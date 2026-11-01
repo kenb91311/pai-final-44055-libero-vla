@@ -1,0 +1,1079 @@
+{
+  "status": "complete",
+  "zip": "artifacts/realtime-vla/inference-profile-evidence.zip",
+  "zip_sha256": "157a056661d1ed1a3afbe3cd98a00531bb043f6ad3587b2a7d0dfed256ff83dd",
+  "zip_bytes": 2935022,
+  "archive_members": 56,
+  "redaction_count": 1817,
+  "all_original_files_unchanged": true,
+  "all_distributed_member_hashes_verified": true,
+  "zip_crc_verified": true,
+  "source_snapshot_verified": true,
+  "secret_pattern_checks_passed": true,
+  "manifest": {
+    "schema_version": 1,
+    "created_at_utc": "2026-11-01T23:58:25.209463+00:00",
+    "scope": "actual native inference evidence; failed FAST paired equality retained as excluded reference",
+    "source_snapshot_proof": [
+      {
+        "source": "experiments/realtime_vla/profile_inference.py",
+        "snapshot": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/profile_inference.py",
+        "preregistered_sha256": "463691a0abae4a74963d4f2ba912027904b2dc70e06e4f5ad2f6a394189a71dd",
+        "current_sha256": "463691a0abae4a74963d4f2ba912027904b2dc70e06e4f5ad2f6a394189a71dd",
+        "snapshot_sha256": "463691a0abae4a74963d4f2ba912027904b2dc70e06e4f5ad2f6a394189a71dd",
+        "all_equal": true
+      },
+      {
+        "source": "experiments/realtime_vla/profiling_hooks.py",
+        "snapshot": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/profiling_hooks.py",
+        "preregistered_sha256": "5957ba824a40d281b3150f1345095d43afe94dc1338d08decff5609887e0fcaa",
+        "current_sha256": "5957ba824a40d281b3150f1345095d43afe94dc1338d08decff5609887e0fcaa",
+        "snapshot_sha256": "5957ba824a40d281b3150f1345095d43afe94dc1338d08decff5609887e0fcaa",
+        "all_equal": true
+      },
+      {
+        "source": "experiments/realtime_vla/capture_profile_inputs.py",
+        "snapshot": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/capture_profile_inputs.py",
+        "preregistered_sha256": "44bcdba3fecff3b37ae4b96fe0bd2df4d5bfa268a8d784ff0d2b07d60f68c576",
+        "current_sha256": "44bcdba3fecff3b37ae4b96fe0bd2df4d5bfa268a8d784ff0d2b07d60f68c576",
+        "snapshot_sha256": "44bcdba3fecff3b37ae4b96fe0bd2df4d5bfa268a8d784ff0d2b07d60f68c576",
+        "all_equal": true
+      },
+      {
+        "source": "experiments/realtime_vla/smolvla_runtime.py",
+        "snapshot": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/smolvla_runtime.py",
+        "preregistered_sha256": "37d27abc9ae7a52ff781f3b26d92c4927443c4a92cad1b6c7fe7096bf70b7d28",
+        "current_sha256": "37d27abc9ae7a52ff781f3b26d92c4927443c4a92cad1b6c7fe7096bf70b7d28",
+        "snapshot_sha256": "37d27abc9ae7a52ff781f3b26d92c4927443c4a92cad1b6c7fe7096bf70b7d28",
+        "all_equal": true
+      },
+      {
+        "source": "experiments/realtime_vla/pi05_runtime.py",
+        "snapshot": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/pi05_runtime.py",
+        "preregistered_sha256": "4b8b5513b5ca8364daac3ed374aa74175dbeb96f0731fb48a5aee85a11712c2e",
+        "current_sha256": "4b8b5513b5ca8364daac3ed374aa74175dbeb96f0731fb48a5aee85a11712c2e",
+        "snapshot_sha256": "4b8b5513b5ca8364daac3ed374aa74175dbeb96f0731fb48a5aee85a11712c2e",
+        "all_equal": true
+      },
+      {
+        "source": "experiments/realtime_vla/pi0fast_runtime.py",
+        "snapshot": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/pi0fast_runtime.py",
+        "preregistered_sha256": "ef87ec6bb8448bb9f199b306f42aae508531cc93029e359354c40f5438b7146c",
+        "current_sha256": "ef87ec6bb8448bb9f199b306f42aae508531cc93029e359354c40f5438b7146c",
+        "snapshot_sha256": "ef87ec6bb8448bb9f199b306f42aae508531cc93029e359354c40f5438b7146c",
+        "all_equal": true
+      },
+      {
+        "source": "experiments/realtime_vla/monitor_resources.py",
+        "snapshot": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/monitor_resources.py",
+        "preregistered_sha256": "b0064b401d0d2ff01a35c0bd4778ac1fe76b87746f96d2853642bf9863349daa",
+        "current_sha256": "b0064b401d0d2ff01a35c0bd4778ac1fe76b87746f96d2853642bf9863349daa",
+        "snapshot_sha256": "b0064b401d0d2ff01a35c0bd4778ac1fe76b87746f96d2853642bf9863349daa",
+        "all_equal": true
+      },
+      {
+        "source": "experiments/realtime_vla/libero_env.py",
+        "snapshot": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/libero_env.py",
+        "preregistered_sha256": "29cfd27f2e151b3b23a1fabd660f1b64a75dd34a4ed1fcafd2fdeed2d7af338d",
+        "current_sha256": "29cfd27f2e151b3b23a1fabd660f1b64a75dd34a4ed1fcafd2fdeed2d7af338d",
+        "snapshot_sha256": "29cfd27f2e151b3b23a1fabd660f1b64a75dd34a4ed1fcafd2fdeed2d7af338d",
+        "all_equal": true
+      },
+      {
+        "source": "tests/test_inference_profiling.py",
+        "snapshot": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/test_inference_profiling.py",
+        "preregistered_sha256": "6486ee907a68e5ef4da50de7d17e66a4124e583c0bf1df58d15bab5afcc9e125",
+        "current_sha256": "6486ee907a68e5ef4da50de7d17e66a4124e583c0bf1df58d15bab5afcc9e125",
+        "snapshot_sha256": "6486ee907a68e5ef4da50de7d17e66a4124e583c0bf1df58d15bab5afcc9e125",
+        "all_equal": true
+      },
+      {
+        "source": "tests/test_profile_inputs.py",
+        "snapshot": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/test_profile_inputs.py",
+        "preregistered_sha256": "62f2661bf480afe741eedbff5b0f22566bbf94683910fe375f15bd8008edd464",
+        "current_sha256": "62f2661bf480afe741eedbff5b0f22566bbf94683910fe375f15bd8008edd464",
+        "snapshot_sha256": "62f2661bf480afe741eedbff5b0f22566bbf94683910fe375f15bd8008edd464",
+        "all_equal": true
+      },
+      {
+        "source": "experiments/realtime_vla/run_inference_profile_series.sh",
+        "snapshot": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/run_inference_profile_series.sh",
+        "preregistered_sha256": "27fc135de44ae7c25bcd8d9e05973f3a1f8f933da184612cdc49472b82e4977a",
+        "current_sha256": "27fc135de44ae7c25bcd8d9e05973f3a1f8f933da184612cdc49472b82e4977a",
+        "snapshot_sha256": "27fc135de44ae7c25bcd8d9e05973f3a1f8f933da184612cdc49472b82e4977a",
+        "all_equal": true
+      }
+    ],
+    "source_snapshot_files_verified": 11,
+    "original_primary_validation_flags": {
+      "smolvla": {
+        "all_nested_interval_accounting_valid": true,
+        "all_paired_outputs_exact": true,
+        "all_paired_outputs_allclose": true,
+        "weights_unchanged": true
+      },
+      "pi05": {
+        "all_nested_interval_accounting_valid": true,
+        "all_paired_outputs_exact": true,
+        "all_paired_outputs_allclose": true,
+        "weights_unchanged": true
+      },
+      "pi0fast": {
+        "all_nested_interval_accounting_valid": true,
+        "all_paired_outputs_exact": false,
+        "all_paired_outputs_allclose": false,
+        "weights_unchanged": true
+      }
+    },
+    "files": [
+      {
+        "path": "artifacts/realtime-vla/inference-profile-audit.json",
+        "original_path": "artifacts/realtime-vla/inference-profile-audit.json",
+        "original_sha256": "d73e86929556d6ff1b070f925ca95b9a3bcf9a4e5146ca6ce3434e2f9f0edfb3",
+        "distributed_sha256": "d73e86929556d6ff1b070f925ca95b9a3bcf9a4e5146ca6ce3434e2f9f0edfb3",
+        "original_bytes": 188320,
+        "distributed_bytes": 188320,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-protocol.json",
+        "original_path": "artifacts/realtime-vla/inference-profile-protocol.json",
+        "original_sha256": "2ed240a5192b7ba5f56b8ceb5d0118986a89a7de8a299d52ebd438039fdd7093",
+        "distributed_sha256": "2ed240a5192b7ba5f56b8ceb5d0118986a89a7de8a299d52ebd438039fdd7093",
+        "original_bytes": 3564,
+        "distributed_bytes": 3564,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-report/native-fullchunk.png",
+        "original_path": "artifacts/realtime-vla/inference-profile-report/native-fullchunk.png",
+        "original_sha256": "e98b67c4bbbae9e3799e07f342926e5beb53b7d5dc1c4fa5257ed45610da659a",
+        "distributed_sha256": "e98b67c4bbbae9e3799e07f342926e5beb53b7d5dc1c4fa5257ed45610da659a",
+        "original_bytes": 164164,
+        "distributed_bytes": 164164,
+        "redaction_counts": {},
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-report/native-fullchunk.svg",
+        "original_path": "artifacts/realtime-vla/inference-profile-report/native-fullchunk.svg",
+        "original_sha256": "9997e246b9e7a0d152bb4aae019cda373fc5a3702267074f3edb2e6a75371f07",
+        "distributed_sha256": "9997e246b9e7a0d152bb4aae019cda373fc5a3702267074f3edb2e6a75371f07",
+        "original_bytes": 91855,
+        "distributed_bytes": 91855,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-report/plot-data.json",
+        "original_path": "artifacts/realtime-vla/inference-profile-report/plot-data.json",
+        "original_sha256": "728579aaee7bc523298486025c6a2e539d6effffcb14a0a9b4fa1ba60e8cd589",
+        "distributed_sha256": "f4f94edfee919aadcc375dff44916b88560f728a51a40ede175dfb4802fdc85e",
+        "original_bytes": 15405,
+        "distributed_bytes": 15445,
+        "redaction_counts": {
+          "linux_home": 5,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 5,
+        "derived_text": true,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-report/stage-cuda-stream.png",
+        "original_path": "artifacts/realtime-vla/inference-profile-report/stage-cuda-stream.png",
+        "original_sha256": "a32af37b55b561cd010ab6f388977a97196a138ba9780e1aea5effc1b1800163",
+        "distributed_sha256": "a32af37b55b561cd010ab6f388977a97196a138ba9780e1aea5effc1b1800163",
+        "original_bytes": 516836,
+        "distributed_bytes": 516836,
+        "redaction_counts": {},
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-report/stage-cuda-stream.svg",
+        "original_path": "artifacts/realtime-vla/inference-profile-report/stage-cuda-stream.svg",
+        "original_sha256": "e282a11703332d4acdc81d9c8a12ea1467c1fa3a497cadd99f5f90d41ade3a3a",
+        "distributed_sha256": "e282a11703332d4acdc81d9c8a12ea1467c1fa3a497cadd99f5f90d41ade3a3a",
+        "original_bytes": 252488,
+        "distributed_bytes": 252488,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-report/stage-host.png",
+        "original_path": "artifacts/realtime-vla/inference-profile-report/stage-host.png",
+        "original_sha256": "f1305f4f3188f0b6412c113b023300417df90f56a24c820183dde16e484b50b5",
+        "distributed_sha256": "f1305f4f3188f0b6412c113b023300417df90f56a24c820183dde16e484b50b5",
+        "original_bytes": 509607,
+        "distributed_bytes": 509607,
+        "redaction_counts": {},
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-report/stage-host.svg",
+        "original_path": "artifacts/realtime-vla/inference-profile-report/stage-host.svg",
+        "original_sha256": "8d2dc6f67067bfd2258b175d08f08477c4b746b29dc7b68a361dced1e9b1dea7",
+        "distributed_sha256": "8d2dc6f67067bfd2258b175d08f08477c4b746b29dc7b68a361dced1e9b1dea7",
+        "original_bytes": 253873,
+        "distributed_bytes": 253873,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-report/stages.csv",
+        "original_path": "artifacts/realtime-vla/inference-profile-report/stages.csv",
+        "original_sha256": "1541aad0957d4bf4fc9fb84039b0389fcb94f23ab6d9a86db42000bd29b03eb0",
+        "distributed_sha256": "1541aad0957d4bf4fc9fb84039b0389fcb94f23ab6d9a86db42000bd29b03eb0",
+        "original_bytes": 41163,
+        "distributed_bytes": 41163,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-report/summary.json",
+        "original_path": "artifacts/realtime-vla/inference-profile-report/summary.json",
+        "original_sha256": "e63040411f716ba0f5a55a16342e8ce7ba8533dbeda9b707c32cbbee837897c7",
+        "distributed_sha256": "de30c73927cc3801bc902f5618e30c57ce6a48e0a03742305f94f75258b4036e",
+        "original_bytes": 400951,
+        "distributed_bytes": 408199,
+        "redaction_counts": {
+          "linux_home": 906,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 906,
+        "derived_text": true,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-report/totals.csv",
+        "original_path": "artifacts/realtime-vla/inference-profile-report/totals.csv",
+        "original_sha256": "d7244c533bbf826a57bed66e851fffd2700459a0733a6edd1d965b994be8c356",
+        "distributed_sha256": "d7244c533bbf826a57bed66e851fffd2700459a0733a6edd1d965b994be8c356",
+        "original_bytes": 2093,
+        "distributed_bytes": 2093,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-resource-trace-v1/configuration.json",
+        "original_path": "artifacts/realtime-vla/inference-profile-resource-trace-v1/configuration.json",
+        "original_sha256": "6b6fcfb4258bf901b467cc8d0b15ff8657babdd65dd7c843fb9e0e1bd5f2cd14",
+        "distributed_sha256": "6b6fcfb4258bf901b467cc8d0b15ff8657babdd65dd7c843fb9e0e1bd5f2cd14",
+        "original_bytes": 207,
+        "distributed_bytes": 207,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-resource-trace-v1/monitor-source.py",
+        "original_path": "artifacts/realtime-vla/inference-profile-resource-trace-v1/monitor-source.py",
+        "original_sha256": "b0064b401d0d2ff01a35c0bd4778ac1fe76b87746f96d2853642bf9863349daa",
+        "distributed_sha256": "b0064b401d0d2ff01a35c0bd4778ac1fe76b87746f96d2853642bf9863349daa",
+        "original_bytes": 12928,
+        "distributed_bytes": 12928,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-resource-trace-v1/samples.jsonl",
+        "original_path": "artifacts/realtime-vla/inference-profile-resource-trace-v1/samples.jsonl",
+        "original_sha256": "8e95d8948e391454ad12e5fdafd6b176d3a3342fd262e977399418573408fe19",
+        "distributed_sha256": "8e95d8948e391454ad12e5fdafd6b176d3a3342fd262e977399418573408fe19",
+        "original_bytes": 593485,
+        "distributed_bytes": 593485,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-resource-trace-v1/summary.json",
+        "original_path": "artifacts/realtime-vla/inference-profile-resource-trace-v1/summary.json",
+        "original_sha256": "974853f112d3ae53d2fabc4acaab64ee49abbaf559d98c9eb67a25c03db2be4e",
+        "distributed_sha256": "974853f112d3ae53d2fabc4acaab64ee49abbaf559d98c9eb67a25c03db2be4e",
+        "original_bytes": 264,
+        "distributed_bytes": 264,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/capture_profile_inputs.py",
+        "original_path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/capture_profile_inputs.py",
+        "original_sha256": "44bcdba3fecff3b37ae4b96fe0bd2df4d5bfa268a8d784ff0d2b07d60f68c576",
+        "distributed_sha256": "44bcdba3fecff3b37ae4b96fe0bd2df4d5bfa268a8d784ff0d2b07d60f68c576",
+        "original_bytes": 17857,
+        "distributed_bytes": 17857,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/libero_env.py",
+        "original_path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/libero_env.py",
+        "original_sha256": "29cfd27f2e151b3b23a1fabd660f1b64a75dd34a4ed1fcafd2fdeed2d7af338d",
+        "distributed_sha256": "29cfd27f2e151b3b23a1fabd660f1b64a75dd34a4ed1fcafd2fdeed2d7af338d",
+        "original_bytes": 26533,
+        "distributed_bytes": 26533,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/manifest.json",
+        "original_path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/manifest.json",
+        "original_sha256": "a5e0b7ca970af61fb27ad79bd798b72909034e7ea49f3ab9070d5e901b4ec614",
+        "distributed_sha256": "a5e0b7ca970af61fb27ad79bd798b72909034e7ea49f3ab9070d5e901b4ec614",
+        "original_bytes": 2347,
+        "distributed_bytes": 2347,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/monitor_resources.py",
+        "original_path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/monitor_resources.py",
+        "original_sha256": "b0064b401d0d2ff01a35c0bd4778ac1fe76b87746f96d2853642bf9863349daa",
+        "distributed_sha256": "b0064b401d0d2ff01a35c0bd4778ac1fe76b87746f96d2853642bf9863349daa",
+        "original_bytes": 12928,
+        "distributed_bytes": 12928,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/pi05_runtime.py",
+        "original_path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/pi05_runtime.py",
+        "original_sha256": "4b8b5513b5ca8364daac3ed374aa74175dbeb96f0731fb48a5aee85a11712c2e",
+        "distributed_sha256": "4b8b5513b5ca8364daac3ed374aa74175dbeb96f0731fb48a5aee85a11712c2e",
+        "original_bytes": 23494,
+        "distributed_bytes": 23494,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/pi0fast_runtime.py",
+        "original_path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/pi0fast_runtime.py",
+        "original_sha256": "ef87ec6bb8448bb9f199b306f42aae508531cc93029e359354c40f5438b7146c",
+        "distributed_sha256": "ef87ec6bb8448bb9f199b306f42aae508531cc93029e359354c40f5438b7146c",
+        "original_bytes": 28059,
+        "distributed_bytes": 28059,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/profile_inference.py",
+        "original_path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/profile_inference.py",
+        "original_sha256": "463691a0abae4a74963d4f2ba912027904b2dc70e06e4f5ad2f6a394189a71dd",
+        "distributed_sha256": "463691a0abae4a74963d4f2ba912027904b2dc70e06e4f5ad2f6a394189a71dd",
+        "original_bytes": 44234,
+        "distributed_bytes": 44234,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/profiling_hooks.py",
+        "original_path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/profiling_hooks.py",
+        "original_sha256": "5957ba824a40d281b3150f1345095d43afe94dc1338d08decff5609887e0fcaa",
+        "distributed_sha256": "5957ba824a40d281b3150f1345095d43afe94dc1338d08decff5609887e0fcaa",
+        "original_bytes": 25538,
+        "distributed_bytes": 25538,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/run_inference_profile_series.sh",
+        "original_path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/run_inference_profile_series.sh",
+        "original_sha256": "27fc135de44ae7c25bcd8d9e05973f3a1f8f933da184612cdc49472b82e4977a",
+        "distributed_sha256": "27fc135de44ae7c25bcd8d9e05973f3a1f8f933da184612cdc49472b82e4977a",
+        "original_bytes": 3656,
+        "distributed_bytes": 3656,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/smolvla_runtime.py",
+        "original_path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/smolvla_runtime.py",
+        "original_sha256": "37d27abc9ae7a52ff781f3b26d92c4927443c4a92cad1b6c7fe7096bf70b7d28",
+        "distributed_sha256": "37d27abc9ae7a52ff781f3b26d92c4927443c4a92cad1b6c7fe7096bf70b7d28",
+        "original_bytes": 17757,
+        "distributed_bytes": 17757,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/test_inference_profiling.py",
+        "original_path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/test_inference_profiling.py",
+        "original_sha256": "6486ee907a68e5ef4da50de7d17e66a4124e583c0bf1df58d15bab5afcc9e125",
+        "distributed_sha256": "6486ee907a68e5ef4da50de7d17e66a4124e583c0bf1df58d15bab5afcc9e125",
+        "original_bytes": 22779,
+        "distributed_bytes": 22779,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/test_profile_inputs.py",
+        "original_path": "artifacts/realtime-vla/inference-profile-source-snapshot-v1/test_profile_inputs.py",
+        "original_sha256": "62f2661bf480afe741eedbff5b0f22566bbf94683910fe375f15bd8008edd464",
+        "distributed_sha256": "62f2661bf480afe741eedbff5b0f22566bbf94683910fe375f15bd8008edd464",
+        "original_bytes": 15263,
+        "distributed_bytes": 15263,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/capture-console.log",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/capture-console.log",
+        "original_sha256": "340f7cfd7966d5d3d57bbafa3d660e8c88db9fbe2bbb99c37ca57dcb39aa6898",
+        "distributed_sha256": "9cdb44d21f4bf094fddbe54a9a1ed9e1164e4bd8e32b59f3b27c407de4116b6c",
+        "original_bytes": 1038,
+        "distributed_bytes": 1046,
+        "redaction_counts": {
+          "linux_home": 1,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 1,
+        "derived_text": true,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/observations/init1.npz",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/observations/init1.npz",
+        "original_sha256": "96ca0585f82163586f35eff6b706fd09fefc2b20c9cb61b74f5c26870d96423d",
+        "distributed_sha256": "96ca0585f82163586f35eff6b706fd09fefc2b20c9cb61b74f5c26870d96423d",
+        "original_bytes": 394644,
+        "distributed_bytes": 394644,
+        "redaction_counts": {},
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/observations/init2.npz",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/observations/init2.npz",
+        "original_sha256": "dabe5c022850e42dad77a730e1d5cb5ed9b030559d6eae2aee54cef242f2bef7",
+        "distributed_sha256": "dabe5c022850e42dad77a730e1d5cb5ed9b030559d6eae2aee54cef242f2bef7",
+        "original_bytes": 394644,
+        "distributed_bytes": 394644,
+        "redaction_counts": {},
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/observations/init3.npz",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/observations/init3.npz",
+        "original_sha256": "7773bad27cc0742b55c2c5bae9028d460d08d48b2a3ec1070e267683e3620a59",
+        "distributed_sha256": "7773bad27cc0742b55c2c5bae9028d460d08d48b2a3ec1070e267683e3620a59",
+        "original_bytes": 394644,
+        "distributed_bytes": 394644,
+        "redaction_counts": {},
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/observations/init4.npz",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/observations/init4.npz",
+        "original_sha256": "250e958ce572f71d7672255be09b13e0466b9b653fad428c2cbf61d916c85f6e",
+        "distributed_sha256": "250e958ce572f71d7672255be09b13e0466b9b653fad428c2cbf61d916c85f6e",
+        "original_bytes": 394644,
+        "distributed_bytes": 394644,
+        "redaction_counts": {},
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/observations/init5.npz",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/observations/init5.npz",
+        "original_sha256": "7f95fb581e1e3190d819053ede314479df55741c16f1cca3104ff5d45a8d62a7",
+        "distributed_sha256": "7f95fb581e1e3190d819053ede314479df55741c16f1cca3104ff5d45a8d62a7",
+        "original_bytes": 394644,
+        "distributed_bytes": 394644,
+        "redaction_counts": {},
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/observations/manifest.json",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/observations/manifest.json",
+        "original_sha256": "9c61d92bb6914a3d05c1fb8cd8e5ad8ccb287bae2170c36704b5214a30182301",
+        "distributed_sha256": "9c61d92bb6914a3d05c1fb8cd8e5ad8ccb287bae2170c36704b5214a30182301",
+        "original_bytes": 21955,
+        "distributed_bytes": 21955,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/pi05-console.log",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/pi05-console.log",
+        "original_sha256": "a4a211de83fa1c0be7fade3fc6c75239d68685c45e2e4154de9a3092aa979d58",
+        "distributed_sha256": "a93723b39b2a88d6fe6111e0a0176f0bfc6aef75f8662837b87c44971aba5467",
+        "original_bytes": 1288,
+        "distributed_bytes": 1296,
+        "redaction_counts": {
+          "linux_home": 1,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 1,
+        "derived_text": true,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/pi05-native/actions.npz",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/pi05-native/actions.npz",
+        "original_sha256": "de31b60bc14bb1824593198fb6ab0391bacee39a37a92037f8685ad088ab5013",
+        "distributed_sha256": "de31b60bc14bb1824593198fb6ab0391bacee39a37a92037f8685ad088ab5013",
+        "original_bytes": 119639,
+        "distributed_bytes": 119639,
+        "redaction_counts": {},
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/pi05-native/report.json",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/pi05-native/report.json",
+        "original_sha256": "367e725b3f5b49f329163d0c83ae5d273d6da85bf03a09c4bfcdff80f1d24c8c",
+        "distributed_sha256": "e6ca55cddd1c1114f12c051437c2fc4d71438a435622fd7e830477f739e053f1",
+        "original_bytes": 1869936,
+        "distributed_bytes": 1872336,
+        "redaction_counts": {
+          "linux_home": 300,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 300,
+        "derived_text": true,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/pi0fast-console.log",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/pi0fast-console.log",
+        "original_sha256": "cdd640850baed38e51d05aca74c68ca1157a7fae1a12669d74cbc1169f9c0b3d",
+        "distributed_sha256": "de30e9250712e875a75581e23586384bd63ade16d7b17f85582ce9fb7beea64d",
+        "original_bytes": 1885,
+        "distributed_bytes": 1909,
+        "redaction_counts": {
+          "linux_home": 3,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 3,
+        "derived_text": true,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/pi0fast-native/actions.npz",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/pi0fast-native/actions.npz",
+        "original_sha256": "cb6a14abdab606b6aab9957cbff8b04793a3a01a8b4ec79365dc43ec5420141b",
+        "distributed_sha256": "cb6a14abdab606b6aab9957cbff8b04793a3a01a8b4ec79365dc43ec5420141b",
+        "original_bytes": 32291,
+        "distributed_bytes": 32291,
+        "redaction_counts": {},
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/pi0fast-native/report.json",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/pi0fast-native/report.json",
+        "original_sha256": "c56ba28e40ecbe145121544f907bf9da859ba1a21bf09418056a4a22d06d56c0",
+        "distributed_sha256": "e291889483d7252137642ded188f781a10db9a2564afab61f64fa1dd7eebeb94",
+        "original_bytes": 3641027,
+        "distributed_bytes": 3643435,
+        "redaction_counts": {
+          "linux_home": 301,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 301,
+        "derived_text": true,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/protocol.json",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/protocol.json",
+        "original_sha256": "2ed240a5192b7ba5f56b8ceb5d0118986a89a7de8a299d52ebd438039fdd7093",
+        "distributed_sha256": "2ed240a5192b7ba5f56b8ceb5d0118986a89a7de8a299d52ebd438039fdd7093",
+        "original_bytes": 3564,
+        "distributed_bytes": 3564,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/smolvla-console.log",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/smolvla-console.log",
+        "original_sha256": "7abb705714f33a1d505c300d040c070f57539518a2880e28ed1908abf7cb733d",
+        "distributed_sha256": "d1bf64860a041f943764c24b89541371eba8f66fc4c2b90f5dcd0081a7727a62",
+        "original_bytes": 1006,
+        "distributed_bytes": 1014,
+        "redaction_counts": {
+          "linux_home": 1,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 1,
+        "derived_text": true,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/smolvla-native/actions.npz",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/smolvla-native/actions.npz",
+        "original_sha256": "c8d0f9b827ce70e2f06acd5f698260bab6f872e7c2d1915f732fab6386876724",
+        "distributed_sha256": "c8d0f9b827ce70e2f06acd5f698260bab6f872e7c2d1915f732fab6386876724",
+        "original_bytes": 119297,
+        "distributed_bytes": 119297,
+        "redaction_counts": {},
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "artifacts/realtime-vla/inference-profile-v1/smolvla-native/report.json",
+        "original_path": "artifacts/realtime-vla/inference-profile-v1/smolvla-native/report.json",
+        "original_sha256": "65d7266dcffbb3c79487d44d8097123dd8f0b5f271eae1eb2194b9b5895bb29d",
+        "distributed_sha256": "9908a6017773b3b26eff8b3883b3258e6e5f3dfc38e4b6b3143b9a09084cbccf",
+        "original_bytes": 1763602,
+        "distributed_bytes": 1765994,
+        "redaction_counts": {
+          "linux_home": 299,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 299,
+        "derived_text": true,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "docs/experiments/realtime-inference-profiling.md",
+        "original_path": "docs/experiments/realtime-inference-profiling.md",
+        "original_sha256": "851794e9f4711ee0b526425b9fe4e00cc2b5a06c8aaea4d9d21a5ba8e0b69acd",
+        "distributed_sha256": "851794e9f4711ee0b526425b9fe4e00cc2b5a06c8aaea4d9d21a5ba8e0b69acd",
+        "original_bytes": 17116,
+        "distributed_bytes": 17116,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "docs/reference/pi05-libero-assets.md",
+        "original_path": "docs/reference/pi05-libero-assets.md",
+        "original_sha256": "12d8694af7d8d1236daf8fb866ebe59be3d3f156351d0109aaf22a8642317a0f",
+        "distributed_sha256": "12d8694af7d8d1236daf8fb866ebe59be3d3f156351d0109aaf22a8642317a0f",
+        "original_bytes": 9328,
+        "distributed_bytes": 9328,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "docs/reference/realtime-vla-assets.md",
+        "original_path": "docs/reference/realtime-vla-assets.md",
+        "original_sha256": "b7c415ed6d1c0aa9a0415fa56ab1036c49aba5e07290023368f1c514f47531c9",
+        "distributed_sha256": "b7c415ed6d1c0aa9a0415fa56ab1036c49aba5e07290023368f1c514f47531c9",
+        "original_bytes": 17107,
+        "distributed_bytes": 17107,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "scripts/build_inference_profile_report.py",
+        "original_path": "scripts/build_inference_profile_report.py",
+        "original_sha256": "46df121fe7bfbd22592ab51ba14f18895365aac3c6c667a975df7f27ad77e0ad",
+        "distributed_sha256": "46df121fe7bfbd22592ab51ba14f18895365aac3c6c667a975df7f27ad77e0ad",
+        "original_bytes": 28115,
+        "distributed_bytes": 28115,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "scripts/package_inference_profile.py",
+        "original_path": "scripts/package_inference_profile.py",
+        "original_sha256": "20b06e86db68d313ea3f0795f168addd8007648d2a451de276c50cb61f3396a6",
+        "distributed_sha256": "20b06e86db68d313ea3f0795f168addd8007648d2a451de276c50cb61f3396a6",
+        "original_bytes": 30928,
+        "distributed_bytes": 30928,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "submissions/pai-final-44055-libero-vla/LICENSES/LeRobot-APACHE-2.0.txt",
+        "original_path": "submissions/pai-final-44055-libero-vla/LICENSES/LeRobot-APACHE-2.0.txt",
+        "original_sha256": "9e108af26a7ae92a6d2cb0273856a4a0a84da8819c2cffee8b2657cc4f905718",
+        "distributed_sha256": "9e108af26a7ae92a6d2cb0273856a4a0a84da8819c2cffee8b2657cc4f905718",
+        "original_bytes": 29977,
+        "distributed_bytes": 29977,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": false,
+        "original_unchanged_checked": true
+      },
+      {
+        "path": "README-inference-profile.md",
+        "original_path": null,
+        "original_sha256": "9372b9afd47556c8a859fa83f434ce8ce987237ec9745d64403e0ae7a897cef7",
+        "distributed_sha256": "9372b9afd47556c8a859fa83f434ce8ce987237ec9745d64403e0ae7a897cef7",
+        "original_bytes": 1528,
+        "distributed_bytes": 1528,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": true,
+        "original_unchanged_checked": null
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "original_path": null,
+        "original_sha256": "b5234fdcf857438dd177e803e167ea8f2b4518314771dd5f2e62a6939f41278c",
+        "distributed_sha256": "b5234fdcf857438dd177e803e167ea8f2b4518314771dd5f2e62a6939f41278c",
+        "original_bytes": 855,
+        "distributed_bytes": 855,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": true,
+        "original_unchanged_checked": null
+      },
+      {
+        "path": "LICENSES/inference-profile-sources.json",
+        "original_path": null,
+        "original_sha256": "e8259053264c5307d615718a91d53de51c4150f8a57851106468b7a9b1065215",
+        "distributed_sha256": "e8259053264c5307d615718a91d53de51c4150f8a57851106468b7a9b1065215",
+        "original_bytes": 251,
+        "distributed_bytes": 251,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": true,
+        "original_unchanged_checked": null
+      },
+      {
+        "path": "TEST-RESULTS.txt",
+        "original_path": null,
+        "original_sha256": "d3ab21b8b34610f98ac6dcd344ee573682873ca366d66960e90db488475ac842",
+        "distributed_sha256": "d3ab21b8b34610f98ac6dcd344ee573682873ca366d66960e90db488475ac842",
+        "original_bytes": 237,
+        "distributed_bytes": 237,
+        "redaction_counts": {
+          "linux_home": 0,
+          "wsl_windows_home": 0,
+          "mac_home": 0,
+          "windows_home": 0
+        },
+        "redaction_count": 0,
+        "derived_text": false,
+        "generated_member": true,
+        "original_unchanged_checked": null
+      }
+    ],
+    "redaction_policy": "UTF8 home prefixes only, consistent participant-N aliases; originals untouched; reverse alias mapping not exported",
+    "external_installed_source": "original paths/hashes only in redacted reports; no dependency files copied",
+    "excluded": [
+      "model weights",
+      "tokenizer bodies",
+      "virtual environments",
+      "caches",
+      "arbitrary dependency source",
+      "unrelated historical experiments",
+      "review PDF/README candidates",
+      ".git",
+      "credentials"
+    ]
+  }
+}

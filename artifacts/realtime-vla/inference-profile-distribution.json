@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "scope": "Participant path-prefix redaction only; measurements and validation flags unchanged; raw source references identify original hashes",
+  "originals_retained": true,
+  "files": [
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/native-fullchunk.svg",
+      "original_sha256": "9997e246b9e7a0d152bb4aae019cda373fc5a3702267074f3edb2e6a75371f07",
+      "distributed_sha256": "9997e246b9e7a0d152bb4aae019cda373fc5a3702267074f3edb2e6a75371f07",
+      "transformation": "none"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/totals.csv",
+      "original_sha256": "d7244c533bbf826a57bed66e851fffd2700459a0733a6edd1d965b994be8c356",
+      "distributed_sha256": "d7244c533bbf826a57bed66e851fffd2700459a0733a6edd1d965b994be8c356",
+      "transformation": "none"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/summary.json",
+      "original_sha256": "e63040411f716ba0f5a55a16342e8ce7ba8533dbeda9b707c32cbbee837897c7",
+      "distributed_sha256": "989fb9a060bbdf67937272f167a82bff6f2b3b4686a69e9276ca8eff8d87a650",
+      "transformation": "workspace/home path prefixes only"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/stage-cuda-stream.svg",
+      "original_sha256": "e282a11703332d4acdc81d9c8a12ea1467c1fa3a497cadd99f5f90d41ade3a3a",
+      "distributed_sha256": "e282a11703332d4acdc81d9c8a12ea1467c1fa3a497cadd99f5f90d41ade3a3a",
+      "transformation": "none"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/stage-host.png",
+      "original_sha256": "f1305f4f3188f0b6412c113b023300417df90f56a24c820183dde16e484b50b5",
+      "distributed_sha256": "f1305f4f3188f0b6412c113b023300417df90f56a24c820183dde16e484b50b5",
+      "transformation": "none"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/plot-data.json",
+      "original_sha256": "728579aaee7bc523298486025c6a2e539d6effffcb14a0a9b4fa1ba60e8cd589",
+      "distributed_sha256": "89c7280cac88969d589e0d3f82bc800eb777720f4d07f64293634d7b16bf31aa",
+      "transformation": "workspace/home path prefixes only"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/native-fullchunk.png",
+      "original_sha256": "e98b67c4bbbae9e3799e07f342926e5beb53b7d5dc1c4fa5257ed45610da659a",
+      "distributed_sha256": "e98b67c4bbbae9e3799e07f342926e5beb53b7d5dc1c4fa5257ed45610da659a",
+      "transformation": "none"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/stages.csv",
+      "original_sha256": "1541aad0957d4bf4fc9fb84039b0389fcb94f23ab6d9a86db42000bd29b03eb0",
+      "distributed_sha256": "1541aad0957d4bf4fc9fb84039b0389fcb94f23ab6d9a86db42000bd29b03eb0",
+      "transformation": "none"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/stage-host.svg",
+      "original_sha256": "8d2dc6f67067bfd2258b175d08f08477c4b746b29dc7b68a361dced1e9b1dea7",
+      "distributed_sha256": "8d2dc6f67067bfd2258b175d08f08477c4b746b29dc7b68a361dced1e9b1dea7",
+      "transformation": "none"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/stage-cuda-stream.png",
+      "original_sha256": "a32af37b55b561cd010ab6f388977a97196a138ba9780e1aea5effc1b1800163",
+      "distributed_sha256": "a32af37b55b561cd010ab6f388977a97196a138ba9780e1aea5effc1b1800163",
+      "transformation": "none"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-v1/pi0fast-native/report.json",
+      "original_sha256": "c56ba28e40ecbe145121544f907bf9da859ba1a21bf09418056a4a22d06d56c0",
+      "distributed_sha256": "0af783ac57d433827970f24438143f800103aa6f0ac77751a9eba8cae9668b44",
+      "transformation": "workspace/home path prefixes only"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-v1/smolvla-native/report.json",
+      "original_sha256": "65d7266dcffbb3c79487d44d8097123dd8f0b5f271eae1eb2194b9b5895bb29d",
+      "distributed_sha256": "116ec774363ac9555974bb66415a58f1390f4c7036687594e2a88bb254adf018",
+      "transformation": "workspace/home path prefixes only"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-v1/pi05-native/report.json",
+      "original_sha256": "367e725b3f5b49f329163d0c83ae5d273d6da85bf03a09c4bfcdff80f1d24c8c",
+      "distributed_sha256": "65fded85f0ef05afa0fcc7bf259b03181df6a33d55c83be9882b7f0b439a7de7",
+      "transformation": "workspace/home path prefixes only"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-v1/observations/manifest.json",
+      "original_sha256": "9c61d92bb6914a3d05c1fb8cd8e5ad8ccb287bae2170c36704b5214a30182301",
+      "distributed_sha256": "9c61d92bb6914a3d05c1fb8cd8e5ad8ccb287bae2170c36704b5214a30182301",
+      "transformation": "none"
+    }
+  ]
+}

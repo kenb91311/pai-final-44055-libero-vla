@@ -1,0 +1,604 @@
+{
+  "version": 1,
+  "status": "complete",
+  "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+  "samples": [
+    {
+      "id": "init1",
+      "file": "init1.npz",
+      "init_state_index": 1,
+      "sha256": "96ca0585f82163586f35eff6b706fd09fefc2b20c9cb61b74f5c26870d96423d",
+      "sensor_hashes": {
+        "agentview_image": "981f9d1c867a13621cda428bdf129fd35dc4c1d6847429357e95e05a4491b04c",
+        "robot0_eye_in_hand_image": "deb64a7593a9bd7e7303b86051531b41dc61c9d7bcf9892b41c342377f6148c1",
+        "robot0_eef_pos": "a6e3513dde89d9dde89e07ead9c4b6929f9dbd20736850bfe6becf26ea623605",
+        "robot0_eef_quat": "4f50c403c9b7ee9cca98408e9f41c103a4be0671302acea85a995524471bbffe",
+        "robot0_gripper_qpos": "f86ce28bef9b2bf0d2f3dfe2bff6c13f71b2ad2e004af75818f42580e2974844"
+      },
+      "sensors": {
+        "agentview_image": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "robot0_eye_in_hand_image": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "robot0_eef_pos": {
+          "shape": [
+            3
+          ],
+          "dtype": "float64"
+        },
+        "robot0_eef_quat": {
+          "shape": [
+            4
+          ],
+          "dtype": "float64"
+        },
+        "robot0_gripper_qpos": {
+          "shape": [
+            2
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "id": "init2",
+      "file": "init2.npz",
+      "init_state_index": 2,
+      "sha256": "dabe5c022850e42dad77a730e1d5cb5ed9b030559d6eae2aee54cef242f2bef7",
+      "sensor_hashes": {
+        "agentview_image": "2ef75629ca1e4f263b6006fd81649bf5d53213490e31a7ff29547e7c8cec122c",
+        "robot0_eye_in_hand_image": "615c1eafa9a85d3351c695d76247f93f28205ca01b8f3cf805a110add6df35bd",
+        "robot0_eef_pos": "6d45f7f6e04b6211a26ab0f44d95a6c80f405b1ac8ca71668ea15069fe326526",
+        "robot0_eef_quat": "77dad8715a406213b79116b4299a10227ec04458af2e231e5269fe60d8ba243c",
+        "robot0_gripper_qpos": "28611c83a14023948fb78262a9175ff1d0b230b66f7397ae587b521a4f5b1491"
+      },
+      "sensors": {
+        "agentview_image": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "robot0_eye_in_hand_image": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "robot0_eef_pos": {
+          "shape": [
+            3
+          ],
+          "dtype": "float64"
+        },
+        "robot0_eef_quat": {
+          "shape": [
+            4
+          ],
+          "dtype": "float64"
+        },
+        "robot0_gripper_qpos": {
+          "shape": [
+            2
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "id": "init3",
+      "file": "init3.npz",
+      "init_state_index": 3,
+      "sha256": "7773bad27cc0742b55c2c5bae9028d460d08d48b2a3ec1070e267683e3620a59",
+      "sensor_hashes": {
+        "agentview_image": "78b23961c9f1650af4f44dd71b675f726f36087c8a269a0bb86eefc19546f4f5",
+        "robot0_eye_in_hand_image": "434ca1c1f304fe03ec88ea8049d4d048a720d5ffb43bad701ad08907926662c2",
+        "robot0_eef_pos": "c3019903c01af0ab5aa49d53b8fb0a12851f0a01465130555fe871a1a7ffd6d8",
+        "robot0_eef_quat": "eb683206c4ca7cc1d6bfce82f1e12b58aed7c6fd458927860ff28c1d52889f39",
+        "robot0_gripper_qpos": "ac18e5b474aba88066cb17dba360061101ec67528bc92a4c32127628dba14f6e"
+      },
+      "sensors": {
+        "agentview_image": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "robot0_eye_in_hand_image": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "robot0_eef_pos": {
+          "shape": [
+            3
+          ],
+          "dtype": "float64"
+        },
+        "robot0_eef_quat": {
+          "shape": [
+            4
+          ],
+          "dtype": "float64"
+        },
+        "robot0_gripper_qpos": {
+          "shape": [
+            2
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "id": "init4",
+      "file": "init4.npz",
+      "init_state_index": 4,
+      "sha256": "250e958ce572f71d7672255be09b13e0466b9b653fad428c2cbf61d916c85f6e",
+      "sensor_hashes": {
+        "agentview_image": "266f589bfd6ab5b26b48362b1d43fefdf76d4fb481acf4f33f85d77b3f64efe4",
+        "robot0_eye_in_hand_image": "b60c4315db3df87be36e20408f72e126e1efdbdb07fdd796995a84685771282c",
+        "robot0_eef_pos": "9b0fe902f306e6bff47def1db70ef4612a29cfd1638794beea5d6b34f9b18256",
+        "robot0_eef_quat": "b87fb384ebdd84184389a8ac7c7d0cd205f64a5c2c6a14d978147fc0ec33c73e",
+        "robot0_gripper_qpos": "398c6607ba7726ec6e1baed19650a26e846731f4ed710b60b2c5cc62f5525995"
+      },
+      "sensors": {
+        "agentview_image": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "robot0_eye_in_hand_image": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "robot0_eef_pos": {
+          "shape": [
+            3
+          ],
+          "dtype": "float64"
+        },
+        "robot0_eef_quat": {
+          "shape": [
+            4
+          ],
+          "dtype": "float64"
+        },
+        "robot0_gripper_qpos": {
+          "shape": [
+            2
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "id": "init5",
+      "file": "init5.npz",
+      "init_state_index": 5,
+      "sha256": "7f95fb581e1e3190d819053ede314479df55741c16f1cca3104ff5d45a8d62a7",
+      "sensor_hashes": {
+        "agentview_image": "73c224565f1da68af64323732ea2c06fce94413dd7950e239f5e8fa0fc69c936",
+        "robot0_eye_in_hand_image": "1054594b75faec91a44c0250b071954ad3db5f0d5b7ecfa0ab46437661e20951",
+        "robot0_eef_pos": "0c6ae0492dc6d89c20da7c004844c0274dbc1ef639159716178a4f340c0f5b3d",
+        "robot0_eef_quat": "2aa34504d80fb46d703abe973e5bffe4b1d03ac31d01bc4f7a6b0ac7ae0efbf4",
+        "robot0_gripper_qpos": "badaac91fe165051aef9523bfbbbab82893546d3ceb9ec9edcfba88a260d89d7"
+      },
+      "sensors": {
+        "agentview_image": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "robot0_eye_in_hand_image": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "robot0_eef_pos": {
+          "shape": [
+            3
+          ],
+          "dtype": "float64"
+        },
+        "robot0_eef_quat": {
+          "shape": [
+            4
+          ],
+          "dtype": "float64"
+        },
+        "robot0_gripper_qpos": {
+          "shape": [
+            2
+          ],
+          "dtype": "float64"
+        }
+      }
+    }
+  ],
+  "environment": {
+    "task_suite": "libero_spatial",
+    "task_id": 0,
+    "control_hz": 20,
+    "resolution": 256,
+    "settle_steps": 10,
+    "seed": 20261102,
+    "initial_states": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "model_input_keys": [
+    "agentview_image",
+    "robot0_eye_in_hand_image",
+    "robot0_eef_pos",
+    "robot0_eef_quat",
+    "robot0_gripper_qpos"
+  ],
+  "images": "raw unrotated HWC RGB uint8; official model processor rotates once",
+  "source": {
+    "method": "physics reset + snapshot -> separate sync scene observe_snapshot",
+    "model_loaded": false,
+    "control_or_camera_workers_started": false,
+    "source_sha256": {
+      "experiments/realtime_vla/capture_profile_inputs.py": "44bcdba3fecff3b37ae4b96fe0bd2df4d5bfa268a8d784ff0d2b07d60f68c576",
+      "experiments/realtime_vla/libero_env.py": "29cfd27f2e151b3b23a1fabd660f1b64a75dd34a4ed1fcafd2fdeed2d7af338d",
+      "experiments/realtime_vla/camera_worker.py": "a95568289f62250535ac06464c96cdaa89c9347be806ca3ed9ee0bef1676c9bb"
+    }
+  },
+  "provenance": [
+    {
+      "id": "init1",
+      "physics_environment": {
+        "task_suite": "libero_spatial",
+        "task_id": 0,
+        "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+        "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "initial_states": 50,
+        "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+        "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+        "control_hz": 20,
+        "canonical_control_hz": 20,
+        "dataset_metadata_fps": 10,
+        "physics_dt": 0.002,
+        "settle_steps": 10,
+        "images": "raw HWC RGB; policy official processor rotates180 once",
+        "action": "native LIBERO relative XYZ/axisangle/gripper7",
+        "render_mode": "physics",
+        "gl_renderer": null,
+        "render_platform": "egl",
+        "gallium_driver": "d3d12"
+      },
+      "camera_environment": {
+        "task_suite": "libero_spatial",
+        "task_id": 0,
+        "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+        "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "initial_states": 50,
+        "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+        "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+        "control_hz": 20,
+        "canonical_control_hz": 20,
+        "dataset_metadata_fps": 10,
+        "physics_dt": 0.002,
+        "settle_steps": 10,
+        "images": "raw HWC RGB; policy official processor rotates180 once",
+        "action": "native LIBERO relative XYZ/axisangle/gripper7",
+        "render_mode": "sync",
+        "gl_renderer": "D3D12 (NVIDIA GeForce RTX 5080)",
+        "render_platform": "egl",
+        "gallium_driver": "d3d12"
+      },
+      "snapshot": {
+        "tick": 0,
+        "simulation_time": 0.5000000000000003,
+        "physics_state_sha256": "3fa9c227c97759bc5c4296a789d989a884aca76de1a2b577ee27437932f249b9"
+      },
+      "historical_initial_comparison": {
+        "status": "compared",
+        "file": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/initial.json",
+        "sha256": "2c4d2c8a4ad249f877d4a8365991fa71a59403b2679fff6154503f7c5e1ccbcb",
+        "baseline_seed": 20261102,
+        "baseline_resolution": 256,
+        "sensor_hashes_equal": {
+          "agentview_image": true,
+          "robot0_eye_in_hand_image": true,
+          "robot0_eef_pos": true,
+          "robot0_eef_quat": true,
+          "robot0_gripper_qpos": true
+        },
+        "all_sensor_hashes_equal": true
+      }
+    },
+    {
+      "id": "init2",
+      "physics_environment": {
+        "task_suite": "libero_spatial",
+        "task_id": 0,
+        "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+        "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "initial_states": 50,
+        "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+        "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+        "control_hz": 20,
+        "canonical_control_hz": 20,
+        "dataset_metadata_fps": 10,
+        "physics_dt": 0.002,
+        "settle_steps": 10,
+        "images": "raw HWC RGB; policy official processor rotates180 once",
+        "action": "native LIBERO relative XYZ/axisangle/gripper7",
+        "render_mode": "physics",
+        "gl_renderer": null,
+        "render_platform": "egl",
+        "gallium_driver": "d3d12"
+      },
+      "camera_environment": {
+        "task_suite": "libero_spatial",
+        "task_id": 0,
+        "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+        "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "initial_states": 50,
+        "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+        "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+        "control_hz": 20,
+        "canonical_control_hz": 20,
+        "dataset_metadata_fps": 10,
+        "physics_dt": 0.002,
+        "settle_steps": 10,
+        "images": "raw HWC RGB; policy official processor rotates180 once",
+        "action": "native LIBERO relative XYZ/axisangle/gripper7",
+        "render_mode": "sync",
+        "gl_renderer": "D3D12 (NVIDIA GeForce RTX 5080)",
+        "render_platform": "egl",
+        "gallium_driver": "d3d12"
+      },
+      "snapshot": {
+        "tick": 0,
+        "simulation_time": 0.5000000000000003,
+        "physics_state_sha256": "37765325d6e4cbe4d214749aa5c7eccddf38e6b0232572e0e90659ac52169599"
+      },
+      "historical_initial_comparison": {
+        "status": "compared",
+        "file": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/initial.json",
+        "sha256": "5c4d79c7bd58484e9083f2b1e47534b8f4000750091b742cde1114ff8598e00a",
+        "baseline_seed": 20261102,
+        "baseline_resolution": 256,
+        "sensor_hashes_equal": {
+          "agentview_image": true,
+          "robot0_eye_in_hand_image": true,
+          "robot0_eef_pos": true,
+          "robot0_eef_quat": true,
+          "robot0_gripper_qpos": true
+        },
+        "all_sensor_hashes_equal": true
+      }
+    },
+    {
+      "id": "init3",
+      "physics_environment": {
+        "task_suite": "libero_spatial",
+        "task_id": 0,
+        "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+        "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "initial_states": 50,
+        "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+        "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+        "control_hz": 20,
+        "canonical_control_hz": 20,
+        "dataset_metadata_fps": 10,
+        "physics_dt": 0.002,
+        "settle_steps": 10,
+        "images": "raw HWC RGB; policy official processor rotates180 once",
+        "action": "native LIBERO relative XYZ/axisangle/gripper7",
+        "render_mode": "physics",
+        "gl_renderer": null,
+        "render_platform": "egl",
+        "gallium_driver": "d3d12"
+      },
+      "camera_environment": {
+        "task_suite": "libero_spatial",
+        "task_id": 0,
+        "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+        "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "initial_states": 50,
+        "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+        "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+        "control_hz": 20,
+        "canonical_control_hz": 20,
+        "dataset_metadata_fps": 10,
+        "physics_dt": 0.002,
+        "settle_steps": 10,
+        "images": "raw HWC RGB; policy official processor rotates180 once",
+        "action": "native LIBERO relative XYZ/axisangle/gripper7",
+        "render_mode": "sync",
+        "gl_renderer": "D3D12 (NVIDIA GeForce RTX 5080)",
+        "render_platform": "egl",
+        "gallium_driver": "d3d12"
+      },
+      "snapshot": {
+        "tick": 0,
+        "simulation_time": 0.5000000000000003,
+        "physics_state_sha256": "929b1ca3011d4676ae84acd54294b84031b0a73050dfa479078f754124f34c4c"
+      },
+      "historical_initial_comparison": {
+        "status": "compared",
+        "file": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/initial.json",
+        "sha256": "d2490200adc15ef9dd544431726bcf75b3fb12ae5fcb0bd6ec0bbc27c63ae802",
+        "baseline_seed": 20261102,
+        "baseline_resolution": 256,
+        "sensor_hashes_equal": {
+          "agentview_image": true,
+          "robot0_eye_in_hand_image": true,
+          "robot0_eef_pos": true,
+          "robot0_eef_quat": true,
+          "robot0_gripper_qpos": true
+        },
+        "all_sensor_hashes_equal": true
+      }
+    },
+    {
+      "id": "init4",
+      "physics_environment": {
+        "task_suite": "libero_spatial",
+        "task_id": 0,
+        "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+        "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "initial_states": 50,
+        "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+        "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+        "control_hz": 20,
+        "canonical_control_hz": 20,
+        "dataset_metadata_fps": 10,
+        "physics_dt": 0.002,
+        "settle_steps": 10,
+        "images": "raw HWC RGB; policy official processor rotates180 once",
+        "action": "native LIBERO relative XYZ/axisangle/gripper7",
+        "render_mode": "physics",
+        "gl_renderer": null,
+        "render_platform": "egl",
+        "gallium_driver": "d3d12"
+      },
+      "camera_environment": {
+        "task_suite": "libero_spatial",
+        "task_id": 0,
+        "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+        "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "initial_states": 50,
+        "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+        "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+        "control_hz": 20,
+        "canonical_control_hz": 20,
+        "dataset_metadata_fps": 10,
+        "physics_dt": 0.002,
+        "settle_steps": 10,
+        "images": "raw HWC RGB; policy official processor rotates180 once",
+        "action": "native LIBERO relative XYZ/axisangle/gripper7",
+        "render_mode": "sync",
+        "gl_renderer": "D3D12 (NVIDIA GeForce RTX 5080)",
+        "render_platform": "egl",
+        "gallium_driver": "d3d12"
+      },
+      "snapshot": {
+        "tick": 0,
+        "simulation_time": 0.5000000000000003,
+        "physics_state_sha256": "ce75f6a48565e9db62ed12e521243a1c44b23d0867e911c4864663ea781029d9"
+      },
+      "historical_initial_comparison": {
+        "status": "compared",
+        "file": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/initial.json",
+        "sha256": "36ba8562ac5ca4d90c7a1a02d5130bb430c089aa4165a0d065eeef277801f8b4",
+        "baseline_seed": 20261102,
+        "baseline_resolution": 256,
+        "sensor_hashes_equal": {
+          "agentview_image": true,
+          "robot0_eye_in_hand_image": true,
+          "robot0_eef_pos": true,
+          "robot0_eef_quat": true,
+          "robot0_gripper_qpos": true
+        },
+        "all_sensor_hashes_equal": true
+      }
+    },
+    {
+      "id": "init5",
+      "physics_environment": {
+        "task_suite": "libero_spatial",
+        "task_id": 0,
+        "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+        "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "initial_states": 50,
+        "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+        "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+        "control_hz": 20,
+        "canonical_control_hz": 20,
+        "dataset_metadata_fps": 10,
+        "physics_dt": 0.002,
+        "settle_steps": 10,
+        "images": "raw HWC RGB; policy official processor rotates180 once",
+        "action": "native LIBERO relative XYZ/axisangle/gripper7",
+        "render_mode": "physics",
+        "gl_renderer": null,
+        "render_platform": "egl",
+        "gallium_driver": "d3d12"
+      },
+      "camera_environment": {
+        "task_suite": "libero_spatial",
+        "task_id": 0,
+        "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+        "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "initial_states": 50,
+        "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+        "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+        "control_hz": 20,
+        "canonical_control_hz": 20,
+        "dataset_metadata_fps": 10,
+        "physics_dt": 0.002,
+        "settle_steps": 10,
+        "images": "raw HWC RGB; policy official processor rotates180 once",
+        "action": "native LIBERO relative XYZ/axisangle/gripper7",
+        "render_mode": "sync",
+        "gl_renderer": "D3D12 (NVIDIA GeForce RTX 5080)",
+        "render_platform": "egl",
+        "gallium_driver": "d3d12"
+      },
+      "snapshot": {
+        "tick": 0,
+        "simulation_time": 0.5000000000000003,
+        "physics_state_sha256": "6c54146e9194cc21b13978893c467c6b6cc79c0e270e118a4105d543591eee83"
+      },
+      "historical_initial_comparison": {
+        "status": "compared",
+        "file": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/initial.json",
+        "sha256": "bc6eea4498bf64806921eda04c7a162d8cbdbe59af2605b61620fe0ade99d613",
+        "baseline_seed": 20261102,
+        "baseline_resolution": 256,
+        "sensor_hashes_equal": {
+          "agentview_image": true,
+          "robot0_eye_in_hand_image": true,
+          "robot0_eef_pos": true,
+          "robot0_eef_quat": true,
+          "robot0_gripper_qpos": true
+        },
+        "all_sensor_hashes_equal": true
+      }
+    }
+  ],
+  "capture_wall_seconds": 120.73921881800925,
+  "simulators_closed_before_manifest": true
+}

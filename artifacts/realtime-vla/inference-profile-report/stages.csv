@@ -1,0 +1,231 @@
+group,model,paired_comparison_eligible,exclusion_reasons,stage,metric,unit,count,mean,median,p95,min,max
+native,smolvla,True,,request_inclusive,host_ms,ms,25,637.6932166790357,634.0142340050079,694.8788471956505,534.6615509915864,723.8875610055402
+native,smolvla,True,,request_inclusive,host_exclusive_ms,ms,25,0.8657029212918133,0.45052099449094385,2.900690396199934,0.37849800719413906,2.9129359900252894
+native,smolvla,True,,request_inclusive,cuda_event_elapsed_ms,ms,25,583.1222766113282,592.1781616210938,631.6825439453125,486.0202941894531,658.067626953125
+native,smolvla,True,,request_inclusive,cuda_event_exclusive_ms,ms,25,0.6070010715723038,0.43142539262771606,2.015506047010417,0.36100485920906067,2.564132511615753
+native,smolvla,True,,request_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,smolvla,True,,observation_preparation_inclusive,host_ms,ms,25,2.3969574383227155,1.6419919993495569,5.385073801153329,1.2714859913103282,15.075253992108628
+native,smolvla,True,,observation_preparation_inclusive,host_exclusive_ms,ms,25,1.0059649590402842,0.3470350202405825,2.288468595361331,0.2894019999075681,14.069475000724196
+native,smolvla,True,,observation_preparation_inclusive,cuda_event_elapsed_ms,ms,25,2.4837004947662353,1.59443199634552,5.387430477142328,1.199552059173584,14.555168151855469
+native,smolvla,True,,observation_preparation_inclusive,cuda_event_exclusive_ms,ms,25,1.3820531337615103,0.455360010266304,3.4193023917730896,0.28272002935409546,13.688384145498276
+native,smolvla,True,,observation_preparation_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,smolvla,True,,libero_camera_rotation_and_state,host_ms,ms,25,0.49009619920980185,0.37615399924106896,0.6649790069786826,0.3225389955332503,2.5112930015893653
+native,smolvla,True,,libero_camera_rotation_and_state,host_exclusive_ms,ms,25,0.49009619920980185,0.37615399924106896,0.6649790069786826,0.3225389955332503,2.5112930015893653
+native,smolvla,True,,libero_camera_rotation_and_state,cuda_event_elapsed_ms,ms,25,0.3605926448944956,0.31782400608062744,0.5493056058883662,0.0019519999623298645,3.2073280811309814
+native,smolvla,True,,libero_camera_rotation_and_state,cuda_event_exclusive_ms,ms,25,0.3605926448944956,0.31782400608062744,0.5493056058883662,0.0019519999623298645,3.2073280811309814
+native,smolvla,True,,libero_camera_rotation_and_state,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,smolvla,True,,saved_preprocessing,host_ms,ms,25,0.9008962800726295,0.8430110028712079,1.3574056036304682,0.5880989920115098,1.4870169979985803
+native,smolvla,True,,saved_preprocessing,host_exclusive_ms,ms,25,0.9008962800726295,0.8430110028712079,1.3574056036304682,0.5880989920115098,1.4870169979985803
+native,smolvla,True,,saved_preprocessing,cuda_event_elapsed_ms,ms,25,0.7410547161102294,0.6873279809951782,1.243488001823425,0.07977599650621414,2.6522879600524902
+native,smolvla,True,,saved_preprocessing,cuda_event_exclusive_ms,ms,25,0.7410547161102294,0.6873279809951782,1.243488001823425,0.07977599650621414,2.6522879600524902
+native,smolvla,True,,saved_preprocessing,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,smolvla,True,,policy_predict_inclusive,host_ms,ms,25,634.0588780801045,631.338376988424,692.265776603017,532.5751880009193,716.7181739932857
+native,smolvla,True,,policy_predict_inclusive,host_exclusive_ms,ms,25,2.4691402033204213,2.3948019952513278,2.952172813820652,2.235890002339147,3.1336600077338517
+native,smolvla,True,,policy_predict_inclusive,cuda_event_elapsed_ms,ms,25,579.8264294433594,588.4952392578125,629.3136596679688,484.1490173339844,651.509521484375
+native,smolvla,True,,policy_predict_inclusive,cuda_event_exclusive_ms,ms,25,2.2258473432064054,2.242565631866455,2.7172855973243712,0.033453941345214844,3.0049473643302917
+native,smolvla,True,,policy_predict_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,smolvla,True,,image_resize_and_policy_preparation,host_ms,ms,25,0.4426731198327616,0.38202198629733175,0.8593714010203256,0.24055100220721215,0.9883129969239235
+native,smolvla,True,,image_resize_and_policy_preparation,host_exclusive_ms,ms,25,0.4426731198327616,0.38202198629733175,0.8593714010203256,0.24055100220721215,0.9883129969239235
+native,smolvla,True,,image_resize_and_policy_preparation,cuda_event_elapsed_ms,ms,25,0.35082624077796937,0.309471994638443,0.6313023924827575,0.12963199615478516,0.8436160087585449
+native,smolvla,True,,image_resize_and_policy_preparation,cuda_event_exclusive_ms,ms,25,0.35082624077796937,0.309471994638443,0.6313023924827575,0.12963199615478516,0.8436160087585449
+native,smolvla,True,,image_resize_and_policy_preparation,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,smolvla,True,,action_sampling_inclusive,host_ms,ms,25,631.1470647569513,628.7714689970016,689.4803226052318,529.8117599886609,713.9384490001248
+native,smolvla,True,,action_sampling_inclusive,host_exclusive_ms,ms,25,1.4932000363478437,1.4743519859621301,1.827194995712489,1.235424992046319,1.864718011347577
+native,smolvla,True,,action_sampling_inclusive,cuda_event_elapsed_ms,ms,25,577.249755859375,585.4090576171875,626.7763061523438,481.62957763671875,649.0049438476562
+native,smolvla,True,,action_sampling_inclusive,cuda_event_exclusive_ms,ms,25,1.5766348648071289,1.4892158508300781,1.9430305480957029,1.2839584350585938,2.280057907104492
+native,smolvla,True,,action_sampling_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,smolvla,True,,prefix_embedding_inclusive,host_ms,ms,25,21.368052721372806,19.124409998767078,28.30140060104895,16.998363003949635,34.09248701063916
+native,smolvla,True,,prefix_embedding_inclusive,host_exclusive_ms,ms,25,2.2125665220664814,1.4913160121068358,4.591703598271123,0.552013996639289,6.019303007633425
+native,smolvla,True,,prefix_embedding_inclusive,cuda_event_elapsed_ms,ms,25,19.493344078063966,17.594112396240234,25.709651184082027,15.432640075683594,30.9835205078125
+native,smolvla,True,,prefix_embedding_inclusive,cuda_event_exclusive_ms,ms,25,0.7101581764221191,0.6516165733337402,1.0653700828552246,0.4285759925842285,1.166111946105957
+native,smolvla,True,,prefix_embedding_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,smolvla,True,,vision_embedding_inclusive,host_ms,ms,25,19.155486199306324,17.690377004328184,26.76237419655081,10.97905999631621,33.01904699765146
+native,smolvla,True,,vision_embedding_inclusive,host_exclusive_ms,ms,25,0.29284624150022864,0.27008599136024714,0.406563383876346,0.20488900190684944,0.5180750013096258
+native,smolvla,True,,vision_embedding_inclusive,cuda_event_elapsed_ms,ms,25,18.783185901641847,16.99120044708252,24.627001380920408,14.748032093048096,29.92409610748291
+native,smolvla,True,,vision_embedding_inclusive,cuda_event_exclusive_ms,ms,25,0.22770045638084413,0.20918385684490204,0.40096068382263184,0.1256641298532486,0.41107143461704254
+native,smolvla,True,,vision_embedding_inclusive,native_invocations_per_request,calls,25,2.0,2.0,2.0,2.0,2.0
+native,smolvla,True,,vision_tower,host_ms,ms,25,18.3924029575428,16.755539007135667,25.855647210846655,10.237499984214082,31.950169985066168
+native,smolvla,True,,vision_tower,host_exclusive_ms,ms,25,18.3924029575428,16.755539007135667,25.855647210846655,10.237499984214082,31.950169985066168
+native,smolvla,True,,vision_tower,cuda_event_elapsed_ms,ms,25,18.166393604278564,16.34272050857544,23.841932773590088,14.200479984283447,29.016640663146973
+native,smolvla,True,,vision_tower,cuda_event_exclusive_ms,ms,25,18.166393604278564,16.34272050857544,23.841932773590088,14.200479984283447,29.016640663146973
+native,smolvla,True,,vision_tower,native_invocations_per_request,calls,25,2.0,2.0,2.0,2.0,2.0
+native,smolvla,True,,vision_projector,host_ms,ms,25,0.47023700026329607,0.4729919892270118,0.7004183891694992,0.2564229944255203,0.7501259970013052
+native,smolvla,True,,vision_projector,host_exclusive_ms,ms,25,0.47023700026329607,0.4729919892270118,0.7004183891694992,0.2564229944255203,0.7501259970013052
+native,smolvla,True,,vision_projector,cuda_event_elapsed_ms,ms,25,0.38909184098243715,0.3792320042848587,0.5798655897378922,0.25545600056648254,0.6559039801359177
+native,smolvla,True,,vision_projector,cuda_event_exclusive_ms,ms,25,0.38909184098243715,0.3792320042848587,0.5798655897378922,0.25545600056648254,0.6559039801359177
+native,smolvla,True,,vision_projector,native_invocations_per_request,calls,25,2.0,2.0,2.0,2.0,2.0
+native,smolvla,True,,vlm_prefix_prefill,host_ms,ms,25,64.08643571892753,61.1470419971738,81.31200739589985,49.691765001625754,82.3003690020414
+native,smolvla,True,,vlm_prefix_prefill,host_exclusive_ms,ms,25,64.08643571892753,61.1470419971738,81.31200739589985,49.691765001625754,82.3003690020414
+native,smolvla,True,,vlm_prefix_prefill,cuda_event_elapsed_ms,ms,25,58.60550537109375,56.660606384277344,73.98353576660156,46.653472900390625,74.79395294189453
+native,smolvla,True,,vlm_prefix_prefill,cuda_event_exclusive_ms,ms,25,58.60550537109375,56.660606384277344,73.98353576660156,46.653472900390625,74.79395294189453
+native,smolvla,True,,vlm_prefix_prefill,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,smolvla,True,,flow_denoise_step,host_ms,ms,25,544.1993762803031,548.7091130053159,610.8364711981267,445.55834399943706,624.4117770111188
+native,smolvla,True,,flow_denoise_step,host_exclusive_ms,ms,25,15.597508801147342,15.018941965536214,19.360834019607864,12.114877055864781,20.867417042609304
+native,smolvla,True,,flow_denoise_step,cuda_event_elapsed_ms,ms,25,497.57427154541017,499.5175971984863,554.9323753356933,404.4646472930908,567.4777183532715
+native,smolvla,True,,flow_denoise_step,cuda_event_exclusive_ms,ms,25,12.647957763671876,12.391998291015625,15.540544128417967,9.386396408081055,16.062725067138672
+native,smolvla,True,,flow_denoise_step,native_invocations_per_request,calls,25,10.0,10.0,10.0,10.0,10.0
+native,smolvla,True,,flow_action_expert_forward,host_ms,ms,25,528.6018674791558,532.7152629906777,594.0283871866995,426.68123001931235,607.1572730143089
+native,smolvla,True,,flow_action_expert_forward,host_exclusive_ms,ms,25,528.6018674791558,532.7152629906777,594.0283871866995,426.68123001931235,607.1572730143089
+native,smolvla,True,,flow_action_expert_forward,cuda_event_elapsed_ms,ms,25,484.92631378173826,489.806209564209,540.3804954528808,393.8366050720215,551.7434196472168
+native,smolvla,True,,flow_action_expert_forward,cuda_event_exclusive_ms,ms,25,484.92631378173826,489.806209564209,540.3804954528808,393.8366050720215,551.7434196472168
+native,smolvla,True,,flow_action_expert_forward,native_invocations_per_request,calls,25,10.0,10.0,10.0,10.0,10.0
+native,smolvla,True,,saved_postprocessing,host_ms,ms,25,0.37167823931667954,0.21927600027993321,0.4149322019657117,0.18999401072505862,3.7096349988132715
+native,smolvla,True,,saved_postprocessing,host_exclusive_ms,ms,25,0.37167823931667954,0.21927600027993321,0.4149322019657117,0.18999401072505862,3.7096349988132715
+native,smolvla,True,,saved_postprocessing,cuda_event_elapsed_ms,ms,25,0.20514560163021087,0.1963520050048828,0.26737278997898095,0.16787199676036835,0.3961920142173767
+native,smolvla,True,,saved_postprocessing,cuda_event_exclusive_ms,ms,25,0.20514560163021087,0.1963520050048828,0.26737278997898095,0.16787199676036835,0.3961920142173767
+native,smolvla,True,,saved_postprocessing,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,request_inclusive,host_ms,ms,25,341.7085092404159,346.36820800369605,380.81970140337944,272.1156050101854,390.9880230057752
+native,pi05,True,,request_inclusive,host_exclusive_ms,ms,25,0.9747564024291933,0.788222998380661,1.9894856144674091,0.5997010011924431,4.079238991835155
+native,pi05,True,,request_inclusive,cuda_event_elapsed_ms,ms,25,311.95530029296873,314.8555908203125,353.5787719726562,247.34463500976562,356.15338134765625
+native,pi05,True,,request_inclusive,cuda_event_exclusive_ms,ms,25,0.9662447682023049,0.7841589003801346,1.927471947669981,0.5749208331108093,3.821891963481903
+native,pi05,True,,request_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,libero_camera_rotation_and_state,host_ms,ms,25,0.4500135185662657,0.43292199552524835,0.6354166049277408,0.32786899828352034,0.6820929993409663
+native,pi05,True,,libero_camera_rotation_and_state,host_exclusive_ms,ms,25,0.4500135185662657,0.43292199552524835,0.6354166049277408,0.32786899828352034,0.6820929993409663
+native,pi05,True,,libero_camera_rotation_and_state,cuda_event_elapsed_ms,ms,25,0.36218239784240724,0.3460800051689148,0.5058111786842346,0.22332799434661865,0.5584959983825684
+native,pi05,True,,libero_camera_rotation_and_state,cuda_event_exclusive_ms,ms,25,0.36218239784240724,0.3460800051689148,0.5058111786842346,0.22332799434661865,0.5584959983825684
+native,pi05,True,,libero_camera_rotation_and_state,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,saved_preprocessing,host_ms,ms,25,1.037143759895116,1.0005700023612007,1.31442500569392,0.8266619988717139,1.3795179984299466
+native,pi05,True,,saved_preprocessing,host_exclusive_ms,ms,25,1.037143759895116,1.0005700023612007,1.31442500569392,0.8266619988717139,1.3795179984299466
+native,pi05,True,,saved_preprocessing,cuda_event_elapsed_ms,ms,25,0.9159667253494262,0.8776640295982361,1.1475648164749146,0.72297602891922,1.171455979347229
+native,pi05,True,,saved_preprocessing,cuda_event_exclusive_ms,ms,25,0.9159667253494262,0.8776640295982361,1.1475648164749146,0.72297602891922,1.171455979347229
+native,pi05,True,,saved_preprocessing,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,policy_predict_inclusive,host_ms,ms,25,338.9217429998098,344.12059700116515,378.2159981899895,269.74690600764006,385.8943709929008
+native,pi05,True,,policy_predict_inclusive,host_exclusive_ms,ms,25,1.4708417205838487,1.4039010129636154,1.6737437952542678,1.2800190161215141,2.4214510049205273
+native,pi05,True,,policy_predict_inclusive,cuda_event_elapsed_ms,ms,25,309.50616271972655,312.85260009765625,350.3339599609375,245.15370178222656,354.0743408203125
+native,pi05,True,,policy_predict_inclusive,cuda_event_exclusive_ms,ms,25,1.3622513222694397,1.302672564983368,1.563745641708374,1.1780592501163483,2.180092751979828
+native,pi05,True,,policy_predict_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,image_resize_and_policy_preparation,host_ms,ms,25,0.5875369202112779,0.5959010013611987,0.7917453942354769,0.3479410079307854,1.153306002379395
+native,pi05,True,,image_resize_and_policy_preparation,host_exclusive_ms,ms,25,0.5875369202112779,0.5959010013611987,0.7917453942354769,0.3479410079307854,1.153306002379395
+native,pi05,True,,image_resize_and_policy_preparation,cuda_event_elapsed_ms,ms,25,0.5047487998008728,0.49622398614883423,0.6855232000350951,0.31404799222946167,0.9885439872741699
+native,pi05,True,,image_resize_and_policy_preparation,cuda_event_exclusive_ms,ms,25,0.5047487998008728,0.49622398614883423,0.6855232000350951,0.31404799222946167,0.9885439872741699
+native,pi05,True,,image_resize_and_policy_preparation,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,action_sampling_inclusive,host_ms,ms,25,336.86336435901467,342.1716099983314,376.34203659836203,267.7589819941204,384.2185609973967
+native,pi05,True,,action_sampling_inclusive,host_exclusive_ms,ms,25,1.7714037955738604,1.745043002301827,2.3021845874609417,1.3289429771248251,2.9467590065905824
+native,pi05,True,,action_sampling_inclusive,cuda_event_elapsed_ms,ms,25,307.63916259765625,311.1052551269531,348.8109130859375,243.37954711914062,352.30303955078125
+native,pi05,True,,action_sampling_inclusive,cuda_event_exclusive_ms,ms,25,1.6943942642211913,1.6772089004516602,2.084603118896484,1.000925064086914,2.808945655822754
+native,pi05,True,,action_sampling_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,prefix_embedding_inclusive,host_ms,ms,25,21.486434279941022,20.281382006942295,29.102338594384484,18.377906002569944,33.12521999760065
+native,pi05,True,,prefix_embedding_inclusive,host_exclusive_ms,ms,25,3.9960981596959755,2.778902999125421,9.58106699690688,0.35722600296139717,10.669889015844092
+native,pi05,True,,prefix_embedding_inclusive,cuda_event_elapsed_ms,ms,25,19.558539352416993,18.43574333190918,26.448538208007808,16.69219207763672,30.101856231689453
+native,pi05,True,,prefix_embedding_inclusive,cuda_event_exclusive_ms,ms,25,0.3135076141357422,0.295135498046875,0.4664833068847655,0.20563316345214844,0.6808967590332031
+native,pi05,True,,prefix_embedding_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,camera_embedding_batch_inclusive,host_ms,ms,25,17.490336120245047,17.525768009363674,26.786393794463947,8.723385006305762,32.36954000021797
+native,pi05,True,,camera_embedding_batch_inclusive,host_exclusive_ms,ms,25,0.12521828000899404,0.1189010072266683,0.1913841988425701,0.07682101568207145,0.29201898723840714
+native,pi05,True,,camera_embedding_batch_inclusive,cuda_event_elapsed_ms,ms,25,19.24503173828125,18.095840454101562,26.12055702209472,16.476032257080078,29.42095947265625
+native,pi05,True,,camera_embedding_batch_inclusive,cuda_event_exclusive_ms,ms,25,0.08308235168457032,0.07523345947265625,0.17870140075683583,0.025760650634765625,0.18815994262695312
+native,pi05,True,,camera_embedding_batch_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,vision_embedding_inclusive,host_ms,ms,25,17.365117840236053,17.41156299249269,26.537447603186592,8.641729000373743,32.228959011263214
+native,pi05,True,,vision_embedding_inclusive,host_exclusive_ms,ms,25,0.19912600109819323,0.19390600209590048,0.28655920759774733,0.14245600323192775,0.2964390005217865
+native,pi05,True,,vision_embedding_inclusive,cuda_event_elapsed_ms,ms,25,19.161949386596678,18.01206398010254,25.933829879760737,16.42745590209961,29.293407440185547
+native,pi05,True,,vision_embedding_inclusive,cuda_event_exclusive_ms,ms,25,0.12622323930263518,0.09964890778064728,0.2662215024232863,0.0476473793387413,0.2968636155128479
+native,pi05,True,,vision_embedding_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,vision_tower,host_ms,ms,25,17.0194109599106,17.03428900509607,26.121539794257842,8.408192006754689,31.57141500560101
+native,pi05,True,,vision_tower,host_exclusive_ms,ms,25,17.0194109599106,17.03428900509607,26.121539794257842,8.408192006754689,31.57141500560101
+native,pi05,True,,vision_tower,cuda_event_elapsed_ms,ms,25,18.942016067504884,17.846847534179688,25.711552047729484,16.280864715576172,28.68499183654785
+native,pi05,True,,vision_tower,cuda_event_exclusive_ms,ms,25,18.942016067504884,17.846847534179688,25.711552047729484,16.280864715576172,28.68499183654785
+native,pi05,True,,vision_tower,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,vision_projector,host_ms,ms,25,0.14658087922725827,0.15203800285235047,0.2329876006115227,0.07679300324525684,0.3611050051404163
+native,pi05,True,,vision_projector,host_exclusive_ms,ms,25,0.14658087922725827,0.15203800285235047,0.2329876006115227,0.07679300324525684,0.3611050051404163
+native,pi05,True,,vision_projector,cuda_event_elapsed_ms,ms,25,0.09371007978916168,0.07295999675989151,0.1540735960006714,0.07264000177383423,0.3115519881248474
+native,pi05,True,,vision_projector,cuda_event_exclusive_ms,ms,25,0.09371007978916168,0.07295999675989151,0.1540735960006714,0.07264000177383423,0.3115519881248474
+native,pi05,True,,vision_projector,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,vlm_prefix_prefill,host_ms,ms,25,21.485869280295447,21.262337002553977,27.25946900609414,16.28809999965597,29.845320008462295
+native,pi05,True,,vlm_prefix_prefill,host_exclusive_ms,ms,25,21.485869280295447,21.262337002553977,27.25946900609414,16.28809999965597,29.845320008462295
+native,pi05,True,,vlm_prefix_prefill,cuda_event_elapsed_ms,ms,25,55.412074432373046,55.067039489746094,57.118029785156246,54.20713424682617,58.12348937988281
+native,pi05,True,,vlm_prefix_prefill,cuda_event_exclusive_ms,ms,25,55.412074432373046,55.067039489746094,57.118029785156246,54.20713424682617,58.12348937988281
+native,pi05,True,,vlm_prefix_prefill,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native,pi05,True,,flow_denoise_step,host_ms,ms,25,292.11965700320434,298.5044299857691,331.53049659740645,214.675206982065,333.40099499037024
+native,pi05,True,,flow_denoise_step,host_exclusive_ms,ms,25,68.65885307604913,69.4206220068736,75.2204240008723,56.92348394950386,77.28619498084299
+native,pi05,True,,flow_denoise_step,cuda_event_elapsed_ms,ms,25,230.97415454864503,233.70012855529785,268.24393806457516,165.9370231628418,277.38364601135254
+native,pi05,True,,flow_denoise_step,cuda_event_exclusive_ms,ms,25,25.161501197814943,24.439071655273438,30.894120597839354,18.769471168518066,31.143646240234375
+native,pi05,True,,flow_denoise_step,native_invocations_per_request,calls,25,10.0,10.0,10.0,10.0,10.0
+native,pi05,True,,flow_action_expert_forward,host_ms,ms,25,223.4608039271552,227.967022015946,257.4872921977658,157.75172303256113,259.6798589947866
+native,pi05,True,,flow_action_expert_forward,host_exclusive_ms,ms,25,223.4608039271552,227.967022015946,257.4872921977658,157.75172303256113,259.6798589947866
+native,pi05,True,,flow_action_expert_forward,cuda_event_elapsed_ms,ms,25,205.8126533508301,207.90713691711426,237.57832260131835,147.16755199432373,246.23999977111816
+native,pi05,True,,flow_action_expert_forward,cuda_event_exclusive_ms,ms,25,205.8126533508301,207.90713691711426,237.57832260131835,147.16755199432373,246.23999977111816
+native,pi05,True,,flow_action_expert_forward,native_invocations_per_request,calls,25,10.0,10.0,10.0,10.0,10.0
+native,pi05,True,,saved_postprocessing,host_ms,ms,25,0.3248525597155094,0.2556340041337535,0.6088040012400597,0.1714670070214197,1.3429050013655797
+native,pi05,True,,saved_postprocessing,host_exclusive_ms,ms,25,0.3248525597155094,0.2556340041337535,0.6088040012400597,0.1714670070214197,1.3429050013655797
+native,pi05,True,,saved_postprocessing,cuda_event_elapsed_ms,ms,25,0.20474368184804917,0.19836799800395966,0.2591231942176819,0.12144000083208084,0.3195199966430664
+native,pi05,True,,saved_postprocessing,cuda_event_exclusive_ms,ms,25,0.20474368184804917,0.19836799800395966,0.2591231942176819,0.12144000083208084,0.3195199966430664
+native,pi05,True,,saved_postprocessing,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,request_inclusive,host_ms,ms,25,849.3987983989064,870.762349004508,1016.5210235893027,593.209319995367,1047.63854900375
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,request_inclusive,host_exclusive_ms,ms,25,2.6775807584635913,0.8148330234689638,8.862825008691283,0.657240001601167,10.429638001369312
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,request_inclusive,cuda_event_elapsed_ms,ms,25,777.3345043945312,791.5363159179688,941.4452880859374,539.2606201171875,952.359375
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,request_inclusive,cuda_event_exclusive_ms,ms,25,2.8944952890556306,1.1635568225756288,8.94388772984966,0.6888364553451538,11.079040162730962
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,request_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,libero_camera_rotation_and_state,host_ms,ms,25,0.4571309610037133,0.4035689926240593,0.7670030026929449,0.33197800803463906,1.1976249952567741
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,libero_camera_rotation_and_state,host_exclusive_ms,ms,25,0.4571309610037133,0.4035689926240593,0.7670030026929449,0.33197800803463906,1.1976249952567741
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,libero_camera_rotation_and_state,cuda_event_elapsed_ms,ms,25,0.22765567851252855,0.29423999786376953,0.6121024012565606,0.0019199999514967203,0.7676159739494324
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,libero_camera_rotation_and_state,cuda_event_exclusive_ms,ms,25,0.22765567851252855,0.29423999786376953,0.6121024012565606,0.0019199999514967203,0.7676159739494324
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,libero_camera_rotation_and_state,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,saved_preprocessing,host_ms,ms,25,0.9601703612133861,0.889611997990869,1.3323117978870866,0.6968399975448847,1.3552320015151054
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,saved_preprocessing,host_exclusive_ms,ms,25,0.9601703612133861,0.889611997990869,1.3323117978870866,0.6968399975448847,1.3552320015151054
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,saved_preprocessing,cuda_event_elapsed_ms,ms,25,0.6682892806828022,0.7482560276985168,1.150265598297119,0.054496001452207565,2.551039934158325
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,saved_preprocessing,cuda_event_exclusive_ms,ms,25,0.6682892806828022,0.7482560276985168,1.150265598297119,0.054496001452207565,2.551039934158325
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,saved_preprocessing,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,policy_predict_inclusive,host_ms,ms,25,845.0180463975994,863.4186169947498,1013.8929113949415,588.7694419943728,1044.9869919975754
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,policy_predict_inclusive,host_exclusive_ms,ms,25,1.1446425563190132,1.0557999921729788,1.8429375923005848,0.9569590038154274,1.9942709768656641
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,policy_predict_inclusive,cuda_event_elapsed_ms,ms,25,773.2960180664063,784.8912353515625,939.0437988281249,535.2099609375,949.966796875
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,policy_predict_inclusive,cuda_event_exclusive_ms,ms,25,1.1550802797079087,1.0853564143180847,1.7946991145610804,0.6383650898933411,1.8801126331090927
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,policy_predict_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,image_resize_and_policy_preparation,host_ms,ms,25,0.6174191599711776,0.5796410114271566,1.1152777966344727,0.35481699160300195,1.193119998788461
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,image_resize_and_policy_preparation,host_exclusive_ms,ms,25,0.6174191599711776,0.5796410114271566,1.1152777966344727,0.35481699160300195,1.193119998788461
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,image_resize_and_policy_preparation,cuda_event_elapsed_ms,ms,25,0.5089484745264053,0.4810880124568939,1.00331517457962,0.10182400047779083,1.0684800148010254
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,image_resize_and_policy_preparation,cuda_event_exclusive_ms,ms,25,0.5089484745264053,0.4810880124568939,1.00331517457962,0.10182400047779083,1.0684800148010254
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,image_resize_and_policy_preparation,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,autoregressive_sampling_inclusive,host_ms,ms,25,842.268131961464,861.2225010001566,1011.0605396010213,586.1565179948229,1042.3356500105
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,autoregressive_sampling_inclusive,host_exclusive_ms,ms,25,141.81265227729455,139.84485596301965,162.03475566580892,118.55769300018437,167.03171498375013
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,autoregressive_sampling_inclusive,cuda_event_elapsed_ms,ms,25,770.7751342773438,782.1801147460938,936.4021850585937,532.8364868164062,947.55908203125
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,autoregressive_sampling_inclusive,cuda_event_exclusive_ms,ms,25,22.448882813453675,22.506152033805847,27.320992660522457,14.010532975196838,28.854381680488586
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,autoregressive_sampling_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,prefix_embedding_inclusive,host_ms,ms,25,40.8153078018222,39.36310899734963,55.41908260493072,27.606101997662336,62.214395991759375
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,prefix_embedding_inclusive,host_exclusive_ms,ms,25,1.0284674825379625,0.9861569997156039,1.4630855963332576,0.5300300108501688,1.6486979875480756
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,prefix_embedding_inclusive,cuda_event_elapsed_ms,ms,25,61.183436737060546,61.286014556884766,62.03057861328125,60.31631851196289,62.428672790527344
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,prefix_embedding_inclusive,cuda_event_exclusive_ms,ms,25,0.3023860931396484,0.2747535705566406,0.4963581085205077,0.1926746368408203,0.5485134124755859
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,prefix_embedding_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_embedding_inclusive,host_ms,ms,25,39.78684031928424,38.44580799341202,54.24741601455024,26.85300199664198,60.5656980042113
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_embedding_inclusive,host_exclusive_ms,ms,25,0.6201302766567096,0.5766340182162821,1.0270629893057044,0.35410998680163175,1.26123201334849
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_embedding_inclusive,cuda_event_elapsed_ms,ms,25,60.8810506439209,60.97104072570801,61.68854522705078,60.03705596923828,62.075103759765625
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_embedding_inclusive,cuda_event_exclusive_ms,ms,25,0.08875497430562973,0.07999792695045471,0.1206336721777916,0.042688533663749695,0.14694592356681824
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_embedding_inclusive,native_invocations_per_request,calls,25,3.0,3.0,3.0,3.0,3.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_tower,host_ms,ms,25,38.79373448085971,37.64234800473787,53.1549366074614,26.047814011690207,59.0480949904304
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_tower,host_exclusive_ms,ms,25,38.79373448085971,37.64234800473787,53.1549366074614,26.047814011690207,59.0480949904304
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_tower,cuda_event_elapsed_ms,ms,25,60.540194549560546,60.6396484375,61.33059310913086,59.7425594329834,61.70486259460449
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_tower,cuda_event_exclusive_ms,ms,25,60.540194549560546,60.6396484375,61.33059310913086,59.7425594329834,61.70486259460449
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_tower,native_invocations_per_request,calls,25,3.0,3.0,3.0,3.0,3.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_projector,host_ms,ms,25,0.37297556176781654,0.3263360122218728,0.7112648017937314,0.18470601935405284,0.7768110081087798
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_projector,host_exclusive_ms,ms,25,0.37297556176781654,0.3263360122218728,0.7112648017937314,0.18470601935405284,0.7768110081087798
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_projector,cuda_event_elapsed_ms,ms,25,0.25210112005472185,0.2523199990391731,0.25260160118341446,0.2504960000514984,0.2526080012321472
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_projector,cuda_event_exclusive_ms,ms,25,0.25210112005472185,0.2523199990391731,0.25260160118341446,0.2504960000514984,0.2526080012321472
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vision_projector,native_invocations_per_request,calls,25,3.0,3.0,3.0,3.0,3.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vlm_prefix_prefill,host_ms,ms,25,24.61166040156968,23.482912001782097,32.55393000144977,15.46904600400012,32.6666210021358
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vlm_prefix_prefill,host_exclusive_ms,ms,25,24.61166040156968,23.482912001782097,32.55393000144977,15.46904600400012,32.6666210021358
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vlm_prefix_prefill,cuda_event_elapsed_ms,ms,25,55.15066940307617,55.161888122558594,55.82486343383789,54.244544982910156,55.897918701171875
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vlm_prefix_prefill,cuda_event_exclusive_ms,ms,25,55.15066940307617,55.161888122558594,55.82486343383789,54.244544982910156,55.897918701171875
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,vlm_prefix_prefill,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_cached_decode_forward,host_ms,ms,25,631.8657116376562,651.561914026388,798.8385229517006,404.226464961539,813.04175099649
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_cached_decode_forward,host_exclusive_ms,ms,25,631.8657116376562,651.561914026388,798.8385229517006,404.226464961539,813.04175099649
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_cached_decode_forward,cuda_event_elapsed_ms,ms,25,594.0225748443604,604.3486433029175,750.5195699691772,373.64905834198,758.5154905319214
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_cached_decode_forward,cuda_event_exclusive_ms,ms,25,594.0225748443604,604.3486433029175,750.5195699691772,373.64905834198,758.5154905319214
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_cached_decode_forward,native_invocations_per_request,calls,25,30.96,31.0,36.599999999999994,22.0,38.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_logits_projection,host_ms,ms,25,3.16279984312132,3.1457460281671956,3.7970162084093313,1.993446028791368,4.884535999735817
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_logits_projection,host_exclusive_ms,ms,25,3.16279984312132,3.1457460281671956,3.7970162084093313,1.993446028791368,4.884535999735817
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_logits_projection,cuda_event_elapsed_ms,ms,25,37.969570479393006,37.29379200935364,44.83816277980804,26.99350392818451,45.761696100234985
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_logits_projection,cuda_event_exclusive_ms,ms,25,37.969570479393006,37.29379200935364,44.83816277980804,26.99350392818451,45.761696100234985
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_logits_projection,native_invocations_per_request,calls,25,31.96,32.0,37.599999999999994,23.0,39.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,action_detokenization_inclusive,host_ms,ms,25,0.9878527198452502,0.9217730112140998,1.287122396752238,0.7690880011068657,1.5026740002213046
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,action_detokenization_inclusive,host_exclusive_ms,ms,25,0.6505520385690033,0.6139430042821914,0.9120857983361925,0.46059499436523765,1.055906992405653
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,action_detokenization_inclusive,cuda_event_elapsed_ms,ms,25,0.856855034828186,0.8011839985847473,1.1565695762634274,0.6617599725723267,1.287071943283081
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,action_detokenization_inclusive,cuda_event_exclusive_ms,ms,25,0.5802636748552322,0.5197440087795258,0.8457087814807887,0.42003199458122253,0.947007954120636
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,action_detokenization_inclusive,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_action_token_decode,host_ms,ms,25,0.3373006812762469,0.3118390013696626,0.45061019191052765,0.268376010353677,0.47951299347914755
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_action_token_decode,host_exclusive_ms,ms,25,0.3373006812762469,0.3118390013696626,0.45061019191052765,0.268376010353677,0.47951299347914755
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_action_token_decode,cuda_event_elapsed_ms,ms,25,0.2765913599729538,0.26284798979759216,0.35844479799270623,0.23030400276184082,0.36454400420188904
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_action_token_decode,cuda_event_exclusive_ms,ms,25,0.2765913599729538,0.26284798979759216,0.35844479799270623,0.23030400276184082,0.36454400420188904
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,fast_action_token_decode,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,saved_postprocessing,host_ms,ms,25,0.2858699206262827,0.21519999427255243,0.544991809874773,0.19126999541185796,0.6805820012232289
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,saved_postprocessing,host_exclusive_ms,ms,25,0.2858699206262827,0.21519999427255243,0.544991809874773,0.19126999541185796,0.6805820012232289
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,saved_postprocessing,cuda_event_elapsed_ms,ms,25,0.2480460798740387,0.19129599630832672,0.48099200725555397,0.17075200378894806,0.579584002494812
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,saved_postprocessing,cuda_event_exclusive_ms,ms,25,0.2480460798740387,0.19129599630832672,0.48099200725555397,0.17075200378894806,0.579584002494812
+native_excluded_reference,pi0fast,False,source validation all_paired_outputs_allclose is not true,saved_postprocessing,native_invocations_per_request,calls,25,1.0,1.0,1.0,1.0,1.0

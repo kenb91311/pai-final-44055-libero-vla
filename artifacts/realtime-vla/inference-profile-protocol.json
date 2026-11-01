@@ -1,0 +1,116 @@
+{
+  "status": "preregistered",
+  "utc": "2026-11-01T23:29:37.209943+00:00",
+  "question": "Why does pi05 have lower measured inference latency than SmolVLA and pi0-FAST in this installation?",
+  "scope": "Offline frozen inference on identical saved raw LIBERO observations; no new closed-loop task-success or training claim",
+  "task": "LIBERO Spatial task0, bowl onto plate",
+  "formal_input_states": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "seed": 20261102,
+  "raw_cameras": {
+    "count": 2,
+    "shape": [
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8",
+    "orientation": "raw unrotated; native model processors rotate once"
+  },
+  "native_conditions": {
+    "smolvla": {
+      "horizon": 50,
+      "flow_steps": 10,
+      "internal_resolution": [
+        512,
+        512
+      ]
+    },
+    "pi05": {
+      "horizon": 50,
+      "flow_steps": 10,
+      "internal_resolution": [
+        224,
+        224
+      ],
+      "empty_camera": 1
+    },
+    "pi0fast": {
+      "horizon": 10,
+      "generation": "greedy autoregressive",
+      "max_decoding_steps": 256,
+      "kv_cache": true,
+      "internal_resolution": [
+        224,
+        224
+      ],
+      "empty_camera": 1
+    }
+  },
+  "device": "RTX5080 16GB, one model at a time after coordinated release",
+  "compile": false,
+  "quantization": false,
+  "local_training": false,
+  "threads": {
+    "torch_intraop": 4,
+    "torch_interop_target": 1,
+    "OPENBLAS_NUM_THREADS": 1
+  },
+  "measurement": {
+    "warmup_calls_per_block": 10,
+    "saved_observations": 5,
+    "repeats_per_observation": 5,
+    "sequence": [
+      "baseline-before",
+      "instrumented",
+      "baseline-after"
+    ],
+    "reset_rng_outside_timed_request": true,
+    "paired_input_order_and_rng": true,
+    "outer_cuda_synchronization": true,
+    "per_stage_cuda_synchronization": false,
+    "statistics": [
+      "count",
+      "mean",
+      "median",
+      "p95",
+      "min",
+      "max"
+    ],
+    "stages": [
+      "raw/native preprocessing and image resize",
+      "vision tower and connector/projector",
+      "prefix embedding and VLM prefill/cache",
+      "flow denoise or autoregressive decode",
+      "detokenization and postprocess/D2H/output conversion"
+    ],
+    "cuda_event_scope": "GPU stream elapsed including possible CPU launch gaps; not kernel busy time",
+    "nested_accounting": "Direct-child subtraction only, CPU and CUDA intervals reported separately"
+  },
+  "optional_controlled_ablation": {
+    "model": "pi05",
+    "change": "native batched camera embedding versus per-camera embedding",
+    "retain": "same weights, precision, raw input, processors, horizon50, flow10, source package",
+    "interpretation": "Latency and paired output differences only; no task-success claim"
+  },
+  "checks": [
+    "raw NPZ+sensor hashes for all consumers",
+    "baseline versus instrumented output equality/tolerance",
+    "instrumentation overhead compared with before/after baseline",
+    "frozen weight digest and no parameter gradients",
+    "native shape/dtype/autocast/actual call counts",
+    "installed implementation file SHA256",
+    "continuous whole-GPU/host resource trace"
+  ],
+  "limitations": [
+    "Five initial observations of one task, not full scene/stage distribution.",
+    "External desktop/driver allocations remain; coordinated model use is not hardware-exclusive GPU reservation.",
+    "Native image size/architecture/precision may differ; do not attribute total latency to parameter count alone.",
+    "Do not alter old task trials or user review PDF/README variants."
+  ]
+}

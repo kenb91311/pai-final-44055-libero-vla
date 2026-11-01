@@ -1,0 +1,527 @@
+{
+  "source_reports": [
+    {
+      "file": "<workspace>/artifacts/realtime-vla/inference-profile-v1/smolvla-native/report.json",
+      "sha256": "65d7266dcffbb3c79487d44d8097123dd8f0b5f271eae1eb2194b9b5895bb29d",
+      "bytes": 1763602
+    },
+    {
+      "file": "<workspace>/artifacts/realtime-vla/inference-profile-v1/pi05-native/report.json",
+      "sha256": "367e725b3f5b49f329163d0c83ae5d273d6da85bf03a09c4bfcdff80f1d24c8c",
+      "bytes": 1869936
+    }
+  ],
+  "figures": {
+    "native-fullchunk": {
+      "unit": "ms",
+      "bars": [
+        {
+          "statistic": "mean",
+          "condition": "baseline_before",
+          "positions": [
+            -0.23,
+            0.77
+          ],
+          "values_ms": [
+            585.0608412787551,
+            360.29788335901685
+          ],
+          "models": [
+            "smolvla",
+            "pi05"
+          ]
+        },
+        {
+          "statistic": "mean",
+          "condition": "instrumented",
+          "positions": [
+            0.0,
+            1.0
+          ],
+          "values_ms": [
+            637.7253134007333,
+            341.7415516800247
+          ],
+          "models": [
+            "smolvla",
+            "pi05"
+          ]
+        },
+        {
+          "statistic": "mean",
+          "condition": "baseline_after",
+          "positions": [
+            0.23,
+            1.23
+          ],
+          "values_ms": [
+            622.0852809213102,
+            375.4935668793041
+          ],
+          "models": [
+            "smolvla",
+            "pi05"
+          ]
+        },
+        {
+          "statistic": "median",
+          "condition": "baseline_before",
+          "positions": [
+            -0.23,
+            0.77
+          ],
+          "values_ms": [
+            581.7993740056409,
+            357.2935679985676
+          ],
+          "models": [
+            "smolvla",
+            "pi05"
+          ]
+        },
+        {
+          "statistic": "median",
+          "condition": "instrumented",
+          "positions": [
+            0.0,
+            1.0
+          ],
+          "values_ms": [
+            634.0737930004252,
+            346.3996360078454
+          ],
+          "models": [
+            "smolvla",
+            "pi05"
+          ]
+        },
+        {
+          "statistic": "median",
+          "condition": "baseline_after",
+          "positions": [
+            0.23,
+            1.23
+          ],
+          "values_ms": [
+            613.1229269958567,
+            372.1422020025784
+          ],
+          "models": [
+            "smolvla",
+            "pi05"
+          ]
+        },
+        {
+          "statistic": "p95",
+          "condition": "baseline_before",
+          "positions": [
+            -0.23,
+            0.77
+          ],
+          "values_ms": [
+            651.3007701898459,
+            409.12623539625196
+          ],
+          "models": [
+            "smolvla",
+            "pi05"
+          ]
+        },
+        {
+          "statistic": "p95",
+          "condition": "instrumented",
+          "positions": [
+            0.0,
+            1.0
+          ],
+          "values_ms": [
+            694.9038431921508,
+            380.8769899973413
+          ],
+          "models": [
+            "smolvla",
+            "pi05"
+          ]
+        },
+        {
+          "statistic": "p95",
+          "condition": "baseline_after",
+          "positions": [
+            0.23,
+            1.23
+          ],
+          "values_ms": [
+            678.4916298114695,
+            420.87446179939434
+          ],
+          "models": [
+            "smolvla",
+            "pi05"
+          ]
+        }
+      ],
+      "model_labels": [
+        "SmolVLA\nH50 full chunk",
+        "pi0.5\nH50 full chunk"
+      ],
+      "no_horizon_normalization": true
+    },
+    "stage-host": {
+      "unit": "ms",
+      "panels": [
+        {
+          "model": "smolvla",
+          "metric": "host_ms",
+          "statistic": "mean",
+          "stages": [
+            "request_inclusive",
+            "observation_preparation_inclusive",
+            "libero_camera_rotation_and_state",
+            "saved_preprocessing",
+            "policy_predict_inclusive",
+            "image_resize_and_policy_preparation",
+            "action_sampling_inclusive",
+            "prefix_embedding_inclusive",
+            "vision_embedding_inclusive",
+            "vision_tower",
+            "vision_projector",
+            "vlm_prefix_prefill",
+            "flow_denoise_step",
+            "flow_action_expert_forward",
+            "saved_postprocessing"
+          ],
+          "values_ms": [
+            637.6932166790357,
+            2.3969574383227155,
+            0.49009619920980185,
+            0.9008962800726295,
+            634.0588780801045,
+            0.4426731198327616,
+            631.1470647569513,
+            21.368052721372806,
+            19.155486199306324,
+            18.3924029575428,
+            0.47023700026329607,
+            64.08643571892753,
+            544.1993762803031,
+            528.6018674791558,
+            0.37167823931667954
+          ]
+        },
+        {
+          "model": "smolvla",
+          "metric": "host_exclusive_ms",
+          "statistic": "mean",
+          "stages": [
+            "request_inclusive",
+            "observation_preparation_inclusive",
+            "libero_camera_rotation_and_state",
+            "saved_preprocessing",
+            "policy_predict_inclusive",
+            "image_resize_and_policy_preparation",
+            "action_sampling_inclusive",
+            "prefix_embedding_inclusive",
+            "vision_embedding_inclusive",
+            "vision_tower",
+            "vision_projector",
+            "vlm_prefix_prefill",
+            "flow_denoise_step",
+            "flow_action_expert_forward",
+            "saved_postprocessing"
+          ],
+          "values_ms": [
+            0.8657029212918133,
+            1.0059649590402842,
+            0.49009619920980185,
+            0.9008962800726295,
+            2.4691402033204213,
+            0.4426731198327616,
+            1.4932000363478437,
+            2.2125665220664814,
+            0.29284624150022864,
+            18.3924029575428,
+            0.47023700026329607,
+            64.08643571892753,
+            15.597508801147342,
+            528.6018674791558,
+            0.37167823931667954
+          ]
+        },
+        {
+          "model": "pi05",
+          "metric": "host_ms",
+          "statistic": "mean",
+          "stages": [
+            "request_inclusive",
+            "libero_camera_rotation_and_state",
+            "saved_preprocessing",
+            "policy_predict_inclusive",
+            "image_resize_and_policy_preparation",
+            "action_sampling_inclusive",
+            "prefix_embedding_inclusive",
+            "camera_embedding_batch_inclusive",
+            "vision_embedding_inclusive",
+            "vision_tower",
+            "vision_projector",
+            "vlm_prefix_prefill",
+            "flow_denoise_step",
+            "flow_action_expert_forward",
+            "saved_postprocessing"
+          ],
+          "values_ms": [
+            341.7085092404159,
+            0.4500135185662657,
+            1.037143759895116,
+            338.9217429998098,
+            0.5875369202112779,
+            336.86336435901467,
+            21.486434279941022,
+            17.490336120245047,
+            17.365117840236053,
+            17.0194109599106,
+            0.14658087922725827,
+            21.485869280295447,
+            292.11965700320434,
+            223.4608039271552,
+            0.3248525597155094
+          ]
+        },
+        {
+          "model": "pi05",
+          "metric": "host_exclusive_ms",
+          "statistic": "mean",
+          "stages": [
+            "request_inclusive",
+            "libero_camera_rotation_and_state",
+            "saved_preprocessing",
+            "policy_predict_inclusive",
+            "image_resize_and_policy_preparation",
+            "action_sampling_inclusive",
+            "prefix_embedding_inclusive",
+            "camera_embedding_batch_inclusive",
+            "vision_embedding_inclusive",
+            "vision_tower",
+            "vision_projector",
+            "vlm_prefix_prefill",
+            "flow_denoise_step",
+            "flow_action_expert_forward",
+            "saved_postprocessing"
+          ],
+          "values_ms": [
+            0.9747564024291933,
+            0.4500135185662657,
+            1.037143759895116,
+            1.4708417205838487,
+            0.5875369202112779,
+            1.7714037955738604,
+            3.9960981596959755,
+            0.12521828000899404,
+            0.19912600109819323,
+            17.0194109599106,
+            0.14658087922725827,
+            21.485869280295447,
+            68.65885307604913,
+            223.4608039271552,
+            0.3248525597155094
+          ]
+        }
+      ],
+      "semantics": "Host elapsed includes CPU work, launches and implicit waits"
+    },
+    "stage-cuda-stream": {
+      "unit": "ms",
+      "panels": [
+        {
+          "model": "smolvla",
+          "metric": "cuda_event_elapsed_ms",
+          "statistic": "mean",
+          "stages": [
+            "request_inclusive",
+            "observation_preparation_inclusive",
+            "libero_camera_rotation_and_state",
+            "saved_preprocessing",
+            "policy_predict_inclusive",
+            "image_resize_and_policy_preparation",
+            "action_sampling_inclusive",
+            "prefix_embedding_inclusive",
+            "vision_embedding_inclusive",
+            "vision_tower",
+            "vision_projector",
+            "vlm_prefix_prefill",
+            "flow_denoise_step",
+            "flow_action_expert_forward",
+            "saved_postprocessing"
+          ],
+          "values_ms": [
+            583.1222766113282,
+            2.4837004947662353,
+            0.3605926448944956,
+            0.7410547161102294,
+            579.8264294433594,
+            0.35082624077796937,
+            577.249755859375,
+            19.493344078063966,
+            18.783185901641847,
+            18.166393604278564,
+            0.38909184098243715,
+            58.60550537109375,
+            497.57427154541017,
+            484.92631378173826,
+            0.20514560163021087
+          ]
+        },
+        {
+          "model": "smolvla",
+          "metric": "cuda_event_exclusive_ms",
+          "statistic": "mean",
+          "stages": [
+            "request_inclusive",
+            "observation_preparation_inclusive",
+            "libero_camera_rotation_and_state",
+            "saved_preprocessing",
+            "policy_predict_inclusive",
+            "image_resize_and_policy_preparation",
+            "action_sampling_inclusive",
+            "prefix_embedding_inclusive",
+            "vision_embedding_inclusive",
+            "vision_tower",
+            "vision_projector",
+            "vlm_prefix_prefill",
+            "flow_denoise_step",
+            "flow_action_expert_forward",
+            "saved_postprocessing"
+          ],
+          "values_ms": [
+            0.6070010715723038,
+            1.3820531337615103,
+            0.3605926448944956,
+            0.7410547161102294,
+            2.2258473432064054,
+            0.35082624077796937,
+            1.5766348648071289,
+            0.7101581764221191,
+            0.22770045638084413,
+            18.166393604278564,
+            0.38909184098243715,
+            58.60550537109375,
+            12.647957763671876,
+            484.92631378173826,
+            0.20514560163021087
+          ]
+        },
+        {
+          "model": "pi05",
+          "metric": "cuda_event_elapsed_ms",
+          "statistic": "mean",
+          "stages": [
+            "request_inclusive",
+            "libero_camera_rotation_and_state",
+            "saved_preprocessing",
+            "policy_predict_inclusive",
+            "image_resize_and_policy_preparation",
+            "action_sampling_inclusive",
+            "prefix_embedding_inclusive",
+            "camera_embedding_batch_inclusive",
+            "vision_embedding_inclusive",
+            "vision_tower",
+            "vision_projector",
+            "vlm_prefix_prefill",
+            "flow_denoise_step",
+            "flow_action_expert_forward",
+            "saved_postprocessing"
+          ],
+          "values_ms": [
+            311.95530029296873,
+            0.36218239784240724,
+            0.9159667253494262,
+            309.50616271972655,
+            0.5047487998008728,
+            307.63916259765625,
+            19.558539352416993,
+            19.24503173828125,
+            19.161949386596678,
+            18.942016067504884,
+            0.09371007978916168,
+            55.412074432373046,
+            230.97415454864503,
+            205.8126533508301,
+            0.20474368184804917
+          ]
+        },
+        {
+          "model": "pi05",
+          "metric": "cuda_event_exclusive_ms",
+          "statistic": "mean",
+          "stages": [
+            "request_inclusive",
+            "libero_camera_rotation_and_state",
+            "saved_preprocessing",
+            "policy_predict_inclusive",
+            "image_resize_and_policy_preparation",
+            "action_sampling_inclusive",
+            "prefix_embedding_inclusive",
+            "camera_embedding_batch_inclusive",
+            "vision_embedding_inclusive",
+            "vision_tower",
+            "vision_projector",
+            "vlm_prefix_prefill",
+            "flow_denoise_step",
+            "flow_action_expert_forward",
+            "saved_postprocessing"
+          ],
+          "values_ms": [
+            0.9662447682023049,
+            0.36218239784240724,
+            0.9159667253494262,
+            1.3622513222694397,
+            0.5047487998008728,
+            1.6943942642211913,
+            0.3135076141357422,
+            0.08308235168457032,
+            0.12622323930263518,
+            18.942016067504884,
+            0.09371007978916168,
+            55.412074432373046,
+            25.161501197814943,
+            205.8126533508301,
+            0.20474368184804917
+          ]
+        }
+      ],
+      "semantics": "CUDA stream elapsed includes possible host launch/idle gaps; not kernel busy time"
+    }
+  },
+  "sources": {
+    "protocol": {
+      "file": "<workspace>/artifacts/realtime-vla/inference-profile-protocol.json",
+      "sha256": "2ed240a5192b7ba5f56b8ceb5d0118986a89a7de8a299d52ebd438039fdd7093",
+      "bytes": 3564
+    },
+    "builder": {
+      "file": "<workspace>/scripts/build_inference_profile_report.py",
+      "sha256": "46df121fe7bfbd22592ab51ba14f18895365aac3c6c667a975df7f27ad77e0ad",
+      "bytes": 28115
+    }
+  },
+  "status": "partial_validated",
+  "primary_comparison": {
+    "included_models": [
+      "smolvla",
+      "pi05"
+    ],
+    "excluded_models": [
+      {
+        "model": "pi0fast",
+        "reasons": [
+          "source validation all_paired_outputs_allclose is not true"
+        ],
+        "source": {
+          "file": "<workspace>/artifacts/realtime-vla/inference-profile-v1/pi0fast-native/report.json",
+          "sha256": "c56ba28e40ecbe145121544f907bf9da859ba1a21bf09418056a4a22d06d56c0",
+          "bytes": 3641027
+        }
+      }
+    ],
+    "policy": "failed source validity remains unchanged; excluded rows are descriptive reference only"
+  }
+}

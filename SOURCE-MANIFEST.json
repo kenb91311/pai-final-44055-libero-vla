@@ -1,6 +1,6 @@
 {
   "task": "PAI final assignment 44055: realtime LIBERO bowl transfer",
-  "scope": "Task implementation, standalone runtimes, original35 and separately scoped additional experimental evidence",
+  "scope": "Task implementation, standalone runtimes, original35 and separately scoped additional experimental evidence, including frozen inference profiling",
   "files": [
     {
       "path": ".gitignore",
@@ -321,6 +321,96 @@
       "path": "artifacts/realtime-vla/gpu-contention-observation.json",
       "bytes": 1225,
       "sha256": "7c6674fc348c951595745d40c426526c1ac5b04874d85e419e5cf3d02e5bc74a"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-audit.json",
+      "bytes": 188320,
+      "sha256": "d73e86929556d6ff1b070f925ca95b9a3bcf9a4e5146ca6ce3434e2f9f0edfb3"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-distribution.json",
+      "bytes": 4791,
+      "sha256": "9173b0a3a1832fbbff951ee5ac7319bd6c67fc3732c33804192cde0aa217f14b"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-packaging-audit.json",
+      "bytes": 47147,
+      "sha256": "232c4aeaa379fa92164a410e9b6873f7a824eae1a51a6aa5556cd9c96a55ecc6"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-protocol.json",
+      "bytes": 3564,
+      "sha256": "2ed240a5192b7ba5f56b8ceb5d0118986a89a7de8a299d52ebd438039fdd7093"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/native-fullchunk.png",
+      "bytes": 164164,
+      "sha256": "e98b67c4bbbae9e3799e07f342926e5beb53b7d5dc1c4fa5257ed45610da659a"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/native-fullchunk.svg",
+      "bytes": 91855,
+      "sha256": "9997e246b9e7a0d152bb4aae019cda373fc5a3702267074f3edb2e6a75371f07"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/plot-data.json",
+      "bytes": 15245,
+      "sha256": "89c7280cac88969d589e0d3f82bc800eb777720f4d07f64293634d7b16bf31aa"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/stage-cuda-stream.png",
+      "bytes": 516836,
+      "sha256": "a32af37b55b561cd010ab6f388977a97196a138ba9780e1aea5effc1b1800163"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/stage-cuda-stream.svg",
+      "bytes": 252488,
+      "sha256": "e282a11703332d4acdc81d9c8a12ea1467c1fa3a497cadd99f5f90d41ade3a3a"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/stage-host.png",
+      "bytes": 509607,
+      "sha256": "f1305f4f3188f0b6412c113b023300417df90f56a24c820183dde16e484b50b5"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/stage-host.svg",
+      "bytes": 253873,
+      "sha256": "8d2dc6f67067bfd2258b175d08f08477c4b746b29dc7b68a361dced1e9b1dea7"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/stages.csv",
+      "bytes": 41163,
+      "sha256": "1541aad0957d4bf4fc9fb84039b0389fcb94f23ab6d9a86db42000bd29b03eb0"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/summary.json",
+      "bytes": 371959,
+      "sha256": "989fb9a060bbdf67937272f167a82bff6f2b3b4686a69e9276ca8eff8d87a650"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-report/totals.csv",
+      "bytes": 2093,
+      "sha256": "d7244c533bbf826a57bed66e851fffd2700459a0733a6edd1d965b994be8c356"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-v1/observations/manifest.json",
+      "bytes": 21955,
+      "sha256": "9c61d92bb6914a3d05c1fb8cd8e5ad8ccb287bae2170c36704b5214a30182301"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-v1/pi05-native/report.json",
+      "bytes": 1860336,
+      "sha256": "65fded85f0ef05afa0fcc7bf259b03181df6a33d55c83be9882b7f0b439a7de7"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-v1/pi0fast-native/report.json",
+      "bytes": 3631395,
+      "sha256": "0af783ac57d433827970f24438143f800103aa6f0ac77751a9eba8cae9668b44"
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-v1/smolvla-native/report.json",
+      "bytes": 1754034,
+      "sha256": "116ec774363ac9555974bb66415a58f1390f4c7036687594e2a88bb254adf018"
     },
     {
       "path": "artifacts/realtime-vla/installed-freeze-combined.txt",
@@ -763,6 +853,11 @@
       "sha256": "977d7a7324f8a50c60362382c26117570267bc8fd9e537de5eeafe2fb2d04f28"
     },
     {
+      "path": "docs/experiments/realtime-inference-profiling.md",
+      "bytes": 17116,
+      "sha256": "851794e9f4711ee0b526425b9fe4e00cc2b5a06c8aaea4d9d21a5ba8e0b69acd"
+    },
+    {
       "path": "docs/experiments/realtime-vla.md",
       "bytes": 10217,
       "sha256": "e9e5f0e38ec13962a803693812da852544cbf1d9a00ab8f34c4e8343c2b1fa25"
@@ -826,6 +921,11 @@
       "path": "experiments/realtime_vla/camera_worker.py",
       "bytes": 14219,
       "sha256": "a95568289f62250535ac06464c96cdaa89c9347be806ca3ed9ee0bef1676c9bb"
+    },
+    {
+      "path": "experiments/realtime_vla/capture_profile_inputs.py",
+      "bytes": 17857,
+      "sha256": "44bcdba3fecff3b37ae4b96fe0bd2df4d5bfa268a8d784ff0d2b07d60f68c576"
     },
     {
       "path": "experiments/realtime_vla/chunk_queue.py",
@@ -923,6 +1023,16 @@
       "sha256": "4d7b1f105cb00b67c5064df5d3bf6456f73b52e3536495e638ab2c7867219ecb"
     },
     {
+      "path": "experiments/realtime_vla/profile_inference.py",
+      "bytes": 44234,
+      "sha256": "463691a0abae4a74963d4f2ba912027904b2dc70e06e4f5ad2f6a394189a71dd"
+    },
+    {
+      "path": "experiments/realtime_vla/profiling_hooks.py",
+      "bytes": 25538,
+      "sha256": "5957ba824a40d281b3150f1345095d43afe94dc1338d08decff5609887e0fcaa"
+    },
+    {
       "path": "experiments/realtime_vla/ros_bridge.py",
       "bytes": 35050,
       "sha256": "b18864ab5fcaeab289e7f86e87493b93c2431391a7f1dfad992b3d5a7846407b"
@@ -941,6 +1051,11 @@
       "path": "experiments/realtime_vla/run_continuity_series.sh",
       "bytes": 1693,
       "sha256": "46d44cab14b20dbe0e0bb8fb60c011506688bcb8b7cf05017a11eb8e61e27938"
+    },
+    {
+      "path": "experiments/realtime_vla/run_inference_profile_series.sh",
+      "bytes": 3656,
+      "sha256": "27fc135de44ae7c25bcd8d9e05973f3a1f8f933da184612cdc49472b82e4977a"
     },
     {
       "path": "experiments/realtime_vla/run_ros_bridge.sh",
@@ -1068,6 +1183,11 @@
       "sha256": "fa43b118492fd203d64c216988e774fe2a5734eb1e7afca6af351d9e84874391"
     },
     {
+      "path": "scripts/build_inference_profile_report.py",
+      "bytes": 28115,
+      "sha256": "46df121fe7bfbd22592ab51ba14f18895365aac3c6c667a975df7f27ad77e0ad"
+    },
+    {
       "path": "scripts/build_realtime_report.py",
       "bytes": 24685,
       "sha256": "70ece8cdafbd16be38f7ca74c75c5305762b0103a2418b4178e5313ec7638661"
@@ -1076,6 +1196,11 @@
       "path": "scripts/fetch_libero_assets.py",
       "bytes": 2381,
       "sha256": "fd5b5728bddae8a18d84f6f51bb8ce576f3353225d3c355305e16cff143144cb"
+    },
+    {
+      "path": "scripts/package_inference_profile.py",
+      "bytes": 30928,
+      "sha256": "20b06e86db68d313ea3f0795f168addd8007648d2a451de276c50cb61f3396a6"
     },
     {
       "path": "scripts/run_a2c2_direct_series.sh",
@@ -1121,6 +1246,16 @@
       "path": "tests/test_continuity_summary.py",
       "bytes": 9136,
       "sha256": "bccef44b507b88c043602b045eb2dc6b3c9422b0c99a415be06d3559e79b4cda"
+    },
+    {
+      "path": "tests/test_inference_profiling.py",
+      "bytes": 22779,
+      "sha256": "6486ee907a68e5ef4da50de7d17e66a4124e583c0bf1df58d15bab5afcc9e125"
+    },
+    {
+      "path": "tests/test_profile_inputs.py",
+      "bytes": 15263,
+      "sha256": "62f2661bf480afe741eedbff5b0f22566bbf94683910fe375f15bd8008edd464"
     },
     {
       "path": "tests/test_resource_monitor.py",
