@@ -305,7 +305,7 @@
     {
       "path": "artifacts/realtime-vla/report/pdf-qa.json",
       "bytes": 1195,
-      "sha256": "0d3165df0965eeea4ac6bebdbdb607c6e411ef8f938f04d5a78f98b213b353f8"
+      "sha256": "e4fe04695816a533642e8e4ebf76456571c470c2e55dd863dbf2f9b0130d1182"
     },
     {
       "path": "artifacts/realtime-vla/report/prefetch.png",
@@ -564,8 +564,8 @@
     },
     {
       "path": "scripts/build_realtime_report.py",
-      "bytes": 24593,
-      "sha256": "e13ee723200ebf70547f59fbba9f0bf31ae11ed6a95c1778acca4a55583135b0"
+      "bytes": 24685,
+      "sha256": "70ece8cdafbd16be38f7ca74c75c5305762b0103a2418b4178e5313ec7638661"
     },
     {
       "path": "scripts/fetch_libero_assets.py",

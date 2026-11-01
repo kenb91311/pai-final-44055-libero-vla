@@ -139,16 +139,16 @@ def main():
     pages.append(page(1, '課題の概要・目的', f'''
     <div class="eyebrow">CAMERA → VLA → ROS 2 → ACTUATOR</div>
     <h1>画像を見て、<br>実時間でボウルを運ぶ。</h1>
-    <p class="lead">学習済みAIでPandaアームを操作する。<br>画像認識・動作列の生成・ROS 2通信・物理制御を接続し、<br>推論中もシミュレーションを進めて操作を評価した。</p>
+    <p class="lead">学習済みAIでシミュレータ内のPandaアームを操作する。<br>画像認識・動作列生成・ROS 2通信・シミュレータ制御を接続し、<br>推論中もシミュレーションを進めて操作を評価した。</p>
     <figure><img class="task" src="{task}"><figcaption>実際のSmolVLA実行映像から。左：外部カメラ ／ 右：手首カメラ</figcaption></figure>
     <div class="columns"><article><h2>タスク</h2><p>皿と小鉢の間にある黒いボウルを、Pandaでつかんで皿へ運ぶ。ボウルが皿上にあるかを、LIBEROの公式判定で評価した。</p></article>
     <article><h2>目的</h2><p>小型モデルの推論の速さが操作の成功につながるかを調べる。同じタスクと制御周期で2モデルを比較し、実行時の遅れと失敗の関係を検討する。</p></article></div>
-    <div class="callout"><b>公開モデルを、画像から物理操作まで接続する。</b><p>VLAは画像・言語・ロボット自身の状態から動作を推論するAI。SmolVLAとπ0-FASTを追加学習なしで使用した。まとめて生成する制御指令を「動作列」と呼び、その受け渡しと、物理・撮像・推論を分離する構成を実装した。</p></div>
+    <div class="callout"><b>公開モデルを、画像からシミュレータ内のアーム操作まで接続する。</b><p>VLAは画像・言語・ロボット自身の状態から動作を推論するAI。SmolVLAとπ0-FASTを追加学習なしで使用した。まとめて生成する制御指令を「動作列」と呼び、その受け渡しと、シミュレータ・撮像・推論を分離する構成を実装した。</p></div>
     <div class="tags"><span>RTX 5080 / 16GB</span><span>実時間制御 約20Hz</span><span>2視点RGB</span><span>全35試行</span></div>'''))
     pages.append(page(2, '構成と資源・プロセス管理', '''
     <div class="eyebrow">DESIGN / REALTIME SYSTEM</div><h1>制御周期を保つため、<br>描画と推論を分離する。</h1>
     <div class="lanes">
-      <article><span>PROCESS A</span><h2>物理・制御</h2><strong>20 Hz</strong><p>位置3・姿勢3を既存OSC（手先制御器）へ渡し、誤差と速度から関節トルクを計算。残る1指令でグリッパを開閉する。</p></article>
+      <article><span>PROCESS A</span><h2>シミュレータ制御</h2><strong>20 Hz</strong><p>MuJoCo内のPandaを制御。位置3・姿勢3の指令からOSCが関節トルクを計算し、物理演算へ反映。残る1指令でグリッパを開閉する。</p></article>
       <article><span>PROCESS B</span><h2>2視点カメラ</h2><strong>10 Hz 設定</strong><p>コピーした物理状態を別シーンに再現。256×256の2画像と、同時点の手先・グリッパ状態を取得する。</p></article>
       <article><span>PROCESS C</span><h2>GPU推論</h2><strong>非同期</strong><p>ROS 2で受信した画像などから動作列を生成。生成結果もROS 2で送り、受信した列を制御へ戻す。</p></article>
     </div>
