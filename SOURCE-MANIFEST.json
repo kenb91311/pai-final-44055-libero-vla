@@ -135,12 +135,12 @@
     {
       "path": "artifacts/realtime-vla/additional-evidence-summary.json",
       "bytes": 282,
-      "sha256": "eb926b9b7c6f2514eac4b715e1316bb32c2e082e7316ba628aabe3dc800e54f1"
+      "sha256": "1412f8f7981ab8c684979a55639238ef22f7bce0092ab986375d39787d587e03"
     },
     {
       "path": "artifacts/realtime-vla/additional-evidence/EVIDENCE-MANIFEST.json",
-      "bytes": 218279,
-      "sha256": "154bc9e2b357227ffcb150891250a11bf150c45197690fce12de5a4aac16fa88"
+      "bytes": 219237,
+      "sha256": "fa0088a64010421f941b5c5089ed0a5689c2e25646d52efaf26137e11938a42c"
     },
     {
       "path": "artifacts/realtime-vla/additional-experiments-summary.json",

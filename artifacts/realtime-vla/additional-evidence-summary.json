@@ -1,8 +1,8 @@
 {
   "archive": "realtime-additional-evidence.zip",
-  "bytes": 20576016,
-  "sha256": "4a185d4f1126e45fba447ffd4690c1be7f5edd99c6373d97335a48eee1b1d396",
-  "files": 989,
+  "bytes": 20592024,
+  "sha256": "78ff5d3b480aca3543e931a34c90269c09be3cd1ff669812b58ab978a5d1c6d8",
+  "files": 994,
   "redacted_files": 12,
-  "manifest_sha256": "154bc9e2b357227ffcb150891250a11bf150c45197690fce12de5a4aac16fa88"
+  "manifest_sha256": "fa0088a64010421f941b5c5089ed0a5689c2e25646d52efaf26137e11938a42c"
 }
