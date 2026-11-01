@@ -1,0 +1,197 @@
+{
+  "scope": "Shared-host monotonic worker-interval comparison with a separately authorized experiment; external task identifiers omitted",
+  "external_worker_intervals_found": 257,
+  "series": [
+    {
+      "series": "formal-pi05-e10",
+      "episodes_with_overlapping_external_worker_intervals": 0,
+      "episodes": [
+        {
+          "episode": "lockstep-init1",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "lockstep-init2",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "lockstep-init3",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "lockstep-init4",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "lockstep-init5",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init1",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init2",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init3",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init4",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init5",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        }
+      ]
+    },
+    {
+      "series": "formal-continuity-smolvla-off",
+      "episodes_with_overlapping_external_worker_intervals": 0,
+      "episodes": [
+        {
+          "episode": "realtime-init1",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init2",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init3",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init4",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init5",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        }
+      ]
+    },
+    {
+      "series": "formal-continuity-smolvla-rtc-stock",
+      "episodes_with_overlapping_external_worker_intervals": 0,
+      "episodes": [
+        {
+          "episode": "realtime-init1",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init2",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init3",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init4",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init5",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        }
+      ]
+    },
+    {
+      "series": "formal-continuity-smolvla-rtc-vjp",
+      "episodes_with_overlapping_external_worker_intervals": 1,
+      "episodes": [
+        {
+          "episode": "realtime-init1",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init2",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init3",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init4",
+          "overlapped_chunks": 0,
+          "overlaps": []
+        },
+        {
+          "episode": "realtime-init5",
+          "overlapped_chunks": 10,
+          "overlaps": [
+            {
+              "request_id": "smolvla-rtc-vjp-5ca98a4798b1-query-68",
+              "overlapped_worker_interval_seconds": 0.36692738499550615
+            },
+            {
+              "request_id": "smolvla-rtc-vjp-5ca98a4798b1-query-69",
+              "overlapped_worker_interval_seconds": 0.6053000629981398
+            },
+            {
+              "request_id": "smolvla-rtc-vjp-5ca98a4798b1-query-70",
+              "overlapped_worker_interval_seconds": 0.5985163179939264
+            },
+            {
+              "request_id": "smolvla-rtc-vjp-5ca98a4798b1-query-71",
+              "overlapped_worker_interval_seconds": 0.7751567980012624
+            },
+            {
+              "request_id": "smolvla-rtc-vjp-5ca98a4798b1-query-72",
+              "overlapped_worker_interval_seconds": 0.5267449609964387
+            },
+            {
+              "request_id": "smolvla-rtc-vjp-5ca98a4798b1-query-73",
+              "overlapped_worker_interval_seconds": 0.7583779670021613
+            },
+            {
+              "request_id": "smolvla-rtc-vjp-5ca98a4798b1-query-74",
+              "overlapped_worker_interval_seconds": 0.4316682930002571
+            },
+            {
+              "request_id": "smolvla-rtc-vjp-5ca98a4798b1-query-75",
+              "overlapped_worker_interval_seconds": 0.8170319220007514
+            },
+            {
+              "request_id": "smolvla-rtc-vjp-5ca98a4798b1-query-76",
+              "overlapped_worker_interval_seconds": 0.39043192499957513
+            },
+            {
+              "request_id": "smolvla-rtc-vjp-5ca98a4798b1-query-77",
+              "overlapped_worker_interval_seconds": 0.7732130419972236
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": "Worker intervals include ROS and preprocessing. This is evidence of concurrent model workers, not per-kernel overlap or a quantitative causal slowdown. Absence of overlap does not prove no model residency."
+}

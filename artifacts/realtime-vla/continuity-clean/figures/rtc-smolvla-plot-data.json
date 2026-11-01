@@ -1,0 +1,34 @@
+{
+  "model": "smolvla",
+  "rows": [
+    {
+      "variant": "off",
+      "successes": 1,
+      "n": 5,
+      "worker_ms": 615.3866841025523,
+      "hold_percent": 0.2514668901927913,
+      "overlap_translation_disagreement": 0.9512934549463933,
+      "overlap_n": 57
+    },
+    {
+      "variant": "rtc-stock",
+      "successes": 1,
+      "n": 5,
+      "worker_ms": 619.5435769624046,
+      "hold_percent": 0.0,
+      "overlap_translation_disagreement": 0.008693567729496074,
+      "overlap_n": 58
+    },
+    {
+      "variant": "rtc-vjp",
+      "successes": 1,
+      "n": 5,
+      "worker_ms": 1355.6619842032283,
+      "hold_percent": 22.350993377483444,
+      "overlap_translation_disagreement": 0.06387441123534136,
+      "overlap_n": 5
+    }
+  ],
+  "source_sha256": "45f6650171357141094885f9cf8608be1e56d1edf761fe8c564de7dcd6a45f27",
+  "scope": "Formal5 per method; overlap disagreement excludes switches after empty queues and shows its own count. Command norm is not a measured EEF trajectory error."
+}

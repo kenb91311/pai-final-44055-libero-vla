@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "method": "official constructor on meta device; header/schema only, no learned tensor data loaded or GPU used",
+  "stored_tensor_count": 812,
+  "stored_elements": 3616757520,
+  "mapped_tensor_count": 813,
+  "runtime_parameter_count": 4143404816,
+  "runtime_parameter_dtype_elements": {
+    "torch.bfloat16": 3609853952,
+    "torch.float32": 533550864
+  },
+  "runtime_parameter_storage_bytes": 9353911360,
+  "all_parameter_devices": [
+    "meta"
+  ],
+  "missing": [],
+  "unexpected": [],
+  "derived_copy_keys": [
+    "model.paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight"
+  ]
+}

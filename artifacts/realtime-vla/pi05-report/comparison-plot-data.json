@@ -1,0 +1,36 @@
+{
+  "scope": "Supplementary three-model realtime E10/P0 case study; task0 fixed5 states, no broad benchmark ranking",
+  "rows": [
+    {
+      "model": "SmolVLA",
+      "successes": 3,
+      "n": 5,
+      "worker_ms": 604.1376948691089,
+      "hold_percent": 53.228782287822874
+    },
+    {
+      "model": "pi0-FAST",
+      "successes": 1,
+      "n": 5,
+      "worker_ms": 1017.9451578867277,
+      "hold_percent": 66.69117647058823
+    },
+    {
+      "model": "pi0.5",
+      "successes": 5,
+      "n": 5,
+      "worker_ms": 411.69530569758433,
+      "hold_percent": 44.48818897637795
+    }
+  ],
+  "sources": [
+    {
+      "path": "artifacts/realtime-vla/report/results.json",
+      "sha256": "edfd7ca36c323ac0fa1eee8911056bdffbca71015ee3ffbe5b505663a517da6f"
+    },
+    {
+      "path": "artifacts/realtime-vla/pi05-comparison-summary.json",
+      "sha256": "8b54a65fa15ec976d62ce8181fa99bb95ed70310ad9c858377f171052fd7d0ca"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "status": "registered_before_clean_remeasurement",
+  "purpose": "Separate scheduling effects from RTC chunk-continuity guidance",
+  "local_training": false,
+  "frozen_families": [
+    "smolvla",
+    "pi05"
+  ],
+  "variants": [
+    "off",
+    "rtc-stock",
+    "rtc-vjp"
+  ],
+  "task": "libero_spatial/task0",
+  "development_initial_states": [
+    0
+  ],
+  "formal_initial_states": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "seed": 20261102,
+  "control_hz": 20,
+  "camera_hz": 10,
+  "wall_seconds": 14,
+  "native_horizon": 50,
+  "execute_steps": 50,
+  "replacement": "aligned; drop actual elapsed prefix on arrival, retaining full H until then",
+  "prefetch_remaining": 30,
+  "guidance_execution_horizon": 30,
+  "max_guidance_weight": 10,
+  "latency_prediction": "ceil(p95 of up to10 recent worker durations /50ms)+capture-to-request tick lag, cap49; record pre-cap estimate",
+  "warmup": "2 ordinary warmups then2 method-specific calibrated calls on held initial state; reset seed and regenerate final bootstrap before taskclock",
+  "unknown_future_padding": false,
+  "prefix_source": "actual clipped actuator history from capture tick to request tick plus known clipped future queue",
+  "normalization": "checkpoint-saved ACTION normalizer; physical and model-space arrays preserved separately",
+  "ros_transport": "actual two-node images and action roundtrip; actuator prefix via bounded local IPC",
+  "gpu_condition": "one resident VLA; camera rendering concurrent; no other policy experiment",
+  "baseline_comparison": "off vsRTC is same new H50/R30 scheduler; originalE10 or native50FIFO results are historical, not matched algorithm controls",
+  "primary_outcomes": [
+    "native_success",
+    "within_wall_budget"
+  ],
+  "secondary_outcomes": [
+    "hold_fraction",
+    "source_age",
+    "actual_vs_predicted_delay",
+    "switch_translation_delta",
+    "switch_rotation_delta",
+    "switch_gripper_delta",
+    "model_and_worker_latency",
+    "peak_cuda_bytes"
+  ],
+  "source_sha256": {
+    "continuity_runtime.py": "efb37b7e3e4d3d29cd6a88194deb4a1bd2b3f5ef44055d473270f699e0ddbff7",
+    "evaluate_continuity.py": "fc7a334632e5bc8811e3cdbc31a6f0f589cfaced9a50280f4dafebd75951d82a",
+    "continuity_worker.py": "3744df92e430e57b3484113301681b8e1ea4a07412611d0749c88c3dc9c051d5"
+  },
+  "registered_at_utc": "2026-11-01T19:38:57.990330+00:00",
+  "series": "host-coordinated clean continuity remeasurement",
+  "supersedes_for_controlled_comparison": "first Smol series remains provisional; no raw records overwritten or pooled",
+  "prior_protocol": {
+    "path": "artifacts/realtime-vla/continuity-protocol.json",
+    "sha256": "af017aae7591ac02fa13a75ae94d8e1c4b18b85243d046e2a9778b5a8bfdff3c"
+  },
+  "resource_deviation_reference": "artifacts/realtime-vla/continuity-smolvla-report/protocol-deviation.json",
+  "amendment": {
+    "process_lifecycle": "one model process per family/variant for ordered states0,1,2,3,4,5; repeated model loading between development/formal is removed",
+    "state_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "formal_states": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "development_states_excluded": [
+      0
+    ],
+    "ordinary_warmup": "two calls once at first state0, as implemented by existing ModelWorker.warmed",
+    "per_state_calibration": "two selected-method calls on held initial state for every state including0",
+    "bootstrap_and_rng": "same per-state model reset/seed and regenerated final first chunk before task clock",
+    "no_adaptive_tuning": "init0 is preflight only; no hyperparameter, model, horizon or timing change may be selected from its outcomes",
+    "failure_rule": "schema/transport/runtime errors stop the run; a completed but unsuccessful task is retained and does not change settings",
+    "analysis_flag": "--allow-development-state0-in-summary; require config/result order0..5, retain0 separately, aggregate1..5 only",
+    "comparison_scope": "compare only this new matched series; never pool the prior provisional results"
+  },
+  "host_gpu_coordination": {
+    "start_gate": "parent grants global GPU lease after other coordinated work sessions report their GPU use finished",
+    "monitoring": "continuous timestamped host GPU utilization, memory and process samples; monitor output path resolved before execution",
+    "unrelated_processes": "read-only inspection only; never stop unrelated user workloads",
+    "verified_exclusive_gpu_claim": "only after runtime monitor and coordination evidence are reviewed"
+  },
+  "planned_output_root": "artifacts/realtime-vla/continuity-clean",
+  "amendment_source_sha256": {
+    "run_continuity_clean_series.sh": "607a5abb9fe9fc439c44f1a2b1b9d4ecf6b0b2dcbbcb03c9cd1f6a73e15185c9",
+    "summarize_continuity.py": "1299030337f64abb5c76f90552ca84b82b12996fa8915dd4d2adcb2f4f6c89e5"
+  }
+}

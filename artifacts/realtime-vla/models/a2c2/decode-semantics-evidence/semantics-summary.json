@@ -1,0 +1,21 @@
+{
+  "head_repository": "k1000dai/rt_libero_spatial_mse",
+  "head_revision": "beaf66dd0fff7b18123ae9dbfe6906235d251981",
+  "head_hf_created_at": "2025-09-20T22:12:42.000Z",
+  "head_hf_last_modified": "2025-09-20T22:12:55.000Z",
+  "head_train_config_explicit_decode_or_source_revision": false,
+  "base_repository": "k1000dai/smolvla_libero_spatial_scratch",
+  "base_revision": "caa0efcb24e261574c824366526c5775d3664cac",
+  "base_hf_created_at": "2025-08-27T02:35:54.000Z",
+  "contemporaneous_eval_base_id_matches": true,
+  "contemporaneous_eval_head_id": "k1000dai/residual_transformer_libero_spatial",
+  "chosen_head_id_is_not_explicitly_named_by_that_eval": true,
+  "direct_source_git_timestamp": "2025-09-20T22:39:55Z",
+  "push_publication_time_verified": false,
+  "head_graph_identical_to_direct_source": true,
+  "direct_source_sha256": "b0fa2cbbc591c6b5ddeae3506ef6e88d1dfee0c8a0b43d4cba8672d3f5575ef3",
+  "direct_train_loss": "MSE(head_output, normalized_target_action)",
+  "direct_inference": "unnormalize(head_output), without adding normalized base action",
+  "residual_inference": "unnormalize(normalized_base_action + head_output)",
+  "certainty": "Direct is a plausible asset interpretation based on contemporaneous code and MSE name; exact checkpoint training-code linkage is not published."
+}

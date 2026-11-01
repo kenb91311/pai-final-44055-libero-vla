@@ -1,0 +1,1124 @@
+{
+  "status": "complete",
+  "results": [
+    {
+      "status": "completed",
+      "error": null,
+      "model": "author-smolvla450m",
+      "variant": "a2c2",
+      "protocol_version": 3,
+      "decode_mode": "direct",
+      "actuation_pipeline_ticks": 1,
+      "mode": "realtime",
+      "init_state_index": 1,
+      "seed": 20261102,
+      "success": false,
+      "success_within_wall_budget": false,
+      "wall_budget_s": 14.0,
+      "wall_seconds": 14.036253876998671,
+      "sim_seconds": 13.9,
+      "realtime_factor": 0.9902927178296518,
+      "control_hz": 20,
+      "ticks": 278,
+      "native_generation_horizon": 50,
+      "execute_steps": 50,
+      "merge": "aligned",
+      "prefetch_steps": 30,
+      "hold_ticks": 35,
+      "hold_fraction": 0.12589928057553956,
+      "expired_prefix_actions": 140,
+      "replaced_actions": 237,
+      "action_origin_counts": {
+        "base_ros_chunk": 64,
+        "base_action_ros_packet": 0,
+        "corrected_ros_packet": 179,
+        "derived_controller_hold": 35
+      },
+      "fallback_base_ticks": 64,
+      "transport_timeout_packets": 3,
+      "late_or_source_rejected_packets": 16,
+      "successful_packets_unused_after_trial": 1,
+      "successful_actuator_packets": 196,
+      "proposal_skipped_busy_ticks": 36,
+      "proposal_skipped_deadline_ticks": 9,
+      "mean_control_interval_s": 0.05049151412636043,
+      "p95_control_interval_s": 0.05301917160250014,
+      "tick_budget_overrun_count": 9,
+      "mean_tick_body_s": 0.025417971010604647,
+      "p95_tick_body_s": 0.043374745150504164,
+      "mean_head_correction_ms": 16.210217865661363,
+      "p95_head_correction_ms": 29.034596602650698,
+      "mean_action_ros_ms": 4.882940326473434,
+      "mean_physics_ms": 12.49313525150035,
+      "mean_base_source_age_s": 0.9991463448854336,
+      "mean_head_camera_age_s": 0.19862390673805033,
+      "mean_current_camera_age_s": 0.16522374394305364,
+      "mean_base_worker_s": 0.5223574377505429,
+      "base_peak_cuda_bytes": 963993600,
+      "head_peak_cuda_bytes": 151277056,
+      "bootstrap_seconds": 0.3259157749998849,
+      "sensor_frames_received": 130,
+      "stale_sensor_ticks": 0,
+      "goal_xy_error_m": 0.12562364843136625,
+      "final_metrics": {
+        "step_wall_seconds": 0.011936296003113966,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.12562364843136625,
+        "bowl_position": [
+          -0.06430681437431066,
+          0.19694192531572619,
+          0.898404150188853
+        ],
+        "plate_position": [
+          0.06130267262633905,
+          0.1950557067066787,
+          0.9024998346667837
+        ],
+        "eef_tracking_error_m": 0.034815946978413226,
+        "actuator_control": [
+          16.528417165048065,
+          9.220288612951537,
+          14.970665881419668,
+          -10.343682995452362,
+          2.2052563246439156,
+          5.674651267643371,
+          0.014146339133315922,
+          0.0,
+          0.0
+        ]
+      },
+      "switches": [
+        {
+          "tick": 26,
+          "translation_delta_l2": 1.7929721230955435,
+          "rotation_delta_l2": 0.11192262834862232,
+          "gripper_delta_abs": 1.9149256944656372
+        },
+        {
+          "tick": 45,
+          "translation_delta_l2": 1.7136324470372462,
+          "rotation_delta_l2": 0.13120239030275033,
+          "gripper_delta_abs": 1.2185866832733154
+        },
+        {
+          "tick": 63,
+          "translation_delta_l2": 1.650816361320301,
+          "rotation_delta_l2": 0.13939173871279484,
+          "gripper_delta_abs": 0.00710982084274292
+        },
+        {
+          "tick": 81,
+          "translation_delta_l2": 0.4937285377056072,
+          "rotation_delta_l2": 0.11426577791144399,
+          "gripper_delta_abs": 0.8650294244289398
+        },
+        {
+          "tick": 158,
+          "translation_delta_l2": 0.9417792649572038,
+          "rotation_delta_l2": 0.11656474267841868,
+          "gripper_delta_abs": 0.00967264175415039
+        },
+        {
+          "tick": 174,
+          "translation_delta_l2": 0.7002197030900755,
+          "rotation_delta_l2": 0.07298986139464976,
+          "gripper_delta_abs": 1.000957302749157
+        },
+        {
+          "tick": 194,
+          "translation_delta_l2": 1.22758056253104,
+          "rotation_delta_l2": 0.11159047310572347,
+          "gripper_delta_abs": 1.0284997075796127
+        },
+        {
+          "tick": 211,
+          "translation_delta_l2": 1.2630140761525823,
+          "rotation_delta_l2": 0.14222476273908785,
+          "gripper_delta_abs": 1.0350334346294403
+        },
+        {
+          "tick": 232,
+          "translation_delta_l2": 0.41000830950725864,
+          "rotation_delta_l2": 0.10176714714606282,
+          "gripper_delta_abs": 0.9587374441325665
+        },
+        {
+          "tick": 248,
+          "translation_delta_l2": 1.127921562490563,
+          "rotation_delta_l2": 0.11865975661639666,
+          "gripper_delta_abs": 0.9928745552897453
+        },
+        {
+          "tick": 266,
+          "translation_delta_l2": 0.5425949973436581,
+          "rotation_delta_l2": 0.07371756847353932,
+          "gripper_delta_abs": 0.9015730321407318
+        }
+      ],
+      "ros_transport": true,
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "input_boundary": "base RGB/state via ROS; head coherent camera IPC; received base or matching received1x7 correction; derived controller hold separately labeled",
+      "hold_boundary": "zero6 plus last applied gripper is executor-derived and is not claimed as a full DDS-received7D command",
+      "video_time_note": "raw video uses simulated tick rate; ticks.jsonl records actual time and realtime_factor"
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "author-smolvla450m",
+      "variant": "a2c2",
+      "protocol_version": 3,
+      "decode_mode": "direct",
+      "actuation_pipeline_ticks": 1,
+      "mode": "realtime",
+      "init_state_index": 2,
+      "seed": 20261102,
+      "success": false,
+      "success_within_wall_budget": false,
+      "wall_budget_s": 14.0,
+      "wall_seconds": 14.031808118998015,
+      "sim_seconds": 13.9,
+      "realtime_factor": 0.9906064765224692,
+      "control_hz": 20,
+      "ticks": 278,
+      "native_generation_horizon": 50,
+      "execute_steps": 50,
+      "merge": "aligned",
+      "prefetch_steps": 30,
+      "hold_ticks": 102,
+      "hold_fraction": 0.3669064748201439,
+      "expired_prefix_actions": 124,
+      "replaced_actions": 166,
+      "action_origin_counts": {
+        "base_ros_chunk": 53,
+        "base_action_ros_packet": 0,
+        "corrected_ros_packet": 123,
+        "derived_controller_hold": 102
+      },
+      "fallback_base_ticks": 53,
+      "transport_timeout_packets": 3,
+      "late_or_source_rejected_packets": 10,
+      "successful_packets_unused_after_trial": 1,
+      "successful_actuator_packets": 134,
+      "proposal_skipped_busy_ticks": 35,
+      "proposal_skipped_deadline_ticks": 6,
+      "mean_control_interval_s": 0.05047341608304202,
+      "p95_control_interval_s": 0.05298341540474212,
+      "tick_budget_overrun_count": 6,
+      "mean_tick_body_s": 0.020529505122291125,
+      "p95_tick_body_s": 0.040821869206774865,
+      "mean_head_correction_ms": 15.961223888215837,
+      "p95_head_correction_ms": 29.10354950072361,
+      "mean_action_ros_ms": 5.188629619285043,
+      "mean_physics_ms": 11.615998755587498,
+      "mean_base_source_age_s": 1.0805480766068534,
+      "mean_head_camera_age_s": 0.2181881789342364,
+      "mean_current_camera_age_s": 0.1703864392335202,
+      "mean_base_worker_s": 0.9647670452242083,
+      "base_peak_cuda_bytes": 963993600,
+      "head_peak_cuda_bytes": 151277056,
+      "bootstrap_seconds": 0.389349889002915,
+      "sensor_frames_received": 130,
+      "stale_sensor_ticks": 0,
+      "goal_xy_error_m": 0.21550329052246167,
+      "final_metrics": {
+        "step_wall_seconds": 0.020031107997056097,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.21550329052246167,
+        "bowl_position": [
+          -0.1314018420067366,
+          0.13708347883489105,
+          0.914916741889681
+        ],
+        "plate_position": [
+          0.06919694308013055,
+          0.21583495912371742,
+          0.9115814373773958
+        ],
+        "eef_tracking_error_m": 0.04232465061038609,
+        "actuator_control": [
+          80.0,
+          -80.0,
+          22.14346163988814,
+          -80.0,
+          -5.6482812896175165,
+          12.0,
+          -4.284892063583185,
+          0.00999999999999998,
+          -0.00999999999999998
+        ]
+      },
+      "switches": [
+        {
+          "tick": 26,
+          "translation_delta_l2": 0.7104984475891243,
+          "rotation_delta_l2": 0.07636090423709649,
+          "gripper_delta_abs": 0.8249811381101608
+        },
+        {
+          "tick": 169,
+          "translation_delta_l2": 1.0012587459825788,
+          "rotation_delta_l2": 0.04533337802368025,
+          "gripper_delta_abs": 0.02150905132293701
+        },
+        {
+          "tick": 184,
+          "translation_delta_l2": 1.2058923139452689,
+          "rotation_delta_l2": 0.08378137355771682,
+          "gripper_delta_abs": 0.8266733288764954
+        },
+        {
+          "tick": 201,
+          "translation_delta_l2": 1.1012421274721245,
+          "rotation_delta_l2": 0.16378448538464963,
+          "gripper_delta_abs": 0.09546363353729248
+        },
+        {
+          "tick": 218,
+          "translation_delta_l2": 0.8381125062985346,
+          "rotation_delta_l2": 0.054720182910695005,
+          "gripper_delta_abs": 0.0827285647392273
+        },
+        {
+          "tick": 237,
+          "translation_delta_l2": 1.0990091248304323,
+          "rotation_delta_l2": 0.100871370150935,
+          "gripper_delta_abs": 0.8641297370195389
+        },
+        {
+          "tick": 254,
+          "translation_delta_l2": 1.6356313467373174,
+          "rotation_delta_l2": 0.1401927136327243,
+          "gripper_delta_abs": 0.0
+        },
+        {
+          "tick": 271,
+          "translation_delta_l2": 1.3726560578582911,
+          "rotation_delta_l2": 0.13587310920672546,
+          "gripper_delta_abs": 0.8173274993896484
+        }
+      ],
+      "ros_transport": true,
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "input_boundary": "base RGB/state via ROS; head coherent camera IPC; received base or matching received1x7 correction; derived controller hold separately labeled",
+      "hold_boundary": "zero6 plus last applied gripper is executor-derived and is not claimed as a full DDS-received7D command",
+      "video_time_note": "raw video uses simulated tick rate; ticks.jsonl records actual time and realtime_factor"
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "author-smolvla450m",
+      "variant": "a2c2",
+      "protocol_version": 3,
+      "decode_mode": "direct",
+      "actuation_pipeline_ticks": 1,
+      "mode": "realtime",
+      "init_state_index": 3,
+      "seed": 20261102,
+      "success": false,
+      "success_within_wall_budget": false,
+      "wall_budget_s": 14.0,
+      "wall_seconds": 14.049698558003001,
+      "sim_seconds": 13.850000000000001,
+      "realtime_factor": 0.985786274546848,
+      "control_hz": 20,
+      "ticks": 277,
+      "native_generation_horizon": 50,
+      "execute_steps": 50,
+      "merge": "aligned",
+      "prefetch_steps": 30,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "expired_prefix_actions": 114,
+      "replaced_actions": 307,
+      "action_origin_counts": {
+        "base_ros_chunk": 52,
+        "base_action_ros_packet": 0,
+        "corrected_ros_packet": 225,
+        "derived_controller_hold": 0
+      },
+      "fallback_base_ticks": 52,
+      "transport_timeout_packets": 2,
+      "late_or_source_rejected_packets": 16,
+      "successful_packets_unused_after_trial": 0,
+      "successful_actuator_packets": 241,
+      "proposal_skipped_busy_ticks": 24,
+      "proposal_skipped_deadline_ticks": 10,
+      "mean_control_interval_s": 0.05072248419202114,
+      "p95_control_interval_s": 0.05263489549906808,
+      "tick_budget_overrun_count": 10,
+      "mean_tick_body_s": 0.027780078397097153,
+      "p95_tick_body_s": 0.04152374819968827,
+      "mean_head_correction_ms": 16.40913556943617,
+      "p95_head_correction_ms": 28.060688196273976,
+      "mean_action_ros_ms": 4.980716896027228,
+      "mean_physics_ms": 11.880185682450957,
+      "mean_base_source_age_s": 1.005694161313647,
+      "mean_head_camera_age_s": 0.2245135733954117,
+      "mean_current_camera_age_s": 0.1835721531334007,
+      "mean_base_worker_s": 0.49999171764284256,
+      "base_peak_cuda_bytes": 963993600,
+      "head_peak_cuda_bytes": 151277056,
+      "bootstrap_seconds": 0.37309975500102155,
+      "sensor_frames_received": 125,
+      "stale_sensor_ticks": 0,
+      "goal_xy_error_m": 0.11179689279436356,
+      "final_metrics": {
+        "step_wall_seconds": 0.012076568993506953,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.11179689279436356,
+        "bowl_position": [
+          -0.04757106892255686,
+          0.201092885863956,
+          0.8984537147100337
+        ],
+        "plate_position": [
+          0.06402130086698549,
+          0.19433357796828682,
+          0.9024984896779827
+        ],
+        "eef_tracking_error_m": 0.021863612007964224,
+        "actuator_control": [
+          0.4862818545521795,
+          -36.62266272352596,
+          9.557029532086679,
+          11.845278322077316,
+          0.8771458337914244,
+          -0.08701688379232325,
+          0.04420699312038362,
+          0.0,
+          0.0
+        ]
+      },
+      "switches": [
+        {
+          "tick": 27,
+          "translation_delta_l2": 1.6240305591949706,
+          "rotation_delta_l2": 0.08362556797252861,
+          "gripper_delta_abs": 1.9352686405181885
+        },
+        {
+          "tick": 43,
+          "translation_delta_l2": 0.41078777832903157,
+          "rotation_delta_l2": 0.07524094839205803,
+          "gripper_delta_abs": 0.8638756722211838
+        },
+        {
+          "tick": 61,
+          "translation_delta_l2": 0.44505138074573447,
+          "rotation_delta_l2": 0.05914481093691813,
+          "gripper_delta_abs": 0.877601221203804
+        },
+        {
+          "tick": 79,
+          "translation_delta_l2": 0.6458259125870436,
+          "rotation_delta_l2": 0.0640459523801817,
+          "gripper_delta_abs": 0.8902813419699669
+        },
+        {
+          "tick": 96,
+          "translation_delta_l2": 1.0012550790721895,
+          "rotation_delta_l2": 0.08989848866042285,
+          "gripper_delta_abs": 0.9128074795007706
+        },
+        {
+          "tick": 115,
+          "translation_delta_l2": 0.6234521468211803,
+          "rotation_delta_l2": 0.0575998160038355,
+          "gripper_delta_abs": 1.7885521054267883
+        },
+        {
+          "tick": 131,
+          "translation_delta_l2": 0.8588674317181854,
+          "rotation_delta_l2": 0.13987944142396505,
+          "gripper_delta_abs": 0.06091141700744629
+        },
+        {
+          "tick": 149,
+          "translation_delta_l2": 1.3772028622996124,
+          "rotation_delta_l2": 0.11248458171790413,
+          "gripper_delta_abs": 1.864949882030487
+        },
+        {
+          "tick": 166,
+          "translation_delta_l2": 0.40984819721906457,
+          "rotation_delta_l2": 0.07633916523003868,
+          "gripper_delta_abs": 0.0252838134765625
+        },
+        {
+          "tick": 182,
+          "translation_delta_l2": 1.1495052389251126,
+          "rotation_delta_l2": 0.12251168770690801,
+          "gripper_delta_abs": 0.038831472396850586
+        },
+        {
+          "tick": 203,
+          "translation_delta_l2": 0.5406627094333971,
+          "rotation_delta_l2": 0.08465359415472576,
+          "gripper_delta_abs": 1.8477156162261963
+        },
+        {
+          "tick": 219,
+          "translation_delta_l2": 1.2485136171779054,
+          "rotation_delta_l2": 0.11678776039752763,
+          "gripper_delta_abs": 0.017858028411865234
+        },
+        {
+          "tick": 238,
+          "translation_delta_l2": 0.8427380562321974,
+          "rotation_delta_l2": 0.07620219204747192,
+          "gripper_delta_abs": 1.2669221758842468
+        }
+      ],
+      "ros_transport": true,
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "input_boundary": "base RGB/state via ROS; head coherent camera IPC; received base or matching received1x7 correction; derived controller hold separately labeled",
+      "hold_boundary": "zero6 plus last applied gripper is executor-derived and is not claimed as a full DDS-received7D command",
+      "video_time_note": "raw video uses simulated tick rate; ticks.jsonl records actual time and realtime_factor"
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "author-smolvla450m",
+      "variant": "a2c2",
+      "protocol_version": 3,
+      "decode_mode": "direct",
+      "actuation_pipeline_ticks": 1,
+      "mode": "realtime",
+      "init_state_index": 4,
+      "seed": 20261102,
+      "success": false,
+      "success_within_wall_budget": false,
+      "wall_budget_s": 14.0,
+      "wall_seconds": 14.07612267499644,
+      "sim_seconds": 13.8,
+      "realtime_factor": 0.9803836126345418,
+      "control_hz": 20,
+      "ticks": 276,
+      "native_generation_horizon": 50,
+      "execute_steps": 50,
+      "merge": "aligned",
+      "prefetch_steps": 30,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "expired_prefix_actions": 118,
+      "replaced_actions": 332,
+      "action_origin_counts": {
+        "base_ros_chunk": 45,
+        "base_action_ros_packet": 0,
+        "corrected_ros_packet": 231,
+        "derived_controller_hold": 0
+      },
+      "fallback_base_ticks": 45,
+      "transport_timeout_packets": 0,
+      "late_or_source_rejected_packets": 24,
+      "successful_packets_unused_after_trial": 0,
+      "successful_actuator_packets": 255,
+      "proposal_skipped_busy_ticks": 10,
+      "proposal_skipped_deadline_ticks": 11,
+      "mean_control_interval_s": 0.050896095425440845,
+      "p95_control_interval_s": 0.053047278201847806,
+      "tick_budget_overrun_count": 11,
+      "mean_tick_body_s": 0.029832750949092282,
+      "p95_tick_body_s": 0.04487605474969314,
+      "mean_head_correction_ms": 16.44293716168263,
+      "p95_head_correction_ms": 29.024481249507517,
+      "mean_action_ros_ms": 4.867071337346216,
+      "mean_physics_ms": 13.047001988867862,
+      "mean_base_source_age_s": 1.149228721652316,
+      "mean_head_camera_age_s": 0.23137046206930628,
+      "mean_current_camera_age_s": 0.20809651581884533,
+      "mean_base_worker_s": 0.30488643886734884,
+      "base_peak_cuda_bytes": 963993600,
+      "head_peak_cuda_bytes": 151277056,
+      "bootstrap_seconds": 2.710880257000099,
+      "sensor_frames_received": 126,
+      "stale_sensor_ticks": 0,
+      "goal_xy_error_m": 0.14660279183168326,
+      "final_metrics": {
+        "step_wall_seconds": 0.05871020799531834,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.14660279183168326,
+        "bowl_position": [
+          -0.026897403379943723,
+          0.016418325589603155,
+          0.902386776307502
+        ],
+        "plate_position": [
+          0.06490991965960057,
+          0.13071528096968585,
+          0.9030457126025415
+        ],
+        "eef_tracking_error_m": 0.04571074827985165,
+        "actuator_control": [
+          80.0,
+          80.0,
+          28.54542289532174,
+          -80.0,
+          -80.0,
+          -12.0,
+          12.0,
+          0.0,
+          0.0
+        ]
+      },
+      "switches": [
+        {
+          "tick": 27,
+          "translation_delta_l2": 1.5859407831567505,
+          "rotation_delta_l2": 0.08714525008269836,
+          "gripper_delta_abs": 1.9301204681396484
+        },
+        {
+          "tick": 44,
+          "translation_delta_l2": 1.6462719933462737,
+          "rotation_delta_l2": 0.05543151871937111,
+          "gripper_delta_abs": 0.009462356567382812
+        },
+        {
+          "tick": 63,
+          "translation_delta_l2": 1.6112363486644143,
+          "rotation_delta_l2": 0.07246288134002668,
+          "gripper_delta_abs": 0.17069590091705322
+        },
+        {
+          "tick": 81,
+          "translation_delta_l2": 1.3922742311921465,
+          "rotation_delta_l2": 0.11805228257539034,
+          "gripper_delta_abs": 0.7353213876485825
+        },
+        {
+          "tick": 98,
+          "translation_delta_l2": 1.0500894570594614,
+          "rotation_delta_l2": 0.035406936148086716,
+          "gripper_delta_abs": 0.02217566967010498
+        },
+        {
+          "tick": 119,
+          "translation_delta_l2": 0.8637714191365505,
+          "rotation_delta_l2": 0.12069130478260488,
+          "gripper_delta_abs": 0.8591737151145935
+        },
+        {
+          "tick": 135,
+          "translation_delta_l2": 0.7847834842914634,
+          "rotation_delta_l2": 0.0787541434686252,
+          "gripper_delta_abs": 0.04682755470275879
+        },
+        {
+          "tick": 153,
+          "translation_delta_l2": 0.488735317923865,
+          "rotation_delta_l2": 0.16320856190125868,
+          "gripper_delta_abs": 0.025963783264160156
+        },
+        {
+          "tick": 173,
+          "translation_delta_l2": 0.6609213369971009,
+          "rotation_delta_l2": 0.2594509185516436,
+          "gripper_delta_abs": 1.0567114874720573
+        },
+        {
+          "tick": 189,
+          "translation_delta_l2": 1.047874424010281,
+          "rotation_delta_l2": 0.22650727969914752,
+          "gripper_delta_abs": 0.8869903832674026
+        },
+        {
+          "tick": 207,
+          "translation_delta_l2": 0.6383315006112077,
+          "rotation_delta_l2": 0.2698915799895219,
+          "gripper_delta_abs": 0.9250703155994415
+        },
+        {
+          "tick": 224,
+          "translation_delta_l2": 0.24021705112377156,
+          "rotation_delta_l2": 0.13351522166265525,
+          "gripper_delta_abs": 0.01016312837600708
+        },
+        {
+          "tick": 239,
+          "translation_delta_l2": 0.828753609427944,
+          "rotation_delta_l2": 0.22461956188262527,
+          "gripper_delta_abs": 0.8752227500081062
+        },
+        {
+          "tick": 259,
+          "translation_delta_l2": 0.14303620369205514,
+          "rotation_delta_l2": 0.08122878035587759,
+          "gripper_delta_abs": 0.0003440380096435547
+        }
+      ],
+      "ros_transport": true,
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "input_boundary": "base RGB/state via ROS; head coherent camera IPC; received base or matching received1x7 correction; derived controller hold separately labeled",
+      "hold_boundary": "zero6 plus last applied gripper is executor-derived and is not claimed as a full DDS-received7D command",
+      "video_time_note": "raw video uses simulated tick rate; ticks.jsonl records actual time and realtime_factor"
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "author-smolvla450m",
+      "variant": "a2c2",
+      "protocol_version": 3,
+      "decode_mode": "direct",
+      "actuation_pipeline_ticks": 1,
+      "mode": "realtime",
+      "init_state_index": 5,
+      "seed": 20261102,
+      "success": false,
+      "success_within_wall_budget": false,
+      "wall_budget_s": 14.0,
+      "wall_seconds": 14.012329547003901,
+      "sim_seconds": 13.700000000000001,
+      "realtime_factor": 0.97771037671101,
+      "control_hz": 20,
+      "ticks": 274,
+      "native_generation_horizon": 50,
+      "execute_steps": 50,
+      "merge": "aligned",
+      "prefetch_steps": 30,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "expired_prefix_actions": 115,
+      "replaced_actions": 335,
+      "action_origin_counts": {
+        "base_ros_chunk": 35,
+        "base_action_ros_packet": 0,
+        "corrected_ros_packet": 239,
+        "derived_controller_hold": 0
+      },
+      "fallback_base_ticks": 35,
+      "transport_timeout_packets": 0,
+      "late_or_source_rejected_packets": 17,
+      "successful_packets_unused_after_trial": 1,
+      "successful_actuator_packets": 257,
+      "proposal_skipped_busy_ticks": 5,
+      "proposal_skipped_deadline_ticks": 12,
+      "mean_control_interval_s": 0.05114600190109997,
+      "p95_control_interval_s": 0.05345556499523809,
+      "tick_budget_overrun_count": 12,
+      "mean_tick_body_s": 0.029797424956053423,
+      "p95_tick_body_s": 0.04611817510194658,
+      "mean_head_correction_ms": 16.520396081760367,
+      "p95_head_correction_ms": 29.454789002193138,
+      "mean_action_ros_ms": 4.996446591360514,
+      "mean_physics_ms": 12.609894821113555,
+      "mean_base_source_age_s": 0.9159647791451935,
+      "mean_head_camera_age_s": 0.21037600302510914,
+      "mean_current_camera_age_s": 0.17938330137584785,
+      "mean_base_worker_s": 0.3047762768653532,
+      "base_peak_cuda_bytes": 963993600,
+      "head_peak_cuda_bytes": 151277056,
+      "bootstrap_seconds": 0.39839686400227947,
+      "sensor_frames_received": 126,
+      "stale_sensor_ticks": 0,
+      "goal_xy_error_m": 0.1295355698263956,
+      "final_metrics": {
+        "step_wall_seconds": 0.010553517000516877,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.1295355698263956,
+        "bowl_position": [
+          -0.05857712642611212,
+          0.21422948990020166,
+          0.898404150188853
+        ],
+        "plate_position": [
+          0.07041822062713324,
+          0.20241152523356826,
+          0.9024998346667837
+        ],
+        "eef_tracking_error_m": 0.028007600849111802,
+        "actuator_control": [
+          -80.0,
+          16.6010455991402,
+          -76.36954705864294,
+          28.622856002242973,
+          -38.350483537809176,
+          12.0,
+          2.1587572023253703,
+          0.0,
+          0.0
+        ]
+      },
+      "switches": [
+        {
+          "tick": 27,
+          "translation_delta_l2": 0.7200494305600563,
+          "rotation_delta_l2": 0.09159987809726507,
+          "gripper_delta_abs": 0.7022970169782639
+        },
+        {
+          "tick": 45,
+          "translation_delta_l2": 1.6553434438234507,
+          "rotation_delta_l2": 0.10767385818694472,
+          "gripper_delta_abs": 1.8781861662864685
+        },
+        {
+          "tick": 63,
+          "translation_delta_l2": 0.6832234893331002,
+          "rotation_delta_l2": 0.16321344999444864,
+          "gripper_delta_abs": 0.34047847986221313
+        },
+        {
+          "tick": 80,
+          "translation_delta_l2": 0.7213808115077255,
+          "rotation_delta_l2": 0.14065060630445955,
+          "gripper_delta_abs": 0.7211824357509613
+        },
+        {
+          "tick": 99,
+          "translation_delta_l2": 1.0845802434793754,
+          "rotation_delta_l2": 0.17102607006067425,
+          "gripper_delta_abs": 0.7141976654529572
+        },
+        {
+          "tick": 116,
+          "translation_delta_l2": 1.2522575538026655,
+          "rotation_delta_l2": 0.16099216741964606,
+          "gripper_delta_abs": 0.38549351692199707
+        },
+        {
+          "tick": 134,
+          "translation_delta_l2": 1.2621559224560528,
+          "rotation_delta_l2": 0.18312826414925545,
+          "gripper_delta_abs": 0.7776242941617966
+        },
+        {
+          "tick": 152,
+          "translation_delta_l2": 1.6078985350907562,
+          "rotation_delta_l2": 0.28102258734893626,
+          "gripper_delta_abs": 0.01270933449268341
+        },
+        {
+          "tick": 169,
+          "translation_delta_l2": 1.363331165774862,
+          "rotation_delta_l2": 0.21147700633016817,
+          "gripper_delta_abs": 0.6658312007784843
+        },
+        {
+          "tick": 184,
+          "translation_delta_l2": 1.5739569745039803,
+          "rotation_delta_l2": 0.10812859629156656,
+          "gripper_delta_abs": 1.8185149431228638
+        },
+        {
+          "tick": 204,
+          "translation_delta_l2": 1.052046303450557,
+          "rotation_delta_l2": 0.13193371483942015,
+          "gripper_delta_abs": 0.8211989179253578
+        },
+        {
+          "tick": 220,
+          "translation_delta_l2": 1.4825429854717687,
+          "rotation_delta_l2": 0.07973508051261785,
+          "gripper_delta_abs": 0.2150077223777771
+        },
+        {
+          "tick": 238,
+          "translation_delta_l2": 1.3951054530081788,
+          "rotation_delta_l2": 0.09366641640138879,
+          "gripper_delta_abs": 0.08945637941360474
+        },
+        {
+          "tick": 256,
+          "translation_delta_l2": 1.541815331190693,
+          "rotation_delta_l2": 0.1426356879631846,
+          "gripper_delta_abs": 0.09604823589324951
+        }
+      ],
+      "ros_transport": true,
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "input_boundary": "base RGB/state via ROS; head coherent camera IPC; received base or matching received1x7 correction; derived controller hold separately labeled",
+      "hold_boundary": "zero6 plus last applied gripper is executor-derived and is not claimed as a full DDS-received7D command",
+      "video_time_note": "raw video uses simulated tick rate; ticks.jsonl records actual time and realtime_factor"
+    }
+  ],
+  "base_audit": {
+    "method": "A2C2 candidate reproduction",
+    "base_model": "k1000dai/smolvla_libero_spatial_scratch",
+    "base_revision": "caa0efcb24e261574c824366526c5775d3664cac",
+    "head_model": "k1000dai/rt_libero_spatial_mse",
+    "head_revision": "beaf66dd0fff7b18123ae9dbfe6906235d251981",
+    "upstream_revision": "75fa9d202fb74150bdbc54ab182c2773f3ed5600",
+    "base_parameter_count": 450046176,
+    "head_parameter_count": 0,
+    "load_base": true,
+    "load_head": false,
+    "chunk_size": 50,
+    "action_dim": 7,
+    "hidden_dim": 960,
+    "local_training": false,
+    "base_amp": false,
+    "head_amp": false,
+    "decode_mode": "residual",
+    "head_decode_reference_revision": "75fa9d202fb74150bdbc54ab182c2773f3ed5600",
+    "head_output_semantics": null,
+    "base_restoration": {
+      "all_stored_tensors_match": true,
+      "tensors": 500,
+      "stored_elements": 450046176,
+      "missing_keys_are_tied_aliases": []
+    },
+    "head_restoration": null,
+    "pair_guarantee": "Author base ID is explicit in source; exact head/base SHA linkage not stated.",
+    "weights_before": "0bba47dbff167788b65108594f57d2932e285a0355b8e6a00259801a42119e23",
+    "weights_after": "0bba47dbff167788b65108594f57d2932e285a0355b8e6a00259801a42119e23",
+    "weights_unchanged": true,
+    "generation_calls": 16,
+    "correction_calls": 0,
+    "requires_grad_parameter_count": 0,
+    "parameters_with_grad": 0
+  },
+  "head_audit": {
+    "method": "A2C2 candidate reproduction",
+    "base_model": "k1000dai/smolvla_libero_spatial_scratch",
+    "base_revision": "caa0efcb24e261574c824366526c5775d3664cac",
+    "head_model": "k1000dai/rt_libero_spatial_mse",
+    "head_revision": "beaf66dd0fff7b18123ae9dbfe6906235d251981",
+    "upstream_revision": "75fa9d202fb74150bdbc54ab182c2773f3ed5600",
+    "base_parameter_count": 0,
+    "head_parameter_count": 30851783,
+    "load_base": false,
+    "load_head": true,
+    "chunk_size": 50,
+    "action_dim": 7,
+    "hidden_dim": 960,
+    "local_training": false,
+    "base_amp": false,
+    "head_amp": false,
+    "decode_mode": "direct",
+    "head_decode_reference_revision": "f7b17e25871ecdf20cbd5a56bcffad31d3a7289a",
+    "head_output_semantics": "normalized_action",
+    "base_restoration": null,
+    "head_restoration": {
+      "all_stored_tensors_match": true,
+      "tensors": 188,
+      "stored_elements": 30870983,
+      "missing_keys_are_tied_aliases": []
+    },
+    "pair_guarantee": "Author base ID is explicit in source; exact head/base SHA linkage not stated.",
+    "weights_before": "f1d7999a384ddc17f4c44170f4b0e8e54b84113e1c7609099de98d6952900031",
+    "weights_after": "f1d7999a384ddc17f4c44170f4b0e8e54b84113e1c7609099de98d6952900031",
+    "weights_unchanged": true,
+    "generation_calls": 0,
+    "correction_calls": 269,
+    "requires_grad_parameter_count": 0,
+    "parameters_with_grad": 0
+  },
+  "worker_ready": {
+    "kind": "ready",
+    "startup_seconds": 13.949574563004717,
+    "metadata": {
+      "method": "A2C2 candidate reproduction",
+      "base_model": "k1000dai/smolvla_libero_spatial_scratch",
+      "base_revision": "caa0efcb24e261574c824366526c5775d3664cac",
+      "head_model": "k1000dai/rt_libero_spatial_mse",
+      "head_revision": "beaf66dd0fff7b18123ae9dbfe6906235d251981",
+      "upstream_revision": "75fa9d202fb74150bdbc54ab182c2773f3ed5600",
+      "base_parameter_count": 450046176,
+      "head_parameter_count": 0,
+      "load_base": true,
+      "load_head": false,
+      "chunk_size": 50,
+      "action_dim": 7,
+      "hidden_dim": 960,
+      "local_training": false,
+      "base_amp": false,
+      "head_amp": false,
+      "decode_mode": "residual",
+      "head_decode_reference_revision": "75fa9d202fb74150bdbc54ab182c2773f3ed5600",
+      "head_output_semantics": null,
+      "base_restoration": {
+        "all_stored_tensors_match": true,
+        "tensors": 500,
+        "stored_elements": 450046176,
+        "missing_keys_are_tied_aliases": []
+      },
+      "head_restoration": null,
+      "pair_guarantee": "Author base ID is explicit in source; exact head/base SHA linkage not stated."
+    }
+  },
+  "actuator_ready": {
+    "kind": "ready",
+    "cpu_only": true,
+    "torch_imported": false
+  },
+  "warmup_records": [
+    {
+      "metadata": {
+        "inference_ms": 1031.6272159980144,
+        "chunk_length": 50,
+        "generation": 1,
+        "method": "author SmolVLA base for A2C2",
+        "local_training": false,
+        "sensor_transport": {
+          "component_sha256": {
+            "agentview_image": "981f9d1c867a13621cda428bdf129fd35dc4c1d6847429357e95e05a4491b04c",
+            "proprio_prompt": "1c7674b5a3bd69cc161679c58b24f19f4984a00ab52263a8015fadc29bd8b33f",
+            "robot0_eye_in_hand_image": "deb64a7593a9bd7e7303b86051531b41dc61c9d7bcf9892b41c342377f6148c1"
+          },
+          "id": "6553545ff2ad47fb97f119ac23003c76",
+          "nodes": [
+            "realtime_sensor_bridge",
+            "realtime_policy_transport"
+          ],
+          "ok": true,
+          "peer_received_sha256": "f3cd2b1080d31c28746495d089ab1446ce0c2f6605176ef8436113d8937abaa7",
+          "received_sha256": "f3cd2b1080d31c28746495d089ab1446ce0c2f6605176ef8436113d8937abaa7",
+          "request_id": "a2c2-base-900ada81311e-query-2",
+          "ros_roundtrip_seconds": 0.00551235400052974,
+          "source_sha256": "f3cd2b1080d31c28746495d089ab1446ce0c2f6605176ef8436113d8937abaa7",
+          "topics": [
+            "/realtime/agentview_image",
+            "/realtime/robot0_eye_in_hand_image",
+            "/realtime/sensor_metadata",
+            "/realtime/chunk_generated"
+          ],
+          "verified": true,
+          "transport_id": "6553545ff2ad47fb97f119ac23003c76",
+          "rpc_wall_seconds": 0.018851262000680435
+        },
+        "action_transport": {
+          "component_sha256": {},
+          "id": "0b02bb34000449089d9c354170a837f2",
+          "nodes": [
+            "realtime_sensor_bridge",
+            "realtime_policy_transport"
+          ],
+          "ok": true,
+          "peer_received_sha256": "4767aef6fdf76f3eb1f8f4319388b6a3f6c6baa2635848ddaa67c881f9b7aeae",
+          "received_sha256": "4767aef6fdf76f3eb1f8f4319388b6a3f6c6baa2635848ddaa67c881f9b7aeae",
+          "request_id": "a2c2-base-900ada81311e-query-2",
+          "ros_roundtrip_seconds": 0.00128029099869309,
+          "source_sha256": "4767aef6fdf76f3eb1f8f4319388b6a3f6c6baa2635848ddaa67c881f9b7aeae",
+          "topics": [
+            "/realtime/agentview_image",
+            "/realtime/robot0_eye_in_hand_image",
+            "/realtime/sensor_metadata",
+            "/realtime/chunk_generated"
+          ],
+          "verified": true,
+          "transport_id": "0b02bb34000449089d9c354170a837f2",
+          "rpc_wall_seconds": 0.004531431004579645
+        },
+        "peak_cuda_bytes": 963993600,
+        "allocated_cuda_bytes": 934761984,
+        "reserved_cuda_bytes": 1000341504
+      },
+      "worker_wall_s": 1.0563211539993063,
+      "head_warmup": [
+        {
+          "correction_ms": 351.22625199437607,
+          "source_generation": 1,
+          "source_action_index": 0,
+          "decode_mode": "direct",
+          "correction_l2": 1.1286828517913818
+        },
+        {
+          "correction_ms": 12.684644003456924,
+          "source_generation": 1,
+          "source_action_index": 0,
+          "decode_mode": "direct",
+          "correction_l2": 1.1286828517913818
+        },
+        {
+          "correction_ms": 11.528628994710743,
+          "source_generation": 1,
+          "source_action_index": 0,
+          "decode_mode": "direct",
+          "correction_l2": 1.1286828517913818
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "inference_ms": 289.70018399559194,
+        "chunk_length": 50,
+        "generation": 1,
+        "method": "author SmolVLA base for A2C2",
+        "local_training": false,
+        "sensor_transport": {
+          "component_sha256": {
+            "agentview_image": "981f9d1c867a13621cda428bdf129fd35dc4c1d6847429357e95e05a4491b04c",
+            "proprio_prompt": "1c7674b5a3bd69cc161679c58b24f19f4984a00ab52263a8015fadc29bd8b33f",
+            "robot0_eye_in_hand_image": "deb64a7593a9bd7e7303b86051531b41dc61c9d7bcf9892b41c342377f6148c1"
+          },
+          "id": "bb416c3c9a564f5ea0f598ce3bf5f88a",
+          "nodes": [
+            "realtime_sensor_bridge",
+            "realtime_policy_transport"
+          ],
+          "ok": true,
+          "peer_received_sha256": "f3cd2b1080d31c28746495d089ab1446ce0c2f6605176ef8436113d8937abaa7",
+          "received_sha256": "f3cd2b1080d31c28746495d089ab1446ce0c2f6605176ef8436113d8937abaa7",
+          "request_id": "a2c2-base-900ada81311e-query-4",
+          "ros_roundtrip_seconds": 0.005741269997088239,
+          "source_sha256": "f3cd2b1080d31c28746495d089ab1446ce0c2f6605176ef8436113d8937abaa7",
+          "topics": [
+            "/realtime/agentview_image",
+            "/realtime/robot0_eye_in_hand_image",
+            "/realtime/sensor_metadata",
+            "/realtime/chunk_generated"
+          ],
+          "verified": true,
+          "transport_id": "bb416c3c9a564f5ea0f598ce3bf5f88a",
+          "rpc_wall_seconds": 0.02071271500608418
+        },
+        "action_transport": {
+          "component_sha256": {},
+          "id": "73b0e5f3601d4e20a97ed95f2e3207b3",
+          "nodes": [
+            "realtime_sensor_bridge",
+            "realtime_policy_transport"
+          ],
+          "ok": true,
+          "peer_received_sha256": "4767aef6fdf76f3eb1f8f4319388b6a3f6c6baa2635848ddaa67c881f9b7aeae",
+          "received_sha256": "4767aef6fdf76f3eb1f8f4319388b6a3f6c6baa2635848ddaa67c881f9b7aeae",
+          "request_id": "a2c2-base-900ada81311e-query-4",
+          "ros_roundtrip_seconds": 0.001348885998595506,
+          "source_sha256": "4767aef6fdf76f3eb1f8f4319388b6a3f6c6baa2635848ddaa67c881f9b7aeae",
+          "topics": [
+            "/realtime/agentview_image",
+            "/realtime/robot0_eye_in_hand_image",
+            "/realtime/sensor_metadata",
+            "/realtime/chunk_generated"
+          ],
+          "verified": true,
+          "transport_id": "73b0e5f3601d4e20a97ed95f2e3207b3",
+          "rpc_wall_seconds": 0.005241761995421257
+        },
+        "peak_cuda_bytes": 963993600,
+        "allocated_cuda_bytes": 934761984,
+        "reserved_cuda_bytes": 1000341504
+      },
+      "worker_wall_s": 0.3170246540030348,
+      "head_warmup": [
+        {
+          "correction_ms": 15.878523998253513,
+          "source_generation": 1,
+          "source_action_index": 0,
+          "decode_mode": "direct",
+          "correction_l2": 1.1286828517913818
+        },
+        {
+          "correction_ms": 13.449336001940537,
+          "source_generation": 1,
+          "source_action_index": 0,
+          "decode_mode": "direct",
+          "correction_l2": 1.1286828517913818
+        },
+        {
+          "correction_ms": 9.556658995279577,
+          "source_generation": 1,
+          "source_action_index": 0,
+          "decode_mode": "direct",
+          "correction_l2": 1.1286828517913818
+        }
+      ]
+    }
+  ]
+}

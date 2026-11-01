@@ -39,7 +39,7 @@ SmolVLAの生成長50とπ0-FASTの生成長10は一致しない。共通E10比�
 
 SmolVLAのParameter数は、実際にロードした `sum(p.numel() for p in runtime.policy.parameters())` の保存結果。π0-FASTは同じ公式constructorを**meta device**で構築し、同じ `.parameters()` 集計を追加確認した。全Parameterのdeviceは `meta`、重み用ストレージの確保・GPU起動・推論は行っていない。π0-FASTは `lm_head.weight` と入力embeddingを共有せず、aliasを含めた集計、`state_dict()`、checkpoint保存要素数も3,449,982,704で一致した。凍結によるtrainable Parameter数0と、モデルの全Parameter数を区別する。
 
-単発smokeは**実シミュレータの固定観測に対する3回の推論**である。ROS往復・連続物理制御・タスク成功率を含めず、2回のwarm値からp95等を推定しない。SmolVLAは[実測JSON](../../artifacts/realtime-vla/smolvla-api-smoke-b/result.json)、π0-FASTは[実測JSON](../../artifacts/realtime-vla/models/pi0fast/gpu-smoke.json)に保存した。両モデルとも実行前後の全登録重みSHA256が一致した。RTX5080 16GBには**1モデルずつ**ロードして検証した。
+単発smokeは**実シミュレータの固定観測に対する3回の推論**である。ROS往復・連続シミュレータ内の制御・タスク成功率を含めず、2回のwarm値からp95等を推定しない。SmolVLAは[実測JSON](../../artifacts/realtime-vla/smolvla-api-smoke-b/result.json)、π0-FASTは[実測JSON](../../artifacts/realtime-vla/models/pi0fast/gpu-smoke.json)に保存した。両モデルとも実行前後の全登録重みSHA256が一致した。RTX5080 16GBには**1モデルずつ**ロードして検証した。
 
 ### 重みファイルのSHA256
 
@@ -61,8 +61,8 @@ SmolVLAのParameter数は、実際にロードした `sum(p.numel() for p in run
 | モデル側state | 公式 `LiberoProcessorStep` がquaternionをaxis-angleへ変換し、位置3＋姿勢3＋gripper2の8次元を作る |
 | 画像の向き | ROSではrawのまま。公式model adapterで180度回転を**1回**適用 |
 | 出力 | 7次元の相対XYZ・姿勢・gripper行動列。モデル出力を関節角やトルクそのものとは扱わない |
-| 物理制御周期 | canonical 20Hz、物理積分dt 0.002秒、reset後10ステップ整定 |
-| HFデータmetadataのfps | 10。物理制御周期20Hzとは別の値として保存 |
+| シミュレータ内の制御周期 | canonical 20Hz、物理積分dt 0.002秒、reset後10ステップ整定 |
+| HFデータmetadataのfps | 10。シミュレータ内の制御周期20Hzとは別の値として保存 |
 | 共通アセット | [lerobot/libero-assets](https://huggingface.co/lerobot/libero-assets/tree/0b3ea86be5fe169d0fd036ae63d1070ec09e90f6)、revision `0b3ea86be5fe169d0fd036ae63d1070ec09e90f6` |
 | 初期状態 | タスク同梱50状態。評価で使う `init_state_id` をrunごとに保存 |
 | 初期状態ファイルSHA256 | `cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a` |

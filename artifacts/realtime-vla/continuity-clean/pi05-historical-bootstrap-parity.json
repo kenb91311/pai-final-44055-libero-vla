@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "generated_at_utc": "2026-11-01T20:49:43.771594+00:00",
+  "same_in_memory_weight_digest": true,
+  "states": [
+    {
+      "state": 1,
+      "sensor_hash_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_five_sensors_equal": true,
+      "same_seed": true,
+      "native_physical_H50_exact_equal": true,
+      "max_abs_difference": 0.0,
+      "old_source": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1",
+      "new_source": "artifacts/realtime-vla/continuity-clean/pi05-off/realtime-init1",
+      "old_chunks_sha256": "14d9e355e66f385157ae94d4fdcff14636aa71e6bc221274ddc6d58c3ccfa518",
+      "new_chunks_sha256": "edfb6da5ad11b28ec86d54f00a008863214fe53107d2bd74adb63a1dd39f354f"
+    },
+    {
+      "state": 2,
+      "sensor_hash_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_five_sensors_equal": true,
+      "same_seed": true,
+      "native_physical_H50_exact_equal": true,
+      "max_abs_difference": 0.0,
+      "old_source": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2",
+      "new_source": "artifacts/realtime-vla/continuity-clean/pi05-off/realtime-init2",
+      "old_chunks_sha256": "e91d0d5befd0ff0e291391faa8d4e73b0c398240bedd3bc8edfc998867edb556",
+      "new_chunks_sha256": "b070de62f74ef9df7b0199788983f1d21345caf9983b45048f57e24fc8c97c62"
+    },
+    {
+      "state": 3,
+      "sensor_hash_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_five_sensors_equal": true,
+      "same_seed": true,
+      "native_physical_H50_exact_equal": true,
+      "max_abs_difference": 0.0,
+      "old_source": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3",
+      "new_source": "artifacts/realtime-vla/continuity-clean/pi05-off/realtime-init3",
+      "old_chunks_sha256": "c66715d6a437693f73aa3a11483e1df5cef72159afb656f89c0546ade55bc725",
+      "new_chunks_sha256": "e645958ed20820699325a96ab7430a0a86fb368e9fe21965c27180a351627130"
+    },
+    {
+      "state": 4,
+      "sensor_hash_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_five_sensors_equal": true,
+      "same_seed": true,
+      "native_physical_H50_exact_equal": true,
+      "max_abs_difference": 0.0,
+      "old_source": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4",
+      "new_source": "artifacts/realtime-vla/continuity-clean/pi05-off/realtime-init4",
+      "old_chunks_sha256": "88c03cf01f8e69dbe70f449747812cae5204f746dcadc3cb0fe84b0f6c3a6c52",
+      "new_chunks_sha256": "9c2e1839a76c56987a06c95f3eb3fdc9ad0edf71bfff93810c1055d320a65408"
+    },
+    {
+      "state": 5,
+      "sensor_hash_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_five_sensors_equal": true,
+      "same_seed": true,
+      "native_physical_H50_exact_equal": true,
+      "max_abs_difference": 0.0,
+      "old_source": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5",
+      "new_source": "artifacts/realtime-vla/continuity-clean/pi05-off/realtime-init5",
+      "old_chunks_sha256": "4ab017892c83d454db46b9c78100cb166bfc04cd90736911fcf42022e7d48da5",
+      "new_chunks_sha256": "b747b7959efec54f708bd0a7a5d8642258ad060bdcda0005cb3aada5608d0188"
+    }
+  ],
+  "scope": "same raw initial sensing and seed; native50 physical bootstrap before task clock. Old E10 scheduler consumes10, newH50/R30 consumes aligned native horizon; these subsequent schedules are intentionally different.",
+  "normalized_comparison": "old run did not save model-normalized chunks; this comparison concerns physical native50 outputs only",
+  "runtime_difference_checked": "original FrozenPI05 inference_mode versus continuity off no_grad; no extra model load performed"
+}

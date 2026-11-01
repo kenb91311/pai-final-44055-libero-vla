@@ -1,0 +1,17 @@
+{
+  "checkpoint_sha256": "877b3ec1130548b69af7f8aeef3ec9d3fc7738040f0b9beb490857ec970997ae",
+  "strict": true,
+  "stored_tensor_count": 812,
+  "stored_elements": 3616757520,
+  "mapped_tensor_count": 813,
+  "checked_tensor_count": 813,
+  "checked_elements": 4143404816,
+  "runtime_parameter_count": 4143404816,
+  "derived_copy_keys": [
+    "model.paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight"
+  ],
+  "all_mapped_tensors_equal_after_official_dtype_cast": true,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "local_training": false
+}

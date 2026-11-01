@@ -1,0 +1,41 @@
+{
+  "all_checks_passed": true,
+  "checks": {
+    "file/a2c2_worker.py": true,
+    "file/chunk_queue.py": true,
+    "file/worker.py": true,
+    "file/libero_env.py": true,
+    "file/camera_worker.py": true,
+    "file/ros_client.py": true,
+    "file/ros_bridge.py": true,
+    "base_method/__init__": true,
+    "base_method/predict": true,
+    "base_method/prepare_observation": true,
+    "base_method/_capture_prefix": true,
+    "base_method/reset": true,
+    "base_method/weight_digest": true,
+    "base_method/audit": true,
+    "normalizer/LegacyMeanStd": true,
+    "control_method/run_episode": true,
+    "control_method/choose_received_action": true,
+    "control_method/wait_sensor": true,
+    "control_method/packet_record": true,
+    "control_method/collect_audits": true
+  },
+  "exclusions": [
+    "docstrings",
+    "explicit decode-mode name validation/storage",
+    "protocol/decode metadata fields"
+  ],
+  "scope": "same base inference, normalization, queue/ROS/camera/physics and timed scheduler; hardware runs remain separate",
+  "reference_protocol": {
+    "path": "artifacts/realtime-vla/a2c2-author-series-v2/registered-protocol.json",
+    "bytes": 2338,
+    "sha256": "64eab4a4e975a06e43ebb940ff64791d751f0bfb35cac08a23428426d89ae671"
+  },
+  "reference_results": {
+    "path": "artifacts/realtime-vla/a2c2-author-series-v2/results-compact.json",
+    "bytes": 51153,
+    "sha256": "25a99578a0c19e539592d49767b68b3ea43366ac4ba4f7c7dce853a35e68025b"
+  }
+}

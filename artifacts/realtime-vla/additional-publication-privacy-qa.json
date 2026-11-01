@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "files_checked": 38,
+  "private_path_email_token_identifier_matches": [],
+  "scope": "New docs/README, derived reports/protocols/SVG text and PNG textual metadata only; no raw trial logs copied.",
+  "binary_scan_note": "Compressed PNG bytes are not decoded as text; their random email-like byte patterns are not metadata. PNG textual metadata is scanned explicitly."
+}

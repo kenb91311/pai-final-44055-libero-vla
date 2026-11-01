@@ -1,0 +1,108 @@
+{
+  "amendment": 3,
+  "registered_at_utc": "2026-11-01T20:20:17.926541+00:00",
+  "amends": "artifacts/realtime-vla/vlash-protocol-amendment-02.json",
+  "previous_amendment_sha256": "9fcab3df293df275a62c738b17f8e5baf2aa34a6d0b5668f6bc0d6f91b8fb3ea",
+  "stage": "After preserved first startup failure, before any physical task tick or task-success result",
+  "reason": "Fallback package imports worked, but shared FrozenLiberoEnv uses sys.prefix/site-packages/libero/libero. .venv-vlash lacked that physical package path.",
+  "repair": "Own .venv-vlash package alias resolves importlib.find_spec libero search location. Relative symlink points to existing identical hf-libero0.1.4; no shared simulator source/package/assets symlink changed. setup_vlash.sh reproduces alias.",
+  "preserved_failure_directory": "artifacts/realtime-vla/development-vlash-artificial-d0",
+  "preserved_failure_console": "artifacts/realtime-vla/development-vlash-artificial-d0-console.log",
+  "failure_class": "startup environment FileNotFoundError before first physical task tick; excluded from task success denominator",
+  "source_sha256": {
+    "experiments/realtime_vla/vlash_runtime.py": "812f70d7c0b3da485f79dca4098593ef669ad5e7a917264ea789ee76fd41d84e",
+    "experiments/realtime_vla/vlash_timing.py": "5bbd07901074d770339380a1a4c56d79343e8fd4b5e86d315a0c8f254245da40",
+    "experiments/realtime_vla/vlash_worker.py": "e2c29dce19745f0fdd7ff1d42a817c79ff43e803e25d97f04dae1bb0eecca39d",
+    "experiments/realtime_vla/evaluate_vlash.py": "6857880a5d7eb9bba2198791afb10820d22f80fbc8121448e6b223339374b167",
+    "experiments/realtime_vla/smoke_vlash.py": "456b42ae33dea9687a01ebcf59e21a7d1ef7e831b33987c6fe6c1be7188c6bd2",
+    "experiments/realtime_vla/prepare_vlash_source.py": "4d7b1f105cb00b67c5064df5d3bf6456f73b52e3536495e638ab2c7867219ecb",
+    "experiments/realtime_vla/libero_env.py": "29cfd27f2e151b3b23a1fabd660f1b64a75dd34a4ed1fcafd2fdeed2d7af338d",
+    "experiments/realtime_vla/camera_worker.py": "a95568289f62250535ac06464c96cdaa89c9347be806ca3ed9ee0bef1676c9bb",
+    "experiments/realtime_vla/chunk_queue.py": "928dccf281094992f119e29759901f30124eb44f3c216bdc65ff1b18f5a74fab",
+    "experiments/realtime_vla/worker.py": "7e4f06a5b935d20cef0a656d01507d75d6adfc9008463caeb8e565858cfd13d5",
+    "experiments/realtime_vla/ros_client.py": "4ffbfb805d6d834e59125fc6dfc8ead389d5e1dae1004f921a2ccadeace19670",
+    "experiments/realtime_vla/ros_bridge.py": "b18864ab5fcaeab289e7f86e87493b93c2431391a7f1dfad992b3d5a7846407b",
+    "experiments/realtime_vla/evaluate.py": "d7b319401af9d0730c2484ae835b9bf41e1ec99512883dedef042e4d661c318a",
+    "scripts/setup_vlash.sh": "f8dd75fe58ff5ac094a7ed468f9a8323acaa2d8e609bb2ea30eed7d68af125d8"
+  },
+  "overlay_cpu_proof": "artifacts/realtime-vla/vlash-overlay-package-proof.json",
+  "overlay_cpu_proof_sha256": "c7420c07633f27c7deee191268070d1dae4aacf86afff26c4d6d7b860cb8a78b",
+  "asset_files_all_sha_verified": 585,
+  "asset_bytes_verified": 422313213,
+  "old45_json_jsonl_sha_unchanged": 243,
+  "api_smoke_sha256": "bc8b1db7bf4fa6f1563d0f8a89eb011807a9feba9b5de24f0cb243eafa2436f2",
+  "other_chat_using_gpu": false,
+  "monitor_latest_sample": {
+    "utc": "2026-11-01T20:20:17.846936+00:00",
+    "monotonic": 62194.306824296,
+    "whole_gpu_total_bytes": 17094934528,
+    "whole_gpu_used_bytes": 1958256640,
+    "whole_gpu_free_bytes": 15136677888,
+    "whole_gpu_utilization_percent": 1,
+    "whole_gpu_memory_utilization_percent": 3,
+    "host_memory_available_bytes": 28083490816,
+    "host_memory_total_bytes": 33365557248,
+    "host_swap_used_bytes": 1909530624,
+    "host_load1": 0.59716796875,
+    "phase": "exclusive_vlash_task_series",
+    "our_gpu_workers_running": true,
+    "probe_wall_s": 0.0009126090008066967
+  },
+  "execution_order": [
+    {
+      "mode": "artificial",
+      "delay_ticks": 0,
+      "states": [
+        0
+      ],
+      "output": "development-vlash-artificial-d0-retry1"
+    },
+    {
+      "mode": "artificial",
+      "delay_ticks": 3,
+      "states": [
+        0
+      ],
+      "output": "development-vlash-artificial-d3"
+    },
+    {
+      "mode": "realtime",
+      "condition": "coherent",
+      "states": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "formal-vlash-coherent"
+    },
+    {
+      "mode": "realtime",
+      "condition": "current",
+      "states": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "formal-vlash-current"
+    },
+    {
+      "mode": "realtime",
+      "condition": "predicted",
+      "states": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "formal-vlash-predicted"
+    }
+  ]
+}

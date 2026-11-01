@@ -1,0 +1,62 @@
+{
+  "status": "registered_before_development_and_formal_trials",
+  "purpose": "Separate scheduling effects from RTC chunk-continuity guidance",
+  "local_training": false,
+  "frozen_families": [
+    "smolvla",
+    "pi05"
+  ],
+  "variants": [
+    "off",
+    "rtc-stock",
+    "rtc-vjp"
+  ],
+  "task": "libero_spatial/task0",
+  "development_initial_states": [
+    0
+  ],
+  "formal_initial_states": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "seed": 20261102,
+  "control_hz": 20,
+  "camera_hz": 10,
+  "wall_seconds": 14,
+  "native_horizon": 50,
+  "execute_steps": 50,
+  "replacement": "aligned; drop actual elapsed prefix on arrival, retaining full H until then",
+  "prefetch_remaining": 30,
+  "guidance_execution_horizon": 30,
+  "max_guidance_weight": 10,
+  "latency_prediction": "ceil(p95 of up to10 recent worker durations /50ms)+capture-to-request tick lag, cap49; record pre-cap estimate",
+  "warmup": "2 ordinary warmups then2 method-specific calibrated calls on held initial state; reset seed and regenerate final bootstrap before taskclock",
+  "unknown_future_padding": false,
+  "prefix_source": "actual clipped actuator history from capture tick to request tick plus known clipped future queue",
+  "normalization": "checkpoint-saved ACTION normalizer; physical and model-space arrays preserved separately",
+  "ros_transport": "actual two-node images and action roundtrip; actuator prefix via bounded local IPC",
+  "gpu_condition": "one resident VLA; camera rendering concurrent; no other policy experiment",
+  "baseline_comparison": "off vsRTC is same new H50/R30 scheduler; originalE10 or native50FIFO results are historical, not matched algorithm controls",
+  "primary_outcomes": [
+    "native_success",
+    "within_wall_budget"
+  ],
+  "secondary_outcomes": [
+    "hold_fraction",
+    "source_age",
+    "actual_vs_predicted_delay",
+    "switch_translation_delta",
+    "switch_rotation_delta",
+    "switch_gripper_delta",
+    "model_and_worker_latency",
+    "peak_cuda_bytes"
+  ],
+  "source_sha256": {
+    "continuity_runtime.py": "efb37b7e3e4d3d29cd6a88194deb4a1bd2b3f5ef44055d473270f699e0ddbff7",
+    "evaluate_continuity.py": "fc7a334632e5bc8811e3cdbc31a6f0f589cfaced9a50280f4dafebd75951d82a",
+    "continuity_worker.py": "3744df92e430e57b3484113301681b8e1ea4a07412611d0749c88c3dc9c051d5"
+  }
+}

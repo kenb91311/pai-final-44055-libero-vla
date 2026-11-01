@@ -1,0 +1,99 @@
+{
+  "amendment": 1,
+  "registered_at_utc": "2026-11-01T19:53:17.675446+00:00",
+  "registered_before_first_task_rollout": true,
+  "amends_protocol": "artifacts/realtime-vla/vlash-protocol.json",
+  "original_protocol_sha256": "eb060809ee842924b9c116a01ec2dee35af8c0fac66d74c74f0e6228ab8bd473",
+  "reason": "Parent preflight review identified absent initial sensor hashes and cold first warmup contaminating p95 latency prediction. No task rollout has run yet; API smoke remains immutable.",
+  "realtime_changes": {
+    "initial_json": "Save SHA256 for raw RGB2 and EEF XYZ/XYZW quaternion/finger2 before bootstrap",
+    "timing_calibration_calls_per_episode": 2,
+    "calibration_state": "Actually measured held initial state, current condition; no physical steps and no forecast in all three variants",
+    "initial_latency_samples": "Only per-episode calibration2 request-to-finish seconds; never warmup records",
+    "episode_start_sequence": "Initial real sensor -> model warm2 once per load -> reset scene and fresh camera -> save five sensor hashes -> held current-state calibration2 -> final RNG seed reset -> final held-current bootstrap -> wallclockt0",
+    "warmup_calls": 2,
+    "warmup_scope": "Once per loaded model, unchanged; excluded from latency estimate",
+    "artificial_reproduction": "Unchanged author-style native warm2 without extra timing calibration"
+  },
+  "execution_order": [
+    {
+      "mode": "artificial",
+      "delay_ticks": 0,
+      "states": [
+        0
+      ],
+      "output": "development-vlash-artificial-d0"
+    },
+    {
+      "mode": "artificial",
+      "delay_ticks": 3,
+      "states": [
+        0
+      ],
+      "output": "development-vlash-artificial-d3"
+    },
+    {
+      "mode": "realtime",
+      "condition": "coherent",
+      "states": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "formal-vlash-coherent"
+    },
+    {
+      "mode": "realtime",
+      "condition": "current",
+      "states": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "formal-vlash-current"
+    },
+    {
+      "mode": "realtime",
+      "condition": "predicted",
+      "states": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "output": "formal-vlash-predicted"
+    }
+  ],
+  "split_rule": "init0 is explicitly split=development; only init1..5 enter formal metrics. Running0..5 in one process saves checkpoint reload, without development-based hyperparameter selection. Abort before formal if init0 has a runtime/integrity error; retain task failures without tuning.",
+  "source_sha256": {
+    "experiments/realtime_vla/vlash_runtime.py": "812f70d7c0b3da485f79dca4098593ef669ad5e7a917264ea789ee76fd41d84e",
+    "experiments/realtime_vla/vlash_timing.py": "5e25a92f1a1dedc9305805ee39c50b9843c40c880f24a673dbc791c3d009898c",
+    "experiments/realtime_vla/vlash_worker.py": "e2c29dce19745f0fdd7ff1d42a817c79ff43e803e25d97f04dae1bb0eecca39d",
+    "experiments/realtime_vla/evaluate_vlash.py": "6857880a5d7eb9bba2198791afb10820d22f80fbc8121448e6b223339374b167",
+    "experiments/realtime_vla/smoke_vlash.py": "456b42ae33dea9687a01ebcf59e21a7d1ef7e831b33987c6fe6c1be7188c6bd2",
+    "experiments/realtime_vla/prepare_vlash_source.py": "4d7b1f105cb00b67c5064df5d3bf6456f73b52e3536495e638ab2c7867219ecb",
+    "experiments/realtime_vla/libero_env.py": "29cfd27f2e151b3b23a1fabd660f1b64a75dd34a4ed1fcafd2fdeed2d7af338d",
+    "experiments/realtime_vla/camera_worker.py": "a95568289f62250535ac06464c96cdaa89c9347be806ca3ed9ee0bef1676c9bb",
+    "experiments/realtime_vla/chunk_queue.py": "928dccf281094992f119e29759901f30124eb44f3c216bdc65ff1b18f5a74fab",
+    "experiments/realtime_vla/worker.py": "7e4f06a5b935d20cef0a656d01507d75d6adfc9008463caeb8e565858cfd13d5",
+    "experiments/realtime_vla/ros_client.py": "4ffbfb805d6d834e59125fc6dfc8ead389d5e1dae1004f921a2ccadeace19670",
+    "experiments/realtime_vla/ros_bridge.py": "b18864ab5fcaeab289e7f86e87493b93c2431391a7f1dfad992b3d5a7846407b",
+    "experiments/realtime_vla/evaluate.py": "d7b319401af9d0730c2484ae835b9bf41e1ec99512883dedef042e4d661c318a"
+  },
+  "prior45_preserved_manifest_reference": "vlash-protocol.json preserved_prior45_json_jsonl_sha256",
+  "api_smoke_sha256": "bc8b1db7bf4fa6f1563d0f8a89eb011807a9feba9b5de24f0cb243eafa2436f2",
+  "unit_validation": {
+    "passed": 35,
+    "seconds": 0.12,
+    "py_compile": "passed",
+    "cli_help": "passed"
+  }
+}

@@ -1,0 +1,10 @@
+# Simulation-policy overlay. Run scripts/setup_realtime_vla.sh first.
+# Author pyproject's exact LeRobot and patched Transformers pairing.
+lerobot==0.4.1
+transformers @ https://github.com/huggingface/transformers/archive/dcddb970176382c0fcf4521b0c0e6fc15894dfe0.tar.gz
+huggingface-hub==0.34.4
+tokenizers==0.21.4
+draccus==0.10.0
+pyserial==3.5
+deepdiff==8.6.1
+orderly-set==5.5.0

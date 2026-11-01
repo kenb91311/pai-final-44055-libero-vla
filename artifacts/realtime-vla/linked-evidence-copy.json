@@ -1,0 +1,33 @@
+{
+  "files": [
+    {
+      "path": "artifacts/realtime-vla/models/pi05/schema-smoke.json",
+      "sha256": "e6aa3497d5e2cc836e7dcbbaf0859995142b869af91124ba21c01d7865efcfe4"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi05/api-smoke.json",
+      "sha256": "5197102c3713f4b39781e9b44c708f52542dab55db93b11bc97ad9835931e480"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi05/restoration.json",
+      "sha256": "a00efe9860ba772eede2011bfe22922a65f09a9b029a825f8dbecece96e68e1e"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi05/processor-smoke.json",
+      "sha256": "e3b87a06148b6be65f3385134f589a0cb2513eb309b238d6642a2ac9ca30bde4"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-author-series-v1/development-off/realtime-init0/result.json",
+      "sha256": "f621ad811cbeaf088fea2b54dde90a33ee74c45168de61402ac4ad01a1f8fb03"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-transport-diagnostics-v1/summary.json",
+      "sha256": "ade5143b27f902816861d651d198f6d6fb82f614e7566f71d4262ede8762fa05"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/a2c2/decode-semantics-evidence/semantics-summary.json",
+      "sha256": "f67d364f2e1a09bd83ee38b62339cad99c008e03222c89371b41425be3614095"
+    }
+  ],
+  "scope": "Small JSON evidence referenced by submitted documentation; no model weights."
+}

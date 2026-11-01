@@ -1,0 +1,30 @@
+{
+  "scope": "read-only host GPU memory observations; external experiment identifiers intentionally omitted",
+  "observations": [
+    {
+      "used_MiB": 11698,
+      "total_MiB": 16303,
+      "utilization_percent": 5,
+      "source": "nvidia-smi --query-gpu=memory.used,memory.total,utilization.gpu --format=csv,noheader",
+      "interpretation": "Additional VLA inference from a separately authorized experiment was running; not an exclusive GPU sample",
+      "sequence": 1,
+      "observed_within_utc_window": [
+        "2026-11-01T19:31:05Z",
+        "2026-11-01T19:34:08Z"
+      ]
+    },
+    {
+      "used_MiB": 1518,
+      "total_MiB": 16303,
+      "utilization_percent": 4,
+      "source": "same host query after our model workers had exited",
+      "interpretation": "Desktop/driver allocation baseline; does not prove future exclusivity",
+      "sequence": 2,
+      "observed_within_utc_window": [
+        "2026-11-01T19:31:05Z",
+        "2026-11-01T19:34:08Z"
+      ]
+    }
+  ],
+  "limits": "UTC is bounded by adjacent clock calls, not a per-query hardware timestamp. No continuous per-process GPU trace was collected during the first RTC series. Preserve results and re-evaluate under coordinated exclusivity."
+}

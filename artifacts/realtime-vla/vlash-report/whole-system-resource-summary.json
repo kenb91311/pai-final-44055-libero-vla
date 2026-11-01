@@ -1,0 +1,15 @@
+{
+  "scope": "Whole device and whole host during coordinated VLASH phase, from start gate to completed report validation; includes startup/diagnostics/idle gaps/renderer/desktop, not per-process model RAM",
+  "samples": 3114,
+  "start_utc": "2026-11-01T20:17:16.721249+00:00",
+  "end_utc": "2026-11-01T20:42:21.977197+00:00",
+  "whole_gpu_peak_used_bytes": 10644172800,
+  "whole_gpu_peak_used_GiB": 9.913158416748047,
+  "host_min_available_bytes": 22554812416,
+  "host_min_available_GiB": 21.00580596923828,
+  "host_max_total_minus_available_GiB": 10.068290710449219,
+  "model_process_peak_RSS_bytes": null,
+  "model_process_peak_RSS_note": "No per-process RSS sampler; do not substitute whole-host usage for model RAM.",
+  "monitor_configuration_sha256": "6b6fcfb4258bf901b467cc8d0b15ff8657babdd65dd7c843fb9e0e1bd5f2cd14",
+  "other_peer_start_gate_using_gpu": false
+}

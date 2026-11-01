@@ -1,0 +1,406 @@
+{
+  "status": "passed",
+  "comparisons": [
+    {
+      "baseline": "formal-smolvla-e10",
+      "mode": "lockstep",
+      "init_state_index": 1,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-smolvla-e10",
+      "mode": "lockstep",
+      "init_state_index": 2,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-smolvla-e10",
+      "mode": "lockstep",
+      "init_state_index": 3,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-smolvla-e10",
+      "mode": "lockstep",
+      "init_state_index": 4,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-smolvla-e10",
+      "mode": "lockstep",
+      "init_state_index": 5,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-smolvla-e10",
+      "mode": "realtime",
+      "init_state_index": 1,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-smolvla-e10",
+      "mode": "realtime",
+      "init_state_index": 2,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-smolvla-e10",
+      "mode": "realtime",
+      "init_state_index": 3,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-smolvla-e10",
+      "mode": "realtime",
+      "init_state_index": 4,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-smolvla-e10",
+      "mode": "realtime",
+      "init_state_index": 5,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-pi0fast-e10",
+      "mode": "lockstep",
+      "init_state_index": 1,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-pi0fast-e10",
+      "mode": "lockstep",
+      "init_state_index": 2,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-pi0fast-e10",
+      "mode": "lockstep",
+      "init_state_index": 3,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-pi0fast-e10",
+      "mode": "lockstep",
+      "init_state_index": 4,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-pi0fast-e10",
+      "mode": "lockstep",
+      "init_state_index": 5,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-pi0fast-e10",
+      "mode": "realtime",
+      "init_state_index": 1,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-pi0fast-e10",
+      "mode": "realtime",
+      "init_state_index": 2,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-pi0fast-e10",
+      "mode": "realtime",
+      "init_state_index": 3,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-pi0fast-e10",
+      "mode": "realtime",
+      "init_state_index": 4,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    },
+    {
+      "baseline": "formal-pi0fast-e10",
+      "mode": "realtime",
+      "init_state_index": 5,
+      "all_sensor_hashes_equal": true,
+      "sensor_matches": {
+        "agentview_image": true,
+        "robot0_eye_in_hand_image": true,
+        "robot0_eef_pos": true,
+        "robot0_eef_quat": true,
+        "robot0_gripper_qpos": true
+      },
+      "all_physical_metrics_equal": true,
+      "physical_matches": {
+        "bowl_position": true,
+        "plate_position": true,
+        "actuator_control": true,
+        "goal_xy_error_m": true
+      }
+    }
+  ],
+  "scope": "Cross-model within same sensor mode; no assumption of cross-mode sensor equality."
+}

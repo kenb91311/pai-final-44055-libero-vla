@@ -1,0 +1,181 @@
+{
+  "repository": "https://github.com/mit-han-lab/vlash",
+  "revision": "d2da223e2251a4a5020b667e77cf8ad57e594144",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1198,
+      "sha256": "72ca241841b66b4190eebc283e01a5505d829d4f5e99e5ec0b5054d6e6ae3e6c"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1003,
+      "sha256": "a2a6f4cd5466201c133d0839f7e07018f945f1bd9aba0ac6b8cb6ef9e4b08ade"
+    },
+    {
+      "path": "vlash/__init__.py",
+      "bytes": 420,
+      "sha256": "73e5ca19675912f8ca94e94f23b3ea9eae26cdb951c264e5b214956f24b9064e"
+    },
+    {
+      "path": "vlash/cli.py",
+      "bytes": 10917,
+      "sha256": "e001c31f4a014eff937f3a7f384a5e523d9f9d95d8a01e67fce90f58213c19c5"
+    },
+    {
+      "path": "vlash/configs/__init__.py",
+      "bytes": 1516,
+      "sha256": "08fc961b10382e69001cc3b54f108abd0f866e29ae6686ae44cdbeee44577205"
+    },
+    {
+      "path": "vlash/configs/run_config.py",
+      "bytes": 5842,
+      "sha256": "cb7e85f18b185cab964706e019e61078fc877558a7eb542b7cba383308027f90"
+    },
+    {
+      "path": "vlash/configs/train_config.py",
+      "bytes": 3722,
+      "sha256": "07190de918bcf90f71d8a7c4b90762e525456ef2218dba1e4e3ac2f453e9f85e"
+    },
+    {
+      "path": "vlash/datasets/__init__.py",
+      "bytes": 1264,
+      "sha256": "c05157e56d01d9ce31bedbd6050028e79703038baf48d9fe597d95496cb26a7f"
+    },
+    {
+      "path": "vlash/datasets/compat.py",
+      "bytes": 11509,
+      "sha256": "faae35fd3f75ef39bbefa3b0eeb71a116120c98f2b9eb964da158b2109df59ac"
+    },
+    {
+      "path": "vlash/datasets/vlash_dataset.py",
+      "bytes": 19037,
+      "sha256": "b651b6eef90f63adcafeb97e4626d13553f65c7725cb4704efbf245eb84bbf35"
+    },
+    {
+      "path": "vlash/eval_libero.py",
+      "bytes": 46482,
+      "sha256": "d1e68abb6a09c2b210fe46b5931d3d29f63dd0266b56f08d83d884e34b7cdca9"
+    },
+    {
+      "path": "vlash/layers/attention.py",
+      "bytes": 3932,
+      "sha256": "8cbec0b93bff65accfbfc4421fbe2f5e3c1ae8ba64e3506cb09f71f1bbf2c699"
+    },
+    {
+      "path": "vlash/layers/linear.py",
+      "bytes": 5056,
+      "sha256": "dff335e6b2911be9462772fd887f3351696b9937af80fbff8f5663074de83514"
+    },
+    {
+      "path": "vlash/layers/rope.py",
+      "bytes": 4252,
+      "sha256": "f5f1741a48f04d273a327bad0a7e0736c3296e534f0d8f2d1a116961b5ea078b"
+    },
+    {
+      "path": "vlash/libero_gym.py",
+      "bytes": 7804,
+      "sha256": "2d6bfc46038dedfe7f9b94e9f0114512633a5dadb0f28163e8e854dd646f23f8"
+    },
+    {
+      "path": "vlash/lora/__init__.py",
+      "bytes": 1150,
+      "sha256": "6f1266ea60ea5eff777779d2884ce6bd0a72616b6a5a32e2e6aa7c3f673045e3"
+    },
+    {
+      "path": "vlash/lora/apply.py",
+      "bytes": 8122,
+      "sha256": "000110c3e4c86d846570ba1962589ec90c63bdc6cd0f807dfa0110f67541a0c7"
+    },
+    {
+      "path": "vlash/lora/checkpoint.py",
+      "bytes": 10536,
+      "sha256": "13013d9d1c4cf9efa4ccf859737ad3c01cfe5cfee2b7baee93bbd98458f1ddf2"
+    },
+    {
+      "path": "vlash/lora/logging.py",
+      "bytes": 8158,
+      "sha256": "9a701b03dd3aa6c3d4e69b768e1e1ab1dde3d507584c35b5999ba1b373001e6a"
+    },
+    {
+      "path": "vlash/lora/qlora.py",
+      "bytes": 9776,
+      "sha256": "b41b00c81a82ef161eee8be423c733f4581d216ccbb5a85673fa1eac6cf175ad"
+    },
+    {
+      "path": "vlash/policies/__init__.py",
+      "bytes": 58,
+      "sha256": "485819bf6a8968e135a37341bc65d43c403bd7f3dff2fd62bc0c4bbf030eb84f"
+    },
+    {
+      "path": "vlash/policies/factory.py",
+      "bytes": 4162,
+      "sha256": "81ce7e75f31d35b99fc9d265be9d8d72b5627ab8615265c40674f969bec8dc5e"
+    },
+    {
+      "path": "vlash/policies/normalize.py",
+      "bytes": 12259,
+      "sha256": "1ecdf53c350248756d2029f15ca7996ccd4ecfdf5eb1f6be768d40ba25bd72b0"
+    },
+    {
+      "path": "vlash/policies/pi0/__init__.py",
+      "bytes": 1025,
+      "sha256": "eb24e6ce5211c3fba40e30a9df6e2e7133366f1e4f876808a8ce3fe07b45e83d"
+    },
+    {
+      "path": "vlash/policies/pi0/configuration_pi0.py",
+      "bytes": 8297,
+      "sha256": "7b1562706cc5c7f2eeda9041cf28255bc649743461c1151aee53eab32f5628ba"
+    },
+    {
+      "path": "vlash/policies/pi0/modeling_pi0.py",
+      "bytes": 47884,
+      "sha256": "302f99864a500463a8332191f0e9f23e8b3e4474e1cf8b32ce0608adb00c0ac9"
+    },
+    {
+      "path": "vlash/policies/pi0/utils.py",
+      "bytes": 12746,
+      "sha256": "162d7e41dc7ec8d8e8e22dc4c449c17f4ef1ca772a84d456a32b74c7408b5f9c"
+    },
+    {
+      "path": "vlash/policies/pi05/__init__.py",
+      "bytes": 227,
+      "sha256": "d3b95a2608f22a533f7e171ab1dad4daf217ddd5502bd0c605a2573b0fdb235b"
+    },
+    {
+      "path": "vlash/policies/pi05/configuration_pi05.py",
+      "bytes": 9948,
+      "sha256": "a1bf466be1c9612f07d85f0e4ce9074b3c02eacb8e0e69daf75b18a3d7dc0043"
+    },
+    {
+      "path": "vlash/policies/pi05/modeling_pi05.py",
+      "bytes": 61863,
+      "sha256": "f13e2785f3431b50f53156adf2f3cb10cca9de07e6d530ea5ddcd7f71dc1282a"
+    },
+    {
+      "path": "vlash/policies/pi05/utils.py",
+      "bytes": 14126,
+      "sha256": "f0474ce457a9ea3cd3555969399684bc746f777d8281b7ad61a752fd65e48440"
+    },
+    {
+      "path": "vlash/run.py",
+      "bytes": 20106,
+      "sha256": "ae584ab8b32aff405e9bd019a9534928d6bbdf35172fac017c6a8bab8e6c2619"
+    },
+    {
+      "path": "vlash/train.py",
+      "bytes": 25221,
+      "sha256": "e3572dc1863af8efc6aee43de2adb549f03bfcc23ea882ada33118cc8720d5f6"
+    },
+    {
+      "path": "examples/train/pi05/libero.yaml",
+      "bytes": 780,
+      "sha256": "923ff0d836a9cb5ef42f8b829820d156241bd21964f035dc598e0ad936826d78"
+    }
+  ]
+}

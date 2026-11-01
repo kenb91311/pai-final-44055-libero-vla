@@ -1,6 +1,6 @@
 {
   "task": "PAI final assignment 44055: realtime LIBERO bowl transfer",
-  "scope": "Task implementation, standalone runtime, and experimental evidence",
+  "scope": "Task implementation, standalone runtimes, original35 and separately scoped additional experimental evidence",
   "files": [
     {
       "path": ".gitignore",
@@ -8,9 +8,94 @@
       "sha256": "4d15e2014d8f3c6636fd5cb8549ff52fe8e53f0cd7460b6fc5b83aeebcf972a5"
     },
     {
+      "path": "LICENSES/A2C2-UPSTREAM-LICENSE.txt",
+      "bytes": 27627,
+      "sha256": "0583375a0ec642ec79c447781f34322b0cfa66baff31258214d040f1f6d86d7c"
+    },
+    {
+      "path": "LICENSES/LeRobot-APACHE-2.0.txt",
+      "bytes": 29977,
+      "sha256": "9e108af26a7ae92a6d2cb0273856a4a0a84da8819c2cffee8b2657cc4f905718"
+    },
+    {
+      "path": "LICENSES/VLASH-APACHE-2.0.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "LICENSES/sources.json",
+      "bytes": 737,
+      "sha256": "1e25956180b22eecbce9e572fb5824dbdc00ef17d419d9fdf8fe025065927184"
+    },
+    {
       "path": "README.md",
-      "bytes": 8913,
-      "sha256": "6ea10a530fd6a611f6a822b135c68eedb3ddd49bfed3e493b180d59f6d9b1f3c"
+      "bytes": 11505,
+      "sha256": "9221450c89d76dd8d76b035f15ed669ac4d710db18dbe26df7aa6d6e5ac352b3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1033,
+      "sha256": "373e02da2d34b57efd38b4fdbd5a5fe4dbca9f0e2311b7c7876d6ed890579656"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-author-series-v1/development-off/realtime-init0/result.json",
+      "bytes": 2739,
+      "sha256": "f621ad811cbeaf088fea2b54dde90a33ee74c45168de61402ac4ad01a1f8fb03"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-author-series-v2/episodes-recomputed.json",
+      "bytes": 70676,
+      "sha256": "e671e657ad1748cfc0d9e1a6bb39c6800207e5694e201a7a5c3d4d85be44b2d0"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-author-series-v2/registered-protocol.json",
+      "bytes": 2338,
+      "sha256": "64eab4a4e975a06e43ebb940ff64791d751f0bfb35cac08a23428426d89ae671"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-author-series-v2/results-compact.json",
+      "bytes": 51153,
+      "sha256": "25a99578a0c19e539592d49767b68b3ea43366ac4ba4f7c7dce853a35e68025b"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-author-series-v3-retry1/baseline-equivalence.json",
+      "bytes": 1468,
+      "sha256": "75ecbd1d6f15f49d167bc91592ec4a480a6ca224e51ae09d263ee6fd99a8682f"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-author-series-v3-retry1/formal-a2c2/base-model-audit.json",
+      "bytes": 1340,
+      "sha256": "feb11fe11f114e52ddfa19018ea40fd51a9689351197baa6cbc4262924cb415b"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-author-series-v3-retry1/formal-a2c2/head-model-audit.json",
+      "bytes": 1352,
+      "sha256": "26a1f7a806235c4bbd54576c67471d5ed0aaca89a2bd6ee829d2230816b676a8"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-author-series-v3-retry1/formal-a2c2/protocol.json",
+      "bytes": 1575,
+      "sha256": "e6a720fd6685423e615fdf22194aacc7573b7b46dcc8e63665529fd588cb7bb6"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-author-series-v3-retry1/formal-a2c2/summary.json",
+      "bytes": 40328,
+      "sha256": "30b2ae704c63a76eb0a737a341270d6fada81dbcb4e6d8b8cda8acd6f980637c"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-author-series-v3-retry1/registered-protocol.json",
+      "bytes": 2880,
+      "sha256": "d43e0bb83a341a8fa86705824839e0858f196dce21ee820f1134ef460a423042"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-author-series-v3-retry1/results-compact.json",
+      "bytes": 62809,
+      "sha256": "af94e16a0f7b2185a6a94e6e7c12c8f065d1169e631ee8bb8bf7a942717e23a9"
+    },
+    {
+      "path": "artifacts/realtime-vla/a2c2-transport-diagnostics-v1/summary.json",
+      "bytes": 2929,
+      "sha256": "ade5143b27f902816861d651d198f6d6fb82f614e7566f71d4262ede8762fa05"
     },
     {
       "path": "artifacts/realtime-vla/ablation-pi0fast-prefetch5/config.json",
@@ -48,6 +133,96 @@
       "sha256": "61403eceec5c26f818fc7c83a15536d208833e6749f63fce97e0d70be7da80e9"
     },
     {
+      "path": "artifacts/realtime-vla/additional-evidence-summary.json",
+      "bytes": 282,
+      "sha256": "eb926b9b7c6f2514eac4b715e1316bb32c2e082e7316ba628aabe3dc800e54f1"
+    },
+    {
+      "path": "artifacts/realtime-vla/additional-evidence/EVIDENCE-MANIFEST.json",
+      "bytes": 218279,
+      "sha256": "154bc9e2b357227ffcb150891250a11bf150c45197690fce12de5a4aac16fa88"
+    },
+    {
+      "path": "artifacts/realtime-vla/additional-experiments-summary.json",
+      "bytes": 48100,
+      "sha256": "1aecdfb4ba7793dde6809df4e0732f893d48e143508f957ebbacb5b69d72c34a"
+    },
+    {
+      "path": "artifacts/realtime-vla/additional-publication-manifest.json",
+      "bytes": 9640,
+      "sha256": "59d3a782fa1709a14ce1e7bcbc7f737c2fdc6c2902e2cbf0054d453c05636e0f"
+    },
+    {
+      "path": "artifacts/realtime-vla/additional-publication-privacy-qa.json",
+      "bytes": 395,
+      "sha256": "39f82ecf46806ce5518a5147e7468c372c7c56267c7f61a1cab4cc675385e624"
+    },
+    {
+      "path": "artifacts/realtime-vla/continuity-clean-protocol.json",
+      "bytes": 4848,
+      "sha256": "08de14f71ed19b64a6bae5195629a1e05321e59eea53a6d8078e05bb5fbbafc7"
+    },
+    {
+      "path": "artifacts/realtime-vla/continuity-clean/figures/rtc-pi05.png",
+      "bytes": 135725,
+      "sha256": "3770b488988b7018e64dd085fec8b80fd5d6a3ee28f036eb60d65b32f4e75e5f"
+    },
+    {
+      "path": "artifacts/realtime-vla/continuity-clean/figures/rtc-pi05.svg",
+      "bytes": 100809,
+      "sha256": "52bd7ac893241d83a74758ca360d3ce35419d70ea7a9d342aed9b9cc56469cff"
+    },
+    {
+      "path": "artifacts/realtime-vla/continuity-clean/figures/rtc-smolvla-plot-data.json",
+      "bytes": 1007,
+      "sha256": "8c60911bead2f4758e711550952ac8a08e38b8ce078629a490d4ebab09dbf786"
+    },
+    {
+      "path": "artifacts/realtime-vla/continuity-clean/figures/rtc-smolvla.png",
+      "bytes": 142840,
+      "sha256": "e9d7dee981783bc2d06ba7efe0245b8c7c9a6aec813dbb6960478e4840c34c34"
+    },
+    {
+      "path": "artifacts/realtime-vla/continuity-clean/figures/rtc-smolvla.svg",
+      "bytes": 103886,
+      "sha256": "bb94c231124606aba58052ae8318c22f1a2b4d3cdbed3399dc31bdee2766f5f4"
+    },
+    {
+      "path": "artifacts/realtime-vla/continuity-clean/pi05-historical-bootstrap-parity.json",
+      "bytes": 4345,
+      "sha256": "c3f77986192d1d5533319893e71e26cfbc284265157c11b391367dc7050be080"
+    },
+    {
+      "path": "artifacts/realtime-vla/continuity-clean/pi05-report/resource-validation.json",
+      "bytes": 8674,
+      "sha256": "ea735b553f036ddf7c056bf64c16aed08148d66406bd9ccf72d6ea8429bddbf1"
+    },
+    {
+      "path": "artifacts/realtime-vla/continuity-clean/pi05-report/results.json",
+      "bytes": 291324,
+      "sha256": "e06b6a487597c54f49f292105647db3b2f6685264302eafa49cc3309a45fe0cd"
+    },
+    {
+      "path": "artifacts/realtime-vla/continuity-clean/smolvla-report/resource-validation.json",
+      "bytes": 8653,
+      "sha256": "406c79098bfa2241e1dcb053d26c9c6c7307017db9ba67895d82d6194e050345"
+    },
+    {
+      "path": "artifacts/realtime-vla/continuity-clean/smolvla-report/results.json",
+      "bytes": 359332,
+      "sha256": "45f6650171357141094885f9cf8608be1e56d1edf761fe8c564de7dcd6a45f27"
+    },
+    {
+      "path": "artifacts/realtime-vla/continuity-protocol.json",
+      "bytes": 2303,
+      "sha256": "af017aae7591ac02fa13a75ae94d8e1c4b18b85243d046e2a9778b5a8bfdff3c"
+    },
+    {
+      "path": "artifacts/realtime-vla/coordinated-gpu-start.json",
+      "bytes": 625,
+      "sha256": "c0dd2e54f3dec7000312895dd42106b69e999761b93f30ce4a39cb8953a0ca0b"
+    },
+    {
       "path": "artifacts/realtime-vla/environment-build-notes.json",
       "bytes": 3447,
       "sha256": "ae2b6df7ddd0a91392860b44bd74502f3a3903414f7ed6144a69d484873339cb"
@@ -81,6 +256,16 @@
       "path": "artifacts/realtime-vla/environment-versions.json",
       "bytes": 812,
       "sha256": "09e6a9445e576bcfb210facb4fe8d7d02cd57becb763aec608a78ecd5ad364c8"
+    },
+    {
+      "path": "artifacts/realtime-vla/external-worker-overlap-audit.json",
+      "bytes": 5708,
+      "sha256": "73dd502eeb237ca300a1d7f8cf4f435f08bc24f5df834c55130373bec5ddc7ef"
+    },
+    {
+      "path": "artifacts/realtime-vla/final-additional-integration-qa.json",
+      "bytes": 715,
+      "sha256": "b89ec2f8a02843f5d6e6492057481a4b23367425d1e389723ef18ec0cbc5a12d"
     },
     {
       "path": "artifacts/realtime-vla/formal-pi05-e10/config.json",
@@ -133,6 +318,11 @@
       "sha256": "4ffffe6a369abdf5e9d20445eaa9290ce51aacb836d1e5a21a0d527169a4ef03"
     },
     {
+      "path": "artifacts/realtime-vla/gpu-contention-observation.json",
+      "bytes": 1225,
+      "sha256": "7c6674fc348c951595745d40c426526c1ac5b04874d85e419e5cf3d02e5bc74a"
+    },
+    {
       "path": "artifacts/realtime-vla/installed-freeze-combined.txt",
       "bytes": 3350,
       "sha256": "83a4503fcb569e2446a9a802e19f83da13fac37dd6ebf611ab19c66df352f220"
@@ -151,6 +341,36 @@
       "path": "artifacts/realtime-vla/libero-assets-manifest.json",
       "bytes": 110691,
       "sha256": "cb74369aceb98a2f26bbff64bee8dbdbeb6957fa84079b1996ac8baeefef68f4"
+    },
+    {
+      "path": "artifacts/realtime-vla/linked-evidence-copy.json",
+      "bytes": 1351,
+      "sha256": "1ac953bebd16c488e5a76af78f6cc172d108e017da4a09aedcb645ad7ef100ca"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/a2c2/decode-semantics-evidence/semantics-summary.json",
+      "bytes": 1305,
+      "sha256": "f67d364f2e1a09bd83ee38b62339cad99c008e03222c89371b41425be3614095"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi05/api-smoke.json",
+      "bytes": 5468,
+      "sha256": "5197102c3713f4b39781e9b44c708f52542dab55db93b11bc97ad9835931e480"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi05/processor-smoke.json",
+      "bytes": 686,
+      "sha256": "e3b87a06148b6be65f3385134f589a0cb2513eb309b238d6642a2ac9ca30bde4"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi05/restoration.json",
+      "bytes": 562,
+      "sha256": "a00efe9860ba772eede2011bfe22922a65f09a9b029a825f8dbecece96e68e1e"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi05/schema-smoke.json",
+      "bytes": 629,
+      "sha256": "e6aa3497d5e2cc836e7dcbbaf0859995142b869af91124ba21c01d7865efcfe4"
     },
     {
       "path": "artifacts/realtime-vla/models/pi0fast/config.json",
@@ -291,6 +511,21 @@
       "path": "artifacts/realtime-vla/pi05-protocol.json",
       "bytes": 37418,
       "sha256": "eeb66778e88fabccb1fd016cca68a2f000ba6550c6ed86128954b9087773dfd5"
+    },
+    {
+      "path": "artifacts/realtime-vla/pi05-report/comparison-plot-data.json",
+      "bytes": 936,
+      "sha256": "2af3bff6a20cb6a007e79ced1db004f25fa9e34b4903956bdf03aee1404459f6"
+    },
+    {
+      "path": "artifacts/realtime-vla/pi05-report/comparison.png",
+      "bytes": 89515,
+      "sha256": "e5a53213fca8502cbd20fb998a1ff46ff5ff3c33b890a41d6f7ff323c3b50621"
+    },
+    {
+      "path": "artifacts/realtime-vla/pi05-report/cross-model-initial-pairing.json",
+      "bytes": 11444,
+      "sha256": "f9060c16995777ea5393e5996a4233da1ce7cd5eff1f5a779732f8a9aeae00ef"
     },
     {
       "path": "artifacts/realtime-vla/pi05-report/episodes.csv",
@@ -463,19 +698,79 @@
       "sha256": "adc2bf36f1b47d34933a65fdc1622f6f9dded451d8bdf0c748954e8a29d26bd2"
     },
     {
+      "path": "artifacts/realtime-vla/vlash-protocol-amendment-01.json",
+      "bytes": 4450,
+      "sha256": "1b3824142899e01373e236101a6ff3c510be10dcaa885c36b831beebf089bc3e"
+    },
+    {
+      "path": "artifacts/realtime-vla/vlash-protocol-amendment-02.json",
+      "bytes": 3683,
+      "sha256": "9fcab3df293df275a62c738b17f8e5baf2aa34a6d0b5668f6bc0d6f91b8fb3ea"
+    },
+    {
+      "path": "artifacts/realtime-vla/vlash-protocol-amendment-03.json",
+      "bytes": 4701,
+      "sha256": "d69d700453d098ade07eb34d8e3becbc998ea1c08e6b67d2198b0f0d22ff3c77"
+    },
+    {
+      "path": "artifacts/realtime-vla/vlash-protocol.json",
+      "bytes": 43250,
+      "sha256": "eb060809ee842924b9c116a01ec2dee35af8c0fac66d74c74f0e6228ab8bd473"
+    },
+    {
+      "path": "artifacts/realtime-vla/vlash-report/paired-initial-hashes.json",
+      "bytes": 10052,
+      "sha256": "e7a8cc018ff1af35b7f44c912eadda32300b9fdebcd88e53513e8786f9341332"
+    },
+    {
+      "path": "artifacts/realtime-vla/vlash-report/prediction-diagnostics.json",
+      "bytes": 474454,
+      "sha256": "f61352092b374c5ed463118c557c9a267e069f7ee40698a5034ea00ba0b7686c"
+    },
+    {
+      "path": "artifacts/realtime-vla/vlash-report/results.json",
+      "bytes": 90182,
+      "sha256": "31c4d9ca4beaf5d8715d78b75364448e05c73a9e108a1a908a7b236e93bbc1bb"
+    },
+    {
+      "path": "artifacts/realtime-vla/vlash-report/summary.json",
+      "bytes": 27929,
+      "sha256": "7d25c4560d8c553dd73967ab32a4c6665e1483df71b331f9cf980bd34a245af2"
+    },
+    {
+      "path": "artifacts/realtime-vla/vlash-report/transport-tail-diagnostics.json",
+      "bytes": 88309,
+      "sha256": "03d0aa34182b1c7af8952018b07438fc2240e1056b17c4adc380543418d81f9f"
+    },
+    {
+      "path": "artifacts/realtime-vla/vlash-report/validation.json",
+      "bytes": 2304,
+      "sha256": "2c3dff2ea2efec2ea848affc793523bd8d80ccafab75aa8e942ffc323948c72e"
+    },
+    {
+      "path": "artifacts/realtime-vla/vlash-report/whole-system-resource-summary.json",
+      "bytes": 869,
+      "sha256": "dce94e9e69f1a17602e742f3515bd6598f3a307a87aa255c672dd1c7aad07e07"
+    },
+    {
       "path": "docs/architecture/realtime-vla.md",
       "bytes": 6879,
       "sha256": "0450f9ab09ef4ab00cb3ee5416c193bfa535cbbbfcfa5b2541c4c74d24970d85"
     },
     {
+      "path": "docs/experiments/realtime-continuity.md",
+      "bytes": 22026,
+      "sha256": "977d7a7324f8a50c60362382c26117570267bc8fd9e537de5eeafe2fb2d04f28"
+    },
+    {
       "path": "docs/experiments/realtime-vla.md",
-      "bytes": 10124,
-      "sha256": "b5dff1fae18b5e995a66c3761952ffacb7fc35e8f57da2596160f9c02bcecb70"
+      "bytes": 10217,
+      "sha256": "e9e5f0e38ec13962a803693812da852544cbf1d9a00ab8f34c4e8343c2b1fa25"
     },
     {
       "path": "docs/guides/realtime-vla.md",
-      "bytes": 7535,
-      "sha256": "a5a6f9c7298c3b7772fd1f63479e28b6acd1673f12dce83c849a0a5378cef7d6"
+      "bytes": 7568,
+      "sha256": "5df5a2db47bf85ae5006232ddbe95cdae6e5932cbc12ecc2220984574480dd23"
     },
     {
       "path": "docs/reference/pi05-libero-assets.md",
@@ -483,14 +778,49 @@
       "sha256": "12d8694af7d8d1236daf8fb866ebe59be3d3f156351d0109aaf22a8642317a0f"
     },
     {
+      "path": "docs/reference/realtime-continuity-methods.md",
+      "bytes": 39479,
+      "sha256": "48fe4a6242f8e2a300b7ed1db1bdc2947f50457314e9effcffc264635283703f"
+    },
+    {
       "path": "docs/reference/realtime-vla-assets.md",
-      "bytes": 16887,
-      "sha256": "ddcf24e61078dfce64679947e3a2fd13e83f3a11a21d5cd6d47cab59289029c4"
+      "bytes": 16941,
+      "sha256": "e2dcc44b2d749e6174dc0d0f343ab8f1aec8a3d3fe6779828e9b6b27d32e9981"
+    },
+    {
+      "path": "docs/reference/vlash-libero-assets.md",
+      "bytes": 15002,
+      "sha256": "9feb06cf64d9c3c128fbe8f55ee205acb5ccc454bf068803a48ffa8d35ae0ae1"
+    },
+    {
+      "path": "docs/reference/vlash-source-manifest.json",
+      "bytes": 5700,
+      "sha256": "132a9d9c014c0f4750c41ba87d68cfb0e41e5bad85e86d4bb2a0525ee06323e7"
     },
     {
       "path": "experiments/realtime_vla/Dockerfile",
       "bytes": 473,
       "sha256": "1bd6cf76d46868c6c49897eb8457f1d778bcef679c48cd835d57a7aadd13ac45"
+    },
+    {
+      "path": "experiments/realtime_vla/a2c2_runtime.py",
+      "bytes": 50876,
+      "sha256": "eafe68ea1c7be64f1b0c1c6aa2fd97db90d4f382cff9039775b21b0c908dbb45"
+    },
+    {
+      "path": "experiments/realtime_vla/a2c2_worker.py",
+      "bytes": 18971,
+      "sha256": "fe96f46bdcf7af36696f718ca968452ae1c3d1c47cc603892c2aa5ca089b344a"
+    },
+    {
+      "path": "experiments/realtime_vla/audit_continuity_resources.py",
+      "bytes": 14471,
+      "sha256": "6404c1c6abd15b8b0aa793596febbcb638a8424e953b41f529318de67051211e"
+    },
+    {
+      "path": "experiments/realtime_vla/benchmark_a2c2_transport.py",
+      "bytes": 10044,
+      "sha256": "b6d91e28e5da1559dcd0adc4a529887bb4b7983f636ce556c667a40878bae325"
     },
     {
       "path": "experiments/realtime_vla/camera_worker.py",
@@ -501,6 +831,21 @@
       "path": "experiments/realtime_vla/chunk_queue.py",
       "bytes": 8472,
       "sha256": "928dccf281094992f119e29759901f30124eb44f3c216bdc65ff1b18f5a74fab"
+    },
+    {
+      "path": "experiments/realtime_vla/continuity_runtime.py",
+      "bytes": 29715,
+      "sha256": "efb37b7e3e4d3d29cd6a88194deb4a1bd2b3f5ef44055d473270f699e0ddbff7"
+    },
+    {
+      "path": "experiments/realtime_vla/continuity_worker.py",
+      "bytes": 9566,
+      "sha256": "3744df92e430e57b3484113301681b8e1ea4a07412611d0749c88c3dc9c051d5"
+    },
+    {
+      "path": "experiments/realtime_vla/download_a2c2.py",
+      "bytes": 7125,
+      "sha256": "a8ed333c4b47554f334067f9655eec2d4706545c62ce2b02c14ec7a622ded08c"
     },
     {
       "path": "experiments/realtime_vla/download_pi05.py",
@@ -518,9 +863,29 @@
       "sha256": "cfbf3cb684f914e6386e4a0ce1d5bf322d4fdd3b38751b2952eb8859f600f7bf"
     },
     {
+      "path": "experiments/realtime_vla/download_vlash.py",
+      "bytes": 5729,
+      "sha256": "e41fbc7d359b6339b1a4e5f00ef9b099a8f7ee9a9419e5aab70c342c30e765c7"
+    },
+    {
       "path": "experiments/realtime_vla/evaluate.py",
       "bytes": 21234,
       "sha256": "d7b319401af9d0730c2484ae835b9bf41e1ec99512883dedef042e4d661c318a"
+    },
+    {
+      "path": "experiments/realtime_vla/evaluate_a2c2.py",
+      "bytes": 37500,
+      "sha256": "ecf9df0a9785baa097393d443792c48dd6da648af34abfc84c6d3e4624ea37a8"
+    },
+    {
+      "path": "experiments/realtime_vla/evaluate_continuity.py",
+      "bytes": 18379,
+      "sha256": "fc7a334632e5bc8811e3cdbc31a6f0f589cfaced9a50280f4dafebd75951d82a"
+    },
+    {
+      "path": "experiments/realtime_vla/evaluate_vlash.py",
+      "bytes": 34714,
+      "sha256": "6857880a5d7eb9bba2198791afb10820d22f80fbc8121448e6b223339374b167"
     },
     {
       "path": "experiments/realtime_vla/libero_env.py",
@@ -533,6 +898,11 @@
       "sha256": "f78b41028c41f441bcb49c77ffcf41378a4b2e021b456c732632732f81f0d36e"
     },
     {
+      "path": "experiments/realtime_vla/monitor_resources.py",
+      "bytes": 12928,
+      "sha256": "b0064b401d0d2ff01a35c0bd4778ac1fe76b87746f96d2853642bf9863349daa"
+    },
+    {
       "path": "experiments/realtime_vla/pi05_runtime.py",
       "bytes": 23494,
       "sha256": "4b8b5513b5ca8364daac3ed374aa74175dbeb96f0731fb48a5aee85a11712c2e"
@@ -543,6 +913,16 @@
       "sha256": "ef87ec6bb8448bb9f199b306f42aae508531cc93029e359354c40f5438b7146c"
     },
     {
+      "path": "experiments/realtime_vla/prepare_vlash_overlay.py",
+      "bytes": 5343,
+      "sha256": "1817311afd6ace4cd41d260ea6d677077146afba81e369d676f063197ab19f54"
+    },
+    {
+      "path": "experiments/realtime_vla/prepare_vlash_source.py",
+      "bytes": 5189,
+      "sha256": "4d7b1f105cb00b67c5064df5d3bf6456f73b52e3536495e638ab2c7867219ecb"
+    },
+    {
       "path": "experiments/realtime_vla/ros_bridge.py",
       "bytes": 35050,
       "sha256": "b18864ab5fcaeab289e7f86e87493b93c2431391a7f1dfad992b3d5a7846407b"
@@ -551,6 +931,16 @@
       "path": "experiments/realtime_vla/ros_client.py",
       "bytes": 13294,
       "sha256": "4ffbfb805d6d834e59125fc6dfc8ead389d5e1dae1004f921a2ccadeace19670"
+    },
+    {
+      "path": "experiments/realtime_vla/run_continuity_clean_series.sh",
+      "bytes": 1378,
+      "sha256": "607a5abb9fe9fc439c44f1a2b1b9d4ecf6b0b2dcbbcb03c9cd1f6a73e15185c9"
+    },
+    {
+      "path": "experiments/realtime_vla/run_continuity_series.sh",
+      "bytes": 1693,
+      "sha256": "46d44cab14b20dbe0e0bb8fb60c011506688bcb8b7cf05017a11eb8e61e27938"
     },
     {
       "path": "experiments/realtime_vla/run_ros_bridge.sh",
@@ -568,6 +958,16 @@
       "sha256": "1fb1506efc6991697d2231ae8e8aa4f47e9eed3376ff1c0b39efe2ed1b6bb70a"
     },
     {
+      "path": "experiments/realtime_vla/smoke_continuity.py",
+      "bytes": 13384,
+      "sha256": "72f24b8c5a04403e5cce13f582f10be2f2305ab83032c9f8b7dd25a7381ac1bc"
+    },
+    {
+      "path": "experiments/realtime_vla/smoke_vlash.py",
+      "bytes": 7795,
+      "sha256": "456b42ae33dea9687a01ebcf59e21a7d1ef7e831b33987c6fe6c1be7188c6bd2"
+    },
+    {
       "path": "experiments/realtime_vla/smolvla_runtime.py",
       "bytes": 17757,
       "sha256": "37d27abc9ae7a52ff781f3b26d92c4927443c4a92cad1b6c7fe7096bf70b7d28"
@@ -576,6 +976,21 @@
       "path": "experiments/realtime_vla/summarize.py",
       "bytes": 47842,
       "sha256": "27f18dbaeba62e89d25117ec801acb5826ec01086630df8355cb8597c7bafe7a"
+    },
+    {
+      "path": "experiments/realtime_vla/summarize_a2c2.py",
+      "bytes": 41005,
+      "sha256": "93ee21b2d77e2bc4dd892cc2047b6a058a4a0d5c26813315f1849e39f7fa5026"
+    },
+    {
+      "path": "experiments/realtime_vla/summarize_continuity.py",
+      "bytes": 27818,
+      "sha256": "1299030337f64abb5c76f90552ca84b82b12996fa8915dd4d2adcb2f4f6c89e5"
+    },
+    {
+      "path": "experiments/realtime_vla/summarize_vlash.py",
+      "bytes": 25423,
+      "sha256": "29bd9e08672804a9a77020ed831bc4d98fcaddc029cfae9b3fd0331ba5f75cd7"
     },
     {
       "path": "experiments/realtime_vla/test_camera_worker.py",
@@ -603,6 +1018,21 @@
       "sha256": "0580f038aa9c6f605081bb7cc58d90694de2cf898d9f575939c3a51120d2f98a"
     },
     {
+      "path": "experiments/realtime_vla/vlash_runtime.py",
+      "bytes": 31644,
+      "sha256": "812f70d7c0b3da485f79dca4098593ef669ad5e7a917264ea789ee76fd41d84e"
+    },
+    {
+      "path": "experiments/realtime_vla/vlash_timing.py",
+      "bytes": 19261,
+      "sha256": "5bbd07901074d770339380a1a4c56d79343e8fd4b5e86d315a0c8f254245da40"
+    },
+    {
+      "path": "experiments/realtime_vla/vlash_worker.py",
+      "bytes": 10455,
+      "sha256": "e2c29dce19745f0fdd7ff1d42a817c79ff43e803e25d97f04dae1bb0eecca39d"
+    },
+    {
       "path": "experiments/realtime_vla/worker.py",
       "bytes": 15762,
       "sha256": "7e4f06a5b935d20cef0a656d01507d75d6adfc9008463caeb8e565858cfd13d5"
@@ -618,9 +1048,24 @@
       "sha256": "c23d70e6a78ae82eb86d5934778a583b1aa5fdc626cb449940ae23127b336fcf"
     },
     {
+      "path": "requirements-vlash.in",
+      "bytes": 377,
+      "sha256": "9cecd2376dfffe0349b0b27eca290ebeebefacc4f625f2e45db4850eb134fcd5"
+    },
+    {
+      "path": "requirements-vlash.lock",
+      "bytes": 377,
+      "sha256": "9cecd2376dfffe0349b0b27eca290ebeebefacc4f625f2e45db4850eb134fcd5"
+    },
+    {
       "path": "scripts/bootstrap_uv.py",
       "bytes": 1995,
       "sha256": "52cf52d79f1a08721dfb8d49dfa13e67c840c0aaa2f95c2c9a7ef4b0b8151a46"
+    },
+    {
+      "path": "scripts/build_continuity_figures.py",
+      "bytes": 7156,
+      "sha256": "fa43b118492fd203d64c216988e774fe2a5734eb1e7afca6af351d9e84874391"
     },
     {
       "path": "scripts/build_realtime_report.py",
@@ -633,15 +1078,69 @@
       "sha256": "fd5b5728bddae8a18d84f6f51bb8ce576f3353225d3c355305e16cff143144cb"
     },
     {
+      "path": "scripts/run_a2c2_direct_series.sh",
+      "bytes": 1533,
+      "sha256": "7962dcd6eb25047e99e9d541b97ff046c63e647b4e2ee7499e4f1bb9d0444a64"
+    },
+    {
+      "path": "scripts/run_a2c2_series.sh",
+      "bytes": 1574,
+      "sha256": "d99fc3274c0929c1d2bd1c22e9928998bfd65381c824cd3eb702e981281e2b61"
+    },
+    {
       "path": "scripts/setup_realtime_vla.sh",
       "bytes": 1481,
       "sha256": "9f8e625aa55287cb26b1de2450b0ad6a51895bdca8a756926ee0805ca5dcb866"
     },
     {
+      "path": "scripts/setup_vlash.sh",
+      "bytes": 3945,
+      "sha256": "3d3c56ee15c220bc51380083b19cf47bd9c3e34f2f61752eb3a61b1e3e2984f2"
+    },
+    {
       "path": "scripts/verify_runtime.py",
       "bytes": 2770,
       "sha256": "db25e3ecdf3b4c804fbcaa0cdb9d8e964fea41611f4258374354771134da7b12"
+    },
+    {
+      "path": "tests/test_a2c2_pipeline.py",
+      "bytes": 16407,
+      "sha256": "ad3ff7c6c685d1ac9774f27e40620d562ae5189a56d85e5cb3ebfd1aa34bdcc9"
+    },
+    {
+      "path": "tests/test_continuity_protocol.py",
+      "bytes": 10952,
+      "sha256": "51a8857da428abac6601a78023a3063f26e46ca2fe0470771e59726e90b5797e"
+    },
+    {
+      "path": "tests/test_continuity_runtime.py",
+      "bytes": 13361,
+      "sha256": "bce0474369e20de59acc0bd95424b002aafef227b046ef6b9e38ac7e0c955b38"
+    },
+    {
+      "path": "tests/test_continuity_summary.py",
+      "bytes": 9136,
+      "sha256": "bccef44b507b88c043602b045eb2dc6b3c9422b0c99a415be06d3559e79b4cda"
+    },
+    {
+      "path": "tests/test_resource_monitor.py",
+      "bytes": 7715,
+      "sha256": "b9dfd655211b18399e4dbadafd1aeaaf81933652a8748280e2faae9d3cb0a169"
+    },
+    {
+      "path": "tests/test_vlash_overlay.py",
+      "bytes": 3737,
+      "sha256": "dc9b15e6654bb0ef1d3333d5349d4c278c75231905bb18f29b81d9b015cd8f6a"
+    },
+    {
+      "path": "tests/test_vlash_restoration.py",
+      "bytes": 5702,
+      "sha256": "668160a3579a9c2e0ac04098b7b63a11b727eae7fd8af35b76737bf5664dd8a3"
+    },
+    {
+      "path": "tests/test_vlash_timing.py",
+      "bytes": 12242,
+      "sha256": "4e0424a677bca9f3768b831563db731fda47da77b337b521e9c13a50a30a9134"
     }
-  ],
-  "manifest_excludes_itself": true
+  ]
 }

@@ -1,0 +1,756 @@
+{
+  "status": "complete",
+  "model": "vlash dedicated pretrained pi05",
+  "formal_episodes": 15,
+  "formal_initial_states": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "groups": {
+    "coherent": {
+      "episodes": 5,
+      "successes": 3,
+      "success_rate": 0.6,
+      "success_by_initial_state": {
+        "1": false,
+        "2": true,
+        "3": false,
+        "4": true,
+        "5": true
+      },
+      "hold_fraction_pooled": 0.0,
+      "hold_fraction_episode_mean": 0.0,
+      "final_goal_xy_error_mm_median": 28.80424716359449,
+      "successful_completion_wall_seconds_median": 4.069878657006484,
+      "successful_completion_sim_seconds_median": 4.1000000000000005,
+      "realtime_factor_median": 1.006651851789208,
+      "effective_control_hz_episode_mean": 19.988985524142446,
+      "worker_steady_episode_mean_average_ms": 349.30842033187565,
+      "model_steady_episode_mean_average_ms": 305.1618940904189,
+      "online_query_interval_episode_mean_average_ticks": 18.207326007326007,
+      "online_query_hz_episode_mean_average": 1.0988711605854462,
+      "expired_prefix_actions_total": 384,
+      "image_source_age_steady_episode_mean_average_ms": 939.1531276219272,
+      "measured_proprio_age_steady_episode_mean_average_ms": 939.1531276219272,
+      "represented_state_age_steady_episode_mean_average_ticks": 17.979673698504282,
+      "prediction_position_error_episode_mean_average_mm": null,
+      "prediction_orientation_error_episode_mean_average_rad": null,
+      "prediction_target_matches": 0,
+      "pending_wait_ticks": 0,
+      "peak_cuda_allocated_GiB": 7.211397647857666,
+      "host_process_peak_RAM_bytes": null,
+      "host_process_peak_RAM_note": "No per-process RSS sampler was registered; whole-host pressure is reported separately."
+    },
+    "current": {
+      "episodes": 5,
+      "successes": 1,
+      "success_rate": 0.2,
+      "success_by_initial_state": {
+        "1": false,
+        "2": true,
+        "3": false,
+        "4": false,
+        "5": false
+      },
+      "hold_fraction_pooled": 0.0,
+      "hold_fraction_episode_mean": 0.0,
+      "final_goal_xy_error_mm_median": 41.445445651788404,
+      "successful_completion_wall_seconds_median": 4.117922429999453,
+      "successful_completion_sim_seconds_median": 4.15,
+      "realtime_factor_median": 1.002598200293549,
+      "effective_control_hz_episode_mean": 19.993550054078106,
+      "worker_steady_episode_mean_average_ms": 347.56924051933026,
+      "model_steady_episode_mean_average_ms": 304.156947215653,
+      "online_query_interval_episode_mean_average_ticks": 20.083333333333336,
+      "online_query_hz_episode_mean_average": 0.9959183673469388,
+      "expired_prefix_actions_total": 413,
+      "image_source_age_steady_episode_mean_average_ms": 987.4536143884316,
+      "measured_proprio_age_steady_episode_mean_average_ms": 878.8356516606658,
+      "represented_state_age_steady_episode_mean_average_ticks": 16.785729550604593,
+      "prediction_position_error_episode_mean_average_mm": null,
+      "prediction_orientation_error_episode_mean_average_rad": null,
+      "prediction_target_matches": 0,
+      "pending_wait_ticks": 0,
+      "peak_cuda_allocated_GiB": 7.211397647857666,
+      "host_process_peak_RAM_bytes": null,
+      "host_process_peak_RAM_note": "No per-process RSS sampler was registered; whole-host pressure is reported separately."
+    },
+    "predicted": {
+      "episodes": 5,
+      "successes": 2,
+      "success_rate": 0.4,
+      "success_by_initial_state": {
+        "1": false,
+        "2": true,
+        "3": true,
+        "4": false,
+        "5": false
+      },
+      "hold_fraction_pooled": 0.0,
+      "hold_fraction_episode_mean": 0.0,
+      "final_goal_xy_error_mm_median": 35.460252345626266,
+      "successful_completion_wall_seconds_median": 11.040872671499528,
+      "successful_completion_sim_seconds_median": 11.075,
+      "realtime_factor_median": 1.0026175862263638,
+      "effective_control_hz_episode_mean": 19.992232030651284,
+      "worker_steady_episode_mean_average_ms": 369.3388656530419,
+      "model_steady_episode_mean_average_ms": 301.73762878971576,
+      "online_query_interval_episode_mean_average_ticks": 30.45952380952381,
+      "online_query_hz_episode_mean_average": 0.6576346470009801,
+      "expired_prefix_actions_total": 25,
+      "image_source_age_steady_episode_mean_average_ms": 1439.4073209062938,
+      "measured_proprio_age_steady_episode_mean_average_ms": 1336.7169245657678,
+      "represented_state_age_steady_episode_mean_average_ticks": 15.253400353446512,
+      "prediction_position_error_episode_mean_average_mm": 22.057807393333036,
+      "prediction_orientation_error_episode_mean_average_rad": 0.06251264160564356,
+      "prediction_target_matches": 39,
+      "pending_wait_ticks": 133,
+      "peak_cuda_allocated_GiB": 7.21133279800415,
+      "host_process_peak_RAM_bytes": null,
+      "host_process_peak_RAM_note": "No per-process RSS sampler was registered; whole-host pressure is reported separately.",
+      "prediction_position_error_pooled_median_mm": 19.806361722913465,
+      "prediction_position_error_pooled_p95_mm": 39.639336401934294,
+      "prediction_fingers_error_pooled_mean_mm": 11.499548495713038
+    }
+  },
+  "development": [
+    {
+      "status": "completed",
+      "error": null,
+      "model": "vlash",
+      "mode": "artificial-lockstep",
+      "state_condition": "current",
+      "init_state_index": 0,
+      "split": "development",
+      "seed": 20261102,
+      "success": true,
+      "success_within_wall_budget": null,
+      "ticks": 101,
+      "wall_seconds": 9.23569113999838,
+      "sim_seconds": 5.05,
+      "realtime_factor": 0.5467917802198056,
+      "control_hz": 20,
+      "sim_budget_s": 14.0,
+      "native_generation_horizon": 50,
+      "prefetch_steps": 0,
+      "artificial_delay_ticks": 0,
+      "artificial_delay_units": "environment loop steps, not declared training dataset samples",
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "goal_xy_error_m": 0.023494580432246545,
+      "final_metrics": {
+        "step_wall_seconds": 0.0839594479984953,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.023494580432246545,
+        "bowl_position": [
+          0.07183515170538692,
+          0.19069108066297338,
+          0.9082103658190769
+        ],
+        "plate_position": [
+          0.053071478359707304,
+          0.20483038305962417,
+          0.9032215827805907
+        ],
+        "eef_tracking_error_m": 0.012960242207786,
+        "actuator_control": [
+          3.4864950247946833,
+          -46.60147133020947,
+          5.558043382923671,
+          14.161951873866675,
+          0.310242539427343,
+          -2.0319122313723548,
+          -0.16535707869515037,
+          0.0,
+          0.0
+        ]
+      },
+      "ros_transport": true,
+      "camera_mode": "synchronous",
+      "local_training": false,
+      "configuration_note": "Author-style old image/current state, action_quant1, native H50 consumption, physics intentionally paused during inference; separate from real-time series",
+      "source_directory": "artifacts/realtime-vla/development-vlash-artificial-d0-retry1/artificial-init0",
+      "peak_cuda_bytes": 7743039488
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "vlash",
+      "mode": "artificial-lockstep",
+      "state_condition": "current",
+      "init_state_index": 0,
+      "split": "development",
+      "seed": 20261102,
+      "success": true,
+      "success_within_wall_budget": null,
+      "ticks": 104,
+      "wall_seconds": 9.408207663997018,
+      "sim_seconds": 5.2,
+      "realtime_factor": 0.5527088884208167,
+      "control_hz": 20,
+      "sim_budget_s": 14.0,
+      "native_generation_horizon": 50,
+      "prefetch_steps": 0,
+      "artificial_delay_ticks": 3,
+      "artificial_delay_units": "environment loop steps, not declared training dataset samples",
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "goal_xy_error_m": 0.004423955785928109,
+      "final_metrics": {
+        "step_wall_seconds": 0.08013394500449067,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.004423955785928109,
+        "bowl_position": [
+          0.05107015920837658,
+          0.20358324195814712,
+          0.9090496504229385
+        ],
+        "plate_position": [
+          0.05398479684754261,
+          0.20691134535621086,
+          0.902649515753633
+        ],
+        "eef_tracking_error_m": 0.04122091849803584,
+        "actuator_control": [
+          1.0034843315416493,
+          -50.265555448458315,
+          3.2764947367687336,
+          16.302233103404316,
+          0.04866243675135651,
+          2.9608622604218886,
+          -0.07795220737964503,
+          0.0,
+          0.0
+        ]
+      },
+      "ros_transport": true,
+      "camera_mode": "synchronous",
+      "local_training": false,
+      "configuration_note": "Author-style old image/current state, action_quant1, native H50 consumption, physics intentionally paused during inference; separate from real-time series",
+      "source_directory": "artifacts/realtime-vla/development-vlash-artificial-d3/artificial-init0",
+      "peak_cuda_bytes": 7743039488
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "vlash",
+      "mode": "realtime",
+      "state_condition": "coherent",
+      "init_state_index": 0,
+      "split": "development",
+      "seed": 20261102,
+      "success": false,
+      "success_within_wall_budget": false,
+      "ticks": 280,
+      "wall_seconds": 13.961454014002811,
+      "sim_seconds": 14.0,
+      "realtime_factor": 1.0027608862199116,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "native_generation_horizon": 50,
+      "prefetch_steps": 30,
+      "merge": "aligned_to_represented_state",
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "expired_prefix_actions": 136,
+      "replaced_actions": 345,
+      "pending_wait_ticks": 0,
+      "mean_control_interval_s": 0.05000288608960376,
+      "p95_control_interval_s": 0.051367664399003844,
+      "mean_chunk_inference_s": 0.3288210925330835,
+      "mean_model_inference_ms": 298.3565002020138,
+      "mean_image_source_age_s": 1.033123838903183,
+      "sensor_frames_received": 125,
+      "stale_sensor_ticks": 0,
+      "goal_xy_error_m": 0.11955537841086417,
+      "final_metrics": {
+        "step_wall_seconds": 0.00939535799989244,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.11955537841086417,
+        "bowl_position": [
+          -0.06600755080101782,
+          0.21076585743704498,
+          0.898404150188853
+        ],
+        "plate_position": [
+          0.05341726861586711,
+          0.20518007063397525,
+          0.9024998346667837
+        ],
+        "eef_tracking_error_m": 0.015510049205070636,
+        "actuator_control": [
+          0.668017957469406,
+          -39.95330287912372,
+          2.652066365075652,
+          16.501090012337777,
+          -0.49479048753481414,
+          2.5328033036315194,
+          -0.0545917401354523,
+          0.0,
+          0.0
+        ]
+      },
+      "switches": [
+        {
+          "tick": 28,
+          "translation_delta_l2": 0.12160125993052924,
+          "rotation_delta_l2": 0.033751936976796154,
+          "gripper_delta_abs": 5.370378494262695e-05
+        },
+        {
+          "tick": 44,
+          "translation_delta_l2": 0.3022980851026057,
+          "rotation_delta_l2": 0.06908533413459421,
+          "gripper_delta_abs": 0.0
+        },
+        {
+          "tick": 62,
+          "translation_delta_l2": 1.658801244262115,
+          "rotation_delta_l2": 0.15862570168277124,
+          "gripper_delta_abs": 1.9959248900413513
+        },
+        {
+          "tick": 78,
+          "translation_delta_l2": 1.903069297130089,
+          "rotation_delta_l2": 0.20221133766871144,
+          "gripper_delta_abs": 2.0
+        },
+        {
+          "tick": 97,
+          "translation_delta_l2": 2.198643761056026,
+          "rotation_delta_l2": 0.2591790308832885,
+          "gripper_delta_abs": 1.997532308101654
+        },
+        {
+          "tick": 116,
+          "translation_delta_l2": 1.9858461351797647,
+          "rotation_delta_l2": 0.3114437044207371,
+          "gripper_delta_abs": 1.996243417263031
+        },
+        {
+          "tick": 134,
+          "translation_delta_l2": 2.0500658541227943,
+          "rotation_delta_l2": 0.3314720995074812,
+          "gripper_delta_abs": 1.9957249760627747
+        },
+        {
+          "tick": 152,
+          "translation_delta_l2": 2.355973513355744,
+          "rotation_delta_l2": 0.2900467162150599,
+          "gripper_delta_abs": 1.9885899424552917
+        },
+        {
+          "tick": 170,
+          "translation_delta_l2": 2.200017498729533,
+          "rotation_delta_l2": 0.31244234837840873,
+          "gripper_delta_abs": 1.9934088587760925
+        },
+        {
+          "tick": 188,
+          "translation_delta_l2": 1.6615597077590598,
+          "rotation_delta_l2": 0.31073789845470046,
+          "gripper_delta_abs": 2.0
+        },
+        {
+          "tick": 206,
+          "translation_delta_l2": 1.7639753849831157,
+          "rotation_delta_l2": 0.29820628038812186,
+          "gripper_delta_abs": 0.0
+        },
+        {
+          "tick": 224,
+          "translation_delta_l2": 1.593622478029067,
+          "rotation_delta_l2": 0.21349217017613856,
+          "gripper_delta_abs": 0.0
+        },
+        {
+          "tick": 241,
+          "translation_delta_l2": 2.025366345803005,
+          "rotation_delta_l2": 0.22121827711258257,
+          "gripper_delta_abs": 1.9745354056358337
+        },
+        {
+          "tick": 259,
+          "translation_delta_l2": 1.5683472638673985,
+          "rotation_delta_l2": 0.17473282533654716,
+          "gripper_delta_abs": 1.9868930578231812
+        },
+        {
+          "tick": 278,
+          "translation_delta_l2": 0.8502491417984628,
+          "rotation_delta_l2": 0.1620735412549326,
+          "gripper_delta_abs": 0.0019109845161437988
+        }
+      ],
+      "prediction_target_matches": 0,
+      "mean_prediction_position_error_m": null,
+      "mean_prediction_orientation_error_rad": null,
+      "ros_transport": true,
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "local_training": false,
+      "configuration_note": "H50/R30, origin=capture/current/predicted target by condition; early chunks pending without blocking; warm2 plus per-episode held-current-state calibration2 and final seed-reset/bootstrap excluded; initial delay estimate uses only calibration2; no privileged policy inputs",
+      "source_directory": "artifacts/realtime-vla/formal-vlash-coherent/realtime-init0",
+      "peak_cuda_bytes": 7743179264,
+      "steady_image_source_age_ms": 911.24467258721,
+      "steady_measured_proprio_source_age_ms": 911.24467258721,
+      "steady_represented_state_age_ticks": 17.42063492063492,
+      "online_query_count": 15,
+      "mean_online_query_interval_ticks": 17.928571428571427,
+      "online_query_hz": 1.1155378486055778
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "vlash",
+      "mode": "realtime",
+      "state_condition": "current",
+      "init_state_index": 0,
+      "split": "development",
+      "seed": 20261102,
+      "success": false,
+      "success_within_wall_budget": false,
+      "ticks": 280,
+      "wall_seconds": 13.973008016000676,
+      "sim_seconds": 14.0,
+      "realtime_factor": 1.0019317232172495,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "native_generation_horizon": 50,
+      "prefetch_steps": 30,
+      "merge": "aligned_to_represented_state",
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "expired_prefix_actions": 112,
+      "replaced_actions": 275,
+      "pending_wait_ticks": 0,
+      "mean_control_interval_s": 0.050036448258055394,
+      "p95_control_interval_s": 0.05117279410114861,
+      "mean_chunk_inference_s": 0.40440083015318334,
+      "mean_model_inference_ms": 316.68696984483034,
+      "mean_image_source_age_s": 1.1578596520706663,
+      "sensor_frames_received": 129,
+      "stale_sensor_ticks": 0,
+      "goal_xy_error_m": 0.11814171077670262,
+      "final_metrics": {
+        "step_wall_seconds": 0.01136694299930241,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.11814171077670262,
+        "bowl_position": [
+          -0.06439872228997992,
+          0.21394683241466828,
+          0.8984041501888531
+        ],
+        "plate_position": [
+          0.05341726861586711,
+          0.20518007063397525,
+          0.9024998346667837
+        ],
+        "eef_tracking_error_m": 0.011862292557882624,
+        "actuator_control": [
+          0.17758421025719362,
+          -43.42368372309868,
+          1.7569874755387347,
+          23.532114022915724,
+          0.18182476458752103,
+          1.3182221050796061,
+          0.6494818326231817,
+          0.0050000000000000044,
+          -0.0050000000000000044
+        ]
+      },
+      "switches": [
+        {
+          "tick": 29,
+          "translation_delta_l2": 0.09621664633579939,
+          "rotation_delta_l2": 0.04809418120154459,
+          "gripper_delta_abs": 0.0009422898292541504
+        },
+        {
+          "tick": 49,
+          "translation_delta_l2": 0.0482289628522084,
+          "rotation_delta_l2": 0.03279113395458221,
+          "gripper_delta_abs": 0.0
+        },
+        {
+          "tick": 68,
+          "translation_delta_l2": 0.6401139127909238,
+          "rotation_delta_l2": 0.1391395594443495,
+          "gripper_delta_abs": 1.994249403476715
+        },
+        {
+          "tick": 87,
+          "translation_delta_l2": 2.0836234593862857,
+          "rotation_delta_l2": 0.27921451602079633,
+          "gripper_delta_abs": 1.9997206926345825
+        },
+        {
+          "tick": 107,
+          "translation_delta_l2": 2.1736012257712596,
+          "rotation_delta_l2": 0.3478284808632874,
+          "gripper_delta_abs": 0.003940701484680176
+        },
+        {
+          "tick": 127,
+          "translation_delta_l2": 1.9425979318512914,
+          "rotation_delta_l2": 0.32674740034363364,
+          "gripper_delta_abs": 0.0
+        },
+        {
+          "tick": 163,
+          "translation_delta_l2": 1.4298970246074858,
+          "rotation_delta_l2": 0.2874442288921428,
+          "gripper_delta_abs": 1.9766921997070312
+        },
+        {
+          "tick": 170,
+          "translation_delta_l2": 1.166028943135801,
+          "rotation_delta_l2": 0.11737244718928318,
+          "gripper_delta_abs": 0.0014607906341552734
+        },
+        {
+          "tick": 190,
+          "translation_delta_l2": 2.0937720666461046,
+          "rotation_delta_l2": 0.28393316541212377,
+          "gripper_delta_abs": 0.0018633604049682617
+        },
+        {
+          "tick": 209,
+          "translation_delta_l2": 1.9524793837255778,
+          "rotation_delta_l2": 0.19568673929629313,
+          "gripper_delta_abs": 1.981784462928772
+        },
+        {
+          "tick": 230,
+          "translation_delta_l2": 1.9232584788874105,
+          "rotation_delta_l2": 0.3652814217409861,
+          "gripper_delta_abs": 2.0
+        },
+        {
+          "tick": 250,
+          "translation_delta_l2": 1.818148725152131,
+          "rotation_delta_l2": 0.19674517435265432,
+          "gripper_delta_abs": 0.0028387904167175293
+        },
+        {
+          "tick": 271,
+          "translation_delta_l2": 1.4091403468090011,
+          "rotation_delta_l2": 0.19243440841544024,
+          "gripper_delta_abs": 1.9840187430381775
+        }
+      ],
+      "prediction_target_matches": 0,
+      "mean_prediction_position_error_m": null,
+      "mean_prediction_orientation_error_rad": null,
+      "ros_transport": true,
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "local_training": false,
+      "configuration_note": "H50/R30, origin=capture/current/predicted target by condition; early chunks pending without blocking; warm2 plus per-episode held-current-state calibration2 and final seed-reset/bootstrap excluded; initial delay estimate uses only calibration2; no privileged policy inputs",
+      "source_directory": "artifacts/realtime-vla/formal-vlash-current/realtime-init0",
+      "peak_cuda_bytes": 7743179264,
+      "steady_image_source_age_ms": 1041.8392431983596,
+      "steady_measured_proprio_source_age_ms": 941.4622499050646,
+      "steady_represented_state_age_ticks": 18.02390438247012,
+      "online_query_count": 13,
+      "mean_online_query_interval_ticks": 20.25,
+      "online_query_hz": 0.9876543209876543
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "vlash",
+      "mode": "realtime",
+      "state_condition": "predicted",
+      "init_state_index": 0,
+      "split": "development",
+      "seed": 20261102,
+      "success": false,
+      "success_within_wall_budget": false,
+      "ticks": 280,
+      "wall_seconds": 13.963116689999879,
+      "sim_seconds": 14.0,
+      "realtime_factor": 1.0026414811835338,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "native_generation_horizon": 50,
+      "prefetch_steps": 30,
+      "merge": "aligned_to_represented_state",
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "expired_prefix_actions": 0,
+      "replaced_actions": 96,
+      "pending_wait_ticks": 62,
+      "mean_control_interval_s": 0.050004225659510036,
+      "p95_control_interval_s": 0.05084343379639904,
+      "mean_chunk_inference_s": 0.3411090424988288,
+      "mean_model_inference_ms": 313.1171148743306,
+      "mean_image_source_age_s": 1.9094823652467832,
+      "sensor_frames_received": 131,
+      "stale_sensor_ticks": 0,
+      "goal_xy_error_m": 0.07714563653951204,
+      "final_metrics": {
+        "step_wall_seconds": 0.010049505995993968,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.07714563653951204,
+        "bowl_position": [
+          0.14757073764249584,
+          0.18098095314997922,
+          0.9166730148726953
+        ],
+        "plate_position": [
+          0.07527986046532759,
+          0.20791565778994267,
+          0.9024921986058924
+        ],
+        "eef_tracking_error_m": 0.034711919566503775,
+        "actuator_control": [
+          2.956351448622609,
+          -43.38748947118257,
+          8.14859965461954,
+          15.36900432079919,
+          0.11962218683724735,
+          0.43231689662681216,
+          -0.19028431093877574,
+          0.0,
+          0.0
+        ]
+      },
+      "switches": [
+        {
+          "tick": 38,
+          "translation_delta_l2": 0.7360129471237552,
+          "rotation_delta_l2": 0.10615000364399818,
+          "gripper_delta_abs": 2.0
+        },
+        {
+          "tick": 75,
+          "translation_delta_l2": 1.1060042178353462,
+          "rotation_delta_l2": 0.10581881579310838,
+          "gripper_delta_abs": 0.0007515549659729004
+        },
+        {
+          "tick": 112,
+          "translation_delta_l2": 1.6895583874697784,
+          "rotation_delta_l2": 0.2665227989784753,
+          "gripper_delta_abs": 1.9932671785354614
+        },
+        {
+          "tick": 148,
+          "translation_delta_l2": 0.5688611534855507,
+          "rotation_delta_l2": 0.14599031150025527,
+          "gripper_delta_abs": 1.9863245487213135
+        },
+        {
+          "tick": 184,
+          "translation_delta_l2": 1.651329922805379,
+          "rotation_delta_l2": 0.22541184783271837,
+          "gripper_delta_abs": 1.979619324207306
+        },
+        {
+          "tick": 219,
+          "translation_delta_l2": 0.2983983130373496,
+          "rotation_delta_l2": 0.09938694711218686,
+          "gripper_delta_abs": 1.984293818473816
+        },
+        {
+          "tick": 254,
+          "translation_delta_l2": 0.339762293603916,
+          "rotation_delta_l2": 0.07991978238135329,
+          "gripper_delta_abs": 0.004719674587249756
+        }
+      ],
+      "prediction_target_matches": 7,
+      "mean_prediction_position_error_m": 0.03073435001383936,
+      "mean_prediction_orientation_error_rad": 0.06356370359205397,
+      "ros_transport": true,
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "local_training": false,
+      "configuration_note": "H50/R30, origin=capture/current/predicted target by condition; early chunks pending without blocking; warm2 plus per-episode held-current-state calibration2 and final seed-reset/bootstrap excluded; initial delay estimate uses only calibration2; no privileged policy inputs",
+      "source_directory": "artifacts/realtime-vla/formal-vlash-predicted/realtime-init0",
+      "peak_cuda_bytes": 7743109632,
+      "steady_image_source_age_ms": 1806.443256703137,
+      "steady_measured_proprio_source_age_ms": 1704.2983813642286,
+      "steady_represented_state_age_ticks": 16.97107438016529,
+      "online_query_count": 8,
+      "mean_online_query_interval_ticks": 36.285714285714285,
+      "online_query_hz": 0.5511811023622047
+    }
+  ],
+  "audit": {
+    "status": "passed",
+    "checked_at_utc": "2026-11-01T20:42:22.251453+00:00",
+    "formal_realtime_episodes": 15,
+    "development_episodes_excluded": 5,
+    "startup_failures_excluded": 1,
+    "startup_failure_directory": "artifacts/realtime-vla/development-vlash-artificial-d0",
+    "registered_sources_unchanged": true,
+    "prior45_json_jsonl_files_unchanged": 243,
+    "api_smoke_unchanged": true,
+    "all_initial_conditions_paired": true,
+    "all_native_actions_time_origin_checked": true,
+    "all_model_calls_including_warmup_and_calibration_accounted": true,
+    "all_actual_ros_receipts_independently_correlated": true,
+    "run_audits": [
+      {
+        "run": "artifacts/realtime-vla/development-vlash-artificial-d0-retry1",
+        "native_task_episodes": 1,
+        "recorded_calls_all_accounted": 5,
+        "native_chunks": 3,
+        "ticks": 101,
+        "actual_ros_exchanges_verified": 10,
+        "all_weights_frozen_same_as_api": true,
+        "all1079state_values_verified": true
+      },
+      {
+        "run": "artifacts/realtime-vla/development-vlash-artificial-d3",
+        "native_task_episodes": 1,
+        "recorded_calls_all_accounted": 5,
+        "native_chunks": 3,
+        "ticks": 104,
+        "actual_ros_exchanges_verified": 10,
+        "all_weights_frozen_same_as_api": true,
+        "all1079state_values_verified": true
+      },
+      {
+        "run": "artifacts/realtime-vla/formal-vlash-coherent",
+        "native_task_episodes": 6,
+        "recorded_calls_all_accounted": 76,
+        "native_chunks": 62,
+        "ticks": 1088,
+        "actual_ros_exchanges_verified": 152,
+        "all_weights_frozen_same_as_api": true,
+        "all1079state_values_verified": true
+      },
+      {
+        "run": "artifacts/realtime-vla/formal-vlash-current",
+        "native_task_episodes": 6,
+        "recorded_calls_all_accounted": 89,
+        "native_chunks": 75,
+        "ticks": 1483,
+        "actual_ros_exchanges_verified": 178,
+        "all_weights_frozen_same_as_api": true,
+        "all1079state_values_verified": true
+      },
+      {
+        "run": "artifacts/realtime-vla/formal-vlash-predicted",
+        "native_task_episodes": 6,
+        "recorded_calls_all_accounted": 68,
+        "native_chunks": 54,
+        "ticks": 1563,
+        "actual_ros_exchanges_verified": 136,
+        "all_weights_frozen_same_as_api": true,
+        "all1079state_values_verified": true
+      }
+    ]
+  },
+  "interpretation": "Same model and H50/R30, different represented-state origins. Correct origin changes usable prefix and query cadence too: this is a system-condition comparison, not isolated state-freshness causation. Descriptive task0/five-state experiment only. Artificial d0/d3 are our H50 synchronous diagnoses, not full official E5 protocol reproduction.",
+  "license_note": "Author code Apache2; selected weights have no declared model license. No weight redistribution.",
+  "native_horizon": 50,
+  "flow_steps": 10,
+  "local_training": false
+}

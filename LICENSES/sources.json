@@ -1,0 +1,17 @@
+[
+  {
+    "file": "LeRobot-APACHE-2.0.txt",
+    "source": "https://raw.githubusercontent.com/huggingface/lerobot/3f797de5952432284a7c77ad2760218cb74e2f26/LICENSE",
+    "sha256": "9e108af26a7ae92a6d2cb0273856a4a0a84da8819c2cffee8b2657cc4f905718"
+  },
+  {
+    "file": "VLASH-APACHE-2.0.txt",
+    "source": "https://raw.githubusercontent.com/mit-han-lab/vlash/d2da223e2251a4a5020b667e77cf8ad57e594144/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "file": "A2C2-UPSTREAM-LICENSE.txt",
+    "source": "https://github.com/k1000dai/a2c2-libero/blob/75fa9d202fb74150bdbc54ab182c2773f3ed5600/LICENSE",
+    "sha256": "0583375a0ec642ec79c447781f34322b0cfa66baff31258214d040f1f6d86d7c"
+  }
+]

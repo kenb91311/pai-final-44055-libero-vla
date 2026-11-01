@@ -1,0 +1,52 @@
+{
+  "series": "a2c2-author-pair-v2-actuation-pipeline",
+  "protocol_version": 2,
+  "variants": [
+    "off",
+    "a2c2"
+  ],
+  "seed": 20261102,
+  "development_initial_states": [
+    0
+  ],
+  "formal_initial_states": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "control_hz": 20,
+  "wall_seconds": 14.0,
+  "camera_hz": 10.0,
+  "horizon": 50,
+  "prefetch_steps": 30,
+  "merge": "aligned",
+  "prefix_conditioning": false,
+  "actuation_pipeline_ticks": 1,
+  "actuator_inflight_limit": 1,
+  "actuator_backlog_limit": 0,
+  "base_repository": "k1000dai/smolvla_libero_spatial_scratch",
+  "base_revision": "caa0efcb24e261574c824366526c5775d3664cac",
+  "head_repository": "k1000dai/rt_libero_spatial_mse",
+  "head_revision": "beaf66dd0fff7b18123ae9dbfe6906235d251981",
+  "source_sha256": {
+    "a2c2_runtime.py": "e5e497b5bcb9dc60c7bfdef20a780b6e5eeb123a18572d78390a3882c8a74bbb",
+    "a2c2_worker.py": "fe96f46bdcf7af36696f718ca968452ae1c3d1c47cc603892c2aa5ca089b344a",
+    "evaluate_a2c2.py": "076253de99bd614fc80a43541d3dff757a11a996ca1b428944d2c57c7aae2898",
+    "download_a2c2.py": "dabee65deb03634b41ae1155468ad7b0a662cc0ab107f3f9aa32785bbda3dbd3",
+    "summarize_a2c2.py": "e132248a94adbaf9f025988ae5a75d8c8842426899549949afdd04b8f2aed67e",
+    "chunk_queue.py": "928dccf281094992f119e29759901f30124eb44f3c216bdc65ff1b18f5a74fab",
+    "worker.py": "7e4f06a5b935d20cef0a656d01507d75d6adfc9008463caeb8e565858cfd13d5",
+    "libero_env.py": "29cfd27f2e151b3b23a1fabd660f1b64a75dd34a4ed1fcafd2fdeed2d7af338d",
+    "camera_worker.py": "a95568289f62250535ac06464c96cdaa89c9347be806ca3ed9ee0bef1676c9bb",
+    "ros_client.py": "4ffbfb805d6d834e59125fc6dfc8ead389d5e1dae1004f921a2ccadeace19670",
+    "ros_bridge.py": "b18864ab5fcaeab289e7f86e87493b93c2431391a7f1dfad992b3d5a7846407b"
+  },
+  "learning": false,
+  "formal_development_separate": true,
+  "input_boundary": "base sensors via ROS; head coherent camera IPC; matching on-time received1x7 or received base row; derived hold separately labeled",
+  "timeout_policy": "nonblocking base fallback; no old relative-action reuse and no timeout-driven wall-budget extension",
+  "resource_boundary": "one resident large VLA in child and one small head in parent share GPU; actual overruns retained",
+  "pair_note": "Author base is explicit in fixed source; exact head/base SHA linkage not published."
+}

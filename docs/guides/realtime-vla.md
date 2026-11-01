@@ -74,7 +74,7 @@ export LD_LIBRARY_PATH=/usr/lib/wsl/lib
 
 元データは各episodeの `initial.json / ticks.jsonl / chunks.json / result.json` とrun全体の `config.json / model-audit.json / summary.json`。モデル真値を渡していないことはworker入力のallowlist、ROS使用はchunk metadataのhash、重み固定はmodel-auditで確認する。
 
-raw rollout MP4は制御tickのfpsで保存しており、lockstepの推論停止時間は映らない。比較映像は `ticks.jsonl` の壁時計で映像を再配置する。raw lockstepを実時間動画として示さない。
+raw rollout MP4は制御tickのfpsで保存しており、lockstepの推論停止時間は映らない。比較映像では `ticks.jsonl` に記録した経過時間に合わせてフレームを配置する。raw lockstepを実時間動画として示さない。
 
 全GPU評価を終えてから `sensor_phase_audit.py` を実行すると、通常stepのcacheとsnapshot強制観測更新の差を同じ初期物理状態で計測できる。再集計前に実行するとauditを結果JSONへ添付する。モデル評価と同時にGPU診断を動かして速度を比較しない。
 

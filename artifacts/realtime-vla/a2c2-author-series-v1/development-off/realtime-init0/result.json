@@ -1,0 +1,90 @@
+{
+  "status": "error",
+  "error": "TimeoutError: timed out",
+  "model": "author-smolvla450m",
+  "variant": "off",
+  "mode": "realtime",
+  "init_state_index": 0,
+  "seed": 20261102,
+  "success": false,
+  "success_within_wall_budget": false,
+  "wall_budget_s": 14.0,
+  "wall_seconds": 3.3558663700023317,
+  "sim_seconds": 2.85,
+  "realtime_factor": 0.8492590841744452,
+  "control_hz": 20,
+  "ticks": 57,
+  "native_generation_horizon": 50,
+  "execute_steps": 50,
+  "merge": "aligned",
+  "prefetch_steps": 30,
+  "hold_ticks": 0,
+  "hold_fraction": 0.0,
+  "expired_prefix_actions": 16,
+  "replaced_actions": 46,
+  "mean_control_interval_s": 0.050011714142913534,
+  "p95_control_interval_s": 0.05070191149934544,
+  "tick_budget_overrun_count": 0,
+  "mean_tick_body_s": 0.017981643701715625,
+  "p95_tick_body_s": 0.02495600259426277,
+  "mean_head_correction_ms": null,
+  "p95_head_correction_ms": null,
+  "mean_action_ros_ms": 4.9306131579470005,
+  "mean_physics_ms": 12.638064683925588,
+  "mean_base_source_age_s": 0.940949580035394,
+  "mean_head_camera_age_s": 0.15963993243910904,
+  "mean_base_worker_s": 0.32905636750001577,
+  "base_peak_cuda_bytes": 963993600,
+  "head_peak_cuda_bytes": null,
+  "bootstrap_seconds": 0.3116033440019237,
+  "sensor_frames_received": 28,
+  "stale_sensor_ticks": 0,
+  "goal_xy_error_m": 0.06673988829773475,
+  "final_metrics": {
+    "step_wall_seconds": 0.013912835995142814,
+    "native_clip_max_excess": 0.0,
+    "goal_xy_error_m": 0.06673988829773475,
+    "bowl_position": [
+      -0.013283893915833365,
+      0.20290683353376143,
+      0.977514740029009
+    ],
+    "plate_position": [
+      0.05341726861586711,
+      0.20518007063397525,
+      0.9024998346667837
+    ],
+    "eef_tracking_error_m": 0.03556366740525355,
+    "actuator_control": [
+      1.1668373877123923,
+      -32.727177219484695,
+      2.4725711514472852,
+      15.081043289106555,
+      -0.5463331390673811,
+      1.9105308907602556,
+      0.03899443725738745,
+      0.0,
+      0.0
+    ]
+  },
+  "switches": [
+    {
+      "tick": 27,
+      "translation_delta_l2": 0.1885344468091949,
+      "rotation_delta_l2": 0.016192566020337657,
+      "gripper_delta_abs": 0.019287467002868652
+    },
+    {
+      "tick": 46,
+      "translation_delta_l2": 0.19258017997598473,
+      "rotation_delta_l2": 0.059774777479705596,
+      "gripper_delta_abs": 0.0
+    }
+  ],
+  "ros_transport": true,
+  "final_action_ros_every_tick": true,
+  "camera_mode": "asynchronous_clone",
+  "camera_hz": 10.0,
+  "input_boundary": "base RGB/state via ROS; head latest coherent RGB/state via camera IPC; every final clipped1x7 action via ROS received values",
+  "video_time_note": "raw video uses simulated tick rate; ticks.jsonl records actual time and realtime_factor"
+}

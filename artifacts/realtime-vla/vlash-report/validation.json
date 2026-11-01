@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-01T20:42:22.251453+00:00",
+  "formal_realtime_episodes": 15,
+  "development_episodes_excluded": 5,
+  "startup_failures_excluded": 1,
+  "startup_failure_directory": "artifacts/realtime-vla/development-vlash-artificial-d0",
+  "registered_sources_unchanged": true,
+  "prior45_json_jsonl_files_unchanged": 243,
+  "api_smoke_unchanged": true,
+  "all_initial_conditions_paired": true,
+  "all_native_actions_time_origin_checked": true,
+  "all_model_calls_including_warmup_and_calibration_accounted": true,
+  "all_actual_ros_receipts_independently_correlated": true,
+  "run_audits": [
+    {
+      "run": "artifacts/realtime-vla/development-vlash-artificial-d0-retry1",
+      "native_task_episodes": 1,
+      "recorded_calls_all_accounted": 5,
+      "native_chunks": 3,
+      "ticks": 101,
+      "actual_ros_exchanges_verified": 10,
+      "all_weights_frozen_same_as_api": true,
+      "all1079state_values_verified": true
+    },
+    {
+      "run": "artifacts/realtime-vla/development-vlash-artificial-d3",
+      "native_task_episodes": 1,
+      "recorded_calls_all_accounted": 5,
+      "native_chunks": 3,
+      "ticks": 104,
+      "actual_ros_exchanges_verified": 10,
+      "all_weights_frozen_same_as_api": true,
+      "all1079state_values_verified": true
+    },
+    {
+      "run": "artifacts/realtime-vla/formal-vlash-coherent",
+      "native_task_episodes": 6,
+      "recorded_calls_all_accounted": 76,
+      "native_chunks": 62,
+      "ticks": 1088,
+      "actual_ros_exchanges_verified": 152,
+      "all_weights_frozen_same_as_api": true,
+      "all1079state_values_verified": true
+    },
+    {
+      "run": "artifacts/realtime-vla/formal-vlash-current",
+      "native_task_episodes": 6,
+      "recorded_calls_all_accounted": 89,
+      "native_chunks": 75,
+      "ticks": 1483,
+      "actual_ros_exchanges_verified": 178,
+      "all_weights_frozen_same_as_api": true,
+      "all1079state_values_verified": true
+    },
+    {
+      "run": "artifacts/realtime-vla/formal-vlash-predicted",
+      "native_task_episodes": 6,
+      "recorded_calls_all_accounted": 68,
+      "native_chunks": 54,
+      "ticks": 1563,
+      "actual_ros_exchanges_verified": 136,
+      "all_weights_frozen_same_as_api": true,
+      "all1079state_values_verified": true
+    }
+  ]
+}

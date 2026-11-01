@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "source_tests": {
+    "passed": 68,
+    "failed": 0,
+    "scope": "experiments/realtime_vla and tests, standalone verified runtime; collected after all submitted source was synchronized"
+  },
+  "documentation_local_links_missing": 0,
+  "private_identifier_hits": 0,
+  "staged_files_checked": 228,
+  "new_formal_episodes": 70,
+  "original_formal_episodes": 35,
+  "formal_count_note": "Additional: native pi05 10, clean RTC30, VLASH15, A2C2 v2 10 plus new v3 direct5. Reused v2 baseline is not counted twice. Superseded RTC and development/startup checks excluded.",
+  "runtime_scope": "Simulation only; frozen models; original35 PDF/video unchanged; extra results separately documented."
+}

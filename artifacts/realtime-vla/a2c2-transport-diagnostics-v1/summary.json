@@ -1,0 +1,116 @@
+{
+  "gpu_used": false,
+  "physics_stepped": false,
+  "server_modified": false,
+  "diagnostic_timeout_s": 1,
+  "task_timeout_unchanged_s": 0.5,
+  "ready": {
+    "id": "5e6d85461b8545c987cc5908dc356a8a",
+    "ok": true,
+    "peer_node": "realtime_policy_transport",
+    "ready": true,
+    "role": "broker",
+    "transport_id": "5e6d85461b8545c987cc5908dc356a8a",
+    "rpc_wall_seconds": 0.0027163050035596825
+  },
+  "persistent_probe": {
+    "responses": 1,
+    "two_requests_supported": false,
+    "error": "EOF: broker closed connection after first response"
+  },
+  "phases": [
+    {
+      "name": "default-2hz",
+      "frequency_hz": 2,
+      "calls": 20,
+      "client_tcp_nodelay": false,
+      "errors": 0,
+      "rpc_ms": {
+        "count": 20,
+        "mean": 5.608551500336034,
+        "p50": 5.63348050127388,
+        "p95": 7.253913296517568,
+        "max": 8.140554004057776
+      },
+      "dds_ms": {
+        "count": 20,
+        "mean": 0.8828088502923492,
+        "p50": 0.8013365004444495,
+        "p95": 1.1456797525170264,
+        "max": 1.7623770036152564
+      },
+      "rpc_minus_dds_ms": {
+        "count": 20,
+        "mean": 4.725742650043685,
+        "p50": 4.798435998964123,
+        "p95": 6.3476895997155225,
+        "max": 6.37817700044252
+      },
+      "rpc_ge35ms": 0,
+      "rpc_ge100ms": 0,
+      "error_rows": []
+    },
+    {
+      "name": "default-20hz",
+      "frequency_hz": 20,
+      "calls": 128,
+      "client_tcp_nodelay": false,
+      "errors": 0,
+      "rpc_ms": {
+        "count": 128,
+        "mean": 5.175619710541923,
+        "p50": 5.069458497018786,
+        "p95": 5.8936025026923735,
+        "max": 7.307147003302816
+      },
+      "dds_ms": {
+        "count": 128,
+        "mean": 0.8453958596987832,
+        "p50": 0.814888502645772,
+        "p95": 1.151908599422313,
+        "max": 1.6783589962869883
+      },
+      "rpc_minus_dds_ms": {
+        "count": 128,
+        "mean": 4.33022385084314,
+        "p50": 4.231481503666146,
+        "p95": 5.004438005926203,
+        "max": 5.628788007015828
+      },
+      "rpc_ge35ms": 0,
+      "rpc_ge100ms": 0,
+      "error_rows": []
+    },
+    {
+      "name": "client-nodelay-20hz",
+      "frequency_hz": 20,
+      "calls": 128,
+      "client_tcp_nodelay": true,
+      "errors": 0,
+      "rpc_ms": {
+        "count": 128,
+        "mean": 3.4856078277698543,
+        "p50": 3.142643501632847,
+        "p95": 7.819288151949877,
+        "max": 8.525170000211801
+      },
+      "dds_ms": {
+        "count": 128,
+        "mean": 0.8045185937248789,
+        "p50": 0.7647750026080757,
+        "p95": 0.9856645981926703,
+        "max": 1.7326800007140264
+      },
+      "rpc_minus_dds_ms": {
+        "count": 128,
+        "mean": 2.6810892340449755,
+        "p50": 2.3864144932304043,
+        "p95": 7.018740346757112,
+        "max": 7.595686998683959
+      },
+      "rpc_ge35ms": 0,
+      "rpc_ge100ms": 0,
+      "error_rows": []
+    }
+  ]
+}

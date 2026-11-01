@@ -1,0 +1,10 @@
+{
+  "other_experiment_gpu_released": true,
+  "other_release_utc": "2026-11-01T19:38:18.697762+00:00",
+  "other_new_gpu_runs_waiting": true,
+  "our_start_utc": "2026-11-01T19:40:47.664493+00:00",
+  "trace": "artifacts/realtime-vla/coordinated-resource-trace/samples.jsonl",
+  "scope": "Coordinated VLA model residency; desktop rendering remains active; no hardware-exclusive guarantee.",
+  "trace_continuation": "artifacts/realtime-vla/coordinated-resource-trace-v2/samples.jsonl",
+  "monitor_revision_note": "v1 source archived; v2 adds explicit error summary and non-object phase guarding; sampling APIs/period unchanged"
+}

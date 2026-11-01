@@ -2,7 +2,7 @@
 
 Pandaアームが、皿とラメキンの間にある黒いボウルをつかみ、皿へ置く。
 LIBERO向け学習済みSmolVLAとπ0-FASTを使い、画像認識から行動列生成、ROS 2通信、
-物理制御までを接続した。追加学習は行わず、推論中にも物理が進む条件で評価する。
+シミュレータ内の制御までを接続した。追加学習は行わず、推論中にもシミュレーションを進めて評価する。
 
 ## タスクとAIの役割
 
@@ -17,21 +17,21 @@ LIBERO向け学習済みSmolVLAとπ0-FASTを使い、画像認識から行動�
 
 ## 設計と工夫
 
-- **物理・撮像・推論を別プロセスへ分離。** 同期2カメラの平均85.64msが、
+- 物理・撮像・推論を別プロセスへ分離: 同期2カメラの平均85.64msが、
   20Hz制御の予算50msを超えたため、撮像を物理ループから外した。
-- **画像と自己状態を同じ時点へ揃える。** 時刻付きsnapshotを同じシーンへ復元し、
+- 画像と自己状態を同じ時点へ揃える: 時刻付きsnapshotを同じシーンへ復元し、
   取得時刻を保ったまま推論する。カメラqueueは長さ1で最新状態のみ保持する。
-- **ROSを通ったデータで動かす。** 2ノード間で画像と行動列を送受信し、
+- ROSを通ったデータで動かす: 2ノード間で画像と行動列を送受信し、
   受信した値をモデルと制御器へ渡す。送受信hashを照合する。
-- **待機も物理へ反映する。** 行動queueが空なら姿勢差分0・グリッパ指令維持。
+- 待機も物理へ反映する: 行動queueが空なら姿勢差分0・グリッパ指令維持。
   推論待ちの間も物理を進め、待機割合と観測から適用までの時間を記録する。
-- **資源を制限して比較する。** RTX5080 16GBにモデルを1種類ずつ常駐させる。
-  モデルCPU threads4、カメラBLAS1、同時推論1要求で測定する。
+- 資源を制限して比較する: RTX5080 16GBにモデルを1種類ずつ常駐させる。
+  推論側CPU4スレッド、撮像側BLAS1スレッド、同時推論1要求で測定する。
 
 ## 結果
 
 共通条件は各5初期配置、20Hz制御、実行10行動、先読みなし、ROS経由。
-実時間側は14壁時計秒、lockstepは物理を止めて推論し最大280行動で評価する。
+実時間側は実際の経過時間14秒、lockstepは物理を止めて推論し最大280行動で評価する。
 
 | モデル／方式 | 公式成功 | ROS込みworker時間 | 待機割合 | 終端XY中央値 |
 |---|---:|---:|---:|---:|
@@ -151,3 +151,41 @@ native Linuxの描画設定は使用するEGL driverに合わせる。
 .venv-realtime/bin/python experiments/realtime_vla/download_pi05.py
 .venv-realtime/bin/python experiments/realtime_vla/evaluate.py --model pi05 --execute-steps 10 --prefetch-steps 0 --merge fifo --ros-transport --initial-states 1 2 3 4 5 --conditions lockstep realtime --wall-seconds 14 --output artifacts/realtime-vla/pi05-reproduction
 ~~~
+
+
+## 行動列の接続と最新観測による補正：追加結果
+
+初版35試行のPDF・動画とは別の追加検証。全てLIBERO Spatial task0、追加学習なし。
+以下は各5配置の正式評価で、開発用配置0を除外した。
+
+| 系列 | 同じ基盤モデル内の条件 | 公式成功 |
+|---|---|---:|
+| 通常π0.5・E10/P0 | 基準実行／実時間実行 | 5/5／5/5 |
+| 約605M SmolVLA・H50/R30 | 補正なし／LeRobot RTC／完全VJP RTC | 1/5／1/5／1/5 |
+| 通常π0.5・H50/R30 | 補正なし／LeRobot RTC／完全VJP RTC | 5/5／4/5／4/5 |
+| VLASH専用π0.5 | 画像と同時点／現在の実測／未来状態予測 | 3/5／1/5／2/5 |
+| A2C2作者450M・v2 | headなし／residual解釈 | 4/5／1/5 |
+| A2C2作者450M・v3 | direct解釈 | 0/5 |
+
+π0.5のH50/R30は補正なしで待機0・5/5成功した。SmolVLAの公開RTCは
+切替指令の食違いを小さくしたが、成功数は増えなかった。A2C2 v2はhead出力の
+解釈に版の不確実性があり、この数値をA2C2一般の性能とは扱わない。
+direct解釈も0/5で、head平均16.3ms・待機9.9%だった。復号式を変えるだけでは改善しなかった。
+モデル、学習済み重み、時刻の原点、待ち行列が異なる行を、そのまま手法順位にはしない。
+
+[追加実験の設計・結果・試行錯誤](docs/experiments/realtime-continuity.md)に、
+各条件、指標の定義、GPU利用調整、0.5秒間隔の資源監視、ROS応答待ちからの復帰、
+headの出力解釈、ライセンス、実行コマンドをまとめた。
+[機械可読の追加結果](artifacts/realtime-vla/additional-experiments-summary.json)も参照できる。
+
+~~~bash
+.venv-realtime/bin/python experiments/realtime_vla/download_pi05.py
+bash experiments/realtime_vla/run_continuity_clean_series.sh smolvla artifacts/realtime-vla/reproduction-rtc
+bash experiments/realtime_vla/run_continuity_clean_series.sh pi05 artifacts/realtime-vla/reproduction-rtc
+~~~
+
+事前にROSブリッジを起動し、同じGPUの他モデルと重複させずに実行する。
+モデル毎・方式毎に別プロセスで配置0〜5を評価し、正式成績は1〜5のみ集計する。
+本結果は1課題・固定5配置であり、一般的なベンチマーク順位や実機性能を示さない。
+コードと外部重みの利用条件は別で、π0.5はGemma条件、VLASH選択重みの明示ライセンスは未確認。
+モデル重みはリポジトリへ含めず、固定revisionから取得する。

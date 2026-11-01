@@ -1,0 +1,284 @@
+{
+  "status": "passed",
+  "generated_at_utc": "2026-11-01T22:00:12.459464+00:00",
+  "formal_episodes": 15,
+  "development_episodes_excluded": 3,
+  "trace_snapshot": {
+    "path": "artifacts/realtime-vla/coordinated-resource-trace-v2/samples.jsonl",
+    "captured_bytes": 4744798,
+    "captured_sha256": "62805889caa9f64599f2aa35faedab6cd15149c0f456457f801bef996484183d",
+    "captured_samples": 9049,
+    "partial_trailing_line_excluded": false
+  },
+  "monitor_source_sha256": "b0064b401d0d2ff01a35c0bd4778ac1fe76b87746f96d2853642bf9863349daa",
+  "configured_sample_period_s": 0.5,
+  "groups": [
+    {
+      "model": "pi05",
+      "variant": "off",
+      "development_included_in_coverage": true,
+      "formal_success_count": 5,
+      "formal_n": 5,
+      "resource_window": {
+        "status": "covered",
+        "start_monotonic": 63727.680478058,
+        "end_monotonic": 63906.783569873,
+        "duration_s": 179.10309181499906,
+        "samples_inside": 358,
+        "bracketed_by_samples": true,
+        "maximum_bracketed_gap_s": 0.5164391560028889,
+        "gap_limit_s": 1.0,
+        "whole_gpu_used_MiB": {
+          "count": 358,
+          "excluded_count": 0,
+          "mean": 11906.484647782821,
+          "p50": 11893.98046875,
+          "p95": 12138.38671875,
+          "min": 11638.63671875,
+          "max": 12142.63671875
+        },
+        "whole_gpu_utilization_percent": {
+          "count": 358,
+          "excluded_count": 0,
+          "mean": 7.153631284916201,
+          "p50": 2.0,
+          "p95": 32.19999999999982,
+          "min": 1.0,
+          "max": 90.0
+        },
+        "host_memory_available_MiB": {
+          "count": 358,
+          "excluded_count": 0,
+          "mean": 19241.60990965433,
+          "p50": 19114.931640625,
+          "p95": 20225.9142578125,
+          "min": 18823.171875,
+          "max": 20965.89453125
+        },
+        "probe_ms": {
+          "count": 358,
+          "excluded_count": 0,
+          "mean": 1.0955951789105585,
+          "p50": 0.8897160005290061,
+          "p95": 1.705540553666646,
+          "min": 0.5627600039588287,
+          "max": 16.51440199930221
+        },
+        "phase_labels": [
+          "exclusive_pi05_rtc_clean_series"
+        ],
+        "phase_read_failure_count": 0,
+        "scope": "whole-device/host samples within task-worker envelope; includes calibration/reset gaps between task chunks, excludes initial model restoration"
+      }
+    },
+    {
+      "model": "pi05",
+      "variant": "rtc-stock",
+      "development_included_in_coverage": true,
+      "formal_success_count": 4,
+      "formal_n": 5,
+      "resource_window": {
+        "status": "covered",
+        "start_monotonic": 64056.629372794,
+        "end_monotonic": 64246.476883893,
+        "duration_s": 189.8475110990039,
+        "samples_inside": 380,
+        "bracketed_by_samples": true,
+        "maximum_bracketed_gap_s": 0.5160072709986707,
+        "gap_limit_s": 1.0,
+        "whole_gpu_used_MiB": {
+          "count": 380,
+          "excluded_count": 0,
+          "mean": 11188.171504934211,
+          "p50": 11783.83984375,
+          "p95": 12137.63671875,
+          "min": 520.19140625,
+          "max": 12140.26171875
+        },
+        "whole_gpu_utilization_percent": {
+          "count": 380,
+          "excluded_count": 0,
+          "mean": 8.215789473684211,
+          "p50": 2.0,
+          "p95": 44.0,
+          "min": 0.0,
+          "max": 78.0
+        },
+        "host_memory_available_MiB": {
+          "count": 380,
+          "excluded_count": 0,
+          "mean": 19306.773581414473,
+          "p50": 19186.42578125,
+          "p95": 20122.254296875,
+          "min": 18204.61328125,
+          "max": 21132.12109375
+        },
+        "probe_ms": {
+          "count": 380,
+          "excluded_count": 0,
+          "mean": 1.0258242315199153,
+          "p50": 0.9083859986276366,
+          "p95": 1.5521977977186923,
+          "min": 0.5417049978859723,
+          "max": 5.096403998322785
+        },
+        "phase_labels": [
+          "exclusive_pi05_rtc_clean_series"
+        ],
+        "phase_read_failure_count": 0,
+        "scope": "whole-device/host samples within task-worker envelope; includes calibration/reset gaps between task chunks, excludes initial model restoration"
+      }
+    },
+    {
+      "model": "pi05",
+      "variant": "rtc-vjp",
+      "development_included_in_coverage": true,
+      "formal_success_count": 4,
+      "formal_n": 5,
+      "resource_window": {
+        "status": "covered",
+        "start_monotonic": 64403.868004081,
+        "end_monotonic": 64611.162898736,
+        "duration_s": 207.29489465500228,
+        "samples_inside": 414,
+        "bracketed_by_samples": true,
+        "maximum_bracketed_gap_s": 0.5399686469972949,
+        "gap_limit_s": 1.0,
+        "whole_gpu_used_MiB": {
+          "count": 414,
+          "excluded_count": 0,
+          "mean": 10943.503793025362,
+          "p50": 10977.6875,
+          "p95": 11147.359375,
+          "min": 10654.453125,
+          "max": 11147.359375
+        },
+        "whole_gpu_utilization_percent": {
+          "count": 414,
+          "excluded_count": 0,
+          "mean": 9.009661835748792,
+          "p50": 0.0,
+          "p95": 42.349999999999966,
+          "min": 0.0,
+          "max": 99.0
+        },
+        "host_memory_available_MiB": {
+          "count": 414,
+          "excluded_count": 0,
+          "mean": 19445.750679347828,
+          "p50": 19317.130859375,
+          "p95": 20289.0412109375,
+          "min": 18693.375,
+          "max": 21141.21875
+        },
+        "probe_ms": {
+          "count": 414,
+          "excluded_count": 0,
+          "mean": 1.2331594591801436,
+          "p50": 1.0506120015634224,
+          "p95": 2.039922202311567,
+          "min": 0.5846290005138144,
+          "max": 13.700420000532176
+        },
+        "phase_labels": [
+          "exclusive_pi05_rtc_clean_series"
+        ],
+        "phase_read_failure_count": 0,
+        "scope": "whole-device/host samples within task-worker envelope; includes calibration/reset gaps between task chunks, excludes initial model restoration"
+      }
+    }
+  ],
+  "paired_initial_sensing_and_bootstrap": [
+    {
+      "model": "pi05",
+      "state": 0,
+      "is_development_excluded": true,
+      "variants": [
+        "off",
+        "rtc-stock",
+        "rtc-vjp"
+      ],
+      "sensor_hashes_exact": true,
+      "physical_actions_exact": true,
+      "normalized_actions_exact": true
+    },
+    {
+      "model": "pi05",
+      "state": 1,
+      "is_development_excluded": false,
+      "variants": [
+        "off",
+        "rtc-stock",
+        "rtc-vjp"
+      ],
+      "sensor_hashes_exact": true,
+      "physical_actions_exact": true,
+      "normalized_actions_exact": true
+    },
+    {
+      "model": "pi05",
+      "state": 2,
+      "is_development_excluded": false,
+      "variants": [
+        "off",
+        "rtc-stock",
+        "rtc-vjp"
+      ],
+      "sensor_hashes_exact": true,
+      "physical_actions_exact": true,
+      "normalized_actions_exact": true
+    },
+    {
+      "model": "pi05",
+      "state": 3,
+      "is_development_excluded": false,
+      "variants": [
+        "off",
+        "rtc-stock",
+        "rtc-vjp"
+      ],
+      "sensor_hashes_exact": true,
+      "physical_actions_exact": true,
+      "normalized_actions_exact": true
+    },
+    {
+      "model": "pi05",
+      "state": 4,
+      "is_development_excluded": false,
+      "variants": [
+        "off",
+        "rtc-stock",
+        "rtc-vjp"
+      ],
+      "sensor_hashes_exact": true,
+      "physical_actions_exact": true,
+      "normalized_actions_exact": true
+    },
+    {
+      "model": "pi05",
+      "state": 5,
+      "is_development_excluded": false,
+      "variants": [
+        "off",
+        "rtc-stock",
+        "rtc-vjp"
+      ],
+      "sensor_hashes_exact": true,
+      "physical_actions_exact": true,
+      "normalized_actions_exact": true
+    }
+  ],
+  "prior35_preservation": {
+    "status": "passed",
+    "checked_files": 190,
+    "changed": [],
+    "reference": "artifacts/realtime-vla/pi05-protocol.json",
+    "reference_sha256": "eeb66778e88fabccb1fd016cca68a2f000ba6550c6ed86128954b9087773dfd5"
+  },
+  "analysis_source_sha256": "6404c1c6abd15b8b0aa793596febbcb638a8424e953b41f529318de67051211e",
+  "limits": [
+    "Sampled whole-device counters and participant coordination support resource isolation; neither proves hardware exclusivity.",
+    "Device counters include desktop/rendering and cannot attribute individual kernels or every sub-sample allocation.",
+    "Task-worker envelopes are explicitly scoped; preceding model restoration and final state hashing are not the reported inference windows."
+  ]
+}
