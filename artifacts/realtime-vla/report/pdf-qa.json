@@ -3,31 +3,31 @@
   "pages": [
     {
       "page": 1,
-      "characters": 485,
+      "characters": 514,
       "width": 594.95996,
       "height": 841.91998
     },
     {
       "page": 2,
-      "characters": 949,
+      "characters": 905,
       "width": 594.95996,
       "height": 841.91998
     },
     {
       "page": 3,
-      "characters": 828,
+      "characters": 900,
       "width": 594.95996,
       "height": 841.91998
     },
     {
       "page": 4,
-      "characters": 1045,
+      "characters": 1041,
       "width": 594.95996,
       "height": 841.91998
     },
     {
       "page": 5,
-      "characters": 1259,
+      "characters": 1084,
       "width": 594.95996,
       "height": 841.91998
     }
@@ -49,7 +49,7 @@
       "page": 3,
       "height": 1123,
       "scrollHeight": 1123,
-      "footerBottom": 1081.21875
+      "footerBottom": 1080.953125
     },
     {
       "page": 4,
