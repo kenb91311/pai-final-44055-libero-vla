@@ -1,0 +1,28 @@
+{
+  "recorded_at_utc": "2026-11-01T17:08:55.154139+00:00",
+  "type": "exploratory native horizon, separate from common-prefix comparison and prefetch ablation",
+  "motivation": "Smol generates50 actions but commonE10 discards40. Test using full generated horizon without overlapping predictions; may reduce holds at cost of less frequent visual correction. Motivated by Smol prefetch5 first3state failures; all outcomes retained.",
+  "model": "smolvla",
+  "states": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "mode": "realtime",
+  "execute_steps": 50,
+  "native_generated_horizon": 50,
+  "prefetch_steps": 0,
+  "control_hz": 20,
+  "camera_hz": 10,
+  "wall_budget_s": 14,
+  "merge": "fifo",
+  "max_sensor_age_s": 0.5,
+  "ros_transport": true,
+  "seed": 20261102,
+  "weights": "same frozen checkpoint, no training",
+  "comparison": "withinSmol primaryE10/p0 vsE50/p0 on same initialstates; pi0FAST nativeE10/p0 is already primary but crossmodeldifferentexecutionhorizons not likeforlike",
+  "not_rtc": "No delay-conditioned inpainting/RTC, no generated-action alteration. Full50 FIFO then hold while predicting freshchunk.",
+  "selection": "Run all5 whether improves or not; keep prior primary and prefetch results."
+}

@@ -1,0 +1,13 @@
+{
+  "checked_at_utc": "2026-11-01T17:00:22.850213+00:00",
+  "unit_tests": {
+    "command": ".venv-realtime/bin/python -m pytest experiments/realtime_vla/test_chunk_queue.py experiments/realtime_vla/test_libero_env.py experiments/realtime_vla/test_camera_worker.py experiments/realtime_vla/test_ros_bridge.py -q",
+    "passed": 18,
+    "failed": 0
+  },
+  "registered_core_source_changed": [],
+  "snapshot_camera_equality_evidence": "environment-smoke/parallel-camera-result.json",
+  "real_ros_transport_evidence": "ros-smoke/transport-checks.json",
+  "formal_protocol": "formal-protocol.json",
+  "note": "Unit tests establish contracts, not task success; model and system outcomes are in completed run artifacts."
+}

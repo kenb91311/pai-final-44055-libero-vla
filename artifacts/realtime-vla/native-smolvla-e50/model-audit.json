@@ -1,0 +1,24 @@
+{
+  "weights_before_sha256": "1012b19e3b2f43300a8c6d2cf5a6d463c5584100aed41fab8535982b5d390a98",
+  "weights_after_sha256": "1012b19e3b2f43300a8c6d2cf5a6d463c5584100aed41fab8535982b5d390a98",
+  "weights_unchanged": true,
+  "local_training": false,
+  "calls": 5,
+  "peak_cuda_bytes": 1574203392,
+  "model": "HuggingFaceVLA/smolvla_libero",
+  "revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+  "parameter_count": 604934176,
+  "chunk_size": 50,
+  "native_n_action_steps": 1,
+  "flow_steps": 10,
+  "amp_dtype": "bfloat16",
+  "image_transform": "official LiberoProcessorStep180degree rotation",
+  "action_transform": "official saved postprocessor; no additional gripper inversion",
+  "restoration": {
+    "all_stored_tensors_match": true,
+    "checked_tensors": 788,
+    "stored_elements": 604934176,
+    "model_only_keys": [],
+    "model_only_parameters_are_tied_aliases": true
+  }
+}

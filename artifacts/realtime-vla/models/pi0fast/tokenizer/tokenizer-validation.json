@@ -1,0 +1,176 @@
+{
+  "text_model_url": "https://storage.googleapis.com/big_vision/paligemma_tokenizer.model",
+  "text_model_sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6",
+  "vocabulary_size": 257152,
+  "special_ids": {
+    "pad": 0,
+    "eos": 1,
+    "bos": 2,
+    "unk": 3
+  },
+  "all_vocabulary_pieces_verified": true,
+  "official_converter_tab_aliases": [
+    [
+      226,
+      "<0x09>",
+      "\t"
+    ]
+  ],
+  "probes": [
+    {
+      "text": "Action: ",
+      "ids": [
+        4022,
+        235292,
+        235248
+      ]
+    },
+    {
+      "text": "pick up the black bowl",
+      "ids": [
+        18075,
+        908,
+        573,
+        2656,
+        14581
+      ]
+    },
+    {
+      "text": "Task: pick up the black bowl, State: 1 2 3 4 5 6 7 8;\n",
+      "ids": [
+        7071,
+        235292,
+        4788,
+        908,
+        573,
+        2656,
+        14581,
+        235269,
+        3040,
+        235292,
+        235248,
+        235274,
+        235248,
+        235284,
+        235248,
+        235304,
+        235248,
+        235310,
+        235248,
+        235308,
+        235248,
+        235318,
+        235248,
+        235324,
+        235248,
+        235321,
+        235289,
+        108
+      ]
+    },
+    {
+      "text": "put the red cup on the plate",
+      "ids": [
+        1065,
+        573,
+        3118,
+        7190,
+        611,
+        573,
+        8811
+      ]
+    },
+    {
+      "text": "open the top drawer",
+      "ids": [
+        4141,
+        573,
+        2267,
+        39635
+      ]
+    },
+    {
+      "text": "Task: move bowl, State: 0 255 127 9 89 200 1 0;\n",
+      "ids": [
+        7071,
+        235292,
+        3124,
+        14581,
+        235269,
+        3040,
+        235292,
+        235248,
+        235276,
+        235248,
+        235284,
+        235308,
+        235308,
+        235248,
+        235274,
+        235284,
+        235324,
+        235248,
+        235315,
+        235248,
+        235321,
+        235315,
+        235248,
+        235284,
+        235276,
+        235276,
+        235248,
+        235274,
+        235248,
+        235276,
+        235289,
+        108
+      ]
+    }
+  ],
+  "bos_behavior": "processor text uses BOS, no EOS; action prefix uses add_special_tokens=False",
+  "fast_repository": "jadechoghari/tokenizer-lib-mean",
+  "fast_revision": "79ae83e3cbd8786dcb84b628569f8d076ca8151e",
+  "fast_files": [
+    {
+      "file": "README.md",
+      "sha256": "0336368f8274a5ed09f54cee8d56a851ecee96026d9f391a6735762c16608a60"
+    },
+    {
+      "file": "bpe_tokenizer/special_tokens_map.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "file": "bpe_tokenizer/tokenizer.json",
+      "sha256": "9ef34cdf034636c845847ca6a72bfa081dc4a3553ff73f247b1b25e2c7c1bf01"
+    },
+    {
+      "file": "bpe_tokenizer/tokenizer_config.json",
+      "sha256": "3b5e73ae9f42da5ac9482dcd042c1b90942def5307c0c33a82e5c1368d3f8a2b"
+    },
+    {
+      "file": "metadata.json",
+      "sha256": "97d04fa5a61817bad1369c551d20a9d5626a26de51aad1f644b9ad069bb7936c"
+    },
+    {
+      "file": "processing_action_tokenizer.py",
+      "sha256": "6f021ca1f4c1b194ab6fa399d80baf3d642eadb17efb8f73301e4ac401522c20"
+    },
+    {
+      "file": "processor_config.json",
+      "sha256": "d471d438f0faae5d2be64df5abd281d9ab462fa1ba92d7185aa6a05ee41aeecb"
+    },
+    {
+      "file": "special_tokens_map.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "file": "tokenizer.json",
+      "sha256": "9ef34cdf034636c845847ca6a72bfa081dc4a3553ff73f247b1b25e2c7c1bf01"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "sha256": "3b5e73ae9f42da5ac9482dcd042c1b90942def5307c0c33a82e5c1368d3f8a2b"
+    }
+  ],
+  "license": "PaliGemma/Gemma upstream terms; no claim of MIT model license"
+}

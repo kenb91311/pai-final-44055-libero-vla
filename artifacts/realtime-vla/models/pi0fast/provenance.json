@@ -1,0 +1,52 @@
+{
+  "repository": "lerobot/pi0fast-libero",
+  "revision": "840f4b503f4c09110421c33c810a85b6684fd658",
+  "files": [
+    {
+      "file": "config.json",
+      "bytes": 2319,
+      "sha256": "742bd4fed667274e2a497b8d5fff34b968e1349f1d43c7dca22ffc2df41d9944",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "model.safetensors",
+      "bytes": 7729830688,
+      "sha256": "f1f8236d44016a533daba7b8249756e84df047f46e20ca17d3fc34d8f2f691ba",
+      "expected_lfs_sha256": "f1f8236d44016a533daba7b8249756e84df047f46e20ca17d3fc34d8f2f691ba"
+    },
+    {
+      "file": "policy_postprocessor.json",
+      "bytes": 660,
+      "sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+      "bytes": 7668,
+      "sha256": "a002c0df7f79c5b169c5a899ad151d4ea1bed246c7d82bd93ed1556558d517a9",
+      "expected_lfs_sha256": "a002c0df7f79c5b169c5a899ad151d4ea1bed246c7d82bd93ed1556558d517a9"
+    },
+    {
+      "file": "policy_preprocessor.json",
+      "bytes": 2136,
+      "sha256": "36ab067b8ea36cee209b4729bedcfc174a9cea5c385cb470ce25b316719ab677",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "policy_preprocessor_step_2_normalizer_processor.safetensors",
+      "bytes": 7668,
+      "sha256": "a002c0df7f79c5b169c5a899ad151d4ea1bed246c7d82bd93ed1556558d517a9",
+      "expected_lfs_sha256": "a002c0df7f79c5b169c5a899ad151d4ea1bed246c7d82bd93ed1556558d517a9"
+    },
+    {
+      "file": "train_config.json",
+      "bytes": 6483,
+      "sha256": "c6009d164fdd68aac63d064d713c59988691078bed75ab9723a74cc689831052",
+      "expected_lfs_sha256": null
+    }
+  ],
+  "local_training": false,
+  "license_note": "main model card absent; upstream PaliGemma/Gemma terms apply; official v044 sibling card declares gemma",
+  "task": "LIBERO pretrained checkpoint, not base pi0-FAST; no pi0/pi05 substitution",
+  "validation": "download and identity only; no task success measured by this script"
+}

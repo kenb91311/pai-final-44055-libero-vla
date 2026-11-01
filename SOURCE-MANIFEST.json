@@ -1,0 +1,587 @@
+{
+  "task": "PAI final assignment 44055: realtime LIBERO bowl transfer",
+  "scope": "Task implementation, standalone runtime, and experimental evidence",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 781,
+      "sha256": "4d15e2014d8f3c6636fd5cb8549ff52fe8e53f0cd7460b6fc5b83aeebcf972a5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7419,
+      "sha256": "26218bad2f04383b242ac3157902086497e27bf270225c62471c7ee5e5bec6d1"
+    },
+    {
+      "path": "artifacts/realtime-vla/ablation-pi0fast-prefetch5/config.json",
+      "bytes": 470,
+      "sha256": "b54b48af4c2bcfeae5b35ce81533e35d368eb76b60ac93e7517419b3a083f5bf"
+    },
+    {
+      "path": "artifacts/realtime-vla/ablation-pi0fast-prefetch5/model-audit.json",
+      "bytes": 349,
+      "sha256": "1f21ff4d3519f63a091931d005bcd2cc4653cedfbbb49745bb36e35256de1bae"
+    },
+    {
+      "path": "artifacts/realtime-vla/ablation-pi0fast-prefetch5/summary.json",
+      "bytes": 29337,
+      "sha256": "75b712cb9532c71413bdb5217f61d54e2ccdc27dda77b1031cb00cab02d9a2a5"
+    },
+    {
+      "path": "artifacts/realtime-vla/ablation-protocol.json",
+      "bytes": 1222,
+      "sha256": "a06c26f5575b0ec8d4f34bae188f174d6135d4666d88d83cae22d627497c23c6"
+    },
+    {
+      "path": "artifacts/realtime-vla/ablation-smolvla-prefetch5/config.json",
+      "bytes": 470,
+      "sha256": "a0a0d5ba7d16c85c50f357045f42563669c8099b4f3de6e009ed88d7b06b2fa2"
+    },
+    {
+      "path": "artifacts/realtime-vla/ablation-smolvla-prefetch5/model-audit.json",
+      "bytes": 887,
+      "sha256": "173bd4b10518247b4200b8acb670598774f97af347578e8e5ca2083faf3d325b"
+    },
+    {
+      "path": "artifacts/realtime-vla/ablation-smolvla-prefetch5/summary.json",
+      "bytes": 29066,
+      "sha256": "61403eceec5c26f818fc7c83a15536d208833e6749f63fce97e0d70be7da80e9"
+    },
+    {
+      "path": "artifacts/realtime-vla/environment-build-notes.json",
+      "bytes": 3447,
+      "sha256": "ae2b6df7ddd0a91392860b44bd74502f3a3903414f7ed6144a69d484873339cb"
+    },
+    {
+      "path": "artifacts/realtime-vla/environment-smoke/environment-metadata.json",
+      "bytes": 697,
+      "sha256": "16bcc30938c69872a812f4077e1cf146fb0b5555bf12ae5003e55c5f04ddac41"
+    },
+    {
+      "path": "artifacts/realtime-vla/environment-smoke/hardware-render-results.json",
+      "bytes": 7157,
+      "sha256": "bc5557ff1817bc74a3658584156492d6713455bd41173bf9c22ea48352c87d78"
+    },
+    {
+      "path": "artifacts/realtime-vla/environment-smoke/parallel-camera-result.json",
+      "bytes": 3198,
+      "sha256": "64dcfeeb1839125eb2f80d0659eda527ae681545bfbea38e3e3ce3d28f5bd9d4"
+    },
+    {
+      "path": "artifacts/realtime-vla/environment-smoke/physics-only-results.json",
+      "bytes": 2395,
+      "sha256": "100dae49b1078f87e9b1a59bbdd1b599bc5d7ed486a8048a31b05f893dfeabe9"
+    },
+    {
+      "path": "artifacts/realtime-vla/environment-smoke/result.json",
+      "bytes": 1534,
+      "sha256": "2fd981a59360020d90c0c852ae69fe249eb76967cd6eb26f70ebe3e5ca3bbfdd"
+    },
+    {
+      "path": "artifacts/realtime-vla/environment-versions.json",
+      "bytes": 812,
+      "sha256": "09e6a9445e576bcfb210facb4fe8d7d02cd57becb763aec608a78ecd5ad364c8"
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi0fast-e10/config.json",
+      "bytes": 478,
+      "sha256": "2b31b61ae98d0e61f2852bb68a3a09c9607aafc1f6da998bc7a356e4b286c9af"
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi0fast-e10/model-audit.json",
+      "bytes": 349,
+      "sha256": "1f21ff4d3519f63a091931d005bcd2cc4653cedfbbb49745bb36e35256de1bae"
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi0fast-e10/summary.json",
+      "bytes": 47074,
+      "sha256": "1e0714c3ea73c2b9ff7d093bc7968d7861035e3a0bd8dfd41b8e9c0eebc90e14"
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-protocol.json",
+      "bytes": 3783,
+      "sha256": "e9dbd3b97476592f049262a54e6aa6a53c0580050b2f6f01d08ce3f0cf08a105"
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/config.json",
+      "bytes": 478,
+      "sha256": "2a7c1860cfb3584d8bc26ee29ce726a72586260d67949f5d230d27211ae196f0"
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/model-audit.json",
+      "bytes": 886,
+      "sha256": "c2e48eba240c2826d27ee19c8f67d0aa449ab1ddd751172a8dd0593fe64e1136"
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/summary.json",
+      "bytes": 46661,
+      "sha256": "4ffffe6a369abdf5e9d20445eaa9290ce51aacb836d1e5a21a0d527169a4ef03"
+    },
+    {
+      "path": "artifacts/realtime-vla/installed-freeze-combined.txt",
+      "bytes": 3350,
+      "sha256": "83a4503fcb569e2446a9a802e19f83da13fac37dd6ebf611ab19c66df352f220"
+    },
+    {
+      "path": "artifacts/realtime-vla/installed-freeze.txt",
+      "bytes": 1743,
+      "sha256": "59f1e14af671138697edeaf40f366bb87ac8463cd1252c8e1428ad8183627f5c"
+    },
+    {
+      "path": "artifacts/realtime-vla/libero-assets-api.json",
+      "bytes": 52147,
+      "sha256": "8ca3393eb4895539c001633a3b2c5740348bef4da87826c8de64e4dc0fca2891"
+    },
+    {
+      "path": "artifacts/realtime-vla/libero-assets-manifest.json",
+      "bytes": 110691,
+      "sha256": "cb74369aceb98a2f26bbff64bee8dbdbeb6957fa84079b1996ac8baeefef68f4"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi0fast/config.json",
+      "bytes": 2319,
+      "sha256": "742bd4fed667274e2a497b8d5fff34b968e1349f1d43c7dca22ffc2df41d9944"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi0fast/gpu-smoke.json",
+      "bytes": 3031,
+      "sha256": "91ea2b48118ffb3902b4961b61e737c15976075adc8a0694f221bab92e3124e9"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi0fast/license-notes.json",
+      "bytes": 2211,
+      "sha256": "6da2c5e70f8959609e76f4aec89c2c551d75842ffb88c4911b3b01aab094126e"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi0fast/model-api.json",
+      "bytes": 1138,
+      "sha256": "8e87c76fe478624ad0c8a9a438c3016722f09741633810fcd00d20f86a2c92fd"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi0fast/official-tree.json",
+      "bytes": 1866,
+      "sha256": "08f72f7c837d080a3d0a351a40cd4c68867bdf1a7cd8e2691cd62ed5a3fe50ab"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi0fast/parameter-count.log",
+      "bytes": 544,
+      "sha256": "1cff4822d03a062648b3232b0843f00d145835434dd207502deedbb15af2e9ce"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi0fast/policy_postprocessor.json",
+      "bytes": 660,
+      "sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi0fast/policy_preprocessor.json",
+      "bytes": 2136,
+      "sha256": "36ab067b8ea36cee209b4729bedcfc174a9cea5c385cb470ce25b316719ab677"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi0fast/provenance.json",
+      "bytes": 2042,
+      "sha256": "3cb3d3711d697063ab72f226a75fe27a11d4304385617d7aff368add5d2f7756"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi0fast/tokenizer/action/provenance.json",
+      "bytes": 1696,
+      "sha256": "f62ef2879687e1dfa35af46db02a2b06248e1644dfe44e48f8186ab31c95618a"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi0fast/tokenizer/tokenizer-validation.json",
+      "bytes": 3832,
+      "sha256": "3ce40955b0d4e877b982b6e844c457d72c87e32bf36a78ceefeacb3f042ad4ad"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/pi0fast/train_config.json",
+      "bytes": 6483,
+      "sha256": "c6009d164fdd68aac63d064d713c59988691078bed75ab9723a74cc689831052"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/smolvla/config.json",
+      "bytes": 2109,
+      "sha256": "e346a63094732ea28e05b08302a218306cf6541960b663a3cb4b6948e4efe6e0"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/smolvla/hub-api.json",
+      "bytes": 2936,
+      "sha256": "7c7188bdf2c283ed4e10aeb61673c07e2be4ad7806838a3efcfdca6677836208"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/smolvla/policy_postprocessor.json",
+      "bytes": 660,
+      "sha256": "ad2d22405cb63be4932c4a4d9a69bc9953df02a01235c5f420b679dbe6bfe7c5"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/smolvla/policy_preprocessor.json",
+      "bytes": 1709,
+      "sha256": "29267ff4423fcce93bbd76ad0f386905f9de5d267ca13379a5795a514a81b7a9"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/smolvla/provenance.json",
+      "bytes": 4663,
+      "sha256": "92f7b14e75053ce1e3d906e6bb510a91257bc863e44a1e9c390f48ebe17b12d6"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/smolvla/vlm/config.json",
+      "bytes": 3767,
+      "sha256": "ea6bc1237e96247f6258de3e202e2e62b93d6f386dc47e7b36b5588bf3a15e17"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/smolvla/vlm/generation_config.json",
+      "bytes": 136,
+      "sha256": "34835060c9f0f74d1acb456cc72ca32746d3843d9eb5f578f9cbffac1d2eb840"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/smolvla/vlm/hub-api.json",
+      "bytes": 15490,
+      "sha256": "c515bbb0c4a524cf3bf297e72ecdbec4987eb4dfa7fb03cfe106a8691358625c"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/smolvla/vlm/preprocessor_config.json",
+      "bytes": 599,
+      "sha256": "149e315d9410368e5491455bb06e0f763426e9e56cca731c13b24404a29b6374"
+    },
+    {
+      "path": "artifacts/realtime-vla/models/smolvla/vlm/processor_config.json",
+      "bytes": 67,
+      "sha256": "f3ad45028447b3562b4752be0d5916d6806c1ef589091a469608dcf0faa1737c"
+    },
+    {
+      "path": "artifacts/realtime-vla/native-horizon-protocol.json",
+      "bytes": 1217,
+      "sha256": "1403e061373a71f32bed6148f64e2b92226e673d9f3d4bfb9a3c196c97943ad3"
+    },
+    {
+      "path": "artifacts/realtime-vla/native-smolvla-e50/config.json",
+      "bytes": 462,
+      "sha256": "95bcb7b438843c6284a99ee35ee98e7821ffb73b49e3d5073de389a981198645"
+    },
+    {
+      "path": "artifacts/realtime-vla/native-smolvla-e50/model-audit.json",
+      "bytes": 886,
+      "sha256": "c6a95c69cfa6d577b6c293d2f34791f9099760444dffe6865ad491f8f7832ca8"
+    },
+    {
+      "path": "artifacts/realtime-vla/native-smolvla-e50/summary.json",
+      "bytes": 29061,
+      "sha256": "075cc06d3fc44995c9a5d6265aa4346d6a9cde8eb186ba158e35cea3600ea23f"
+    },
+    {
+      "path": "artifacts/realtime-vla/publication-redactions.json",
+      "bytes": 2005,
+      "sha256": "5c5afa6d8fbf9497958d2760cbf75a36342edddce58dfe8350640a4161069737"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/episodes.csv",
+      "bytes": 2976,
+      "sha256": "4cb76eb836699363def0eee07c560e68484bc4bfbed47fb30854c38cea39f24f"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/goal-trajectories.png",
+      "bytes": 309473,
+      "sha256": "bad11b0c440fba016eadffc79bbfdc1f376b8c9ee07948e8a24bc8ed8e7ef6e6"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/goal-trajectories.svg",
+      "bytes": 142620,
+      "sha256": "e692b02957a46d17ec627d59f1a692726bc49ec46cd032342adc0039483cc5cf"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/native-horizon-smol.csv",
+      "bytes": 996,
+      "sha256": "312997c884a835af465fb42fc16c16f1955af137de7c195b446eb836ad7a5987"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/outcomes.png",
+      "bytes": 121281,
+      "sha256": "5c944cc9fc71f17a487a7854ccf7cabdd04e706cfe22403e24d0300439722c30"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/outcomes.svg",
+      "bytes": 82661,
+      "sha256": "cafc4f33b887f0d9766aebcf13a5d5b757c9ade382bc0fcd83d838ab92547924"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/pdf-qa.json",
+      "bytes": 1194,
+      "sha256": "06725822c2ccb668a874e04dfbc8237b15044614a306de9e4e2fb5bab4ba95d9"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/prefetch.png",
+      "bytes": 264237,
+      "sha256": "c4389176e1cf0df35ee987391b573574fb0b8fd48cbf4e235b3f6541474030b8"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/prefetch.svg",
+      "bytes": 117274,
+      "sha256": "0ac343420aec8e76357c56b55fc37a1901dae0f16cab6473d2496f968c33ff49"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/results.json",
+      "bytes": 424440,
+      "sha256": "edfd7ca36c323ac0fa1eee8911056bdffbca71015ee3ffbe5b505663a517da6f"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/scheduler-ablation.csv",
+      "bytes": 1786,
+      "sha256": "a5fc59d049a1f07b171f2b74fb6bf649734a02bb5f82fed1ce20a5ea59e2d115"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/sensor-phase-audit.json",
+      "bytes": 5202,
+      "sha256": "d7fa56290b63cd0b5ee78709d8d792293dbac135430812fadca876c20f50cbff"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/sensor-phase.png",
+      "bytes": 931202,
+      "sha256": "8e3fd9116193c0560d213d35b0978fec4733192a1e13e14c479538ccf72f6e7b"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/sensor-phase.svg",
+      "bytes": 1182522,
+      "sha256": "0f1e65ffee50e961871a432aa05e62f1b75c8e1ee63e862dff96a3f840868006"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/summary.json",
+      "bytes": 424440,
+      "sha256": "edfd7ca36c323ac0fa1eee8911056bdffbca71015ee3ffbe5b505663a517da6f"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/task-frame.png",
+      "bytes": 126759,
+      "sha256": "b5016cf4b26a8173a07249dc2377029d5f3bda58018854480571c7de30588f4c"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/timing.png",
+      "bytes": 159469,
+      "sha256": "29736b2b387f227ada09c565819031dbec837433543247900b9ec1042d3ecc53"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/timing.svg",
+      "bytes": 99279,
+      "sha256": "6a1ab831c545b0663f2f52859811d1ab763554df7300e8054285a8a02a320e0f"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/validation.json",
+      "bytes": 1277,
+      "sha256": "7874c02630203146059228ea8b0b0acb9a657cec98e429952ad7769c4697962f"
+    },
+    {
+      "path": "artifacts/realtime-vla/report/video-manifest.json",
+      "bytes": 7390,
+      "sha256": "b7f7dcf36dd0a0a42461f187f8fbf9e96d789c62853673c5bcec71922c0736ea"
+    },
+    {
+      "path": "artifacts/realtime-vla/robosuite-wheel.json",
+      "bytes": 307,
+      "sha256": "8853fbd0a1b23ca364ab97a1e12b120ce75d2f06d2d37e86b76795a68eb23bf7"
+    },
+    {
+      "path": "artifacts/realtime-vla/ros-smoke/ros-image-id.txt",
+      "bytes": 74,
+      "sha256": "7b27e6e018fb7813f3b98328a5f880651e34c90f4e63513f81e7268e4b0a8947"
+    },
+    {
+      "path": "artifacts/realtime-vla/ros-smoke/ros-versions.txt",
+      "bytes": 203,
+      "sha256": "46fbd5dcd13878a8d45f5778d332a2878655414f38b5881148881043bc0d9b7e"
+    },
+    {
+      "path": "artifacts/realtime-vla/ros-smoke/transport-checks.json",
+      "bytes": 5558,
+      "sha256": "7c0632456c2b468f2c16bb4790865267d3dbae0c154cf9e126870c04a38c22e4"
+    },
+    {
+      "path": "artifacts/realtime-vla/ros-system/ros-image-id.txt",
+      "bytes": 74,
+      "sha256": "7b27e6e018fb7813f3b98328a5f880651e34c90f4e63513f81e7268e4b0a8947"
+    },
+    {
+      "path": "artifacts/realtime-vla/ros-system/ros-versions.txt",
+      "bytes": 203,
+      "sha256": "46fbd5dcd13878a8d45f5778d332a2878655414f38b5881148881043bc0d9b7e"
+    },
+    {
+      "path": "artifacts/realtime-vla/smolvla-api-smoke-b/result.json",
+      "bytes": 2654,
+      "sha256": "e6eb2fbd7a2bb6ced76f37c63a70bd894b576062d91cac3fa3ca9dd3c96bfc46"
+    },
+    {
+      "path": "artifacts/realtime-vla/standalone-runtime-verification.json",
+      "bytes": 4376,
+      "sha256": "e07008cde92dc169d27de53df1dcffbc8059203610bda25b78bc307abba51f70"
+    },
+    {
+      "path": "artifacts/realtime-vla/verification.json",
+      "bytes": 715,
+      "sha256": "adc2bf36f1b47d34933a65fdc1622f6f9dded451d8bdf0c748954e8a29d26bd2"
+    },
+    {
+      "path": "docs/architecture/realtime-vla.md",
+      "bytes": 6879,
+      "sha256": "0450f9ab09ef4ab00cb3ee5416c193bfa535cbbbfcfa5b2541c4c74d24970d85"
+    },
+    {
+      "path": "docs/experiments/realtime-vla.md",
+      "bytes": 10124,
+      "sha256": "b5dff1fae18b5e995a66c3761952ffacb7fc35e8f57da2596160f9c02bcecb70"
+    },
+    {
+      "path": "docs/guides/realtime-vla.md",
+      "bytes": 7535,
+      "sha256": "a5a6f9c7298c3b7772fd1f63479e28b6acd1673f12dce83c849a0a5378cef7d6"
+    },
+    {
+      "path": "docs/reference/realtime-vla-assets.md",
+      "bytes": 16887,
+      "sha256": "ddcf24e61078dfce64679947e3a2fd13e83f3a11a21d5cd6d47cab59289029c4"
+    },
+    {
+      "path": "experiments/realtime_vla/Dockerfile",
+      "bytes": 473,
+      "sha256": "1bd6cf76d46868c6c49897eb8457f1d778bcef679c48cd835d57a7aadd13ac45"
+    },
+    {
+      "path": "experiments/realtime_vla/camera_worker.py",
+      "bytes": 14219,
+      "sha256": "a95568289f62250535ac06464c96cdaa89c9347be806ca3ed9ee0bef1676c9bb"
+    },
+    {
+      "path": "experiments/realtime_vla/chunk_queue.py",
+      "bytes": 8472,
+      "sha256": "928dccf281094992f119e29759901f30124eb44f3c216bdc65ff1b18f5a74fab"
+    },
+    {
+      "path": "experiments/realtime_vla/download_pi0fast.py",
+      "bytes": 4220,
+      "sha256": "0a64497866cc848cbc74717b38223593b6cb517b0780e68d6d407d6f54cd5c59"
+    },
+    {
+      "path": "experiments/realtime_vla/download_smolvla.py",
+      "bytes": 5528,
+      "sha256": "cfbf3cb684f914e6386e4a0ce1d5bf322d4fdd3b38751b2952eb8859f600f7bf"
+    },
+    {
+      "path": "experiments/realtime_vla/evaluate.py",
+      "bytes": 21170,
+      "sha256": "19b77588b7ab256c28173f94260e99e13e389b41afaaf523054cb10347ab1f5c"
+    },
+    {
+      "path": "experiments/realtime_vla/libero_env.py",
+      "bytes": 26533,
+      "sha256": "29cfd27f2e151b3b23a1fabd660f1b64a75dd34a4ed1fcafd2fdeed2d7af338d"
+    },
+    {
+      "path": "experiments/realtime_vla/make_demo.py",
+      "bytes": 20802,
+      "sha256": "f78b41028c41f441bcb49c77ffcf41378a4b2e021b456c732632732f81f0d36e"
+    },
+    {
+      "path": "experiments/realtime_vla/pi0fast_runtime.py",
+      "bytes": 28059,
+      "sha256": "ef87ec6bb8448bb9f199b306f42aae508531cc93029e359354c40f5438b7146c"
+    },
+    {
+      "path": "experiments/realtime_vla/ros_bridge.py",
+      "bytes": 35050,
+      "sha256": "b18864ab5fcaeab289e7f86e87493b93c2431391a7f1dfad992b3d5a7846407b"
+    },
+    {
+      "path": "experiments/realtime_vla/ros_client.py",
+      "bytes": 13294,
+      "sha256": "4ffbfb805d6d834e59125fc6dfc8ead389d5e1dae1004f921a2ccadeace19670"
+    },
+    {
+      "path": "experiments/realtime_vla/run_ros_bridge.sh",
+      "bytes": 3187,
+      "sha256": "9f7aa848d6498766cd314862394dc4a984cfd68bebf5789b20f1a26e2c580121"
+    },
+    {
+      "path": "experiments/realtime_vla/sensor_phase_audit.py",
+      "bytes": 10987,
+      "sha256": "0ef7effcee3d624a368df528fa5eaca7254d42b48d4c40bff7cb938a72504f50"
+    },
+    {
+      "path": "experiments/realtime_vla/smoke_camera.py",
+      "bytes": 5050,
+      "sha256": "1fb1506efc6991697d2231ae8e8aa4f47e9eed3376ff1c0b39efe2ed1b6bb70a"
+    },
+    {
+      "path": "experiments/realtime_vla/smolvla_runtime.py",
+      "bytes": 17757,
+      "sha256": "37d27abc9ae7a52ff781f3b26d92c4927443c4a92cad1b6c7fe7096bf70b7d28"
+    },
+    {
+      "path": "experiments/realtime_vla/summarize.py",
+      "bytes": 47842,
+      "sha256": "27f18dbaeba62e89d25117ec801acb5826ec01086630df8355cb8597c7bafe7a"
+    },
+    {
+      "path": "experiments/realtime_vla/test_camera_worker.py",
+      "bytes": 6351,
+      "sha256": "f5a0b7a52c05462f9f8918da046c05909451374e4018b865b309d7d9731cf1f5"
+    },
+    {
+      "path": "experiments/realtime_vla/test_chunk_queue.py",
+      "bytes": 4869,
+      "sha256": "38800f8df2b287385a5295f46ab43d25ca648466a76aa85f9bc74744f8daf8c6"
+    },
+    {
+      "path": "experiments/realtime_vla/test_libero_env.py",
+      "bytes": 5490,
+      "sha256": "158e552b342e3dbd951f09ddfb77d59d2035e9e12cc3666d3fb6899070a86ecf"
+    },
+    {
+      "path": "experiments/realtime_vla/test_ros_bridge.py",
+      "bytes": 9558,
+      "sha256": "6984f7f39ae2219aa4953577d810f84adc9b70295408cdd3449d76dd425102bc"
+    },
+    {
+      "path": "experiments/realtime_vla/video_text.py",
+      "bytes": 3415,
+      "sha256": "0580f038aa9c6f605081bb7cc58d90694de2cf898d9f575939c3a51120d2f98a"
+    },
+    {
+      "path": "experiments/realtime_vla/worker.py",
+      "bytes": 15603,
+      "sha256": "9d5d5bc710cd7e04f4e74538e91b625b950f9f1325fc15ccb9234339ed74f8af"
+    },
+    {
+      "path": "requirements-realtime.in",
+      "bytes": 494,
+      "sha256": "486f70f438d32e4a0701acae43756b1c03226fe38b5330d6c431352f9f1df591"
+    },
+    {
+      "path": "requirements-realtime.lock",
+      "bytes": 3193,
+      "sha256": "c23d70e6a78ae82eb86d5934778a583b1aa5fdc626cb449940ae23127b336fcf"
+    },
+    {
+      "path": "scripts/bootstrap_uv.py",
+      "bytes": 1995,
+      "sha256": "52cf52d79f1a08721dfb8d49dfa13e67c840c0aaa2f95c2c9a7ef4b0b8151a46"
+    },
+    {
+      "path": "scripts/build_realtime_report.py",
+      "bytes": 23147,
+      "sha256": "d123afa0ac3cc07beb6359c9b481e43570faee8e3f02bd6ec34c870a3a5b4316"
+    },
+    {
+      "path": "scripts/fetch_libero_assets.py",
+      "bytes": 2381,
+      "sha256": "fd5b5728bddae8a18d84f6f51bb8ce576f3353225d3c355305e16cff143144cb"
+    },
+    {
+      "path": "scripts/setup_realtime_vla.sh",
+      "bytes": 1481,
+      "sha256": "9f8e625aa55287cb26b1de2450b0ad6a51895bdca8a756926ee0805ca5dcb866"
+    },
+    {
+      "path": "scripts/verify_runtime.py",
+      "bytes": 2770,
+      "sha256": "db25e3ecdf3b4c804fbcaa0cdb9d8e964fea41611f4258374354771134da7b12"
+    }
+  ],
+  "manifest_excludes_itself": true
+}

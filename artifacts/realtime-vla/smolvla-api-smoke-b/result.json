@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "scope": "actual bare-environment sensors; task completion not tested",
+  "total_wall_seconds": 24.726660209998954,
+  "metadata": {
+    "model": "HuggingFaceVLA/smolvla_libero",
+    "revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+    "parameter_count": 604934176,
+    "chunk_size": 50,
+    "native_n_action_steps": 1,
+    "flow_steps": 10,
+    "amp_dtype": "bfloat16",
+    "local_training": false,
+    "image_transform": "official LiberoProcessorStep180degree rotation",
+    "action_transform": "official saved postprocessor; no additional gripper inversion",
+    "restoration": {
+      "all_stored_tensors_match": true,
+      "checked_tensors": 788,
+      "stored_elements": 604934176,
+      "model_only_keys": [],
+      "model_only_parameters_are_tied_aliases": true
+    }
+  },
+  "calls": [
+    {
+      "inference_ms": 1621.5404280010262,
+      "model_inference_ms": 1556.0312939996948,
+      "chunk_length": 50,
+      "call": 1,
+      "peak_cuda_bytes": 1574203392,
+      "action_min": -1.0244513750076294,
+      "action_max": 1.0207629203796387,
+      "amp_dtype": "bfloat16"
+    },
+    {
+      "inference_ms": 508.81293599377386,
+      "model_inference_ms": 475.30288199777715,
+      "chunk_length": 50,
+      "call": 2,
+      "peak_cuda_bytes": 1574203392,
+      "action_min": -1.0259168148040771,
+      "action_max": 1.011318325996399,
+      "amp_dtype": "bfloat16"
+    },
+    {
+      "inference_ms": 463.4714530038764,
+      "model_inference_ms": 453.5368459983147,
+      "chunk_length": 50,
+      "call": 3,
+      "peak_cuda_bytes": 1574203392,
+      "action_min": -1.0147595405578613,
+      "action_max": 1.015529751777649,
+      "amp_dtype": "bfloat16"
+    }
+  ],
+  "audit": {
+    "weights_before_sha256": "1012b19e3b2f43300a8c6d2cf5a6d463c5584100aed41fab8535982b5d390a98",
+    "weights_after_sha256": "1012b19e3b2f43300a8c6d2cf5a6d463c5584100aed41fab8535982b5d390a98",
+    "weights_unchanged": true,
+    "local_training": false,
+    "calls": 3,
+    "peak_cuda_bytes": 1574203392,
+    "model": "HuggingFaceVLA/smolvla_libero",
+    "revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+    "parameter_count": 604934176,
+    "chunk_size": 50,
+    "native_n_action_steps": 1,
+    "flow_steps": 10,
+    "amp_dtype": "bfloat16",
+    "image_transform": "official LiberoProcessorStep180degree rotation",
+    "action_transform": "official saved postprocessor; no additional gripper inversion",
+    "restoration": {
+      "all_stored_tensors_match": true,
+      "checked_tensors": 788,
+      "stored_elements": 604934176,
+      "model_only_keys": [],
+      "model_only_parameters_are_tied_aliases": true
+    }
+  }
+}

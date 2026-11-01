@@ -1,0 +1,31 @@
+{
+  "recorded_at_utc": "2026-11-01T16:57:19.510043+00:00",
+  "type": "exploratory scheduler ablation, separate from preregistered primary20 episodes",
+  "motivation": "Prefetch0 isolates delayed supply but forces a hold after every chunk; assess overlapping half the executable chunk with next inference. Faster supply need not improve control because observations are taken while prior actions are moving.",
+  "models": [
+    "smolvla",
+    "pi0fast"
+  ],
+  "states": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "development_state": 0,
+  "mode": "realtime",
+  "execute_steps": 10,
+  "prefetch_steps": 5,
+  "control_hz": 20,
+  "camera_hz": 10,
+  "wall_budget_s": 14,
+  "merge": "fifo",
+  "max_sensor_age_s": 0.5,
+  "ros_transport": true,
+  "seed": 20261102,
+  "weights": "same frozen checkpoints; no training",
+  "comparison": "within-model primary prefetch0 vs added prefetch5, all configurations shown; same initial states, not a new holdout",
+  "not_rtc": "Simple overlapping FIFO, no delay-conditioned inpainting/RTC corrections. Forecast generated from partially executed old chunk may conflict.",
+  "selection": "Run both models on all5 states irrespective of improvement; do not replace original primary outcome."
+}

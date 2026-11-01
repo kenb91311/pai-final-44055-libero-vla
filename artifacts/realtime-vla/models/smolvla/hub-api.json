@@ -1,0 +1,113 @@
+{
+  "_id": "68ca6912151287843ffe442b",
+  "id": "HuggingFaceVLA/smolvla_libero",
+  "private": false,
+  "pipeline_tag": "robotics",
+  "library_name": "lerobot",
+  "tags": [
+    "lerobot",
+    "safetensors",
+    "robotics",
+    "smolvla",
+    "dataset:unknown",
+    "arxiv:2506.01844",
+    "base_model:lerobot/smolvla_base",
+    "base_model:finetune:lerobot/smolvla_base",
+    "license:apache-2.0",
+    "eval-results",
+    "region:us"
+  ],
+  "downloads": 36355,
+  "likes": 22,
+  "modelId": "HuggingFaceVLA/smolvla_libero",
+  "author": "HuggingFaceVLA",
+  "sha": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+  "lastModified": "2025-09-17T07:58:34.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "base_model": "lerobot/smolvla_base",
+    "datasets": "unknown",
+    "library_name": "lerobot",
+    "license": "apache-2.0",
+    "model_name": "smolvla",
+    "pipeline_tag": "robotics",
+    "tags": [
+      "robotics",
+      "lerobot",
+      "smolvla"
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "c97db5f9eac91ef24ea476f93c0af4f7880e8470",
+      "size": 1679
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "a277adbb8bbf2f96fcfe87d8e21f10aac73f2438",
+      "size": 2109
+    },
+    {
+      "rfilename": "model.safetensors",
+      "blobId": "d35f8e24a3b50fdd42d44a4a1f5fb3d21be32c55",
+      "size": 1218047032,
+      "lfs": {
+        "sha256": "71d9563c8295284acba8fc2d5c19de000d6fe9ba58a406832af7ef3d221ed52f",
+        "size": 1218047032,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "policy_postprocessor.json",
+      "blobId": "f8e3df79b6b41acd8f1ffc8a616a8e62036c0bd4",
+      "size": 660
+    },
+    {
+      "rfilename": "policy_postprocessor_step_1_unnormalizer_processor.safetensors",
+      "blobId": "86a334ba454cd10be7e10730926d4b59bcbc49fd",
+      "size": 416,
+      "lfs": {
+        "sha256": "7008ba73c73887e5a7e631d478de9563ec5a0c51b7f0327f2530d7326c4b039e",
+        "size": 416,
+        "pointerSize": 128
+      }
+    },
+    {
+      "rfilename": "policy_preprocessor.json",
+      "blobId": "a777b3f3d9b46ddd83dc05cbdbd37ca44aefb7b4",
+      "size": 1709
+    },
+    {
+      "rfilename": "policy_preprocessor_step_5_normalizer_processor.safetensors",
+      "blobId": "86a334ba454cd10be7e10730926d4b59bcbc49fd",
+      "size": 416,
+      "lfs": {
+        "sha256": "7008ba73c73887e5a7e631d478de9563ec5a0c51b7f0327f2530d7326c4b039e",
+        "size": 416,
+        "pointerSize": 128
+      }
+    }
+  ],
+  "spaces": [
+    "HuggingFaceVLA/libero-vla-leaderboard",
+    "glayguo/robot-reel"
+  ],
+  "createdAt": "2025-09-17T07:53:54.000Z",
+  "safetensors": {
+    "parameters": {
+      "F32": 4031872,
+      "BF16": 600902304
+    },
+    "total": 604934176
+  },
+  "usedStorage": 1218047448
+}

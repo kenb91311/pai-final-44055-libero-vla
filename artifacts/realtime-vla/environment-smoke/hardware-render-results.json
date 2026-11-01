@@ -1,0 +1,203 @@
+[
+  {
+    "control_hz": 20,
+    "blas_limit": null,
+    "renderer": "D3D12 (NVIDIA GeForce RTX 5080)",
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 20,
+        "prefix": "libscipy_openblas",
+        "filepath": ".venv/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": ".venv/lib/python3.12/site-packages/opencv_python.libs/libopenblas-r0-f650aae0.3.3.so",
+        "version": null,
+        "threading_layer": "disabled",
+        "architecture": "Prescott"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 20,
+        "prefix": "libgomp",
+        "filepath": ".venv/lib/python3.12/site-packages/torch/lib/libgomp.so.1",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 20,
+        "prefix": "libscipy_openblas",
+        "filepath": ".venv-realtime/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ],
+    "steps": 50,
+    "mean_ms": 85.63725597952725,
+    "p95_ms": 93.10215654804777,
+    "max_ms": 94.56157000386156,
+    "budget_ms": 50.0,
+    "goal_xy_error_m": 0.11693418980419837,
+    "metadata": {
+      "task_suite": "libero_spatial",
+      "task_id": 0,
+      "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "initial_states": 50,
+      "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+      "control_hz": 20,
+      "canonical_control_hz": 20,
+      "dataset_metadata_fps": 10,
+      "physics_dt": 0.002,
+      "settle_steps": 10,
+      "images": "raw HWC RGB; policy official processor rotates180 once",
+      "action": "native LIBERO relative XYZ/axisangle/gripper7"
+    }
+  },
+  {
+    "control_hz": 20,
+    "blas_limit": 1,
+    "renderer": "D3D12 (NVIDIA GeForce RTX 5080)",
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": ".venv/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": ".venv/lib/python3.12/site-packages/opencv_python.libs/libopenblas-r0-f650aae0.3.3.so",
+        "version": null,
+        "threading_layer": "disabled",
+        "architecture": "Prescott"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": ".venv/lib/python3.12/site-packages/torch/lib/libgomp.so.1",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": ".venv-realtime/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ],
+    "steps": 50,
+    "mean_ms": 87.08768471988151,
+    "p95_ms": 94.53224615099316,
+    "max_ms": 170.07584599923575,
+    "budget_ms": 50.0,
+    "goal_xy_error_m": 0.11693418980419837,
+    "metadata": {
+      "task_suite": "libero_spatial",
+      "task_id": 0,
+      "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "initial_states": 50,
+      "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+      "control_hz": 20,
+      "canonical_control_hz": 20,
+      "dataset_metadata_fps": 10,
+      "physics_dt": 0.002,
+      "settle_steps": 10,
+      "images": "raw HWC RGB; policy official processor rotates180 once",
+      "action": "native LIBERO relative XYZ/axisangle/gripper7"
+    }
+  },
+  {
+    "control_hz": 10,
+    "blas_limit": 1,
+    "renderer": "D3D12 (NVIDIA GeForce RTX 5080)",
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": ".venv/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": ".venv/lib/python3.12/site-packages/opencv_python.libs/libopenblas-r0-f650aae0.3.3.so",
+        "version": null,
+        "threading_layer": "disabled",
+        "architecture": "Prescott"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": ".venv/lib/python3.12/site-packages/torch/lib/libgomp.so.1",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": ".venv-realtime/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ],
+    "steps": 50,
+    "mean_ms": 113.32298560068011,
+    "p95_ms": 166.58047044911646,
+    "max_ms": 200.59224600117886,
+    "budget_ms": 100.0,
+    "goal_xy_error_m": 0.11693418980419837,
+    "metadata": {
+      "task_suite": "libero_spatial",
+      "task_id": 0,
+      "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "initial_states": 50,
+      "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+      "control_hz": 10,
+      "canonical_control_hz": 20,
+      "dataset_metadata_fps": 10,
+      "physics_dt": 0.002,
+      "settle_steps": 10,
+      "images": "raw HWC RGB; policy official processor rotates180 once",
+      "action": "native LIBERO relative XYZ/axisangle/gripper7"
+    }
+  }
+]

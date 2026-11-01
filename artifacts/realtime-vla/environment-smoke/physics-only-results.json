@@ -1,0 +1,72 @@
+[
+  {
+    "control_hz": 20,
+    "mode": "physics",
+    "steps": 100,
+    "image_keys": [
+      "images"
+    ],
+    "mean_ms": 8.982239270262653,
+    "p95_ms": 10.640313144176615,
+    "max_ms": 11.33868299802998,
+    "goal_xy_error_m": 0.11693418980419837,
+    "snapshot_shape": [
+      92
+    ],
+    "metadata": {
+      "task_suite": "libero_spatial",
+      "task_id": 0,
+      "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "initial_states": 50,
+      "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+      "control_hz": 20,
+      "canonical_control_hz": 20,
+      "dataset_metadata_fps": 10,
+      "physics_dt": 0.002,
+      "settle_steps": 10,
+      "images": "raw HWC RGB; policy official processor rotates180 once",
+      "action": "native LIBERO relative XYZ/axisangle/gripper7",
+      "render_mode": "physics",
+      "gl_renderer": null,
+      "render_platform": "egl",
+      "gallium_driver": "d3d12"
+    }
+  },
+  {
+    "control_hz": 10,
+    "mode": "physics",
+    "steps": 100,
+    "image_keys": [
+      "images"
+    ],
+    "mean_ms": 17.654721080034506,
+    "p95_ms": 20.04680270110839,
+    "max_ms": 23.22526900388766,
+    "goal_xy_error_m": 0.11693418980419837,
+    "snapshot_shape": [
+      92
+    ],
+    "metadata": {
+      "task_suite": "libero_spatial",
+      "task_id": 0,
+      "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "initial_states": 50,
+      "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+      "control_hz": 10,
+      "canonical_control_hz": 20,
+      "dataset_metadata_fps": 10,
+      "physics_dt": 0.002,
+      "settle_steps": 10,
+      "images": "raw HWC RGB; policy official processor rotates180 once",
+      "action": "native LIBERO relative XYZ/axisangle/gripper7",
+      "render_mode": "physics",
+      "gl_renderer": null,
+      "render_platform": "egl",
+      "gallium_driver": "d3d12"
+    }
+  }
+]

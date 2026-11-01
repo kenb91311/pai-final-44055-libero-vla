@@ -1,0 +1,124 @@
+{
+  "status": "passed",
+  "standalone_install": true,
+  "pinned_packages": 140,
+  "source_environment_fallback": false,
+  "gpu_model_loaded": false,
+  "network_used_for_imports": false,
+  "policy_imports": [
+    "SmolVLAPolicy",
+    "PI0FastPolicy"
+  ],
+  "libero_import": true,
+  "cli_checks": [
+    {
+      "entrypoint": "experiments/realtime_vla/evaluate.py",
+      "returncode": 0,
+      "help": true
+    },
+    {
+      "entrypoint": "experiments/realtime_vla/summarize.py",
+      "returncode": 0,
+      "help": true
+    },
+    {
+      "entrypoint": "experiments/realtime_vla/make_demo.py",
+      "returncode": 0,
+      "help": true
+    },
+    {
+      "entrypoint": "experiments/realtime_vla/sensor_phase_audit.py",
+      "returncode": 0,
+      "help": true
+    },
+    {
+      "entrypoint": "scripts/build_realtime_report.py",
+      "returncode": 0,
+      "help": true
+    }
+  ],
+  "caption_helper_pixel_equivalence": true,
+  "verification_python": "3.12.3",
+  "torch": "2.7.1+cu128",
+  "torchvision": "0.22.1+cu128",
+  "ros_minimal_image_built": true,
+  "unit_tests_passed": 18,
+  "unit_tests_failed": 0,
+  "setup_script_offline_cached_check": true,
+  "physics_smoke": {
+    "status": "passed",
+    "task": "libero_spatial/task0",
+    "initial_state": 1,
+    "seed": 20261102,
+    "render_mode": "physics",
+    "physics_dt": 0.002,
+    "control_hz": 20,
+    "initial_goal_xy_m": 0.1256236484398719,
+    "matches_recorded_initial_goal_xy": true,
+    "hold_step_finite": true,
+    "gpu_model_loaded": false,
+    "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+    "formal_evaluation": false
+  },
+  "standalone_ros_transport": {
+    "status": "passed",
+    "input_kind": "synthetic",
+    "model_performance_evidence": false,
+    "image_tag": "physical-ai-ros2:jazzy-libero-vla",
+    "image_id": "sha256:e8cd5d580e59ef39eadbf32125b5f9a92634948667261ccc139b770e28cd7d29",
+    "base_reference": "ros:jazzy-ros-base@sha256:103b6c417973394659af6804d4917cd489b91e5ed22eb7bef263025a3bed2410",
+    "ros_versions": {
+      "ros-jazzy-rclpy": "7.1.12-1noble.20260912.162354",
+      "ros-jazzy-rmw-cyclonedds-cpp": "2.2.4-1noble.20260911.095700",
+      "ros-jazzy-sensor-msgs": "5.3.8-1noble.20260911.140426",
+      "ros-jazzy-std-msgs": "5.3.8-1noble.20260911.094424"
+    },
+    "nodes": [
+      "realtime_policy_transport",
+      "realtime_sensor_bridge"
+    ],
+    "sensor_pairs": 3,
+    "rgb_images": 6,
+    "action_chunk_lengths": [
+      10,
+      50
+    ],
+    "exact_sensor_and_action_values_verified": true,
+    "all_source_and_receipt_hashes_equal": true,
+    "identical_duplicate_replayed": true,
+    "changed_duplicate_rejected": true,
+    "receipt_hashes": [
+      {
+        "source_sha256": "ca2c582ffb0f2247b38ef43bcbd3d49798640f2a585391004dc30e81b44b256f",
+        "received_sha256": "ca2c582ffb0f2247b38ef43bcbd3d49798640f2a585391004dc30e81b44b256f",
+        "peer_received_sha256": "ca2c582ffb0f2247b38ef43bcbd3d49798640f2a585391004dc30e81b44b256f",
+        "verified": true
+      },
+      {
+        "source_sha256": "ebe5f8135c33c90bf6e6cf4634fa4992b6f4087b5a36e1bdeacefa20c9121e1d",
+        "received_sha256": "ebe5f8135c33c90bf6e6cf4634fa4992b6f4087b5a36e1bdeacefa20c9121e1d",
+        "peer_received_sha256": "ebe5f8135c33c90bf6e6cf4634fa4992b6f4087b5a36e1bdeacefa20c9121e1d",
+        "verified": true
+      },
+      {
+        "source_sha256": "9752d68d7fe05f1df95767097305d26c5f7dd9d1f35f9ab4da12b8016433eca9",
+        "received_sha256": "9752d68d7fe05f1df95767097305d26c5f7dd9d1f35f9ab4da12b8016433eca9",
+        "peer_received_sha256": "9752d68d7fe05f1df95767097305d26c5f7dd9d1f35f9ab4da12b8016433eca9",
+        "verified": true
+      },
+      {
+        "source_sha256": "c503500c789c1d9438fcb7237da6a3a40993f8ed2fc4f5943a2c5d118e980c60",
+        "received_sha256": "c503500c789c1d9438fcb7237da6a3a40993f8ed2fc4f5943a2c5d118e980c60",
+        "peer_received_sha256": "c503500c789c1d9438fcb7237da6a3a40993f8ed2fc4f5943a2c5d118e980c60",
+        "verified": true
+      },
+      {
+        "source_sha256": "537d00e76d4b076fdc464089c5235793fd298cfb3565c655c81897c1d00789f6",
+        "received_sha256": "537d00e76d4b076fdc464089c5235793fd298cfb3565c655c81897c1d00789f6",
+        "peer_received_sha256": "537d00e76d4b076fdc464089c5235793fd298cfb3565c655c81897c1d00789f6",
+        "verified": true
+      }
+    ],
+    "owned_container_stopped": true
+  }
+}

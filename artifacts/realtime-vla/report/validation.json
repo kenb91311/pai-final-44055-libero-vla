@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "tests": {
+    "command": ".venv-realtime/bin/python -m pytest -q experiments/realtime_vla",
+    "passed": 18,
+    "failed": 0,
+    "elapsed_s": 0.11
+  },
+  "episodes_verified": 35,
+  "primary_episodes": 20,
+  "scheduler_ablation_episodes": 10,
+  "native_horizon_episodes": 5,
+  "all_episode_ros_sensor_and_chunk_hashes_verified": true,
+  "frozen_model_audits_verified": 5,
+  "all_audits_training_false": true,
+  "source_file_hashes_verified": 156,
+  "primary_same_mode_cross_model_initial_sensor_hashes_equal": true,
+  "primary_cross_mode_physical_metrics_equal": true,
+  "primary_cross_mode_initial_sensor_hashes_equal": false,
+  "all_prefetch_and_native_initial_sensor_pairs_equal": true,
+  "sensor_phase_physics_state_and_control_unchanged": true,
+  "report_sha256": "edfd7ca36c323ac0fa1eee8911056bdffbca71015ee3ffbe5b505663a517da6f",
+  "video_validation": {
+    "status": "passed",
+    "duration_s": 68.65,
+    "output_frames": 1373,
+    "clips": 7,
+    "all_source_and_final_frames_decoded": true,
+    "presentation": "task execution only; zero slides",
+    "visual_review_frames_s": [
+      0.0,
+      15.0,
+      35.0,
+      55.0,
+      67.65
+    ],
+    "movie_sha256": "edad0de2640b1bf3e5834610a69af71d650bc2152b887dabfb82891392f34602"
+  }
+}

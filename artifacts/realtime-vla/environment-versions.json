@@ -1,0 +1,27 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "packages": {
+    "lerobot": "0.6.2",
+    "torch": "2.7.1+cu128",
+    "torchvision": "0.22.1+cu128",
+    "numpy": "2.2.6",
+    "transformers": "5.4.0",
+    "huggingface-hub": "1.6.0",
+    "hf-libero": "0.1.4",
+    "robosuite": "1.4.0",
+    "robomimic": "0.2.0",
+    "mujoco": "3.3.7",
+    "av": "15.1.0",
+    "pandas": "2.3.3",
+    "pyarrow": "26.0.0",
+    "matplotlib": "3.11.2",
+    "sentencepiece": "0.2.1",
+    "regex": "2026.9.29"
+  },
+  "torch_file": ".venv/lib/python3.12/site-packages/torch/__init__.py",
+  "torch_cuda_build": "12.8",
+  "policy_import_smoke": "passed",
+  "env_unit_tests": "7 passed",
+  "base_runtime_modified": false,
+  "requirements_lock_sha256": "69ae584cc9649a0323ff28352843e247e0774be30862758ad1ffda509bc633b9"
+}

@@ -1,0 +1,19 @@
+# Task roots; install the complete pinned runtime from requirements-realtime.lock.
+lerobot @ https://github.com/huggingface/lerobot/archive/3f797de5952432284a7c77ad2760218cb74e2f26.tar.gz
+torch==2.7.1+cu128
+torchvision==0.22.1+cu128
+transformers==5.4.0
+huggingface-hub==1.6.0
+hf-libero==0.1.4
+robosuite==1.4.0
+robomimic==0.2.0
+mujoco==3.3.7
+numpy==2.2.6
+sentencepiece==0.2.1
+safetensors==0.6.2
+imageio==2.38.1
+imageio-ffmpeg==0.6.0
+pillow==11.3.0
+scipy==1.17.1
+matplotlib==3.11.2
+pytest==8.4.2

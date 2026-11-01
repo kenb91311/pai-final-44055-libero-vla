@@ -1,0 +1,68 @@
+[
+  {
+    "type": "file",
+    "oid": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+    "size": 1519,
+    "path": ".gitattributes"
+  },
+  {
+    "type": "file",
+    "oid": "fbcac1dff508ecc3620d8991f4e76ae105d71bad",
+    "size": 2319,
+    "path": "config.json"
+  },
+  {
+    "type": "file",
+    "oid": "01a854d4f9027b22a76bfb79525d3ebcad403ef3",
+    "size": 7729830688,
+    "lfs": {
+      "oid": "f1f8236d44016a533daba7b8249756e84df047f46e20ca17d3fc34d8f2f691ba",
+      "size": 7729830688,
+      "pointerSize": 135
+    },
+    "xetHash": "f8d6cc5eb03c1e05b56588da0379f1c3d576753aa79c2c1f4c8400580c3aace9",
+    "path": "model.safetensors"
+  },
+  {
+    "type": "file",
+    "oid": "0ec8146a07f9b92bc5a3c02e2d6b7d49ba6d26e8",
+    "size": 660,
+    "path": "policy_postprocessor.json"
+  },
+  {
+    "type": "file",
+    "oid": "e75542de525061dee2549887013968b3516cdfdc",
+    "size": 7668,
+    "lfs": {
+      "oid": "a002c0df7f79c5b169c5a899ad151d4ea1bed246c7d82bd93ed1556558d517a9",
+      "size": 7668,
+      "pointerSize": 129
+    },
+    "xetHash": "d28481aa49b5267215082c0a101c9f9fe4b08fd6a0af1de22b04eb785de6b8a1",
+    "path": "policy_postprocessor_step_0_unnormalizer_processor.safetensors"
+  },
+  {
+    "type": "file",
+    "oid": "c1743d0db9b0673c1d19d71c6ac4b940e7464205",
+    "size": 2136,
+    "path": "policy_preprocessor.json"
+  },
+  {
+    "type": "file",
+    "oid": "e75542de525061dee2549887013968b3516cdfdc",
+    "size": 7668,
+    "lfs": {
+      "oid": "a002c0df7f79c5b169c5a899ad151d4ea1bed246c7d82bd93ed1556558d517a9",
+      "size": 7668,
+      "pointerSize": 129
+    },
+    "xetHash": "d28481aa49b5267215082c0a101c9f9fe4b08fd6a0af1de22b04eb785de6b8a1",
+    "path": "policy_preprocessor_step_2_normalizer_processor.safetensors"
+  },
+  {
+    "type": "file",
+    "oid": "bc68827f8940343d111a8bcf69692aaccab5ce22",
+    "size": 6483,
+    "path": "train_config.json"
+  }
+]

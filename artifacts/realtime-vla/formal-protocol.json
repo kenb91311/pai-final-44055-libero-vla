@@ -1,0 +1,75 @@
+{
+  "registered_at_utc": "2026-11-01T16:46:20.381707+00:00",
+  "purpose": "Frozen pretrained SmolVLA vs pi0-FAST in real wallclock LIBERO closed-loop system",
+  "development_states": [
+    0
+  ],
+  "formal_states": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "task_suite": "libero_spatial",
+  "task_id": 0,
+  "models": [
+    "smolvla",
+    "pi0fast"
+  ],
+  "conditions": [
+    "lockstep",
+    "realtime"
+  ],
+  "control_hz": 20,
+  "camera_hz_realtime": 10,
+  "resolution": [
+    256,
+    256
+  ],
+  "wall_budget_s": 14,
+  "execute_steps": 10,
+  "prefetch_steps": 0,
+  "merge": "fifo",
+  "max_sensor_age_s": 0.5,
+  "warmup_calls": 2,
+  "bootstrap": "Fresh sensor after warmup, first chunk precomputed while physical initial state is held; startup timing excluded and reported",
+  "seed": 20261102,
+  "ros_transport": true,
+  "policy_input": "two raw RGB cameras + robot eef position/quaternion/gripper, language; no object truth",
+  "official_success": "native LIBERO bowl in/on plate predicate",
+  "secondary_metrics": [
+    "final goalXY error",
+    "time to success",
+    "holds",
+    "measured tick periods",
+    "RTF",
+    "model inference walltime",
+    "chunk including ROS walltime",
+    "camera age",
+    "action source age excluding bootstrap",
+    "peak GPU memory"
+  ],
+  "pairing": "Same official initial state and RNG seed. One model at a time. Lockstep uses synchronous camera and pauses physics; realtime uses snapshot-equivalent asynchronous camera and continues physics. Full system difference, not pure inference causality.",
+  "early_stop": "first native success or terminal or 14 sec RT /280 steps lockstep",
+  "hypothesis": "Neither speed nor task quality rank is assumed. N=5 per cell is a small paired pilot, no general benchmark claim.",
+  "optional_ablation": "Any scheduler/native-horizon ablation is separate and does not replace preregistered primary results.",
+  "code_sha256": {
+    "experiments/realtime_vla/ros_client.py": "4ffbfb805d6d834e59125fc6dfc8ead389d5e1dae1004f921a2ccadeace19670",
+    "experiments/realtime_vla/test_camera_worker.py": "f5a0b7a52c05462f9f8918da046c05909451374e4018b865b309d7d9731cf1f5",
+    "experiments/realtime_vla/test_libero_env.py": "158e552b342e3dbd951f09ddfb77d59d2035e9e12cc3666d3fb6899070a86ecf",
+    "experiments/realtime_vla/chunk_queue.py": "928dccf281094992f119e29759901f30124eb44f3c216bdc65ff1b18f5a74fab",
+    "experiments/realtime_vla/download_smolvla.py": "cfbf3cb684f914e6386e4a0ce1d5bf322d4fdd3b38751b2952eb8859f600f7bf",
+    "experiments/realtime_vla/libero_env.py": "29cfd27f2e151b3b23a1fabd660f1b64a75dd34a4ed1fcafd2fdeed2d7af338d",
+    "experiments/realtime_vla/test_chunk_queue.py": "38800f8df2b287385a5295f46ab43d25ca648466a76aa85f9bc74744f8daf8c6",
+    "experiments/realtime_vla/download_pi0fast.py": "0a64497866cc848cbc74717b38223593b6cb517b0780e68d6d407d6f54cd5c59",
+    "experiments/realtime_vla/test_ros_bridge.py": "6984f7f39ae2219aa4953577d810f84adc9b70295408cdd3449d76dd425102bc",
+    "experiments/realtime_vla/worker.py": "9d5d5bc710cd7e04f4e74538e91b625b950f9f1325fc15ccb9234339ed74f8af",
+    "experiments/realtime_vla/camera_worker.py": "a95568289f62250535ac06464c96cdaa89c9347be806ca3ed9ee0bef1676c9bb",
+    "experiments/realtime_vla/evaluate.py": "19b77588b7ab256c28173f94260e99e13e389b41afaaf523054cb10347ab1f5c",
+    "experiments/realtime_vla/pi0fast_runtime.py": "ef87ec6bb8448bb9f199b306f42aae508531cc93029e359354c40f5438b7146c",
+    "experiments/realtime_vla/smolvla_runtime.py": "37d27abc9ae7a52ff781f3b26d92c4927443c4a92cad1b6c7fe7096bf70b7d28",
+    "experiments/realtime_vla/smoke_camera.py": "1fb1506efc6991697d2231ae8e8aa4f47e9eed3376ff1c0b39efe2ed1b6bb70a",
+    "experiments/realtime_vla/ros_bridge.py": "b18864ab5fcaeab289e7f86e87493b93c2431391a7f1dfad992b3d5a7846407b"
+  }
+}

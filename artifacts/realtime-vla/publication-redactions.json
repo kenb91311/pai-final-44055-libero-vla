@@ -1,0 +1,39 @@
+{
+  "format_version": 1,
+  "task": "LIBERO real-time VLA comparison",
+  "generated_at_utc": "2026-11-01T17:56:03.750803+00:00",
+  "purpose": "Document the distribution of environment metadata with workspace-relative paths; measured results, model revisions and downloaded file digests remain unchanged.",
+  "operations": [
+    {
+      "path": "artifacts/realtime-vla/environment-versions.json",
+      "operation": "absolute_workspace_paths_to_relative_paths",
+      "occurrences": 1,
+      "source_sha256": "073a771f08ab848c99ae156c080be8fe4e8ed07fbc5f4755cc0f13553c65da12",
+      "published_sha256": "09e6a9445e576bcfb210facb4fe8d7d02cd57becb763aec608a78ecd5ad364c8",
+      "measured_numeric_values_changed": false
+    },
+    {
+      "path": "artifacts/realtime-vla/environment-smoke/hardware-render-results.json",
+      "operation": "absolute_workspace_paths_to_relative_paths",
+      "occurrences": 12,
+      "source_sha256": "78d7b18c381f8967026bb8ad2979a4f44e387130d2034ddd0760c83168c3d5cc",
+      "published_sha256": "bc5557ff1817bc74a3658584156492d6713455bd41173bf9c22ea48352c87d78",
+      "measured_numeric_values_changed": false
+    },
+    {
+      "path": "artifacts/realtime-vla/installed-freeze.txt",
+      "operation": "local_wheel_reference_to_identical_public_wheel_url_and_digest",
+      "occurrences": 1,
+      "source_sha256": "a423f56ef02bb783ccb070bef3bca84ace9fbffbffb2ba4cf546b2e2df200bff",
+      "published_sha256": "59f1e14af671138697edeaf40f366bb87ac8463cd1252c8e1428ad8183627f5c",
+      "measured_numeric_values_changed": false
+    },
+    {
+      "path": "SUBMISSION-SOURCES.json",
+      "operation": "removed_stale_copy_manifest_before_publication_manifest_rebuild",
+      "source_sha256": "839e82475dfec2fdeb34f0a5121a84e1d65e221cfc9f816f422d3e08a3f08bd5",
+      "measured_numeric_values_changed": false
+    }
+  ],
+  "policy": "The measured-run code/file hashes identify original experiment evidence. A separate publication manifest identifies the final distributable files."
+}

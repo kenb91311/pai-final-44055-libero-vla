@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "input": "actual fixed LIBERO raw observation; no simulation advancement in this smoke",
+  "training": false,
+  "measurements": [
+    {
+      "shape": [
+        10,
+        7
+      ],
+      "model": "pi0-FAST",
+      "chunk_size": 10,
+      "chunk_length": 10,
+      "action_dim": 7,
+      "inference_ms": 1284.910423004476,
+      "model_inference_ms": 1258.8420220054104,
+      "inference_seconds": 1.2588420220054104,
+      "end_to_end_seconds": 1.2849104230044759,
+      "call": 1,
+      "action_min": -0.9971544146537781,
+      "action_max": 0.8974117040634155,
+      "kv_cache": true,
+      "temperature": 0.0,
+      "max_decoding_steps": 256,
+      "autoregressive_token_count": null,
+      "compile_model": false,
+      "dtype": "torch.bfloat16",
+      "peak_cuda_bytes": 7876082176,
+      "peak_cuda_allocated_bytes": 7876082176,
+      "decode_errors": [],
+      "local_training": false
+    },
+    {
+      "shape": [
+        10,
+        7
+      ],
+      "model": "pi0-FAST",
+      "chunk_size": 10,
+      "chunk_length": 10,
+      "action_dim": 7,
+      "inference_ms": 673.4308089944534,
+      "model_inference_ms": 671.9235130003653,
+      "inference_seconds": 0.6719235130003653,
+      "end_to_end_seconds": 0.6734308089944534,
+      "call": 2,
+      "action_min": -0.9971544146537781,
+      "action_max": 0.8206360340118408,
+      "kv_cache": true,
+      "temperature": 0.0,
+      "max_decoding_steps": 256,
+      "autoregressive_token_count": null,
+      "compile_model": false,
+      "dtype": "torch.bfloat16",
+      "peak_cuda_bytes": 7876128256,
+      "peak_cuda_allocated_bytes": 7876128256,
+      "decode_errors": [],
+      "local_training": false
+    },
+    {
+      "shape": [
+        10,
+        7
+      ],
+      "model": "pi0-FAST",
+      "chunk_size": 10,
+      "chunk_length": 10,
+      "action_dim": 7,
+      "inference_ms": 706.1154530019849,
+      "model_inference_ms": 704.0334310004255,
+      "inference_seconds": 0.7040334310004255,
+      "end_to_end_seconds": 0.7061154530019849,
+      "call": 3,
+      "action_min": -0.9971544146537781,
+      "action_max": 0.8206360340118408,
+      "kv_cache": true,
+      "temperature": 0.0,
+      "max_decoding_steps": 256,
+      "autoregressive_token_count": null,
+      "compile_model": false,
+      "dtype": "torch.bfloat16",
+      "peak_cuda_bytes": 7876128256,
+      "peak_cuda_allocated_bytes": 7876128256,
+      "decode_errors": [],
+      "local_training": false
+    }
+  ],
+  "startup_seconds": 97.19286139500036,
+  "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+  "audit": {
+    "weights_before_sha256": "705f3d810e383a8ad404150de18c5b6e5cbc64781380d10b0c45c10d78eaa286",
+    "weights_after_sha256": "705f3d810e383a8ad404150de18c5b6e5cbc64781380d10b0c45c10d78eaa286",
+    "weights_unchanged": true,
+    "peak_cuda_bytes": 7876128256,
+    "checkpoint_load_strict": true,
+    "checkpoint_tensor_count": 604,
+    "local_training": false
+  },
+  "cuda_allocated_after_close": 8519680
+}

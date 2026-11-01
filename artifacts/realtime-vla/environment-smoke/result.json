@@ -1,0 +1,50 @@
+{
+  "steps": 50,
+  "mean_ms": 98.47156614006963,
+  "p95_ms": 101.137394097168,
+  "max_ms": 103.23175999656087,
+  "success": false,
+  "metrics": {
+    "step_wall_seconds": 0.09789264800201636,
+    "native_clip_max_excess": 0.0,
+    "goal_xy_error_m": 0.11693418980419837,
+    "bowl_position": [
+      -0.06347436696073382,
+      0.2020256646056691,
+      0.898404150188853
+    ],
+    "plate_position": [
+      0.05341726861586711,
+      0.20518007063397525,
+      0.9024998346667837
+    ],
+    "eef_tracking_error_m": 1.5973340997535733e-06,
+    "actuator_control": [
+      -0.0999864003619369,
+      -19.299254158674543,
+      0.1780531172843241,
+      18.016794142459087,
+      -0.0002163589151825832,
+      2.010072648075757,
+      -0.06105053669958443,
+      0.04,
+      -0.04
+    ]
+  },
+  "metadata": {
+    "task_suite": "libero_spatial",
+    "task_id": 0,
+    "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+    "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "initial_states": 50,
+    "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+    "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+    "control_hz": 20,
+    "canonical_control_hz": 20,
+    "dataset_metadata_fps": 10,
+    "physics_dt": 0.002,
+    "settle_steps": 10,
+    "images": "raw HWC RGB; policy official processor rotates180 once",
+    "action": "native LIBERO relative XYZ/axisangle/gripper7"
+  }
+}

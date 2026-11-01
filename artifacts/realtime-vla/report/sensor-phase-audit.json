@@ -1,0 +1,148 @@
+{
+  "sensors": {
+    "agentview_image": {
+      "shape": [
+        256,
+        256,
+        3
+      ],
+      "dtype": "uint8",
+      "byte_equal": false,
+      "cached_sha256": "c2362ea7457ca66b8c42ca342f4f1e5126e037e31d7b097b559b9ac1ecde86a8",
+      "regenerated_sha256": "981f9d1c867a13621cda428bdf129fd35dc4c1d6847429357e95e05a4491b04c",
+      "max_abs_difference": 31.0,
+      "mean_abs_difference": 0.0048370361328125,
+      "changed_pixels": 85,
+      "total_pixels": 65536,
+      "changed_pixel_fraction": 0.0012969970703125,
+      "mean_abs_channel_difference_0_255": 0.0048370361328125,
+      "rmse_channel_0_255": 0.30236662811805004
+    },
+    "robot0_eye_in_hand_image": {
+      "shape": [
+        256,
+        256,
+        3
+      ],
+      "dtype": "uint8",
+      "byte_equal": false,
+      "cached_sha256": "6ea7857794da87b4c9d9eb616a31bcd58bcb04e2176086ca2766f5f75b6cd7ac",
+      "regenerated_sha256": "deb64a7593a9bd7e7303b86051531b41dc61c9d7bcf9892b41c342377f6148c1",
+      "max_abs_difference": 50.0,
+      "mean_abs_difference": 0.07337443033854167,
+      "changed_pixels": 3140,
+      "total_pixels": 65536,
+      "changed_pixel_fraction": 0.04791259765625,
+      "mean_abs_channel_difference_0_255": 0.07337443033854167,
+      "rmse_channel_0_255": 1.0060900574879177
+    },
+    "robot0_eef_pos": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "cached_sha256": "d8a81d3f1538ea17ccd2c9c6d1e2171b09c0648ba202d0b71ad7eb75294cf78d",
+      "regenerated_sha256": "a6e3513dde89d9dde89e07ead9c4b6929f9dbd20736850bfe6becf26ea623605",
+      "max_abs_difference": 1.321656520468506e-06,
+      "mean_abs_difference": 5.05254119447888e-07,
+      "cached": [
+        -0.20685084988127977,
+        -0.02232481900224892,
+        1.173981271495001
+      ],
+      "regenerated": [
+        -0.20685070227559185,
+        -0.02232349734572845,
+        1.1739812249948511
+      ],
+      "l2_difference": 1.3306861617787976e-06
+    },
+    "robot0_eef_quat": {
+      "shape": [
+        4
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "cached_sha256": "fe66c439af88c1c65ff463639b952bb44c7686f78cf2a4932517d2f152c2df9d",
+      "regenerated_sha256": "4f50c403c9b7ee9cca98408e9f41c103a4be0671302acea85a995524471bbffe",
+      "max_abs_difference": 2.6565851289739317e-05,
+      "mean_abs_difference": 6.9823631685104505e-06,
+      "cached": [
+        0.9995909166949706,
+        -0.000871756662780776,
+        -0.028587210519801096,
+        -0.00010342110704449417
+      ],
+      "regenerated": [
+        0.9995909422146896,
+        -0.0008451908114910367,
+        -0.02858711145078275,
+        -0.00010466011969144547
+      ],
+      "l2_difference": 2.6594925700484735e-05
+    },
+    "robot0_gripper_qpos": {
+      "shape": [
+        2
+      ],
+      "dtype": "float64",
+      "byte_equal": false,
+      "cached_sha256": "75b4ad08e65d4a240676ea14f7ba3b0bd6b256d4c1caac2cea455c8324b664dc",
+      "regenerated_sha256": "f86ce28bef9b2bf0d2f3dfe2bff6c13f71b2ad2e004af75818f42580e2974844",
+      "max_abs_difference": 6.407509984762694e-06,
+      "mean_abs_difference": 6.377236502284889e-06,
+      "cached": [
+        0.038722029368111324,
+        -0.03872347032053804
+      ],
+      "regenerated": [
+        0.03872843687809609,
+        -0.03872981728355785
+      ],
+      "l2_difference": 9.018875970964024e-06
+    }
+  },
+  "eef_position_l2_m": 1.3306861617787976e-06,
+  "eef_quaternion_angle_rad": 5.318984047126431e-05,
+  "gripper_position_l2_m": 9.018875970964024e-06,
+  "all_sensor_bytes_equal": false,
+  "status": "passed",
+  "initial_state_index": 1,
+  "seed": 20261102,
+  "environment": {
+    "task_suite": "libero_spatial",
+    "task_id": 0,
+    "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+    "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "initial_states": 50,
+    "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+    "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+    "control_hz": 20,
+    "canonical_control_hz": 20,
+    "dataset_metadata_fps": 10,
+    "physics_dt": 0.002,
+    "settle_steps": 10,
+    "images": "raw HWC RGB; policy official processor rotates180 once",
+    "action": "native LIBERO relative XYZ/axisangle/gripper7",
+    "render_mode": "sync",
+    "gl_renderer": "D3D12 (NVIDIA GeForce RTX 5080)",
+    "render_platform": "egl",
+    "gallium_driver": "d3d12"
+  },
+  "physics_state_byte_equal": true,
+  "physics_state_array_equal": true,
+  "actuator_control_array_equal": true,
+  "physics_time_before": 0.5000000000000003,
+  "physics_time_after": 0.5000000000000003,
+  "scope": "One diagnostic state; cached observations versus forced regeneration. Does not estimate any causal effect on formal task success.",
+  "source_mechanism": "robosuite Observable.update caches one sample per control period; LIBERO regenerate_obs_from_state calls sim.forward and force-updates observables.",
+  "raw_arrays": [
+    "sensor-phase-cached.npz",
+    "sensor-phase-regenerated.npz"
+  ],
+  "plots": [
+    "sensor-phase.png",
+    "sensor-phase.svg"
+  ]
+}

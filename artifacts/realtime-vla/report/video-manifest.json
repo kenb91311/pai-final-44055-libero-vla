@@ -1,0 +1,211 @@
+{
+  "report": "artifacts/realtime-vla/report/results.json",
+  "report_sha256": "edfd7ca36c323ac0fa1eee8911056bdffbca71015ee3ffbe5b505663a517da6f",
+  "fps": 20,
+  "size": [
+    1080,
+    720
+  ],
+  "presentation": "recorded task execution only; brief condition/clock/terminal labels; no explanatory slides",
+  "clips": [
+    {
+      "source": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/rollout.mp4",
+      "sha256": "278c7f6ae423ef9aa1b94cd406221ea73770db50891ac7fe4b0c5d5a67fd7cab",
+      "selection_reason": "earliest paired disagreement",
+      "model": "smolvla",
+      "mode": "realtime",
+      "execute_steps": 10,
+      "prefetch_steps": 0,
+      "init_state_index": 1,
+      "native_success": true,
+      "source_frames": 178,
+      "output_frames": 178,
+      "output_duration_s": 8.9,
+      "actual_run_wall_s": 8.884667568003351,
+      "source_sim_s": 8.9,
+      "timing": "wall-timestamp reconstruction at1x",
+      "wall_frame_mapping": "first frame held before first completed tick; last completed-step frame selected thereafter",
+      "start_s": 0.0
+    },
+    {
+      "source": "artifacts/realtime-vla/formal-pi0fast-e10/realtime-init1/rollout.mp4",
+      "sha256": "7c05fa53a610f0a7a490ed5228b6f52e55685b69418dec4dc5ce92c95738e4ba",
+      "selection_reason": "earliest paired disagreement",
+      "model": "pi0fast",
+      "mode": "realtime",
+      "execute_steps": 10,
+      "prefetch_steps": 0,
+      "init_state_index": 1,
+      "native_success": false,
+      "source_frames": 280,
+      "output_frames": 280,
+      "output_duration_s": 14.0,
+      "actual_run_wall_s": 13.965099353001278,
+      "source_sim_s": 14.0,
+      "timing": "wall-timestamp reconstruction at1x",
+      "wall_frame_mapping": "first frame held before first completed tick; last completed-step frame selected thereafter",
+      "start_s": 8.9
+    },
+    {
+      "source": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/rollout.mp4",
+      "sha256": "7c9b83c64e614f419d13490ad28605f8410be4f0833894e8205166cfdb680388",
+      "selection_reason": "same-state paused reference",
+      "model": "smolvla",
+      "mode": "lockstep",
+      "execute_steps": 10,
+      "prefetch_steps": 0,
+      "init_state_index": 1,
+      "native_success": true,
+      "source_frames": 79,
+      "output_frames": 79,
+      "output_duration_s": 3.95,
+      "actual_run_wall_s": 10.624760332000733,
+      "source_sim_s": 3.95,
+      "timing": "simulated-time paused reference; inference/render waits omitted and labelled",
+      "wall_frame_mapping": "first frame held before first completed tick; last completed-step frame selected thereafter",
+      "start_s": 22.9
+    },
+    {
+      "source": "artifacts/realtime-vla/formal-pi0fast-e10/lockstep-init1/rollout.mp4",
+      "sha256": "51a68d143276fe35b20d09fcddf49fb5a6d29b521e62256b7488cb08740ee267",
+      "selection_reason": "same-state paused reference",
+      "model": "pi0fast",
+      "mode": "lockstep",
+      "execute_steps": 10,
+      "prefetch_steps": 0,
+      "init_state_index": 1,
+      "native_success": false,
+      "source_frames": 280,
+      "output_frames": 280,
+      "output_duration_s": 14.0,
+      "actual_run_wall_s": 50.219457828003215,
+      "source_sim_s": 14.0,
+      "timing": "simulated-time paused reference; inference/render waits omitted and labelled",
+      "wall_frame_mapping": "first frame held before first completed tick; last completed-step frame selected thereafter",
+      "start_s": 26.849999999999998
+    },
+    {
+      "source": "artifacts/realtime-vla/formal-pi0fast-e10/lockstep-init2/rollout.mp4",
+      "sha256": "ee555268e25f392616d29679a1c4489ae74a1e5971e7b026ec6d5e0755acb207",
+      "selection_reason": "first pi paused-reference success to show pretrained competence",
+      "model": "pi0fast",
+      "mode": "lockstep",
+      "execute_steps": 10,
+      "prefetch_steps": 0,
+      "init_state_index": 2,
+      "native_success": true,
+      "source_frames": 85,
+      "output_frames": 85,
+      "output_duration_s": 4.25,
+      "actual_run_wall_s": 14.614948613001616,
+      "source_sim_s": 4.25,
+      "timing": "simulated-time paused reference; inference/render waits omitted and labelled",
+      "wall_frame_mapping": "first frame held before first completed tick; last completed-step frame selected thereafter",
+      "start_s": 40.849999999999994
+    },
+    {
+      "source": "artifacts/realtime-vla/ablation-smolvla-prefetch5/realtime-init1/rollout.mp4",
+      "sha256": "417643681d2389c6d53a426bd919bac295bea597a58a83349124e4a3518acff3",
+      "selection_reason": "first-state exploratory Smol E10/P5; outcome retained",
+      "model": "smolvla",
+      "mode": "realtime",
+      "execute_steps": 10,
+      "prefetch_steps": 5,
+      "init_state_index": 1,
+      "native_success": false,
+      "source_frames": 280,
+      "output_frames": 280,
+      "output_duration_s": 14.0,
+      "actual_run_wall_s": 13.99057886999799,
+      "source_sim_s": 14.0,
+      "timing": "wall-timestamp reconstruction at1x",
+      "wall_frame_mapping": "first frame held before first completed tick; last completed-step frame selected thereafter",
+      "start_s": 45.099999999999994
+    },
+    {
+      "source": "artifacts/realtime-vla/native-smolvla-e50/realtime-init1/rollout.mp4",
+      "sha256": "37dc13b784395c1b649ca7413511787c4d93b0fb7a60ae1688f670273fbf3506",
+      "selection_reason": "first-state exploratory Smol E50/P0; outcome retained",
+      "model": "smolvla",
+      "mode": "realtime",
+      "execute_steps": 50,
+      "prefetch_steps": 0,
+      "init_state_index": 1,
+      "native_success": true,
+      "source_frames": 190,
+      "output_frames": 191,
+      "output_duration_s": 9.55,
+      "actual_run_wall_s": 9.501054291999026,
+      "source_sim_s": 9.5,
+      "timing": "wall-timestamp reconstruction at1x",
+      "wall_frame_mapping": "first frame held before first completed tick; last completed-step frame selected thereafter",
+      "start_s": 59.099999999999994
+    }
+  ],
+  "omitted_clips": [],
+  "full_formal_outcomes": [
+    {
+      "model": "smolvla",
+      "mode": "lockstep",
+      "successes": 5,
+      "n": 5
+    },
+    {
+      "model": "smolvla",
+      "mode": "realtime",
+      "successes": 3,
+      "n": 5
+    },
+    {
+      "model": "pi0fast",
+      "mode": "lockstep",
+      "successes": 4,
+      "n": 5
+    },
+    {
+      "model": "pi0fast",
+      "mode": "realtime",
+      "successes": 1,
+      "n": 5
+    }
+  ],
+  "exploratory_scheduler_outcomes": [
+    {
+      "model": "smolvla",
+      "execute_steps": 10,
+      "prefetch_steps": 5,
+      "successes": 0,
+      "n": 5
+    },
+    {
+      "model": "pi0fast",
+      "execute_steps": 10,
+      "prefetch_steps": 5,
+      "successes": 0,
+      "n": 5
+    }
+  ],
+  "exploratory_native_outcomes": [
+    {
+      "model": "smolvla",
+      "execute_steps": 50,
+      "prefetch_steps": 0,
+      "successes": 3,
+      "n": 5
+    }
+  ],
+  "total_evaluated_trials": 35,
+  "output_frames": 1373,
+  "duration_s": 68.65,
+  "movie": "demo.mp4",
+  "movie_sha256": "edad0de2640b1bf3e5834610a69af71d650bc2152b887dabfb82891392f34602",
+  "size_bytes": 7619090,
+  "validation": "all selected source frames decoded; final1373frames fully decoded; representative task frames visually reviewed with readable labels and unobscured two-camera footage",
+  "visual_review_frames_s": [
+    0.0,
+    15.0,
+    35.0,
+    55.0,
+    67.65
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "task_suite": "libero_spatial",
+  "task_id": 0,
+  "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+  "prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+  "initial_states": 50,
+  "initial_states_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+  "assets_revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6",
+  "control_hz": 20,
+  "canonical_control_hz": 20,
+  "dataset_metadata_fps": 10,
+  "physics_dt": 0.002,
+  "settle_steps": 10,
+  "images": "raw HWC RGB; policy official processor rotates180 once",
+  "action": "native LIBERO relative XYZ/axisangle/gripper7"
+}

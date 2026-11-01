@@ -1,0 +1,3 @@
+WARNING:root:No accelerated backend detected. Using default cpu, this will be slow.
+WARNING:lerobot.configs.policies:Device 'cuda' is not available. Switching to 'cpu'.
+{"method": "official PI0FastPolicy(config) under torch.device(meta); no tensor storage, weight load or GPU use", "unique_parameter_count": 3449982704, "named_parameters_with_aliases_count": 3449982704, "state_dict_elements": 3449982704, "stored_checkpoint_elements": 3449982704, "checkpoint_tensors": 604, "all_parameter_devices": ["meta"], "embed_and_lmhead_shared": false}

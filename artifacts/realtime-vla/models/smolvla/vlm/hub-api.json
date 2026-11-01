@@ -1,0 +1,495 @@
+{
+  "_id": "67aaf6fe385da1f07cd40b05",
+  "id": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+  "private": false,
+  "pipeline_tag": "image-text-to-text",
+  "library_name": "transformers",
+  "tags": [
+    "transformers",
+    "onnx",
+    "safetensors",
+    "smolvlm",
+    "image-text-to-text",
+    "conversational",
+    "en",
+    "dataset:HuggingFaceM4/the_cauldron",
+    "dataset:HuggingFaceM4/Docmatix",
+    "dataset:lmms-lab/LLaVA-OneVision-Data",
+    "dataset:lmms-lab/M4-Instruct-Data",
+    "dataset:HuggingFaceFV/finevideo",
+    "dataset:MAmmoTH-VL/MAmmoTH-VL-Instruct-12M",
+    "dataset:lmms-lab/LLaVA-Video-178K",
+    "dataset:orrzohar/Video-STaR",
+    "dataset:Mutonix/Vript",
+    "dataset:TIGER-Lab/VISTA-400K",
+    "dataset:Enxin/MovieChat-1K_train",
+    "dataset:ShareGPT4Video/ShareGPT4Video",
+    "arxiv:2504.05299",
+    "base_model:HuggingFaceTB/SmolVLM-500M-Instruct",
+    "base_model:quantized:HuggingFaceTB/SmolVLM-500M-Instruct",
+    "license:apache-2.0",
+    "endpoints_compatible",
+    "region:us"
+  ],
+  "downloads": 1663493,
+  "likes": 201,
+  "modelId": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+  "author": "HuggingFaceTB",
+  "sha": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+  "lastModified": "2025-04-08T07:25:40.000Z",
+  "gated": false,
+  "disabled": false,
+  "widgetData": [
+    {
+      "text": "Hi, what can you help me with?"
+    },
+    {
+      "text": "What is 84 * 3 / 2?"
+    },
+    {
+      "text": "Tell me an interesting fact about the universe!"
+    },
+    {
+      "text": "Explain quantum computing in simple terms."
+    }
+  ],
+  "model-index": null,
+  "config": {
+    "architectures": [
+      "SmolVLMForConditionalGeneration"
+    ],
+    "model_type": "smolvlm",
+    "tokenizer_config": {
+      "bos_token": "<|im_start|>",
+      "eos_token": "<end_of_utterance>",
+      "unk_token": "<|endoftext|>",
+      "pad_token": "<|im_end|>",
+      "chat_template": "<|im_start|>{% for message in messages %}{{message['role'] | capitalize}}{% if message['content'][0]['type'] == 'image' %}{{':'}}{% else %}{{': '}}{% endif %}{% for line in message['content'] %}{% if line['type'] == 'text' %}{{line['text']}}{% elif line['type'] == 'image' %}{{ '<image>' }}{% endif %}{% endfor %}<end_of_utterance>\n{% endfor %}{% if add_generation_prompt %}{{ 'Assistant:' }}{% endif %}"
+    },
+    "processor_config": {
+      "chat_template": "<|im_start|>{% for message in messages %}{{message['role'] | capitalize}}{% if message['content'][0]['type'] == 'image' %}{{':'}}{% else %}{{': '}}{% endif %}{% for line in message['content'] %}{% if line['type'] == 'text' %}{{line['text']}}{% elif line['type'] == 'image' %}{{ '<image>' }}{% endif %}{% endfor %}<end_of_utterance>\n{% endfor %}{% if add_generation_prompt %}{{ 'Assistant:' }}{% endif %}"
+    }
+  },
+  "cardData": {
+    "library_name": "transformers",
+    "license": "apache-2.0",
+    "datasets": [
+      "HuggingFaceM4/the_cauldron",
+      "HuggingFaceM4/Docmatix",
+      "lmms-lab/LLaVA-OneVision-Data",
+      "lmms-lab/M4-Instruct-Data",
+      "HuggingFaceFV/finevideo",
+      "MAmmoTH-VL/MAmmoTH-VL-Instruct-12M",
+      "lmms-lab/LLaVA-Video-178K",
+      "orrzohar/Video-STaR",
+      "Mutonix/Vript",
+      "TIGER-Lab/VISTA-400K",
+      "Enxin/MovieChat-1K_train",
+      "ShareGPT4Video/ShareGPT4Video"
+    ],
+    "pipeline_tag": "image-text-to-text",
+    "language": [
+      "en"
+    ],
+    "base_model": [
+      "HuggingFaceTB/SmolVLM-500M-Instruct"
+    ]
+  },
+  "transformersInfo": {
+    "auto_model": "AutoModelForMultimodalLM",
+    "pipeline_tag": "image-text-to-text",
+    "processor": "AutoProcessor"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "6121eec63636b076e23d9e2ceb019d5029cb73fb",
+      "size": 10865
+    },
+    {
+      "rfilename": "added_tokens.json",
+      "blobId": "71dc811700b6aa9274d3697ee7d4fb2d5375e766",
+      "size": 4739
+    },
+    {
+      "rfilename": "chat_template.json",
+      "blobId": "1d342e4f070c962a14ba4ece4e06212bc70d8e36",
+      "size": 430
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "2463e842695989a207176fdb249327a494b05cfb",
+      "size": 3767
+    },
+    {
+      "rfilename": "generation_config.json",
+      "blobId": "eace9aa6d392fd94dbe0c90825074c53fd7ecd4a",
+      "size": 136
+    },
+    {
+      "rfilename": "merges.txt",
+      "blobId": "69503b13f727ba3812b6803e97442a6de05ef5eb",
+      "size": 466391
+    },
+    {
+      "rfilename": "model.safetensors",
+      "blobId": "b460cb276cab4cf02bd94e661a52b7b3a14998d6",
+      "size": 2029990624,
+      "lfs": {
+        "sha256": "b9bfd456c9472c0acd5719d6e514c4b859891af205ee1a736552fd3497b8b0c3",
+        "size": 2029990624,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "onnx/decoder_model_merged.onnx",
+      "blobId": "40153952efa3abdd0c2ed537d4dbf13f5200c291",
+      "size": 1450426001,
+      "lfs": {
+        "sha256": "2c8743f020606f401ffa0c0ec7a7055da6ad7518b981ecdb060b62da3a60ec45",
+        "size": 1450426001,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "onnx/decoder_model_merged_bnb4.onnx",
+      "blobId": "2260579bf482200daa56a3686b9c32506cb115b6",
+      "size": 206503532,
+      "lfs": {
+        "sha256": "c20111c92ecee932e85de34e0afd9341f60bb210456bc5d8a4809c055dd5bc15",
+        "size": 206503532,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "onnx/decoder_model_merged_fp16.onnx",
+      "blobId": "276a8abbde5c163c4a8bcb4ed87809a3660a68df",
+      "size": 725489385,
+      "lfs": {
+        "sha256": "ace259f4ff3a070cfcefc41c6b4ddaf52a5c1b988348004da13043ff4a6de5ae",
+        "size": 725489385,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "onnx/decoder_model_merged_int8.onnx",
+      "blobId": "11c819afe959a313803889014672c60e2b0c0ada",
+      "size": 365039224,
+      "lfs": {
+        "sha256": "7d0a356562c7e474012c5e383de58d44d487a517c04190d26e5891db86cb2b1f",
+        "size": 365039224,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "onnx/decoder_model_merged_q4.onnx",
+      "blobId": "6cd86673828351eb3fbdd9853ef29a78d93d0409",
+      "size": 229119396,
+      "lfs": {
+        "sha256": "69561703c23810bf58cd4fe81b2427df95339a5b55743f62d1e767bd4a83a1e2",
+        "size": 229119396,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "onnx/decoder_model_merged_q4f16.onnx",
+      "blobId": "d7ed2e1fc2d7e703f64a38bcb2f4379b9dbe6e75",
+      "size": 205328508,
+      "lfs": {
+        "sha256": "6265f0aa571ad624f67b5f19b79f1562b4bfd4e6db812815c1794172985b3e5e",
+        "size": 205328508,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "onnx/decoder_model_merged_quantized.onnx",
+      "blobId": "4e7e58cc669f57293b557699b2a3cb10607708d1",
+      "size": 365039344,
+      "lfs": {
+        "sha256": "a5aaa12d62d43a05a4a7456864c508d0b3c17c55a654c05fb568f6da0b7d212d",
+        "size": 365039344,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "onnx/decoder_model_merged_uint8.onnx",
+      "blobId": "4e7e58cc669f57293b557699b2a3cb10607708d1",
+      "size": 365039344,
+      "lfs": {
+        "sha256": "a5aaa12d62d43a05a4a7456864c508d0b3c17c55a654c05fb568f6da0b7d212d",
+        "size": 365039344,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "onnx/embed_tokens.onnx",
+      "blobId": "e09650dafabe83e3896a31decaa72ffd720ea25c",
+      "size": 189235499,
+      "lfs": {
+        "sha256": "4696831e7181d72fd7736b0c119cd53141a46c940ca24c03ce05ba623b402dd4",
+        "size": 189235499,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "onnx/embed_tokens_bnb4.onnx",
+      "blobId": "e62a4984e0bbf5acd4ced2ba0263f489bd0677d3",
+      "size": 189235518,
+      "lfs": {
+        "sha256": "dc09c2b3264365dcc8de8cae7513b640a40624cd038ede20a0ffcac0f82ecb11",
+        "size": 189235518,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "onnx/embed_tokens_fp16.onnx",
+      "blobId": "8f37bc2a14ac1e9a277753fc9fa18687410e7033",
+      "size": 94617986,
+      "lfs": {
+        "sha256": "bc9e790f2e90ebf3b1efe84ec82530d6c12e27b0a103703fe865a5faf24f2336",
+        "size": 94617986,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "onnx/embed_tokens_int8.onnx",
+      "blobId": "a29c94ef0295f731974217b7d4f61ad12fed9d23",
+      "size": 47309344,
+      "lfs": {
+        "sha256": "0e6d275190cd1cdf3339225b98b42116871ddc4e0c3210801f02bf2a1d2e164a",
+        "size": 47309344,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "onnx/embed_tokens_q4.onnx",
+      "blobId": "e62a4984e0bbf5acd4ced2ba0263f489bd0677d3",
+      "size": 189235518,
+      "lfs": {
+        "sha256": "dc09c2b3264365dcc8de8cae7513b640a40624cd038ede20a0ffcac0f82ecb11",
+        "size": 189235518,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "onnx/embed_tokens_q4f16.onnx",
+      "blobId": "f2b6941ad880e07f963c94c89f5fa642a050f319",
+      "size": 94618005,
+      "lfs": {
+        "sha256": "a330cc444671c47e6a2de559405404043b2a49b015188250eca8c0c88d263b73",
+        "size": 94618005,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "onnx/embed_tokens_quantized.onnx",
+      "blobId": "a29c94ef0295f731974217b7d4f61ad12fed9d23",
+      "size": 47309344,
+      "lfs": {
+        "sha256": "0e6d275190cd1cdf3339225b98b42116871ddc4e0c3210801f02bf2a1d2e164a",
+        "size": 47309344,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "onnx/embed_tokens_uint8.onnx",
+      "blobId": "a29c94ef0295f731974217b7d4f61ad12fed9d23",
+      "size": 47309344,
+      "lfs": {
+        "sha256": "0e6d275190cd1cdf3339225b98b42116871ddc4e0c3210801f02bf2a1d2e164a",
+        "size": 47309344,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "onnx/vision_encoder.onnx",
+      "blobId": "97e2247ec15ec8e6a3609d85f7cbde37cba27d1a",
+      "size": 393190822,
+      "lfs": {
+        "sha256": "d4797cdad0ba1958e7dfcc5e074d0b02ae3c4df80cce17ecab282dde37e0ddc1",
+        "size": 393190822,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "onnx/vision_encoder_bnb4.onnx",
+      "blobId": "4741cfb2533cfdf492a935d2bcbacb72a7a7204b",
+      "size": 60688904,
+      "lfs": {
+        "sha256": "749b03c76adc0311fdc2d347ace3c9f78c792816e519c3e28a17f12f27cd496d",
+        "size": 60688904,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "onnx/vision_encoder_fp16.onnx",
+      "blobId": "8dd3420501dfcc21d33fd466b06ba8e906a83224",
+      "size": 196731834,
+      "lfs": {
+        "sha256": "9faa8f3b4a922514a2e7773f20e99fdf7dc7b4eeeeaca1fb82cf18f7945ca23a",
+        "size": 196731834,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "onnx/vision_encoder_int8.onnx",
+      "blobId": "0b9177048ec6118c23bbf602ec97e737cd9b7ea1",
+      "size": 98966476,
+      "lfs": {
+        "sha256": "d931eb204e21ab4d905d62976aeaefe20360076f52760ba55b84a5b35088284f",
+        "size": 98966476,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "onnx/vision_encoder_q4.onnx",
+      "blobId": "ac33ddd2b02e3f0a8dd25b43bc21b12b3b108fd9",
+      "size": 66734064,
+      "lfs": {
+        "sha256": "2fb71423919f04851bdac96588267e6a9db95903ca94fcd7b7a0f51b5cd53d8a",
+        "size": 66734064,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "onnx/vision_encoder_q4f16.onnx",
+      "blobId": "32c0dc6fcd80b5f7ad08f7fa06cbd1801f478355",
+      "size": 57691749,
+      "lfs": {
+        "sha256": "f7e811e4cef2c214c80ea7572eacb102ea396a881fb9170577b20c10fe4fa485",
+        "size": 57691749,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "onnx/vision_encoder_quantized.onnx",
+      "blobId": "a12c510a95537497845fe0ed327e0bcbef9e5934",
+      "size": 98966521,
+      "lfs": {
+        "sha256": "8e8e2950e6837a71a3d972a14eb287d8875c4c2d5e8cfd6001bf185115295cdd",
+        "size": 98966521,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "onnx/vision_encoder_uint8.onnx",
+      "blobId": "a12c510a95537497845fe0ed327e0bcbef9e5934",
+      "size": 98966521,
+      "lfs": {
+        "sha256": "8e8e2950e6837a71a3d972a14eb287d8875c4c2d5e8cfd6001bf185115295cdd",
+        "size": 98966521,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "preprocessor_config.json",
+      "blobId": "bf7669a38692ad141d333db3be18bd55cb6e2c59",
+      "size": 599
+    },
+    {
+      "rfilename": "processor_config.json",
+      "blobId": "83df8c48da1f41e1a9129a4bc2aba000eb2b529f",
+      "size": 67
+    },
+    {
+      "rfilename": "special_tokens_map.json",
+      "blobId": "2b5aee28d56c0e9d89ff6bc70818fba986a90ca9",
+      "size": 868
+    },
+    {
+      "rfilename": "tokenizer.json",
+      "blobId": "a4005d1cf3170a31600a5c96f95768166cbc2b28",
+      "size": 3548256
+    },
+    {
+      "rfilename": "tokenizer_config.json",
+      "blobId": "e4042a1126290fdb96ece2a4ad8dd7108c5de484",
+      "size": 28626
+    },
+    {
+      "rfilename": "vocab.json",
+      "blobId": "0ad5ecc2035b7031b88afb544ee95e2d49baa484",
+      "size": 800662
+    }
+  ],
+  "spaces": [
+    "linoyts/LTX-2-3-sync",
+    "sergiopaniego/vqa_autonomous_driving_smolvlm2",
+    "mrdbourke/FoodExtract-Vision-v1",
+    "AnasKAN/Moraqeb",
+    "Zurya/Jarvise",
+    "CreatorJarvis/FoodExtract-Vision",
+    "smartdigitalnetworks/generativevideo",
+    "X-HighVoltage-X/LTX-2.3-Sync",
+    "Suyang99/xlerobot-build-reports",
+    "Samarth991/CV-Agent",
+    "becteur92/smollvm",
+    "blasisd/GAIA_benchmarked_Agent",
+    "xco2/smolvlm2-500M-illustration-description",
+    "SkyNait/SmolVLM2-on-transformers",
+    "NeuralFalcon/Image-to-Prompt",
+    "anhkhoiphan/Kumiko_v2.0",
+    "jlamperez/mortis",
+    "ajayvikram/FoodExtract-Vision-v1",
+    "smartdigitalnetworks/ltx-2-TURBO",
+    "ninjals/FoodExtract-Vision-v1",
+    "berkeruveyik/FoodExtract-Vision",
+    "hamidown/unit_8_final",
+    "Unnatrathi/caloraify",
+    "yanshania/LTX-2-3-sync",
+    "Noname24545/LTX-2-3-sync",
+    "prakhar-adaf/LTX-2-3-sync",
+    "Jaggieasr/LTX-2-3-sync",
+    "honesdev/invoice-extractor",
+    "Trkaga/LTX-2-3-sync",
+    "helmies/LTX-2-3-sync",
+    "naicoi/LTX-2-3-sync",
+    "FINAL-Bench/LTX-2-3-sync",
+    "iramadwivedi/LTX-2-3-sync",
+    "rahul7star/LTX-2-3",
+    "Rahul124566/LTX-2-3-sync",
+    "Rahulgghhbrtt/LTX-2-3-sync",
+    "Muralix/LTX-2-3-sync",
+    "Ify-2410/LTX-2-3-sync",
+    "fffiloni/LTX-2-3-sync",
+    "Markdawg/LTX-2-3-sync",
+    "pantelism/FoodExtract-Vision-v1",
+    "smartgrowthgear/LTX-Motion",
+    "nomanpro/LTX-2-3-sync",
+    "pepijn223/robomme-eval-docker",
+    "Usagert12/LTX-2-3-sync",
+    "2026hbk/FoodExtract-Vision-v1",
+    "raubatz/LTX-2-3-sync",
+    "jhkim3217/FoodExtract-Vision-v1",
+    "raubatz/ltx-2-TURBO-outp",
+    "huydzhihi/Caloraify",
+    "raubatz/LTX-2-3-sync-copy",
+    "kapilr/LTX-2-3-sync",
+    "chanifrusydi/FoodExtract-Vision-v1",
+    "venayc/elrobot-training",
+    "leilaloren1/fresh",
+    "raubatz/ltx-2-TURBO-motioncontrol",
+    "udit74j/FoodExtract-Vision-v1",
+    "Jejend/LTX-2-3-sync",
+    "Kamaljeyaram07/test",
+    "samnoul/Padeliq",
+    "Richharvey1978/LTX-2-3-sync",
+    "evanjaber/calorify-by-img",
+    "raubatz/ltxturbo-i2v-v2v",
+    "china12n/007-ai-agent-runtime",
+    "mjpsm/mfm-workshop-image-to-text-api"
+  ],
+  "createdAt": "2025-02-11T07:06:38.000Z",
+  "safetensors": {
+    "parameters": {
+      "F32": 507482304
+    },
+    "total": 507482304
+  },
+  "usedStorage": 10125731115
+}

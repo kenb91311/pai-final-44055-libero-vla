@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "pages": [
+    {
+      "page": 1,
+      "characters": 485,
+      "width": 594.95996,
+      "height": 841.91998
+    },
+    {
+      "page": 2,
+      "characters": 949,
+      "width": 594.95996,
+      "height": 841.91998
+    },
+    {
+      "page": 3,
+      "characters": 828,
+      "width": 594.95996,
+      "height": 841.91998
+    },
+    {
+      "page": 4,
+      "characters": 1045,
+      "width": 594.95996,
+      "height": 841.91998
+    },
+    {
+      "page": 5,
+      "characters": 1259,
+      "width": 594.95996,
+      "height": 841.91998
+    }
+  ],
+  "geometry": [
+    {
+      "page": 1,
+      "height": 1123,
+      "scrollHeight": 1123,
+      "footerBottom": 1080.953125
+    },
+    {
+      "page": 2,
+      "height": 1123,
+      "scrollHeight": 1123,
+      "footerBottom": 1080.953125
+    },
+    {
+      "page": 3,
+      "height": 1123,
+      "scrollHeight": 1123,
+      "footerBottom": 1081.21875
+    },
+    {
+      "page": 4,
+      "height": 1123,
+      "scrollHeight": 1123,
+      "footerBottom": 1080.953125
+    },
+    {
+      "page": 5,
+      "height": 1123,
+      "scrollHeight": 1123,
+      "footerBottom": 1080.953125
+    }
+  ],
+  "truePdfRendered": true
+}

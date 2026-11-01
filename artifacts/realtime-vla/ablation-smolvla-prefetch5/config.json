@@ -1,0 +1,27 @@
+{
+  "model": "smolvla",
+  "modeldir": null,
+  "output": "artifacts/realtime-vla/ablation-smolvla-prefetch5",
+  "initial_states": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "conditions": [
+    "realtime"
+  ],
+  "control_hz": 20,
+  "wall_seconds": 14.0,
+  "execute_steps": 10,
+  "prefetch_steps": 5,
+  "merge": "fifo",
+  "seed": 20261102,
+  "video": true,
+  "camera_hz": 10.0,
+  "max_sensor_age": 0.5,
+  "sync_camera": false,
+  "ros_transport": true,
+  "ros_port": 8780
+}

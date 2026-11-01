@@ -1,0 +1,54 @@
+{
+  "_id": "6998b393a227343b9ceb3f24",
+  "id": "lerobot/pi0fast-libero",
+  "private": false,
+  "tags": [
+    "safetensors",
+    "region:us"
+  ],
+  "downloads": 1309,
+  "likes": 3,
+  "modelId": "lerobot/pi0fast-libero",
+  "author": "lerobot",
+  "sha": "840f4b503f4c09110421c33c810a85b6684fd658",
+  "lastModified": "2026-02-20T19:19:28.000Z",
+  "gated": false,
+  "disabled": false,
+  "config": {},
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "config.json"
+    },
+    {
+      "rfilename": "model.safetensors"
+    },
+    {
+      "rfilename": "policy_postprocessor.json"
+    },
+    {
+      "rfilename": "policy_postprocessor_step_0_unnormalizer_processor.safetensors"
+    },
+    {
+      "rfilename": "policy_preprocessor.json"
+    },
+    {
+      "rfilename": "policy_preprocessor_step_2_normalizer_processor.safetensors"
+    },
+    {
+      "rfilename": "train_config.json"
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2026-02-20T19:18:43.000Z",
+  "safetensors": {
+    "parameters": {
+      "F32": 414879472,
+      "BF16": 3035103232
+    },
+    "total": 3449982704
+  },
+  "usedStorage": 7729838356
+}

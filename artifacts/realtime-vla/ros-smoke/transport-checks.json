@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "input_kind": "synthetic",
+  "model_performance_evidence": false,
+  "port": 8780,
+  "sensors": [
+    {
+      "component_sha256": {
+        "agentview_image": "6018a70f09e53d07ad99cde3bc4a15d00371d6217fcfd5ad86cd2cf8bbfe087c",
+        "proprio_prompt": "f77a9e8e99ad3ada4258ef610ad09e78876997986eab605c7a5827dc4450cfb9",
+        "robot0_eye_in_hand_image": "af38ea2ea63bfaab1707254e6c142ae59bf09f585fd1a0052bbd3296f42c98da"
+      },
+      "id": "546577a31a55438abc285350840cfb23",
+      "nodes": [
+        "realtime_sensor_bridge",
+        "realtime_policy_transport"
+      ],
+      "ok": true,
+      "peer_received_sha256": "ca2c582ffb0f2247b38ef43bcbd3d49798640f2a585391004dc30e81b44b256f",
+      "received_sha256": "ca2c582ffb0f2247b38ef43bcbd3d49798640f2a585391004dc30e81b44b256f",
+      "request_id": "synthetic-0",
+      "ros_roundtrip_seconds": 0.00715478999336483,
+      "source_sha256": "ca2c582ffb0f2247b38ef43bcbd3d49798640f2a585391004dc30e81b44b256f",
+      "topics": [
+        "/realtime/agentview_image",
+        "/realtime/robot0_eye_in_hand_image",
+        "/realtime/sensor_metadata",
+        "/realtime/chunk_generated"
+      ],
+      "verified": true,
+      "transport_id": "546577a31a55438abc285350840cfb23",
+      "rpc_wall_seconds": 0.0308575499948347
+    },
+    {
+      "component_sha256": {
+        "agentview_image": "53636d3fee4e996bb7657924f1c865e20d34a2d3599eb2f2f1953921e62ef092",
+        "proprio_prompt": "f77a9e8e99ad3ada4258ef610ad09e78876997986eab605c7a5827dc4450cfb9",
+        "robot0_eye_in_hand_image": "af38ea2ea63bfaab1707254e6c142ae59bf09f585fd1a0052bbd3296f42c98da"
+      },
+      "id": "1d02b26937e84820b1176b9e99b8b368",
+      "nodes": [
+        "realtime_sensor_bridge",
+        "realtime_policy_transport"
+      ],
+      "ok": true,
+      "peer_received_sha256": "ebe5f8135c33c90bf6e6cf4634fa4992b6f4087b5a36e1bdeacefa20c9121e1d",
+      "received_sha256": "ebe5f8135c33c90bf6e6cf4634fa4992b6f4087b5a36e1bdeacefa20c9121e1d",
+      "request_id": "synthetic-1",
+      "ros_roundtrip_seconds": 0.006223058997420594,
+      "source_sha256": "ebe5f8135c33c90bf6e6cf4634fa4992b6f4087b5a36e1bdeacefa20c9121e1d",
+      "topics": [
+        "/realtime/agentview_image",
+        "/realtime/robot0_eye_in_hand_image",
+        "/realtime/sensor_metadata",
+        "/realtime/chunk_generated"
+      ],
+      "verified": true,
+      "transport_id": "1d02b26937e84820b1176b9e99b8b368",
+      "rpc_wall_seconds": 0.022903277997102123
+    },
+    {
+      "component_sha256": {
+        "agentview_image": "d8a1dcf2c26751744500ba122ac998f4599511a3f480462aa25c0171b64ece5f",
+        "proprio_prompt": "f77a9e8e99ad3ada4258ef610ad09e78876997986eab605c7a5827dc4450cfb9",
+        "robot0_eye_in_hand_image": "af38ea2ea63bfaab1707254e6c142ae59bf09f585fd1a0052bbd3296f42c98da"
+      },
+      "id": "ea9581a6cf75475d9bea76a03f5e3717",
+      "nodes": [
+        "realtime_sensor_bridge",
+        "realtime_policy_transport"
+      ],
+      "ok": true,
+      "peer_received_sha256": "9752d68d7fe05f1df95767097305d26c5f7dd9d1f35f9ab4da12b8016433eca9",
+      "received_sha256": "9752d68d7fe05f1df95767097305d26c5f7dd9d1f35f9ab4da12b8016433eca9",
+      "request_id": "synthetic-2",
+      "ros_roundtrip_seconds": 0.00503679399844259,
+      "source_sha256": "9752d68d7fe05f1df95767097305d26c5f7dd9d1f35f9ab4da12b8016433eca9",
+      "topics": [
+        "/realtime/agentview_image",
+        "/realtime/robot0_eye_in_hand_image",
+        "/realtime/sensor_metadata",
+        "/realtime/chunk_generated"
+      ],
+      "verified": true,
+      "transport_id": "ea9581a6cf75475d9bea76a03f5e3717",
+      "rpc_wall_seconds": 0.015413077002449427
+    }
+  ],
+  "chunks": [
+    {
+      "component_sha256": {},
+      "id": "6afde3bd5708488b8dd87c3524f45f24",
+      "nodes": [
+        "realtime_sensor_bridge",
+        "realtime_policy_transport"
+      ],
+      "ok": true,
+      "peer_received_sha256": "c503500c789c1d9438fcb7237da6a3a40993f8ed2fc4f5943a2c5d118e980c60",
+      "received_sha256": "c503500c789c1d9438fcb7237da6a3a40993f8ed2fc4f5943a2c5d118e980c60",
+      "request_id": "synthetic-chunk-10",
+      "ros_roundtrip_seconds": 0.0011051629990106449,
+      "source_sha256": "c503500c789c1d9438fcb7237da6a3a40993f8ed2fc4f5943a2c5d118e980c60",
+      "topics": [
+        "/realtime/agentview_image",
+        "/realtime/robot0_eye_in_hand_image",
+        "/realtime/sensor_metadata",
+        "/realtime/chunk_generated"
+      ],
+      "verified": true,
+      "transport_id": "6afde3bd5708488b8dd87c3524f45f24",
+      "rpc_wall_seconds": 0.007551927003078163
+    },
+    {
+      "component_sha256": {},
+      "id": "a539e0df6e92417b86ec1665bba6b1dc",
+      "nodes": [
+        "realtime_sensor_bridge",
+        "realtime_policy_transport"
+      ],
+      "ok": true,
+      "peer_received_sha256": "537d00e76d4b076fdc464089c5235793fd298cfb3565c655c81897c1d00789f6",
+      "received_sha256": "537d00e76d4b076fdc464089c5235793fd298cfb3565c655c81897c1d00789f6",
+      "request_id": "synthetic-chunk-50",
+      "ros_roundtrip_seconds": 0.001288417995965574,
+      "source_sha256": "537d00e76d4b076fdc464089c5235793fd298cfb3565c655c81897c1d00789f6",
+      "topics": [
+        "/realtime/agentview_image",
+        "/realtime/robot0_eye_in_hand_image",
+        "/realtime/sensor_metadata",
+        "/realtime/chunk_generated"
+      ],
+      "verified": true,
+      "transport_id": "a539e0df6e92417b86ec1665bba6b1dc",
+      "rpc_wall_seconds": 0.00495711400435539
+    }
+  ],
+  "dedup_identical_replayed": true,
+  "dedup_changed_rejected": true
+}

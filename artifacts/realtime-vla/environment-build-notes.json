@@ -1,0 +1,59 @@
+{
+  "environment_isolation": {
+    "base": ".venv unchanged; CUDA torch2.7.1+cu128 reused through .pth fallback",
+    "dedicated": ".venv-realtime; NumPy2.2.6 and Transformers5.4.0 override all model-facing dependencies",
+    "source_commit": "3f797de5952432284a7c77ad2760218cb74e2f26"
+  },
+  "trials": [
+    {
+      "issue": "Stable LeRobot0.4.4 pi0-FAST requires patched Transformers custom branch, while Smol requires newer upstream Transformers",
+      "decision": "Use one official LeRobot main0.6.2 commit for both policies, with matching main-format checkpoints",
+      "evidence": "v0.4.4 pi0_fast source has transformers.models.siglip.check requirement; both main policy imports passed"
+    },
+    {
+      "issue": "LeRobot policies package eagerly imports dataset/video helpers even for inference",
+      "observed_failure": "Missing av, then av19 AttributeError av.option",
+      "decision": "Pin official PyAV>=15,<16 (15.1.0) and install NumPy2-compatible pandas2.3.3,pyarrow26,matplotlib3.11.2",
+      "evidence": "environment-versions.json; both policy imports succeeded"
+    },
+    {
+      "issue": "CUDA GPU visibility did not imply accelerated OpenGL",
+      "observed_failure": "EGL renderer llvmpipe; two-camera256 step mean98.47ms",
+      "decision": "Process-local WSL D3D12 driver/NVIDIA adapter selection; record actual GL_RENDERER",
+      "evidence": "environment-smoke/profile.pstat,hardware-render-results.json"
+    },
+    {
+      "issue": "GPU rendering still exceeded physical control deadlines",
+      "observed_failure": "D3D12 20Hz step85.64ms; BLAS1 87.09ms; native10Hz113.32ms",
+      "decision": "Preserve official cameras/scene and render separate state snapshots in a spawned latest-only camera process",
+      "evidence": "environment-smoke/physics-only-results.json,parallel-camera-result.json"
+    },
+    {
+      "issue": "Async camera frames can lag physical state and cross episode resets",
+      "decision": "Use physical snapshot capture_time,tick,episode_id; restore both camera and proprio from the same state; root filters obsolete episode IDs",
+      "evidence": "Camera snapshot parity is byte-identical for twoRGB and threeproprio sensors; tests verify timestamp/identity copying"
+    },
+    {
+      "issue": "A bounded multiprocessing queue can be full before feeder bytes are readable",
+      "decision": "Drop a new submission during that race rather than block control; otherwise evict pending sample and retain newest",
+      "evidence": "test_camera_worker.py feeder race and latest-mailbox tests"
+    }
+  ],
+  "validated": {
+    "unit_tests": 10,
+    "no_camera_20hz_step_mean_ms": 8.9822,
+    "no_camera_20hz_step_p95_ms": 10.6403,
+    "camera_concurrent_20hz_step_mean_ms": 10.7441,
+    "camera_concurrent_20hz_step_p95_ms": 12.5864,
+    "camera_concurrent_submit_max_ms": 0.1359,
+    "camera_concurrent_sensor_age_mean_ms": 122.795,
+    "camera_concurrent_sensor_age_p95_ms": 151.907,
+    "snapshot_sensor_byte_parity": true
+  },
+  "limits": [
+    "Five-second hold-action smoke proves timing separation, not learned-policy task success.",
+    "Sensor scene clone and baseline scene use identical official task/assets/resolution, but async sensor timing is a declared separate condition.",
+    "Deadline behavior under simultaneous model inference requires full-runner evaluation.",
+    "Desktop Python/ROS/D3D12 pipeline is soft realtime; it is not a hard-realtime safety claim."
+  ]
+}

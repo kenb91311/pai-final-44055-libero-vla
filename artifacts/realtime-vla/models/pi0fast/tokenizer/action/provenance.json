@@ -1,0 +1,56 @@
+{
+  "repo": "jadechoghari/tokenizer-lib-mean",
+  "revision": "79ae83e3cbd8786dcb84b628569f8d076ca8151e",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "0336368f8274a5ed09f54cee8d56a851ecee96026d9f391a6735762c16608a60",
+      "bytes": 5174
+    },
+    {
+      "path": "bpe_tokenizer/special_tokens_map.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    {
+      "path": "bpe_tokenizer/tokenizer.json",
+      "sha256": "9ef34cdf034636c845847ca6a72bfa081dc4a3553ff73f247b1b25e2c7c1bf01",
+      "bytes": 60700
+    },
+    {
+      "path": "bpe_tokenizer/tokenizer_config.json",
+      "sha256": "3b5e73ae9f42da5ac9482dcd042c1b90942def5307c0c33a82e5c1368d3f8a2b",
+      "bytes": 353
+    },
+    {
+      "path": "metadata.json",
+      "sha256": "97d04fa5a61817bad1369c551d20a9d5626a26de51aad1f644b9ad069bb7936c",
+      "bytes": 578
+    },
+    {
+      "path": "processing_action_tokenizer.py",
+      "sha256": "6f021ca1f4c1b194ab6fa399d80baf3d642eadb17efb8f73301e4ac401522c20",
+      "bytes": 6145
+    },
+    {
+      "path": "processor_config.json",
+      "sha256": "d471d438f0faae5d2be64df5abd281d9ab462fa1ba92d7185aa6a05ee41aeecb",
+      "bytes": 250
+    },
+    {
+      "path": "special_tokens_map.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    {
+      "path": "tokenizer.json",
+      "sha256": "9ef34cdf034636c845847ca6a72bfa081dc4a3553ff73f247b1b25e2c7c1bf01",
+      "bytes": 60700
+    },
+    {
+      "path": "tokenizer_config.json",
+      "sha256": "3b5e73ae9f42da5ac9482dcd042c1b90942def5307c0c33a82e5c1368d3f8a2b",
+      "bytes": 353
+    }
+  ]
+}
