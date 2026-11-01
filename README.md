@@ -128,3 +128,26 @@ native Linuxの描画設定は使用するEGL driverに合わせる。
 モデル・シミュレータ・タスクは既存資産を利用し、追加した範囲は
 非同期の実行系、観測と行動の時刻管理、ROS実経路、比較・監査である。
 コードのライセンスを外部の重み・tokenizer・meshへ一括適用しない。
+
+## 追加検証：π0.5（別集計）
+
+同じ課題・配置1〜5・制御20Hz・E10/P0・ROS通信の条件で、公開済みの
+`lerobot/pi05_libero_finetuned` を追加評価した。基準実行5/5、実時間実行5/5が
+公式成功判定を満たした。実時間側の生成・通信は平均約412ms、待機割合44.5%、
+ボウルと皿の終了時水平距離の中央値17.7mm。モデルのGPUメモリピークは8.87GiB。
+追加学習・量子化・コンパイルは行っていない。
+
+これは1課題・固定5配置の結果であり、公式の多課題ベンチマークの再現ではない。
+元の35試行とは分けて、事前条件・10試行の集計・重みと通信の監査を保存した。
+初版の2モデルによる提出PDF・動画は元の35試行を説明している。
+
+- [追加結果](artifacts/realtime-vla/pi05-comparison-summary.json)
+- [固定した資産と復元方法](docs/reference/pi05-libero-assets.md)
+- [事前条件](artifacts/realtime-vla/pi05-protocol.json)
+
+モデル重みにはGemmaの条件がある。ダウンロード元の利用条件を確認して使用する。
+
+~~~bash
+.venv-realtime/bin/python experiments/realtime_vla/download_pi05.py
+.venv-realtime/bin/python experiments/realtime_vla/evaluate.py --model pi05 --execute-steps 10 --prefetch-steps 0 --merge fifo --ros-transport --initial-states 1 2 3 4 5 --conditions lockstep realtime --wall-seconds 14 --output artifacts/realtime-vla/pi05-reproduction
+~~~

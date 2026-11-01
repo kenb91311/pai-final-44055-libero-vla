@@ -1,0 +1,3236 @@
+{
+  "status": "complete",
+  "generated_at_utc": "2026-11-01T19:10:49.449418+00:00",
+  "protocol": {
+    "task": "LIBERO spatial task0: black bowl between plate/ramekin onto plate",
+    "initial_states": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "models": [
+      "pi05"
+    ],
+    "modes": [
+      "lockstep",
+      "realtime"
+    ],
+    "wall_budget_s": 14.0,
+    "seed": 20261102,
+    "pilot_state_excluded": 0,
+    "control_hz": 20,
+    "camera_hz_realtime": 10,
+    "camera_rate_semantics": "maximum rendering rate; actual received cameraHz is measured separately",
+    "execute_steps": 10,
+    "prefetch_steps": 0,
+    "merge": "fifo",
+    "ros_transport": true,
+    "training": false,
+    "baseline": "lockstep: inference and synchronous rendering pause physical progress",
+    "realtime": "separate physics/camera/model processes; zero relative pose plus retained gripper during queue starvation",
+    "latency_label": "CUDA-synchronized model inference wall time; worker roundtrip spans sensor ROS, inference and action ROS, excluding parent IPC/poll delay; action-source age spans capture to command application",
+    "steady_definition": "exclude bootstrap request IDs; chunk timing includes late-drained requests but applied subset is separately available",
+    "camera_age_steady_definition": "all physical ticks after last bootstrap action; includes hold ticks"
+  },
+  "issues": [],
+  "groups": [
+    {
+      "model": "pi05",
+      "mode": "lockstep",
+      "n": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "success_wilson95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "errors": 0,
+      "states": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "final_goal_xy_mm": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 14.728565512831363,
+        "p50": 9.899483759926554,
+        "p95": 25.029890525677168,
+        "min": 6.675753329138834,
+        "max": 25.935656572806323
+      },
+      "hold_fraction": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "pooled_hold_fraction": 0.0,
+      "effective_control_hz": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 7.810741369568854,
+        "p50": 7.9156021499162845,
+        "p95": 8.177513799825972,
+        "min": 7.275735720588078,
+        "max": 8.182251560282312
+      },
+      "realtime_factor": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 0.38870954151118936,
+        "p50": 0.3933097336836372,
+        "p95": 0.40780242340477935,
+        "min": 0.36509897628466753,
+        "max": 0.41047942801732873
+      },
+      "ros_all_verified": true,
+      "effective_received_camera_hz": {
+        "count": 0,
+        "excluded_count": 5,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "min": null,
+        "max": null
+      },
+      "model_inference_wall_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 335.1053625145661,
+        "p50": 345.29206100082126,
+        "p95": 373.783035944507,
+        "min": 296.45212885744905,
+        "max": 377.84613543044543
+      },
+      "model_inference_wall_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 376.4261806306604,
+        "p50": 387.8179326020472,
+        "p95": 436.0962846918846,
+        "min": 325.68026180233574,
+        "max": 447.99125160207035
+      },
+      "full_chunk_worker_roundtrip_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 372.0247719008382,
+        "p50": 384.97326750166394,
+        "p95": 414.945091343543,
+        "min": 324.59285743035645,
+        "max": 416.4189031434944
+      },
+      "full_chunk_worker_roundtrip_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 438.83898655098164,
+        "p50": 417.24839335292927,
+        "p95": 559.6048638421051,
+        "min": 354.49252590115066,
+        "max": 577.8326367028056
+      },
+      "action_source_age_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 785.9739817378173,
+        "p50": 780.8640243664497,
+        "p95": 856.3638202129882,
+        "min": 724.5304796964443,
+        "max": 863.453178958203
+      },
+      "action_source_age_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 1216.8892434005102,
+        "p50": 1171.3462059997255,
+        "p95": 1333.4731090896819,
+        "min": 1148.0003125026997,
+        "max": 1352.6951953987007
+      },
+      "action_source_age_ms_bootstrap_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 898.9541369999642,
+        "p50": 932.6091845010524,
+        "p95": 992.623552797304,
+        "min": 772.8526209983102,
+        "max": 994.758504096535
+      },
+      "action_source_age_ms_bootstrap_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 1270.9988401312876,
+        "p50": 1320.1347446527507,
+        "p95": 1345.8040463690122,
+        "min": 1154.8811892494996,
+        "max": 1345.8706412984611
+      },
+      "camera_sensor_age_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 41.42430419569,
+        "p50": 42.66748242071776,
+        "p95": 46.19021499236137,
+        "min": 35.59673742501852,
+        "max": 46.62915173344118
+      },
+      "camera_sensor_age_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 366.44976923955255,
+        "p50": 373.93330349477765,
+        "p95": 409.0368038810266,
+        "min": 323.1050763497478,
+        "max": 415.7203146009124
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "realtime",
+      "n": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "success_wilson95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "errors": 0,
+      "states": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "final_goal_xy_mm": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 17.156740300320767,
+        "p50": 17.653570280662667,
+        "p95": 23.743392675304293,
+        "min": 11.67246693519336,
+        "max": 25.19660020804289
+      },
+      "hold_fraction": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 0.4411215347669609,
+        "p50": 0.43137254901960786,
+        "p95": 0.496249679850719,
+        "min": 0.39849624060150374,
+        "max": 0.5027624309392266
+      },
+      "pooled_hold_fraction": 0.4448818897637795,
+      "effective_control_hz": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 19.98093590699133,
+        "p50": 19.9957038883673,
+        "p95": 19.997661504425967,
+        "min": 19.95029648305292,
+        "max": 19.998005743608907
+      },
+      "realtime_factor": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 1.003216983171541,
+        "p50": 1.0039011970584135,
+        "p95": 1.004192711809673,
+        "min": 1.0008977214239276,
+        "max": 1.004229729162502
+      },
+      "ros_all_verified": true,
+      "effective_received_camera_hz": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 9.204571820719039,
+        "p50": 9.200557770629285,
+        "p95": 9.382705306998403,
+        "min": 8.924841265763172,
+        "max": 9.400696831053462
+      },
+      "model_inference_wall_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 332.15223057749324,
+        "p50": 329.1698028883224,
+        "p95": 346.39944455011573,
+        "min": 319.6100362501966,
+        "max": 347.0156008752383
+      },
+      "model_inference_wall_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 376.6686468707485,
+        "p50": 375.76063460001023,
+        "p95": 397.2493519639829,
+        "min": 352.7434871499281,
+        "max": 399.35149430384627
+      },
+      "full_chunk_worker_roundtrip_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 411.69530569758433,
+        "p50": 374.9416202508655,
+        "p95": 508.29074608914704,
+        "min": 348.20200937610934,
+        "max": 518.5617401115856
+      },
+      "full_chunk_worker_roundtrip_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 660.9581470013652,
+        "p50": 418.13454095135967,
+        "p95": 1170.6185532816012,
+        "min": 381.3041356028407,
+        "max": 1248.6946498029279
+      },
+      "action_source_age_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 811.8169313124903,
+        "p50": 791.2035225717655,
+        "p95": 919.629554052964,
+        "min": 729.1225306314453,
+        "max": 933.9741389877418
+      },
+      "action_source_age_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 1346.5237068700662,
+        "p50": 1040.6297599998652,
+        "p95": 2094.865564120264,
+        "min": 952.1283182493789,
+        "max": 2239.8159862499597
+      },
+      "action_source_age_ms_bootstrap_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 832.0656328971381,
+        "p50": 842.8936148979119,
+        "p95": 916.9028525559406,
+        "min": 704.3265718973998,
+        "max": 931.8002503954631
+      },
+      "action_source_age_ms_bootstrap_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 1034.2259234859375,
+        "p50": 1044.5318830490578,
+        "p95": 1119.2997383944748,
+        "min": 907.0389104446804,
+        "max": 1134.2605222442216
+      },
+      "camera_sensor_age_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 184.00912678324053,
+        "p50": 184.68023620338678,
+        "p95": 190.56890190836694,
+        "min": 173.30688326842525,
+        "max": 191.49621694033607
+      },
+      "camera_sensor_age_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 281.3196425596834,
+        "p50": 286.14946699963184,
+        "p95": 287.90002832058235,
+        "min": 260.9529829969688,
+        "max": 288.15818350049085
+      }
+    }
+  ],
+  "initial_condition_checks": {
+    "initial_sensor_match_across_models_by_mode": {
+      "all_match": null,
+      "comparisons": []
+    },
+    "physical_initial_metrics_same_across_modes": {
+      "all_match": null,
+      "compared_fields": [
+        "bowl_position",
+        "plate_position",
+        "actuator_control",
+        "goal_xy_error_m"
+      ],
+      "comparisons": []
+    },
+    "initial_sensor_match_across_modes": {
+      "all_match": null,
+      "comparisons": []
+    },
+    "scope_note": "Clone byte parity was tested after regenerating the same snapshot in both scenes. Sync cached-step sensors and async regenerated sensors are compared separately here; their equality is not assumed."
+  },
+  "paired_lockstep_realtime": [
+    {
+      "model": "pi05",
+      "init_state_index": 1,
+      "lockstep_success": true,
+      "realtime_success": true,
+      "lockstep_goal_xy_mm": 9.899483759926554,
+      "realtime_goal_xy_mm": 17.930562544349897,
+      "goal_xy_delta_rt_minus_lockstep_mm": 8.031078784423341,
+      "same_initial_state_file": true
+    },
+    {
+      "model": "pi05",
+      "init_state_index": 2,
+      "lockstep_success": true,
+      "realtime_success": true,
+      "lockstep_goal_xy_mm": 21.406826337160542,
+      "realtime_goal_xy_mm": 11.67246693519336,
+      "goal_xy_delta_rt_minus_lockstep_mm": -9.734359401967183,
+      "same_initial_state_file": true
+    },
+    {
+      "model": "pi05",
+      "init_state_index": 3,
+      "lockstep_success": true,
+      "realtime_success": true,
+      "lockstep_goal_xy_mm": 6.675753329138834,
+      "realtime_goal_xy_mm": 17.653570280662667,
+      "goal_xy_delta_rt_minus_lockstep_mm": 10.977816951523833,
+      "same_initial_state_file": true
+    },
+    {
+      "model": "pi05",
+      "init_state_index": 4,
+      "lockstep_success": true,
+      "realtime_success": true,
+      "lockstep_goal_xy_mm": 25.935656572806323,
+      "realtime_goal_xy_mm": 13.330501533355008,
+      "goal_xy_delta_rt_minus_lockstep_mm": -12.605155039451317,
+      "same_initial_state_file": true
+    },
+    {
+      "model": "pi05",
+      "init_state_index": 5,
+      "lockstep_success": true,
+      "realtime_success": true,
+      "lockstep_goal_xy_mm": 9.725107565124565,
+      "realtime_goal_xy_mm": 25.19660020804289,
+      "goal_xy_delta_rt_minus_lockstep_mm": 15.471492642918326,
+      "same_initial_state_file": true
+    }
+  ],
+  "episodes": [
+    {
+      "status": "completed",
+      "error": null,
+      "model": "pi05",
+      "mode": "lockstep",
+      "init_state_index": 1,
+      "seed": 20261102,
+      "success": true,
+      "success_within_wall_budget": null,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "execute_steps": 10,
+      "native_generation_horizon": 50,
+      "merge": "fifo",
+      "prefetch_steps": 0,
+      "ticks": 79,
+      "policy_actions": 79,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 10.818984047000413,
+      "sim_seconds": 3.95,
+      "realtime_factor": 0.36509897628466753,
+      "startup_initial_chunk_seconds": 0.45075494200136745,
+      "goal_xy_error_m": 0.009899483759926555,
+      "final_metrics": {
+        "step_wall_seconds": 0.09704914200119674,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.009899483759926555,
+        "bowl_position": [
+          0.052955018462503965,
+          0.190698754766046,
+          0.9082675852129527
+        ],
+        "plate_position": [
+          0.061301904145505536,
+          0.19602128030454302,
+          0.9025018457186369
+        ],
+        "eef_tracking_error_m": 0.03766634807868756,
+        "actuator_control": [
+          0.9200732465275219,
+          -46.70035742562293,
+          3.5656369587336516,
+          17.109378267918686,
+          0.2866268977356854,
+          3.5345343379713112,
+          0.12373606168231249,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_control_interval_s": 0.1374431450513396,
+      "p95_control_interval_s": 0.5125274459511274,
+      "overrun_period_count": 78,
+      "mean_observation_age_s": 0.8722071037104624,
+      "p95_observation_age_s": 1.3635898239037487,
+      "mean_steady_observation_age_s": 0.8634531789582031,
+      "p95_steady_observation_age_s": 1.3526951953987005,
+      "mean_chunk_inference_s": 0.4090498441437376,
+      "p95_chunk_inference_s": 0.4866937723993032,
+      "expired_prefix_actions": 0,
+      "replaced_actions": 0,
+      "configuration_note": "common executed prefix; two untimed warmup calls and first chunk before task clock; physics continues during asynchronous inference; no catch-up bursts",
+      "camera_mode": "synchronous",
+      "camera_hz": null,
+      "sensor_frames_received": 0,
+      "stale_sensor_ticks": 0,
+      "ros_transport": true,
+      "video_time_note": "raw video uses simulated tick rate; wall timestamps are in ticks.jsonl; realtime factor must be reported",
+      "source_directory": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1",
+      "initial_goal_xy_error_m": 0.1256236484398719,
+      "bootstrap_request_ids": [
+        "pi05-b67d0ee4aa53-query-6"
+      ],
+      "bootstrap_action_ticks": 10,
+      "steady_action_ticks": 69,
+      "steady_chunk_count": 7,
+      "steady_applied_chunk_count": 7,
+      "late_unapplied_chunk_count": 0,
+      "metrics_recomputed": {
+        "model_inference_wall_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 377.84613543044543,
+          "p50": 380.8490139999776,
+          "p95": 447.99125160207035,
+          "min": 249.24542799999472,
+          "max": 468.54205500130774
+        },
+        "full_chunk_worker_roundtrip_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 409.0498441437376,
+          "p50": 413.0946910008788,
+          "p95": 486.6937723993032,
+          "min": 274.4786550028948,
+          "max": 510.4640779973124
+        },
+        "full_chunk_worker_roundtrip_ms_steady_applied": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 409.0498441437376,
+          "p50": 413.0946910008788,
+          "p95": 486.6937723993032,
+          "min": 274.4786550028948,
+          "max": 510.4640779973124
+        },
+        "model_inference_wall_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 423.03287100367015,
+          "p50": 423.03287100367015,
+          "p95": 423.03287100367015,
+          "min": 423.03287100367015,
+          "max": 423.03287100367015
+        },
+        "full_chunk_worker_roundtrip_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 448.85964300192427,
+          "p50": 448.85964300192427,
+          "p95": 448.85964300192427,
+          "min": 448.85964300192427,
+          "max": 448.85964300192427
+        },
+        "sensor_ros_rpc_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 20.714008429162536,
+          "p50": 20.156459002464544,
+          "p95": 26.464574802957934,
+          "min": 17.018858998198994,
+          "max": 28.714459003822412
+        },
+        "action_ros_rpc_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 6.6106442858914045,
+          "p50": 7.33671600028174,
+          "p95": 8.51648239986389,
+          "min": 4.37605100159999,
+          "max": 8.576492000429425
+        },
+        "action_source_age_ms_all": {
+          "count": 79,
+          "excluded_count": 0,
+          "mean": 872.2071037104624,
+          "p50": 878.4749660044326,
+          "p95": 1363.5898239037488,
+          "min": 276.8037070054561,
+          "max": 1487.0788430052926
+        },
+        "action_source_age_ms_steady": {
+          "count": 69,
+          "excluded_count": 0,
+          "mean": 863.453178958203,
+          "p50": 871.4036650053458,
+          "p95": 1352.6951953987007,
+          "min": 276.8037070054561,
+          "max": 1487.0788430052926
+        },
+        "action_source_age_ms_bootstrap": {
+          "count": 10,
+          "excluded_count": 0,
+          "mean": 932.6091845010524,
+          "p50": 941.7258469984517,
+          "p95": 1320.1347446527507,
+          "min": 460.7937920009135,
+          "max": 1362.7228000041214
+        },
+        "camera_sensor_age_ms_all": {
+          "count": 79,
+          "excluded_count": 0,
+          "mean": 43.78985639271412,
+          "p50": 1.0152070026379079,
+          "p95": 416.4486179004598,
+          "min": 0.7907729959697463,
+          "max": 513.1288090051385
+        },
+        "camera_sensor_age_ms_steady": {
+          "count": 69,
+          "excluded_count": 0,
+          "mean": 42.66748242071776,
+          "p50": 0.9919880030793138,
+          "p95": 415.7203146009124,
+          "min": 0.7907729959697463,
+          "max": 513.1288090051385
+        },
+        "physical_step_ms": {
+          "count": 79,
+          "excluded_count": 0,
+          "mean": 98.9780371009941,
+          "p50": 96.5583009965485,
+          "p95": 128.64494409805047,
+          "min": 78.82344700192334,
+          "max": 131.4980250026565
+        },
+        "control_interval_ms": {
+          "count": 78,
+          "excluded_count": 0,
+          "mean": 137.4431450513396,
+          "p50": 98.74727300120867,
+          "p95": 512.5274459511274,
+          "min": 79.62917899567401,
+          "max": 644.847169998684
+        },
+        "eef_controller_tracking_error_mm": {
+          "count": 79,
+          "excluded_count": 0,
+          "mean": 34.44375667637919,
+          "p50": 39.17328081170942,
+          "p95": 47.58085201621482,
+          "min": 1.6702874193039723,
+          "max": 52.3466454947253
+        }
+      },
+      "effective_control_hz": 7.275735720588078,
+      "effective_received_camera_hz": null,
+      "ros_exchange_count": 16,
+      "ros_expected_exchange_count": 16,
+      "ros_all_verified": true,
+      "initial_state_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "initial_sensor_hashes": {
+        "agentview_image": "c2362ea7457ca66b8c42ca342f4f1e5126e037e31d7b097b559b9ac1ecde86a8",
+        "robot0_eye_in_hand_image": "6ea7857794da87b4c9d9eb616a31bcd58bcb04e2176086ca2766f5f75b6cd7ac",
+        "robot0_eef_pos": "d8a81d3f1538ea17ccd2c9c6d1e2171b09c0648ba202d0b71ad7eb75294cf78d",
+        "robot0_eef_quat": "fe66c439af88c1c65ff463639b952bb44c7686f78cf2a4932517d2f152c2df9d",
+        "robot0_gripper_qpos": "75b4ad08e65d4a240676ea14f7ba3b0bd6b256d4c1caac2cea455c8324b664dc"
+      },
+      "initial_physical_metrics": {
+        "bowl_position": [
+          -0.06430681439327617,
+          0.19694192532962085,
+          0.8984038715812133
+        ],
+        "plate_position": [
+          0.06130267261506076,
+          0.19505570666600683,
+          0.9024995808477997
+        ],
+        "actuator_control": [
+          -0.05323240787376263,
+          -19.88178030799002,
+          0.03729925539251686,
+          18.13669222288066,
+          -0.09043361380002801,
+          2.121564003184448,
+          0.019028612818637537,
+          0.04,
+          -0.04
+        ],
+        "goal_xy_error_m": 0.1256236484398719
+      }
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "pi05",
+      "mode": "lockstep",
+      "init_state_index": 2,
+      "seed": 20261102,
+      "success": true,
+      "success_within_wall_budget": null,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "execute_steps": 10,
+      "native_generation_horizon": 50,
+      "merge": "fifo",
+      "prefetch_steps": 0,
+      "ticks": 81,
+      "policy_actions": 81,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 10.297227994000423,
+      "sim_seconds": 4.05,
+      "realtime_factor": 0.3933097336836372,
+      "startup_initial_chunk_seconds": 0.5764211350033293,
+      "goal_xy_error_m": 0.021406826337160543,
+      "final_metrics": {
+        "step_wall_seconds": 0.08647388900135411,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.021406826337160543,
+        "bowl_position": [
+          0.0764328537499352,
+          0.1882421715600388,
+          0.9101166160775274
+        ],
+        "plate_position": [
+          0.06941630866405248,
+          0.20846642207488175,
+          0.9024527148894874
+        ],
+        "eef_tracking_error_m": 0.04368541443386128,
+        "actuator_control": [
+          11.22535415797571,
+          -47.99730105316607,
+          5.784332236274645,
+          16.440381197752377,
+          -4.063391984128744,
+          5.506225793250764,
+          1.4588825053281302,
+          0.020000000000000014,
+          -0.020000000000000014
+        ]
+      },
+      "mean_control_interval_s": 0.12257060828751491,
+      "p95_control_interval_s": 0.46374316755209294,
+      "overrun_period_count": 80,
+      "mean_observation_age_s": 0.8072707502590528,
+      "p95_observation_age_s": 1.2158629980040132,
+      "mean_steady_observation_age_s": 0.7808640243664497,
+      "p95_steady_observation_age_s": 1.1713462059997255,
+      "mean_chunk_inference_s": 0.38497326750166394,
+      "p95_chunk_inference_s": 0.4172483933529293,
+      "expired_prefix_actions": 0,
+      "replaced_actions": 0,
+      "configuration_note": "common executed prefix; two untimed warmup calls and first chunk before task clock; physics continues during asynchronous inference; no catch-up bursts",
+      "camera_mode": "synchronous",
+      "camera_hz": null,
+      "sensor_frames_received": 0,
+      "stale_sensor_ticks": 0,
+      "ros_transport": true,
+      "video_time_note": "raw video uses simulated tick rate; wall timestamps are in ticks.jsonl; realtime factor must be reported",
+      "source_directory": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2",
+      "initial_goal_xy_error_m": 0.16845120578593487,
+      "bootstrap_request_ids": [
+        "pi05-b67d0ee4aa53-query-25"
+      ],
+      "bootstrap_action_ticks": 10,
+      "steady_action_ticks": 71,
+      "steady_chunk_count": 8,
+      "steady_applied_chunk_count": 8,
+      "late_unapplied_chunk_count": 0,
+      "metrics_recomputed": {
+        "model_inference_wall_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 357.53063800075324,
+          "p50": 352.67900050166645,
+          "p95": 388.5164170511416,
+          "min": 320.87011900148354,
+          "max": 391.32924700243166
+        },
+        "full_chunk_worker_roundtrip_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 384.97326750166394,
+          "p50": 379.972615497536,
+          "p95": 417.24839335292927,
+          "min": 349.4298330042511,
+          "max": 420.5850830039708
+        },
+        "full_chunk_worker_roundtrip_ms_steady_applied": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 384.97326750166394,
+          "p50": 379.972615497536,
+          "p95": 417.24839335292927,
+          "min": 349.4298330042511,
+          "max": 420.5850830039708
+        },
+        "model_inference_wall_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 549.5371779979905,
+          "p50": 549.5371779979905,
+          "p95": 549.5371779979905,
+          "min": 549.5371779979905,
+          "max": 549.5371779979905
+        },
+        "full_chunk_worker_roundtrip_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 575.4510059996392,
+          "p50": 575.4510059996392,
+          "p95": 575.4510059996392,
+          "min": 575.4510059996392,
+          "max": 575.4510059996392
+        },
+        "sensor_ros_rpc_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 17.317400001047645,
+          "p50": 17.0320664983592,
+          "p95": 20.126220448946697,
+          "min": 14.816890005022287,
+          "max": 20.37641900096787
+        },
+        "action_ros_rpc_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 6.857606124867743,
+          "p50": 6.768006001948379,
+          "p95": 8.583582047140226,
+          "min": 4.337507001764607,
+          "max": 8.784956997260451
+        },
+        "action_source_age_ms_all": {
+          "count": 81,
+          "excluded_count": 0,
+          "mean": 807.2707502590529,
+          "p50": 809.0875199995935,
+          "p95": 1215.8629980040132,
+          "min": 351.53540000465,
+          "max": 1385.857904999284
+        },
+        "action_source_age_ms_steady": {
+          "count": 71,
+          "excluded_count": 0,
+          "mean": 780.8640243664497,
+          "p50": 777.2195719953743,
+          "p95": 1171.3462059997255,
+          "min": 351.53540000465,
+          "max": 1221.3455210003303
+        },
+        "action_source_age_ms_bootstrap": {
+          "count": 10,
+          "excluded_count": 0,
+          "mean": 994.758504096535,
+          "p50": 996.7525954962184,
+          "p95": 1345.8706412984611,
+          "min": 577.9482499929145,
+          "max": 1385.857904999284
+        },
+        "camera_sensor_age_ms_all": {
+          "count": 81,
+          "excluded_count": 0,
+          "mean": 46.673038246808574,
+          "p50": 0.9095049972529523,
+          "p95": 385.07291700079804,
+          "min": 0.782385999627877,
+          "max": 577.9482499929145
+        },
+        "camera_sensor_age_ms_steady": {
+          "count": 71,
+          "excluded_count": 0,
+          "mean": 44.43446802804214,
+          "p50": 0.8881410030880943,
+          "p95": 382.3027610014833,
+          "min": 0.782385999627877,
+          "max": 422.6363970010425
+        },
+        "physical_step_ms": {
+          "count": 81,
+          "excluded_count": 0,
+          "mean": 87.57664416052536,
+          "p50": 87.57685700402362,
+          "p95": 94.15830899524735,
+          "min": 80.64369200292276,
+          "max": 99.61329300131183
+        },
+        "control_interval_ms": {
+          "count": 80,
+          "excluded_count": 0,
+          "mean": 122.57060828751491,
+          "p50": 88.69162349947146,
+          "p95": 463.7431675520929,
+          "min": 81.52322000387358,
+          "max": 508.5655939983553
+        },
+        "eef_controller_tracking_error_mm": {
+          "count": 81,
+          "excluded_count": 0,
+          "mean": 33.87741245610139,
+          "p50": 36.72774520138044,
+          "p95": 46.73920016149838,
+          "min": 1.5158153202031994,
+          "max": 53.142965415173215
+        }
+      },
+      "effective_control_hz": 8.15856275800061,
+      "effective_received_camera_hz": null,
+      "ros_exchange_count": 18,
+      "ros_expected_exchange_count": 18,
+      "ros_all_verified": true,
+      "initial_state_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "initial_sensor_hashes": {
+        "agentview_image": "9f7f4248878921a2639bbbdc6ac500e9cb16102b164c03b000eb2cdba4af04d0",
+        "robot0_eye_in_hand_image": "2a8dcd3a9fb3dcf64db63aea940eb740ba817905f21f3eddcea38d141d69940d",
+        "robot0_eef_pos": "7efac2fceb57c6002872ad30aafe8b5cf01ab4dc1fa0f0b07d335f959d118af5",
+        "robot0_eef_quat": "f9beacf0aedf671cff25ed2c54cbc3a80e163aeece03b6b897f7a793bbcbc8ea",
+        "robot0_gripper_qpos": "fa6334d1d3100a75d2e4607990c4a075140c22081b5b9013aac529c460fbf38a"
+      },
+      "initial_physical_metrics": {
+        "bowl_position": [
+          -0.09867575658235289,
+          0.19747202325621402,
+          0.8990059968219842
+        ],
+        "plate_position": [
+          0.06941647771953098,
+          0.20846336066964793,
+          0.9024997312179027
+        ],
+        "actuator_control": [
+          -0.06193913828040411,
+          -20.221354088639366,
+          -0.053011346198216076,
+          18.24123197185774,
+          0.06304870925340857,
+          2.2017419912939,
+          -0.0015440932488912677,
+          0.04,
+          -0.04
+        ],
+        "goal_xy_error_m": 0.16845120578593487
+      }
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "pi05",
+      "mode": "lockstep",
+      "init_state_index": 3,
+      "seed": 20261102,
+      "success": true,
+      "success_within_wall_budget": null,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "execute_steps": 10,
+      "native_generation_horizon": 50,
+      "merge": "fifo",
+      "prefetch_steps": 0,
+      "ticks": 76,
+      "policy_actions": 76,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 9.257467586998246,
+      "sim_seconds": 3.8000000000000003,
+      "realtime_factor": 0.41047942801732873,
+      "startup_initial_chunk_seconds": 0.36111051499756286,
+      "goal_xy_error_m": 0.006675753329138834,
+      "final_metrics": {
+        "step_wall_seconds": 0.08982657800515881,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.006675753329138834,
+        "bowl_position": [
+          0.06703510524347836,
+          0.18874909478563287,
+          0.9078637427630758
+        ],
+        "plate_position": [
+          0.06414779948204433,
+          0.19476816015755716,
+          0.902342801208763
+        ],
+        "eef_tracking_error_m": 0.05257069920651517,
+        "actuator_control": [
+          0.8627810912114979,
+          -46.808769097078326,
+          3.117840320280591,
+          14.739707315749804,
+          0.16062335033148056,
+          5.007616347013411,
+          -0.33944086958099606,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_control_interval_s": 0.12221574863991312,
+      "p95_control_interval_s": 0.4271763982978882,
+      "overrun_period_count": 75,
+      "mean_observation_age_s": 0.7358378676052733,
+      "p95_observation_age_s": 1.1631432899994252,
+      "mean_steady_observation_age_s": 0.7245304796964444,
+      "p95_steady_observation_age_s": 1.1558197392478178,
+      "mean_chunk_inference_s": 0.3250889872849387,
+      "p95_chunk_inference_s": 0.35792760439871923,
+      "expired_prefix_actions": 0,
+      "replaced_actions": 0,
+      "configuration_note": "common executed prefix; two untimed warmup calls and first chunk before task clock; physics continues during asynchronous inference; no catch-up bursts",
+      "camera_mode": "synchronous",
+      "camera_hz": null,
+      "sensor_frames_received": 0,
+      "stale_sensor_ticks": 0,
+      "ros_transport": true,
+      "video_time_note": "raw video uses simulated tick rate; wall timestamps are in ticks.jsonl; realtime factor must be reported",
+      "source_directory": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3",
+      "initial_goal_xy_error_m": 0.11140371865621297,
+      "bootstrap_request_ids": [
+        "pi05-b67d0ee4aa53-query-46"
+      ],
+      "bootstrap_action_ticks": 10,
+      "steady_action_ticks": 66,
+      "steady_chunk_count": 7,
+      "steady_applied_chunk_count": 7,
+      "late_unapplied_chunk_count": 0,
+      "metrics_recomputed": {
+        "model_inference_wall_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 298.40584928336153,
+          "p50": 307.2250109980814,
+          "p95": 332.12504009570694,
+          "min": 238.33951100095874,
+          "max": 335.42175899492577
+        },
+        "full_chunk_worker_roundtrip_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 325.0889872849387,
+          "p50": 336.0064060034347,
+          "p95": 357.92760439871927,
+          "min": 267.2460859976127,
+          "max": 360.66024799947627
+        },
+        "full_chunk_worker_roundtrip_ms_steady_applied": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 325.0889872849387,
+          "p50": 336.0064060034347,
+          "p95": 357.92760439871927,
+          "min": 267.2460859976127,
+          "max": 360.66024799947627
+        },
+        "model_inference_wall_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 333.1104509998113,
+          "p50": 333.1104509998113,
+          "p95": 333.1104509998113,
+          "min": 333.1104509998113,
+          "max": 333.1104509998113
+        },
+        "full_chunk_worker_roundtrip_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 359.60678899573395,
+          "p50": 359.60678899573395,
+          "p95": 359.60678899573395,
+          "min": 359.60678899573395,
+          "max": 359.60678899573395
+        },
+        "sensor_ros_rpc_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 18.21018528530008,
+          "p50": 17.941252001037356,
+          "p95": 19.41208969874424,
+          "min": 17.122404999099672,
+          "max": 19.527058997482527
+        },
+        "action_ros_rpc_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 5.330115572308257,
+          "p50": 5.024126003263518,
+          "p95": 7.0886573019379275,
+          "min": 3.9453669960494153,
+          "max": 7.42567700217478
+        },
+        "action_source_age_ms_all": {
+          "count": 76,
+          "excluded_count": 0,
+          "mean": 735.8378676052732,
+          "p50": 717.8411384993524,
+          "p95": 1163.1432899994252,
+          "min": 269.78970199706964,
+          "max": 1227.8506190050393
+        },
+        "action_source_age_ms_steady": {
+          "count": 66,
+          "excluded_count": 0,
+          "mean": 724.5304796964443,
+          "p50": 713.103621998016,
+          "p95": 1155.8197392478178,
+          "min": 269.78970199706964,
+          "max": 1222.3475270002382
+        },
+        "action_source_age_ms_bootstrap": {
+          "count": 10,
+          "excluded_count": 0,
+          "mean": 810.4666278035438,
+          "p50": 810.1425055028812,
+          "p95": 1188.56995880451,
+          "min": 363.0513600000995,
+          "max": 1227.8506190050393
+        },
+        "camera_sensor_age_ms_all": {
+          "count": 76,
+          "excluded_count": 0,
+          "mean": 36.3624427639144,
+          "p50": 0.9832600007939618,
+          "p95": 340.62568674926297,
+          "min": 0.8354480014531873,
+          "max": 363.0513600000995
+        },
+        "camera_sensor_age_ms_steady": {
+          "count": 66,
+          "excluded_count": 0,
+          "mean": 35.59673742501852,
+          "p50": 0.967294501606375,
+          "p95": 337.1873907508416,
+          "min": 0.8354480014531873,
+          "max": 362.75085899978876
+        },
+        "physical_step_ms": {
+          "count": 76,
+          "excluded_count": 0,
+          "mean": 90.20827435453707,
+          "p50": 89.94054150025477,
+          "p95": 99.62486924814584,
+          "min": 81.8313020063215,
+          "max": 102.02570800174726
+        },
+        "control_interval_ms": {
+          "count": 75,
+          "excluded_count": 0,
+          "mean": 122.21574863991312,
+          "p50": 91.42359600082273,
+          "p95": 427.1763982978882,
+          "min": 82.73294799437281,
+          "max": 451.9315990037285
+        },
+        "eef_controller_tracking_error_mm": {
+          "count": 76,
+          "excluded_count": 0,
+          "mean": 34.39043066640415,
+          "p50": 39.280377204958285,
+          "p95": 48.878396333695136,
+          "min": 0.8423097845972809,
+          "max": 54.26864997780525
+        }
+      },
+      "effective_control_hz": 8.182251560282312,
+      "effective_received_camera_hz": null,
+      "ros_exchange_count": 16,
+      "ros_expected_exchange_count": 16,
+      "ros_all_verified": true,
+      "initial_state_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "initial_sensor_hashes": {
+        "agentview_image": "ebcc5662235e7b89aef1c1b30fb2ec8939e4e10eabc7e8e5234e2bc8fc163b7f",
+        "robot0_eye_in_hand_image": "0691841e1f804fd84ef062e6ca3e797134fc83ced5e771f4de315c16818072da",
+        "robot0_eef_pos": "bb3ce875227e044f8a1a1ca47766dcf6d5a49d3ab086c2718e965d4bf41bdbb3",
+        "robot0_eef_quat": "53f45f2e177133353cb07b6a2706ddc638a92f7983d3bc07bea1800d87ae5711",
+        "robot0_gripper_qpos": "3fbc6741b84ba8829463555339e47f44bb283ca3be9786eac4d980a7d46b3111"
+      },
+      "initial_physical_metrics": {
+        "bowl_position": [
+          -0.04720012034566131,
+          0.201079276471669,
+          0.8986660696252619
+        ],
+        "plate_position": [
+          0.0639992612784024,
+          0.194334941303656,
+          0.9024981394553362
+        ],
+        "actuator_control": [
+          -0.10065563808697757,
+          -18.926598409483812,
+          0.1363515072538508,
+          17.996012950538216,
+          -0.0847746171348262,
+          1.950714163115372,
+          0.08089244399279631,
+          0.04,
+          -0.04
+        ],
+        "goal_xy_error_m": 0.11140371865621297
+      }
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "pi05",
+      "mode": "lockstep",
+      "init_state_index": 4,
+      "seed": 20261102,
+      "success": true,
+      "success_within_wall_budget": null,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "execute_steps": 10,
+      "native_generation_horizon": 50,
+      "merge": "fifo",
+      "prefetch_steps": 0,
+      "ticks": 74,
+      "policy_actions": 74,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 9.799632875998213,
+      "sim_seconds": 3.7,
+      "realtime_factor": 0.37756516461573153,
+      "startup_initial_chunk_seconds": 0.5588629599951673,
+      "goal_xy_error_m": 0.025935656572806325,
+      "final_metrics": {
+        "step_wall_seconds": 0.09285939599794801,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.025935656572806325,
+        "bowl_position": [
+          0.09151742703282194,
+          0.17932272945897684,
+          0.9104458492981323
+        ],
+        "plate_position": [
+          0.07135943513478418,
+          0.19564184844565,
+          0.902375330423611
+        ],
+        "eef_tracking_error_m": 0.05020804806951735,
+        "actuator_control": [
+          -0.515544835417819,
+          -52.336513799236435,
+          2.550007111739867,
+          15.431051371565129,
+          0.5630710709376697,
+          3.8214739420611203,
+          -0.479017422547461,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_control_interval_s": 0.1329512375205387,
+      "p95_control_interval_s": 0.4659030028036795,
+      "overrun_period_count": 73,
+      "mean_observation_age_s": 0.8490979206872982,
+      "p95_observation_age_s": 1.3026172168480115,
+      "mean_steady_observation_age_s": 0.8280063852321291,
+      "p95_steady_observation_age_s": 1.2565847638536067,
+      "mean_chunk_inference_s": 0.4164189031434944,
+      "p95_chunk_inference_s": 0.5778326367028056,
+      "expired_prefix_actions": 0,
+      "replaced_actions": 0,
+      "configuration_note": "common executed prefix; two untimed warmup calls and first chunk before task clock; physics continues during asynchronous inference; no catch-up bursts",
+      "camera_mode": "synchronous",
+      "camera_hz": null,
+      "sensor_frames_received": 0,
+      "stale_sensor_ticks": 0,
+      "ros_transport": true,
+      "video_time_note": "raw video uses simulated tick rate; wall timestamps are in ticks.jsonl; realtime factor must be reported",
+      "source_directory": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4",
+      "initial_goal_xy_error_m": 0.11881880716730893,
+      "bootstrap_request_ids": [
+        "pi05-b67d0ee4aa53-query-65"
+      ],
+      "bootstrap_action_ticks": 10,
+      "steady_action_ticks": 64,
+      "steady_chunk_count": 7,
+      "steady_applied_chunk_count": 7,
+      "late_unapplied_chunk_count": 0,
+      "metrics_recomputed": {
+        "model_inference_wall_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 345.29206100082126,
+          "p50": 336.0236920052557,
+          "p95": 387.8179326020472,
+          "min": 318.2245520001743,
+          "max": 391.467924004246
+        },
+        "full_chunk_worker_roundtrip_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 416.4189031434944,
+          "p50": 371.8550889971084,
+          "p95": 577.8326367028056,
+          "min": 345.454875001451,
+          "max": 645.698637003079
+        },
+        "full_chunk_worker_roundtrip_ms_steady_applied": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 416.4189031434944,
+          "p50": 371.8550889971084,
+          "p95": 577.8326367028056,
+          "min": 345.454875001451,
+          "max": 645.698637003079
+        },
+        "model_inference_wall_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 530.6129309974494,
+          "p50": 530.6129309974494,
+          "p95": 530.6129309974494,
+          "min": 530.6129309974494,
+          "max": 530.6129309974494
+        },
+        "full_chunk_worker_roundtrip_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 557.6375880045816,
+          "p50": 557.6375880045816,
+          "p95": 557.6375880045816,
+          "min": 557.6375880045816,
+          "max": 557.6375880045816
+        },
+        "sensor_ros_rpc_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 61.22452543058898,
+          "p50": 18.6044009969919,
+          "p95": 227.16751700208965,
+          "min": 16.11834300274495,
+          "max": 314.70216200250434
+        },
+        "action_ros_rpc_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 6.268439287461141,
+          "p50": 6.492606997198891,
+          "p95": 7.808287305670092,
+          "min": 4.177906004770193,
+          "max": 7.923241006210446
+        },
+        "action_source_age_ms_all": {
+          "count": 74,
+          "excluded_count": 0,
+          "mean": 849.0979206872981,
+          "p50": 843.3521049955743,
+          "p95": 1302.6172168480116,
+          "min": 347.65826600050787,
+          "max": 1502.6409349957248
+        },
+        "action_source_age_ms_steady": {
+          "count": 64,
+          "excluded_count": 0,
+          "mean": 828.0063852321291,
+          "p50": 830.6110139965313,
+          "p95": 1256.5847638536068,
+          "min": 347.65826600050787,
+          "max": 1502.6409349957248
+        },
+        "action_source_age_ms_bootstrap": {
+          "count": 10,
+          "excluded_count": 0,
+          "mean": 984.0837476003799,
+          "p50": 984.5497630012687,
+          "p95": 1345.5376666512166,
+          "min": 560.5026370030828,
+          "max": 1384.6255320022465
+        },
+        "camera_sensor_age_ms_all": {
+          "count": 74,
+          "excluded_count": 0,
+          "mean": 48.553633296447714,
+          "p50": 0.9567509987391531,
+          "p95": 386.51629829619174,
+          "min": 0.824830996862147,
+          "max": 647.9362139943987
+        },
+        "camera_sensor_age_ms_steady": {
+          "count": 64,
+          "excluded_count": 0,
+          "mean": 46.62915173344118,
+          "p50": 0.9393464970344212,
+          "p95": 373.93330349477765,
+          "min": 0.824830996862147,
+          "max": 647.9362139943987
+        },
+        "physical_step_ms": {
+          "count": 74,
+          "excluded_count": 0,
+          "mean": 91.43382255491373,
+          "p50": 90.93724599733832,
+          "p95": 97.75858565371891,
+          "min": 82.23351099877618,
+          "max": 99.61968900461216
+        },
+        "control_interval_ms": {
+          "count": 73,
+          "excluded_count": 0,
+          "mean": 132.95123752053868,
+          "p50": 92.84032499999739,
+          "p95": 465.9030028036795,
+          "min": 85.47348499996588,
+          "max": 745.8780059969286
+        },
+        "eef_controller_tracking_error_mm": {
+          "count": 74,
+          "excluded_count": 0,
+          "mean": 34.36225141469633,
+          "p50": 38.34103286036974,
+          "p95": 45.67566297203449,
+          "min": 2.111396091605208,
+          "max": 50.208048069517346
+        }
+      },
+      "effective_control_hz": 7.521554659056988,
+      "effective_received_camera_hz": null,
+      "ros_exchange_count": 16,
+      "ros_expected_exchange_count": 16,
+      "ros_all_verified": true,
+      "initial_state_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "initial_sensor_hashes": {
+        "agentview_image": "5cf1c067995a8b497bf026016240c868e825bd7fa6e167860d41a5afbfec2c12",
+        "robot0_eye_in_hand_image": "a44c60ce7f4f8aa04a252536621db6caf4b689e01e5d99ae1250a70559072269",
+        "robot0_eef_pos": "a75f030cd316adc09657f8892d6455601d31db074fe6d67f39b3d1cf962ae4e1",
+        "robot0_eef_quat": "af2567041634935a1f9d5938c1b496b03207af72b93bd65b76283b95d9e073ec",
+        "robot0_gripper_qpos": "35eb8487019f7860ea3cbed377fd7cc52ec6be81f28726d8c014e73d4273df42"
+      },
+      "initial_physical_metrics": {
+        "bowl_position": [
+          -0.046821490547654894,
+          0.18565251037010724,
+          0.8984037642374318
+        ],
+        "plate_position": [
+          0.07170763657059592,
+          0.19394437151509056,
+          0.9024996101899305
+        ],
+        "actuator_control": [
+          -0.009334292787078431,
+          -19.87887098518957,
+          -0.07491785479596501,
+          17.864621850310478,
+          0.005334136981072438,
+          2.0678612802168503,
+          -0.052853768828031784,
+          0.04,
+          -0.04
+        ],
+        "goal_xy_error_m": 0.11881880716730893
+      }
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "pi05",
+      "mode": "lockstep",
+      "init_state_index": 5,
+      "seed": 20261102,
+      "success": true,
+      "success_within_wall_budget": null,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "execute_steps": 10,
+      "native_generation_horizon": 50,
+      "merge": "fifo",
+      "prefetch_steps": 0,
+      "ticks": 72,
+      "policy_actions": 72,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 9.065854252999998,
+      "sim_seconds": 3.6,
+      "realtime_factor": 0.3970944049545819,
+      "startup_initial_chunk_seconds": 0.31714552799530793,
+      "goal_xy_error_m": 0.009725107565124565,
+      "final_metrics": {
+        "step_wall_seconds": 0.0949281430002884,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.009725107565124565,
+        "bowl_position": [
+          0.0800223176468113,
+          0.20781337805610023,
+          0.9112837870677594
+        ],
+        "plate_position": [
+          0.07048849426014796,
+          0.20589402170952092,
+          0.9022531686076658
+        ],
+        "eef_tracking_error_m": 0.04691553821851265,
+        "actuator_control": [
+          4.480838562632714,
+          -52.11794615211748,
+          6.412799454534469,
+          12.632979400359922,
+          0.45767565290271583,
+          3.141502929170576,
+          -0.5947947683898294,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_control_interval_s": 0.12633277684510408,
+      "p95_control_interval_s": 0.4085642284990172,
+      "overrun_period_count": 71,
+      "mean_observation_age_s": 0.7385487266250897,
+      "p95_observation_age_s": 1.153187915099261,
+      "mean_steady_observation_age_s": 0.7330158404358607,
+      "p95_steady_observation_age_s": 1.1480003125026996,
+      "mean_chunk_inference_s": 0.32459285743035643,
+      "p95_chunk_inference_s": 0.35449252590115066,
+      "expired_prefix_actions": 0,
+      "replaced_actions": 0,
+      "configuration_note": "common executed prefix; two untimed warmup calls and first chunk before task clock; physics continues during asynchronous inference; no catch-up bursts",
+      "camera_mode": "synchronous",
+      "camera_hz": null,
+      "sensor_frames_received": 0,
+      "stale_sensor_ticks": 0,
+      "ros_transport": true,
+      "video_time_note": "raw video uses simulated tick rate; wall timestamps are in ticks.jsonl; realtime factor must be reported",
+      "source_directory": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5",
+      "initial_goal_xy_error_m": 0.129535563517079,
+      "bootstrap_request_ids": [
+        "pi05-b67d0ee4aa53-query-84"
+      ],
+      "bootstrap_action_ticks": 10,
+      "steady_action_ticks": 62,
+      "steady_chunk_count": 7,
+      "steady_applied_chunk_count": 7,
+      "late_unapplied_chunk_count": 0,
+      "metrics_recomputed": {
+        "model_inference_wall_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 296.45212885744905,
+          "p50": 295.76751699642045,
+          "p95": 325.68026180233574,
+          "min": 261.7875100040692,
+          "max": 327.07895600469783
+        },
+        "full_chunk_worker_roundtrip_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 324.59285743035645,
+          "p50": 321.39255000220146,
+          "p95": 354.49252590115066,
+          "min": 293.06736700527836,
+          "max": 356.1016710009426
+        },
+        "full_chunk_worker_roundtrip_ms_steady_applied": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 324.59285743035645,
+          "p50": 321.39255000220146,
+          "p95": 354.49252590115066,
+          "min": 293.06736700527836,
+          "max": 356.1016710009426
+        },
+        "model_inference_wall_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 286.36410999752115,
+          "p50": 286.36410999752115,
+          "p95": 286.36410999752115,
+          "min": 286.36410999752115,
+          "max": 286.36410999752115
+        },
+        "full_chunk_worker_roundtrip_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 316.145361000963,
+          "p50": 316.145361000963,
+          "p95": 316.145361000963,
+          "min": 316.145361000963,
+          "max": 316.145361000963
+        },
+        "sensor_ros_rpc_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 18.885943714329706,
+          "p50": 19.302057997265365,
+          "p95": 20.373181099421345,
+          "min": 16.59525700233644,
+          "max": 20.72512399900006
+        },
+        "action_ros_rpc_ms_steady": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 5.89728271214491,
+          "p50": 5.353913998987991,
+          "p95": 8.217097596934762,
+          "min": 3.2999320028466173,
+          "max": 8.616216997324955
+        },
+        "action_source_age_ms_all": {
+          "count": 72,
+          "excluded_count": 0,
+          "mean": 738.5487266250898,
+          "p50": 719.9535089966957,
+          "p95": 1153.1879150992609,
+          "min": 295.43560699676163,
+          "max": 1208.8396969993482
+        },
+        "action_source_age_ms_steady": {
+          "count": 62,
+          "excluded_count": 0,
+          "mean": 733.0158404358606,
+          "p50": 711.0729679952783,
+          "p95": 1148.0003125026997,
+          "min": 295.43560699676163,
+          "max": 1208.8396969993482
+        },
+        "action_source_age_ms_bootstrap": {
+          "count": 10,
+          "excluded_count": 0,
+          "mean": 772.8526209983102,
+          "p50": 773.8964014970406,
+          "p95": 1154.8811892494996,
+          "min": 318.7417439985438,
+          "max": 1198.6119799985318
+        },
+        "camera_sensor_age_ms_all": {
+          "count": 72,
+          "excluded_count": 0,
+          "mean": 37.68712191696169,
+          "p50": 0.9972499974537641,
+          "p95": 320.9592620991316,
+          "min": 0.8480969991069287,
+          "max": 358.19752299721586
+        },
+        "camera_sensor_age_ms_steady": {
+          "count": 62,
+          "excluded_count": 0,
+          "mean": 37.793681371230406,
+          "p50": 0.9614970003894996,
+          "p95": 323.1050763497478,
+          "min": 0.8480969991069287,
+          "max": 358.19752299721586
+        },
+        "physical_step_ms": {
+          "count": 72,
+          "excluded_count": 0,
+          "mean": 92.64042416634766,
+          "p50": 92.68350850106799,
+          "p95": 101.28311984917673,
+          "min": 84.09605900669703,
+          "max": 103.34850599610945
+        },
+        "control_interval_ms": {
+          "count": 71,
+          "excluded_count": 0,
+          "mean": 126.33277684510406,
+          "p50": 94.36627799732378,
+          "p95": 408.5642284990172,
+          "min": 84.9835350018111,
+          "max": 452.0957150016329
+        },
+        "eef_controller_tracking_error_mm": {
+          "count": 72,
+          "excluded_count": 0,
+          "mean": 33.605237266015365,
+          "p50": 38.16356685506692,
+          "p95": 43.749654928882464,
+          "min": 6.423188455842002,
+          "max": 46.91553821851265
+        }
+      },
+      "effective_control_hz": 7.9156021499162845,
+      "effective_received_camera_hz": null,
+      "ros_exchange_count": 16,
+      "ros_expected_exchange_count": 16,
+      "ros_all_verified": true,
+      "initial_state_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "initial_sensor_hashes": {
+        "agentview_image": "1ba785899a56fee50a9b5d55ecb8813b2ca18921b6386bfb1cd4dd275ff73c10",
+        "robot0_eye_in_hand_image": "5983f3ef08eb0a06b4018e8753e44c6e0400a20cbced29c076e946f02242edcb",
+        "robot0_eef_pos": "398c1ffeb4d52232ecf622de7be19fbc1a58cec7ff2cc81e66bd4b6f4356de9b",
+        "robot0_eef_quat": "872aa2075cc8341534d742279fee20cbc6e5ba51c98d24081bfe6a6b1b145d6c",
+        "robot0_gripper_qpos": "1ca20561bb053a9e03a86e90c90b230de9f01052b52a690567b3bc5155ab5700"
+      },
+      "initial_physical_metrics": {
+        "bowl_position": [
+          -0.058577122833557906,
+          0.21422949114189446,
+          0.8984038142669032
+        ],
+        "plate_position": [
+          0.0704182177819746,
+          0.2024115253622028,
+          0.9024996500821864
+        ],
+        "actuator_control": [
+          0.09652827201041117,
+          -20.38955317774395,
+          -0.001696978765990429,
+          18.21921708777767,
+          0.029321517264139303,
+          2.1158157428901974,
+          -0.02784236553601877,
+          0.04,
+          -0.04
+        ],
+        "goal_xy_error_m": 0.129535563517079
+      }
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "pi05",
+      "mode": "realtime",
+      "init_state_index": 1,
+      "seed": 20261102,
+      "success": true,
+      "success_within_wall_budget": true,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "execute_steps": 10,
+      "native_generation_horizon": 50,
+      "merge": "fifo",
+      "prefetch_steps": 0,
+      "ticks": 153,
+      "policy_actions": 87,
+      "hold_ticks": 66,
+      "hold_fraction": 0.43137254901960786,
+      "wall_seconds": 7.62027181799931,
+      "sim_seconds": 7.65,
+      "realtime_factor": 1.0039011970584135,
+      "startup_initial_chunk_seconds": 0.5220034450030653,
+      "goal_xy_error_m": 0.017930562544349896,
+      "final_metrics": {
+        "step_wall_seconds": 0.01782885599823203,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.017930562544349896,
+        "bowl_position": [
+          0.04721679355268485,
+          0.20624992656047078,
+          0.9094312646222807
+        ],
+        "plate_position": [
+          0.06126137643165519,
+          0.19510296442217603,
+          0.900894066269696
+        ],
+        "eef_tracking_error_m": 0.04659415225099606,
+        "actuator_control": [
+          8.660885455732874,
+          -30.11756012813424,
+          8.528264815966148,
+          -3.085444905209694,
+          -0.08302917779114671,
+          -5.67827273161043,
+          -0.840518668401478,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_control_interval_s": 0.05000498613815963,
+      "p95_control_interval_s": 0.05149705475050723,
+      "overrun_period_count": 1,
+      "mean_observation_age_s": 0.7971449124943111,
+      "p95_observation_age_s": 1.0406709449976916,
+      "mean_steady_observation_age_s": 0.7912035225717655,
+      "p95_steady_observation_age_s": 1.0406297599998653,
+      "mean_chunk_inference_s": 0.3749416202508655,
+      "p95_chunk_inference_s": 0.41813454095135966,
+      "expired_prefix_actions": 0,
+      "replaced_actions": 0,
+      "configuration_note": "common executed prefix; two untimed warmup calls and first chunk before task clock; physics continues during asynchronous inference; no catch-up bursts",
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "sensor_frames_received": 70,
+      "stale_sensor_ticks": 0,
+      "ros_transport": true,
+      "video_time_note": "raw video uses simulated tick rate; wall timestamps are in ticks.jsonl; realtime factor must be reported",
+      "source_directory": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1",
+      "initial_goal_xy_error_m": 0.1256236484398719,
+      "bootstrap_request_ids": [
+        "pi05-b67d0ee4aa53-query-15"
+      ],
+      "bootstrap_action_ticks": 10,
+      "steady_action_ticks": 77,
+      "steady_chunk_count": 8,
+      "steady_applied_chunk_count": 8,
+      "late_unapplied_chunk_count": 0,
+      "metrics_recomputed": {
+        "model_inference_wall_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 347.0156008752383,
+          "p50": 333.9893384982133,
+          "p95": 388.8407826045295,
+          "min": 308.02820199460257,
+          "max": 391.22914200561354
+        },
+        "full_chunk_worker_roundtrip_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 374.9416202508655,
+          "p50": 361.29731649998575,
+          "p95": 418.13454095135967,
+          "min": 336.08328900299966,
+          "max": 421.21233000216307
+        },
+        "full_chunk_worker_roundtrip_ms_steady_applied": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 374.9416202508655,
+          "p50": 361.29731649998575,
+          "p95": 418.13454095135967,
+          "min": 336.08328900299966,
+          "max": 421.21233000216307
+        },
+        "model_inference_wall_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 490.1130279977224,
+          "p50": 490.1130279977224,
+          "p95": 490.1130279977224,
+          "min": 490.1130279977224,
+          "max": 490.1130279977224
+        },
+        "full_chunk_worker_roundtrip_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 520.7070809992729,
+          "p50": 520.7070809992729,
+          "p95": 520.7070809992729,
+          "min": 520.7070809992729,
+          "max": 520.7070809992729
+        },
+        "sensor_ros_rpc_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 19.218531750084367,
+          "p50": 19.407919495279202,
+          "p95": 19.67028170111007,
+          "min": 18.663705996004865,
+          "max": 19.70602299843449
+        },
+        "action_ros_rpc_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 5.274143123642716,
+          "p50": 5.1485634976415895,
+          "p95": 6.613181847569649,
+          "min": 4.065474000526592,
+          "max": 6.9023269970784895
+        },
+        "action_source_age_ms_all": {
+          "count": 87,
+          "excluded_count": 0,
+          "mean": 797.144912494311,
+          "p50": 788.6204280002858,
+          "p95": 1040.6709449976915,
+          "min": 486.70318000222323,
+          "max": 1091.2130549986614
+        },
+        "action_source_age_ms_steady": {
+          "count": 77,
+          "excluded_count": 0,
+          "mean": 791.2035225717655,
+          "p50": 788.5926460003247,
+          "p95": 1040.6297599998652,
+          "min": 486.70318000222323,
+          "max": 1091.2130549986614
+        },
+        "action_source_age_ms_bootstrap": {
+          "count": 10,
+          "excluded_count": 0,
+          "mean": 842.8936148979119,
+          "p50": 842.5150949988165,
+          "p95": 1044.5318830490578,
+          "min": 616.2295229951269,
+          "max": 1066.2983430011082
+        },
+        "camera_sensor_age_ms_all": {
+          "count": 153,
+          "excluded_count": 0,
+          "mean": 187.55685086325923,
+          "p50": 187.06160799774807,
+          "p95": 286.1764194036368,
+          "min": 87.97166199656203,
+          "max": 674.4074079979328
+        },
+        "camera_sensor_age_ms_steady": {
+          "count": 143,
+          "excluded_count": 0,
+          "mean": 184.68023620338678,
+          "p50": 187.37866899755318,
+          "p95": 284.4701717003773,
+          "min": 87.97166199656203,
+          "max": 290.2929609990679
+        },
+        "physical_step_ms": {
+          "count": 153,
+          "excluded_count": 0,
+          "mean": 12.537533712662373,
+          "p50": 11.89840400184039,
+          "p95": 17.95673559536226,
+          "min": 9.118790003412869,
+          "max": 38.076509001257364
+        },
+        "control_interval_ms": {
+          "count": 152,
+          "excluded_count": 0,
+          "mean": 50.00498613815963,
+          "p50": 50.06700849844492,
+          "p95": 51.49705475050723,
+          "min": 43.159045999345835,
+          "max": 58.153828998911195
+        },
+        "eef_controller_tracking_error_mm": {
+          "count": 153,
+          "excluded_count": 0,
+          "mean": 19.668875074014323,
+          "p50": 14.548699095681673,
+          "p95": 43.43981136751073,
+          "min": 0.01548738344096544,
+          "max": 48.706337466556455
+        }
+      },
+      "effective_control_hz": 19.998005743608907,
+      "effective_received_camera_hz": 9.186024025371104,
+      "ros_exchange_count": 18,
+      "ros_expected_exchange_count": 18,
+      "ros_all_verified": true,
+      "initial_state_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "initial_sensor_hashes": {
+        "agentview_image": "981f9d1c867a13621cda428bdf129fd35dc4c1d6847429357e95e05a4491b04c",
+        "robot0_eye_in_hand_image": "deb64a7593a9bd7e7303b86051531b41dc61c9d7bcf9892b41c342377f6148c1",
+        "robot0_eef_pos": "a6e3513dde89d9dde89e07ead9c4b6929f9dbd20736850bfe6becf26ea623605",
+        "robot0_eef_quat": "4f50c403c9b7ee9cca98408e9f41c103a4be0671302acea85a995524471bbffe",
+        "robot0_gripper_qpos": "f86ce28bef9b2bf0d2f3dfe2bff6c13f71b2ad2e004af75818f42580e2974844"
+      },
+      "initial_physical_metrics": {
+        "bowl_position": [
+          -0.06430681439327617,
+          0.19694192532962085,
+          0.8984038715812133
+        ],
+        "plate_position": [
+          0.06130267261506076,
+          0.19505570666600683,
+          0.9024995808477997
+        ],
+        "actuator_control": [
+          -0.05323240787376263,
+          -19.88178030799002,
+          0.03729925539251686,
+          18.13669222288066,
+          -0.09043361380002801,
+          2.121564003184448,
+          0.019028612818637537,
+          0.04,
+          -0.04
+        ],
+        "goal_xy_error_m": 0.1256236484398719
+      }
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "pi05",
+      "mode": "realtime",
+      "init_state_index": 2,
+      "seed": 20261102,
+      "success": true,
+      "success_within_wall_budget": true,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "execute_steps": 10,
+      "native_generation_horizon": 50,
+      "merge": "fifo",
+      "prefetch_steps": 0,
+      "ticks": 181,
+      "policy_actions": 90,
+      "hold_ticks": 91,
+      "hold_fraction": 0.5027624309392266,
+      "wall_seconds": 9.041882908000844,
+      "sim_seconds": 9.05,
+      "realtime_factor": 1.0008977214239276,
+      "startup_initial_chunk_seconds": 0.37863230900256895,
+      "goal_xy_error_m": 0.01167246693519336,
+      "final_metrics": {
+        "step_wall_seconds": 0.01747874799912097,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.01167246693519336,
+        "bowl_position": [
+          0.0804659847152099,
+          0.206438383030275,
+          0.9114229138281634
+        ],
+        "plate_position": [
+          0.06900240484259763,
+          0.2086367508014683,
+          0.9021137902967239
+        ],
+        "eef_tracking_error_m": 0.004165104910649281,
+        "actuator_control": [
+          0.19595636302984465,
+          -44.091500008580745,
+          3.7772774526304564,
+          17.753412553517595,
+          -0.41358419464069557,
+          0.2699632706307563,
+          0.21190399156408354,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_control_interval_s": 0.05012456836666388,
+      "p95_control_interval_s": 0.051530830052070084,
+      "overrun_period_count": 1,
+      "mean_observation_age_s": 0.9084577426443704,
+      "p95_observation_age_s": 2.214553139401323,
+      "mean_steady_observation_age_s": 0.9339741389877417,
+      "p95_steady_observation_age_s": 2.2398159862499596,
+      "mean_chunk_inference_s": 0.5185617401115855,
+      "p95_chunk_inference_s": 1.2486946498029279,
+      "expired_prefix_actions": 0,
+      "replaced_actions": 0,
+      "configuration_note": "common executed prefix; two untimed warmup calls and first chunk before task clock; physics continues during asynchronous inference; no catch-up bursts",
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "sensor_frames_received": 85,
+      "stale_sensor_ticks": 0,
+      "ros_transport": true,
+      "video_time_note": "raw video uses simulated tick rate; wall timestamps are in ticks.jsonl; realtime factor must be reported",
+      "source_directory": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2",
+      "initial_goal_xy_error_m": 0.16845120578593487,
+      "bootstrap_request_ids": [
+        "pi05-b67d0ee4aa53-query-35"
+      ],
+      "bootstrap_action_ticks": 10,
+      "steady_action_ticks": 80,
+      "steady_chunk_count": 9,
+      "steady_applied_chunk_count": 8,
+      "late_unapplied_chunk_count": 1,
+      "metrics_recomputed": {
+        "model_inference_wall_ms_steady": {
+          "count": 9,
+          "excluded_count": 0,
+          "mean": 329.1698028883224,
+          "p50": 330.4995759972371,
+          "p95": 375.76063460001023,
+          "min": 277.10281000327086,
+          "max": 391.35115899989614
+        },
+        "full_chunk_worker_roundtrip_ms_steady": {
+          "count": 9,
+          "excluded_count": 0,
+          "mean": 518.5617401115856,
+          "p50": 360.69806400337256,
+          "p95": 1248.6946498029279,
+          "min": 307.522416995198,
+          "max": 1800.7890230001067
+        },
+        "full_chunk_worker_roundtrip_ms_steady_applied": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 540.0928062508683,
+          "p50": 363.8394745030382,
+          "p95": 1317.706446452575,
+          "min": 307.522416995198,
+          "max": 1800.7890230001067
+        },
+        "model_inference_wall_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 353.58435499802,
+          "p50": 353.58435499802,
+          "p95": 353.58435499802,
+          "min": 353.58435499802,
+          "max": 353.58435499802
+        },
+        "full_chunk_worker_roundtrip_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 377.62664099864196,
+          "p50": 377.62664099864196,
+          "p95": 377.62664099864196,
+          "min": 377.62664099864196,
+          "max": 377.62664099864196
+        },
+        "sensor_ros_rpc_ms_steady": {
+          "count": 9,
+          "excluded_count": 0,
+          "mean": 179.22359655575644,
+          "p50": 19.511295002303086,
+          "p95": 883.2401612002282,
+          "min": 18.54976599861402,
+          "max": 1458.4668300012709
+        },
+        "action_ros_rpc_ms_steady": {
+          "count": 9,
+          "excluded_count": 0,
+          "mean": 6.727743555125522,
+          "p50": 6.830061000073329,
+          "p95": 8.130231998802628,
+          "min": 4.897812003036961,
+          "max": 8.20224799826974
+        },
+        "action_source_age_ms_all": {
+          "count": 90,
+          "excluded_count": 0,
+          "mean": 908.4577426443705,
+          "p50": 785.5177514975367,
+          "p95": 2214.5531394013233,
+          "min": 410.8683619997464,
+          "max": 2437.106188997859
+        },
+        "action_source_age_ms_steady": {
+          "count": 80,
+          "excluded_count": 0,
+          "mean": 933.9741389877418,
+          "p50": 786.8173160022707,
+          "p95": 2239.8159862499597,
+          "min": 410.8683619997464,
+          "max": 2437.106188997859
+        },
+        "action_source_age_ms_bootstrap": {
+          "count": 10,
+          "excluded_count": 0,
+          "mean": 704.3265718973998,
+          "p50": 704.4004399976984,
+          "p95": 907.0389104446804,
+          "min": 478.3493909999379,
+          "max": 929.6729829948163
+        },
+        "camera_sensor_age_ms_all": {
+          "count": 181,
+          "excluded_count": 0,
+          "mean": 174.37882631978061,
+          "p50": 184.1923920001136,
+          "p95": 283.43151199806016,
+          "min": 85.64046600076836,
+          "max": 528.5638779969304
+        },
+        "camera_sensor_age_ms_steady": {
+          "count": 171,
+          "excluded_count": 0,
+          "mean": 173.30688326842525,
+          "p50": 184.6717849984998,
+          "p95": 260.9529829969688,
+          "min": 85.64046600076836,
+          "max": 333.405393997964
+        },
+        "physical_step_ms": {
+          "count": 181,
+          "excluded_count": 0,
+          "mean": 13.813054315229358,
+          "p50": 13.112018001265824,
+          "p95": 18.32649900461547,
+          "min": 8.539213995391037,
+          "max": 69.31923999945866
+        },
+        "control_interval_ms": {
+          "count": 180,
+          "excluded_count": 0,
+          "mean": 50.12456836666388,
+          "p50": 49.95087450151914,
+          "p95": 51.53083005207009,
+          "min": 47.698914000648074,
+          "max": 72.58619400090538
+        },
+        "eef_controller_tracking_error_mm": {
+          "count": 181,
+          "excluded_count": 0,
+          "mean": 18.093566192095896,
+          "p50": 6.007085655833632,
+          "p95": 46.81102724934284,
+          "min": 0.03252919518571264,
+          "max": 51.744587579198985
+        }
+      },
+      "effective_control_hz": 19.95029648305292,
+      "effective_received_camera_hz": 9.400696831053462,
+      "ros_exchange_count": 20,
+      "ros_expected_exchange_count": 20,
+      "ros_all_verified": true,
+      "initial_state_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "initial_sensor_hashes": {
+        "agentview_image": "2ef75629ca1e4f263b6006fd81649bf5d53213490e31a7ff29547e7c8cec122c",
+        "robot0_eye_in_hand_image": "615c1eafa9a85d3351c695d76247f93f28205ca01b8f3cf805a110add6df35bd",
+        "robot0_eef_pos": "6d45f7f6e04b6211a26ab0f44d95a6c80f405b1ac8ca71668ea15069fe326526",
+        "robot0_eef_quat": "77dad8715a406213b79116b4299a10227ec04458af2e231e5269fe60d8ba243c",
+        "robot0_gripper_qpos": "28611c83a14023948fb78262a9175ff1d0b230b66f7397ae587b521a4f5b1491"
+      },
+      "initial_physical_metrics": {
+        "bowl_position": [
+          -0.09867575658235289,
+          0.19747202325621402,
+          0.8990059968219842
+        ],
+        "plate_position": [
+          0.06941647771953098,
+          0.20846336066964793,
+          0.9024997312179027
+        ],
+        "actuator_control": [
+          -0.06193913828040411,
+          -20.221354088639366,
+          -0.053011346198216076,
+          18.24123197185774,
+          0.06304870925340857,
+          2.2017419912939,
+          -0.0015440932488912677,
+          0.04,
+          -0.04
+        ],
+        "goal_xy_error_m": 0.16845120578593487
+      }
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "pi05",
+      "mode": "realtime",
+      "init_state_index": 3,
+      "seed": 20261102,
+      "success": true,
+      "success_within_wall_budget": true,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "execute_steps": 10,
+      "native_generation_horizon": 50,
+      "merge": "fifo",
+      "prefetch_steps": 0,
+      "ticks": 144,
+      "policy_actions": 86,
+      "hold_ticks": 58,
+      "hold_fraction": 0.4027777777777778,
+      "wall_seconds": 7.170995886001037,
+      "sim_seconds": 7.2,
+      "realtime_factor": 1.004044642398357,
+      "startup_initial_chunk_seconds": 0.49580814400542295,
+      "goal_xy_error_m": 0.017653570280662667,
+      "final_metrics": {
+        "step_wall_seconds": 0.01817475599818863,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.017653570280662667,
+        "bowl_position": [
+          0.11614193745052537,
+          0.2031190752701427,
+          0.9154473356076229
+        ],
+        "plate_position": [
+          0.098703612522627,
+          0.20037073625114699,
+          0.913237499686902
+        ],
+        "eef_tracking_error_m": 0.05129930781275298,
+        "actuator_control": [
+          0.4280079682748551,
+          -49.61545385533675,
+          2.0326011684098235,
+          15.823780034557524,
+          -0.1492713824930833,
+          5.239949649628603,
+          -0.24128218419696487,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_control_interval_s": 0.05000929035665834,
+      "p95_control_interval_s": 0.051494600001024085,
+      "overrun_period_count": 0,
+      "mean_observation_age_s": 0.7401541510344244,
+      "p95_observation_age_s": 0.9886560820013983,
+      "mean_steady_observation_age_s": 0.7291225306314453,
+      "p95_steady_observation_age_s": 0.9521283182493789,
+      "mean_chunk_inference_s": 0.34820200937610934,
+      "p95_chunk_inference_s": 0.38130413560284065,
+      "expired_prefix_actions": 0,
+      "replaced_actions": 0,
+      "configuration_note": "common executed prefix; two untimed warmup calls and first chunk before task clock; physics continues during asynchronous inference; no catch-up bursts",
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "sensor_frames_received": 64,
+      "stale_sensor_ticks": 0,
+      "ros_transport": true,
+      "video_time_note": "raw video uses simulated tick rate; wall timestamps are in ticks.jsonl; realtime factor must be reported",
+      "source_directory": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3",
+      "initial_goal_xy_error_m": 0.11140371865621297,
+      "bootstrap_request_ids": [
+        "pi05-b67d0ee4aa53-query-55"
+      ],
+      "bootstrap_action_ticks": 10,
+      "steady_action_ticks": 76,
+      "steady_chunk_count": 8,
+      "steady_applied_chunk_count": 8,
+      "late_unapplied_chunk_count": 0,
+      "metrics_recomputed": {
+        "model_inference_wall_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 319.6100362501966,
+          "p50": 317.3311485006707,
+          "p95": 352.7434871499281,
+          "min": 294.9426359991776,
+          "max": 362.6262030011276
+        },
+        "full_chunk_worker_roundtrip_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 348.20200937610934,
+          "p50": 346.5898055001162,
+          "p95": 381.3041356028407,
+          "min": 322.8941740017035,
+          "max": 391.5739560034126
+        },
+        "full_chunk_worker_roundtrip_ms_steady_applied": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 348.20200937610934,
+          "p50": 346.5898055001162,
+          "p95": 381.3041356028407,
+          "min": 322.8941740017035,
+          "max": 391.5739560034126
+        },
+        "model_inference_wall_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 465.1412109960802,
+          "p50": 465.1412109960802,
+          "p95": 465.1412109960802,
+          "min": 465.1412109960802,
+          "max": 465.1412109960802
+        },
+        "full_chunk_worker_roundtrip_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 494.49951599672204,
+          "p50": 494.49951599672204,
+          "p95": 494.49951599672204,
+          "min": 494.49951599672204,
+          "max": 494.49951599672204
+        },
+        "sensor_ros_rpc_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 19.008806249985355,
+          "p50": 19.155263500579167,
+          "p95": 20.141711350879632,
+          "min": 16.33126600063406,
+          "max": 20.206237000820693
+        },
+        "action_ros_rpc_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 5.833361000441073,
+          "p50": 6.3073869969230145,
+          "p95": 7.741316999818081,
+          "min": 3.8410550041589886,
+          "max": 8.078359998762608
+        },
+        "action_source_age_ms_all": {
+          "count": 86,
+          "excluded_count": 0,
+          "mean": 740.1541510344243,
+          "p50": 738.5027330019511,
+          "p95": 988.6560820013983,
+          "min": 441.97000400163233,
+          "max": 1048.0597709974973
+        },
+        "action_source_age_ms_steady": {
+          "count": 76,
+          "excluded_count": 0,
+          "mean": 729.1225306314453,
+          "p50": 736.5604255028302,
+          "p95": 952.1283182493789,
+          "min": 441.97000400163233,
+          "max": 1040.2708889960195
+        },
+        "action_source_age_ms_bootstrap": {
+          "count": 10,
+          "excluded_count": 0,
+          "mean": 823.994466097065,
+          "p50": 824.6163129952038,
+          "p95": 1025.8416986962402,
+          "min": 597.9153009975562,
+          "max": 1048.0597709974973
+        },
+        "camera_sensor_age_ms_all": {
+          "count": 144,
+          "excluded_count": 0,
+          "mean": 194.65627827068803,
+          "p50": 188.32271000064793,
+          "p95": 289.1633704013657,
+          "min": 86.37758600525558,
+          "max": 649.1112820003764
+        },
+        "camera_sensor_age_ms_steady": {
+          "count": 134,
+          "excluded_count": 0,
+          "mean": 191.49621694033607,
+          "p50": 188.55707649709075,
+          "p95": 288.15818350049085,
+          "min": 86.37758600525558,
+          "max": 338.53066000301624
+        },
+        "physical_step_ms": {
+          "count": 144,
+          "excluded_count": 0,
+          "mean": 12.937126250007067,
+          "p50": 12.421544000972062,
+          "p95": 18.79820100184588,
+          "min": 9.001799000543542,
+          "max": 32.30509399872972
+        },
+        "control_interval_ms": {
+          "count": 143,
+          "excluded_count": 0,
+          "mean": 50.00929035665834,
+          "p50": 49.95824299840024,
+          "p95": 51.49460000102408,
+          "min": 47.86800299916649,
+          "max": 51.98200199811254
+        },
+        "eef_controller_tracking_error_mm": {
+          "count": 144,
+          "excluded_count": 0,
+          "mean": 21.518456206673918,
+          "p50": 21.000729074364394,
+          "p95": 46.836433560302034,
+          "min": 0.17666684776046176,
+          "max": 51.29930781275298
+        }
+      },
+      "effective_control_hz": 19.996284547694206,
+      "effective_received_camera_hz": 8.924841265763172,
+      "ros_exchange_count": 18,
+      "ros_expected_exchange_count": 18,
+      "ros_all_verified": true,
+      "initial_state_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "initial_sensor_hashes": {
+        "agentview_image": "78b23961c9f1650af4f44dd71b675f726f36087c8a269a0bb86eefc19546f4f5",
+        "robot0_eye_in_hand_image": "434ca1c1f304fe03ec88ea8049d4d048a720d5ffb43bad701ad08907926662c2",
+        "robot0_eef_pos": "c3019903c01af0ab5aa49d53b8fb0a12851f0a01465130555fe871a1a7ffd6d8",
+        "robot0_eef_quat": "eb683206c4ca7cc1d6bfce82f1e12b58aed7c6fd458927860ff28c1d52889f39",
+        "robot0_gripper_qpos": "ac18e5b474aba88066cb17dba360061101ec67528bc92a4c32127628dba14f6e"
+      },
+      "initial_physical_metrics": {
+        "bowl_position": [
+          -0.04720012034566131,
+          0.201079276471669,
+          0.8986660696252619
+        ],
+        "plate_position": [
+          0.0639992612784024,
+          0.194334941303656,
+          0.9024981394553362
+        ],
+        "actuator_control": [
+          -0.10065563808697757,
+          -18.926598409483812,
+          0.1363515072538508,
+          17.996012950538216,
+          -0.0847746171348262,
+          1.950714163115372,
+          0.08089244399279631,
+          0.04,
+          -0.04
+        ],
+        "goal_xy_error_m": 0.11140371865621297
+      }
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "pi05",
+      "mode": "realtime",
+      "init_state_index": 4,
+      "seed": 20261102,
+      "success": true,
+      "success_within_wall_budget": true,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "execute_steps": 10,
+      "native_generation_horizon": 50,
+      "merge": "fifo",
+      "prefetch_steps": 0,
+      "ticks": 151,
+      "policy_actions": 80,
+      "hold_ticks": 71,
+      "hold_fraction": 0.47019867549668876,
+      "wall_seconds": 7.518200049998995,
+      "sim_seconds": 7.550000000000001,
+      "realtime_factor": 1.004229729162502,
+      "startup_initial_chunk_seconds": 0.6108001489992603,
+      "goal_xy_error_m": 0.013330501533355008,
+      "final_metrics": {
+        "step_wall_seconds": 0.014045556999917608,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.013330501533355008,
+        "bowl_position": [
+          0.0923777093691189,
+          0.19729424255716044,
+          0.913122122349818
+        ],
+        "plate_position": [
+          0.07926401268938472,
+          0.1948998260264146,
+          0.9028525674234446
+        ],
+        "eef_tracking_error_m": 0.004582570078916877,
+        "actuator_control": [
+          -1.24274064780206,
+          -48.985605200066715,
+          1.381520879592363,
+          23.314594527730563,
+          0.022391118594419723,
+          3.042095754531551,
+          0.4049131330183282,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_control_interval_s": 0.05001074258664933,
+      "p95_control_interval_s": 0.05166236409859266,
+      "overrun_period_count": 1,
+      "mean_observation_age_s": 0.8709448438240542,
+      "p95_observation_age_s": 1.4900272196020523,
+      "mean_steady_observation_age_s": 0.862251214313853,
+      "p95_steady_observation_age_s": 1.5150638756014814,
+      "mean_chunk_inference_s": 0.46720676999939315,
+      "p95_chunk_inference_s": 0.8583141671962945,
+      "expired_prefix_actions": 0,
+      "replaced_actions": 0,
+      "configuration_note": "common executed prefix; two untimed warmup calls and first chunk before task clock; physics continues during asynchronous inference; no catch-up bursts",
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "sensor_frames_received": 70,
+      "stale_sensor_ticks": 0,
+      "ros_transport": true,
+      "video_time_note": "raw video uses simulated tick rate; wall timestamps are in ticks.jsonl; realtime factor must be reported",
+      "source_directory": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4",
+      "initial_goal_xy_error_m": 0.11881880716730893,
+      "bootstrap_request_ids": [
+        "pi05-b67d0ee4aa53-query-74"
+      ],
+      "bootstrap_action_ticks": 10,
+      "steady_action_ticks": 70,
+      "steady_chunk_count": 8,
+      "steady_applied_chunk_count": 7,
+      "late_unapplied_chunk_count": 1,
+      "metrics_recomputed": {
+        "model_inference_wall_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 343.93481924962543,
+          "p50": 354.26038099831203,
+          "p95": 399.35149430384627,
+          "min": 289.864148995548,
+          "max": 414.49024800385814
+        },
+        "full_chunk_worker_roundtrip_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 467.20676999939315,
+          "p50": 397.611391999817,
+          "p95": 858.3141671962945,
+          "min": 315.82965300185606,
+          "max": 1080.7947849971242
+        },
+        "full_chunk_worker_roundtrip_ms_steady_applied": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 476.6804951421883,
+          "p50": 395.40470499923686,
+          "p95": 890.0971125964129,
+          "min": 315.82965300185606,
+          "max": 1080.7947849971242
+        },
+        "model_inference_wall_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 580.4447039990919,
+          "p50": 580.4447039990919,
+          "p95": 580.4447039990919,
+          "min": 580.4447039990919,
+          "max": 580.4447039990919
+        },
+        "full_chunk_worker_roundtrip_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 609.329983999487,
+          "p50": 609.329983999487,
+          "p95": 609.329983999487,
+          "min": 609.329983999487,
+          "max": 609.329983999487
+        },
+        "sensor_ros_rpc_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 112.90734787417023,
+          "p50": 19.366307999007404,
+          "p95": 506.9952701469443,
+          "min": 17.12712400330929,
+          "max": 768.4516929948586
+        },
+        "action_ros_rpc_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 6.789224498788826,
+          "p50": 7.092218998877797,
+          "p95": 8.4624575523776,
+          "min": 3.805551998084411,
+          "max": 8.470664004562423
+        },
+        "action_source_age_ms_all": {
+          "count": 80,
+          "excluded_count": 0,
+          "mean": 870.9448438240543,
+          "p50": 834.8270395035797,
+          "p95": 1490.0272196020521,
+          "min": 439.3448709961376,
+          "max": 1687.7429529995425
+        },
+        "action_source_age_ms_steady": {
+          "count": 70,
+          "excluded_count": 0,
+          "mean": 862.251214313853,
+          "p50": 793.4868239972275,
+          "p95": 1515.0638756014812,
+          "min": 439.3448709961376,
+          "max": 1687.7429529995425
+        },
+        "action_source_age_ms_bootstrap": {
+          "count": 10,
+          "excluded_count": 0,
+          "mean": 931.8002503954631,
+          "p50": 931.9216924959619,
+          "p95": 1134.2605222442216,
+          "min": 705.2890569975716,
+          "max": 1156.5880259950063
+        },
+        "camera_sensor_age_ms_all": {
+          "count": 151,
+          "excluded_count": 0,
+          "mean": 188.53314239080743,
+          "p50": 186.73803599813255,
+          "p95": 286.2497739988612,
+          "min": 87.33171100175241,
+          "max": 758.4140549952281
+        },
+        "camera_sensor_age_ms_steady": {
+          "count": 141,
+          "excluded_count": 0,
+          "mean": 183.70265572356408,
+          "p50": 186.81516600190662,
+          "p95": 286.14946699963184,
+          "min": 87.33171100175241,
+          "max": 327.52121800149325
+        },
+        "physical_step_ms": {
+          "count": 151,
+          "excluded_count": 0,
+          "mean": 13.404932834280482,
+          "p50": 12.63003399799345,
+          "p95": 16.872786000021733,
+          "min": 9.380422001413535,
+          "max": 48.347160998673644
+        },
+        "control_interval_ms": {
+          "count": 150,
+          "excluded_count": 0,
+          "mean": 50.010742586649336,
+          "p50": 50.02457549562678,
+          "p95": 51.66236409859266,
+          "min": 41.32407900033286,
+          "max": 58.640878000005614
+        },
+        "eef_controller_tracking_error_mm": {
+          "count": 151,
+          "excluded_count": 0,
+          "mean": 19.32231827852719,
+          "p50": 8.281231606240885,
+          "p95": 47.67447906591876,
+          "min": 0.04900576916843996,
+          "max": 52.583933895457314
+        }
+      },
+      "effective_control_hz": 19.9957038883673,
+      "effective_received_camera_hz": 9.310739210778165,
+      "ros_exchange_count": 18,
+      "ros_expected_exchange_count": 18,
+      "ros_all_verified": true,
+      "initial_state_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "initial_sensor_hashes": {
+        "agentview_image": "266f589bfd6ab5b26b48362b1d43fefdf76d4fb481acf4f33f85d77b3f64efe4",
+        "robot0_eye_in_hand_image": "b60c4315db3df87be36e20408f72e126e1efdbdb07fdd796995a84685771282c",
+        "robot0_eef_pos": "9b0fe902f306e6bff47def1db70ef4612a29cfd1638794beea5d6b34f9b18256",
+        "robot0_eef_quat": "b87fb384ebdd84184389a8ac7c7d0cd205f64a5c2c6a14d978147fc0ec33c73e",
+        "robot0_gripper_qpos": "398c6607ba7726ec6e1baed19650a26e846731f4ed710b60b2c5cc62f5525995"
+      },
+      "initial_physical_metrics": {
+        "bowl_position": [
+          -0.046821490547654894,
+          0.18565251037010724,
+          0.8984037642374318
+        ],
+        "plate_position": [
+          0.07170763657059592,
+          0.19394437151509056,
+          0.9024996101899305
+        ],
+        "actuator_control": [
+          -0.009334292787078431,
+          -19.87887098518957,
+          -0.07491785479596501,
+          17.864621850310478,
+          0.005334136981072438,
+          2.0678612802168503,
+          -0.052853768828031784,
+          0.04,
+          -0.04
+        ],
+        "goal_xy_error_m": 0.11881880716730893
+      }
+    },
+    {
+      "status": "completed",
+      "error": null,
+      "model": "pi05",
+      "mode": "realtime",
+      "init_state_index": 5,
+      "seed": 20261102,
+      "success": true,
+      "success_within_wall_budget": true,
+      "control_hz": 20,
+      "wall_budget_s": 14.0,
+      "execute_steps": 10,
+      "native_generation_horizon": 50,
+      "merge": "fifo",
+      "prefetch_steps": 0,
+      "ticks": 133,
+      "policy_actions": 80,
+      "hold_ticks": 53,
+      "hold_fraction": 0.39849624060150374,
+      "wall_seconds": 6.630032822002249,
+      "sim_seconds": 6.65,
+      "realtime_factor": 1.003011625814504,
+      "startup_initial_chunk_seconds": 0.5269543539980077,
+      "goal_xy_error_m": 0.02519660020804289,
+      "final_metrics": {
+        "step_wall_seconds": 0.016673552003339864,
+        "native_clip_max_excess": 0.0,
+        "goal_xy_error_m": 0.02519660020804289,
+        "bowl_position": [
+          0.09602780622926049,
+          0.2046895947246943,
+          0.912215294020211
+        ],
+        "plate_position": [
+          0.07093305820082957,
+          0.20242634850885535,
+          0.9041309349556685
+        ],
+        "eef_tracking_error_m": 0.004581356305202482,
+        "actuator_control": [
+          -0.2715951329399023,
+          -62.33051485450886,
+          2.1408331983915385,
+          21.739636212169206,
+          -0.13007950901945142,
+          1.985232612828379,
+          -0.24998387632885033,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_control_interval_s": 0.05008918662122486,
+      "p95_control_interval_s": 0.051584220350923714,
+      "overrun_period_count": 2,
+      "mean_observation_age_s": 0.7568807514501714,
+      "p95_observation_age_s": 0.9881065098539693,
+      "mean_steady_observation_age_s": 0.7425332500576457,
+      "p95_steady_observation_age_s": 0.9849805942496459,
+      "mean_chunk_inference_s": 0.3495643887499682,
+      "p95_chunk_inference_s": 0.3983432414534036,
+      "expired_prefix_actions": 0,
+      "replaced_actions": 0,
+      "configuration_note": "common executed prefix; two untimed warmup calls and first chunk before task clock; physics continues during asynchronous inference; no catch-up bursts",
+      "camera_mode": "asynchronous_clone",
+      "camera_hz": 10.0,
+      "sensor_frames_received": 61,
+      "stale_sensor_ticks": 0,
+      "ros_transport": true,
+      "video_time_note": "raw video uses simulated tick rate; wall timestamps are in ticks.jsonl; realtime factor must be reported",
+      "source_directory": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5",
+      "initial_goal_xy_error_m": 0.129535563517079,
+      "bootstrap_request_ids": [
+        "pi05-b67d0ee4aa53-query-93"
+      ],
+      "bootstrap_action_ticks": 10,
+      "steady_action_ticks": 70,
+      "steady_chunk_count": 8,
+      "steady_applied_chunk_count": 7,
+      "late_unapplied_chunk_count": 1,
+      "metrics_recomputed": {
+        "model_inference_wall_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 321.03089362408355,
+          "p50": 321.4489370038791,
+          "p95": 366.6468356954283,
+          "min": 276.38513499550754,
+          "max": 375.1527099957457
+        },
+        "full_chunk_worker_roundtrip_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 349.5643887499682,
+          "p50": 347.05646799557144,
+          "p95": 398.3432414534036,
+          "min": 302.56196499976795,
+          "max": 406.9792860027519
+        },
+        "full_chunk_worker_roundtrip_ms_steady_applied": {
+          "count": 7,
+          "excluded_count": 0,
+          "mean": 341.3622605709991,
+          "p50": 341.840194996621,
+          "p95": 376.13772110344144,
+          "min": 302.56196499976795,
+          "max": 382.3048730046139
+        },
+        "model_inference_wall_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 492.3898819979513,
+          "p50": 492.3898819979513,
+          "p95": 492.3898819979513,
+          "min": 492.3898819979513,
+          "max": 492.3898819979513
+        },
+        "full_chunk_worker_roundtrip_ms_bootstrap": {
+          "count": 1,
+          "excluded_count": 0,
+          "mean": 525.8191390021238,
+          "p50": 525.8191390021238,
+          "p95": 525.8191390021238,
+          "min": 525.8191390021238,
+          "max": 525.8191390021238
+        },
+        "sensor_ros_rpc_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 18.751691499346634,
+          "p50": 19.901652998669306,
+          "p95": 20.57960030178947,
+          "min": 14.596965003875084,
+          "max": 20.747510003275238
+        },
+        "action_ros_rpc_ms_steady": {
+          "count": 8,
+          "excluded_count": 0,
+          "mean": 6.1952791238581995,
+          "p50": 6.175533497298602,
+          "p95": 8.017958597338293,
+          "min": 4.19143500039354,
+          "max": 8.216080997954123
+        },
+        "action_source_age_ms_all": {
+          "count": 80,
+          "excluded_count": 0,
+          "mean": 756.8807514501714,
+          "p50": 744.0645150018099,
+          "p95": 988.1065098539693,
+          "min": 438.8912470021751,
+          "max": 1081.6427999961888
+        },
+        "action_source_age_ms_steady": {
+          "count": 70,
+          "excluded_count": 0,
+          "mean": 742.5332500576458,
+          "p50": 738.8109435014485,
+          "p95": 984.980594249646,
+          "min": 438.8912470021751,
+          "max": 1037.4294130015187
+        },
+        "action_source_age_ms_bootstrap": {
+          "count": 10,
+          "excluded_count": 0,
+          "mean": 857.3132611978508,
+          "p50": 857.0986529957736,
+          "p95": 1059.4566029954876,
+          "min": 630.3661229976569,
+          "max": 1081.6427999961888
+        },
+        "camera_sensor_age_ms_all": {
+          "count": 133,
+          "excluded_count": 0,
+          "mean": 191.04371745110038,
+          "p50": 187.4715730009484,
+          "p95": 287.6424019996193,
+          "min": 86.95676700153854,
+          "max": 686.4232689986238
+        },
+        "camera_sensor_age_ms_steady": {
+          "count": 123,
+          "excluded_count": 0,
+          "mean": 186.85964178049045,
+          "p50": 187.80288499692688,
+          "p95": 286.86740760094835,
+          "min": 86.95676700153854,
+          "max": 336.9139010028448
+        },
+        "physical_step_ms": {
+          "count": 133,
+          "excluded_count": 0,
+          "mean": 13.202498210197984,
+          "p50": 12.364137000986375,
+          "p95": 17.638488000375215,
+          "min": 9.211632997903507,
+          "max": 57.875127997249365
+        },
+        "control_interval_ms": {
+          "count": 132,
+          "excluded_count": 0,
+          "mean": 50.08918662122486,
+          "p50": 50.00252600075328,
+          "p95": 51.584220350923715,
+          "min": 46.110840994515456,
+          "max": 59.23524899844779
+        },
+        "eef_controller_tracking_error_mm": {
+          "count": 133,
+          "excluded_count": 0,
+          "mean": 22.739111398245587,
+          "p50": 23.877772352300756,
+          "p95": 48.75720345710058,
+          "min": 0.19440540827079433,
+          "max": 54.88669692259666
+        }
+      },
+      "effective_control_hz": 19.96438887223333,
+      "effective_received_camera_hz": 9.200557770629285,
+      "ros_exchange_count": 18,
+      "ros_expected_exchange_count": 18,
+      "ros_all_verified": true,
+      "initial_state_file_sha256": "cbbc73792ce546c9bec181fd328a411d3183074840b282671dee481511381d0a",
+      "initial_sensor_hashes": {
+        "agentview_image": "73c224565f1da68af64323732ea2c06fce94413dd7950e239f5e8fa0fc69c936",
+        "robot0_eye_in_hand_image": "1054594b75faec91a44c0250b071954ad3db5f0d5b7ecfa0ab46437661e20951",
+        "robot0_eef_pos": "0c6ae0492dc6d89c20da7c004844c0274dbc1ef639159716178a4f340c0f5b3d",
+        "robot0_eef_quat": "2aa34504d80fb46d703abe973e5bffe4b1d03ac31d01bc4f7a6b0ac7ae0efbf4",
+        "robot0_gripper_qpos": "badaac91fe165051aef9523bfbbbab82893546d3ceb9ec9edcfba88a260d89d7"
+      },
+      "initial_physical_metrics": {
+        "bowl_position": [
+          -0.058577122833557906,
+          0.21422949114189446,
+          0.8984038142669032
+        ],
+        "plate_position": [
+          0.0704182177819746,
+          0.2024115253622028,
+          0.9024996500821864
+        ],
+        "actuator_control": [
+          0.09652827201041117,
+          -20.38955317774395,
+          -0.001696978765990429,
+          18.21921708777767,
+          0.029321517264139303,
+          2.1158157428901974,
+          -0.02784236553601877,
+          0.04,
+          -0.04
+        ],
+        "goal_xy_error_m": 0.129535563517079
+      }
+    }
+  ],
+  "model_audits": {
+    "pi05": {
+      "model": "pi05",
+      "repository": "lerobot/pi05_libero_finetuned",
+      "revision": "7152f13e34c6c115d808aea0e5d08aca74eac14b",
+      "weights_before_sha256": "569e834f3216c559f61c910b76b4844ad026c8c7ab6b1cadcdea21984f6102e4",
+      "weights_after_sha256": "569e834f3216c559f61c910b76b4844ad026c8c7ab6b1cadcdea21984f6102e4",
+      "weights_unchanged": true,
+      "requires_grad_parameter_count": 0,
+      "parameter_count": 4143404816,
+      "peak_cuda_bytes": 9522044928,
+      "native_horizon": 50,
+      "flow_steps": 10,
+      "processor_snapshot_sha256": {
+        "config.json": "2f6d4b96b032593e1de65b391ee7252a70227bff398ef1b94658fea17818142f",
+        "policy_preprocessor.json": "3d669ffc18d0364536735d8203076dcc69d3a6523aa5956ccaada3f9e1e6b748",
+        "policy_postprocessor.json": "37d719a6584600988e6c343306d2eaee0575109f235ad500313577f73e47e8a1",
+        "policy_preprocessor_step_2_normalizer_processor.safetensors": "a002c0df7f79c5b169c5a899ad151d4ea1bed246c7d82bd93ed1556558d517a9",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "a002c0df7f79c5b169c5a899ad151d4ea1bed246c7d82bd93ed1556558d517a9"
+      },
+      "local_training": false,
+      "calls": 89,
+      "restoration": {
+        "checkpoint_sha256": "877b3ec1130548b69af7f8aeef3ec9d3fc7738040f0b9beb490857ec970997ae",
+        "strict": true,
+        "stored_tensor_count": 812,
+        "stored_elements": 3616757520,
+        "mapped_tensor_count": 813,
+        "checked_tensor_count": 813,
+        "checked_elements": 4143404816,
+        "runtime_parameter_count": 4143404816,
+        "derived_copy_keys": [
+          "model.paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight"
+        ],
+        "all_mapped_tensors_equal_after_official_dtype_cast": true,
+        "missing_keys": [],
+        "unexpected_keys": [],
+        "local_training": false
+      }
+    }
+  },
+  "source_files": [
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/summary.json",
+      "sha256": "622a643ccc92afa214026b898a2132f0cc9043fe89f696e0483b9b1a8d0e9696",
+      "bytes": 48173
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/config.json",
+      "sha256": "77ac605f493e29c5dafbf8f2a67782b5c10db4f68d1aed0a094f2971888ff9d2",
+      "bytes": 472
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/model-audit.json",
+      "sha256": "60dd950efbd903b3674a70bf905b622238f9d6efcc767a6ff2aa47d1a3dd81a6",
+      "bytes": 1747
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/result.json",
+      "sha256": "1959fc78fcbe7e0549dc368aa6f613c87bac5b472a64c73660731b8fc7d233e4",
+      "bytes": 2199
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/ticks.jsonl",
+      "sha256": "c9681ee283802cc6a7f014b0764e20688cbbde9576c7b1c9450c8949b85a62be",
+      "bytes": 89663
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/chunks.json",
+      "sha256": "5759b03f81d6d9a705c5c74a29365dc4b668641452cd6137876a95a268c5de09",
+      "bytes": 114524
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/initial.json",
+      "sha256": "4f3a5efe7ef5cea84caaf43d64ffb310d3b72eedfc2b16b07fa00f2b0242003a",
+      "bytes": 2087
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/result.json",
+      "sha256": "353b47278f573b8da08d604082a09182b569fccc10fc6dc1f50b2fcf8c060495",
+      "bytes": 2229
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/ticks.jsonl",
+      "sha256": "ffe5c0dfa8d0872f24de6c10c48975a52f4df4f17d93526c19cc852560f07aa0",
+      "bytes": 91885
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/chunks.json",
+      "sha256": "da8c6871ace6bf3e00aeaf6d777e40db7b7bf2371e4acd9d2c9aa4c54f0a8292",
+      "bytes": 128617
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/initial.json",
+      "sha256": "7882f0ce97b360347de7cfb029959677fc38c89e49d7db92f7670064cdfcd2bf",
+      "bytes": 2091
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/result.json",
+      "sha256": "bf7baf675757b52712509d687e274fcee80daf771d3128dc585d3492cfdf00c1",
+      "bytes": 2214
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/ticks.jsonl",
+      "sha256": "4d30542d0763ac241faca12ae14140df98ff53245394de9d921891110e954bd7",
+      "bytes": 86299
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/chunks.json",
+      "sha256": "0e195c682884654c226bef09b4a36feba2c3ac6a81e5e1feb9734a1722c0455b",
+      "bytes": 114572
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/initial.json",
+      "sha256": "b57a6da027736b5a6af4ce1acec08a3c42e8d45cda08fd1f1cc4cbcbd001ff94",
+      "bytes": 2082
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/result.json",
+      "sha256": "f188d9b30944aaacff5d94e1eb5a0ace7e26db913d901d9624faa6c158f9eb29",
+      "bytes": 2191
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/ticks.jsonl",
+      "sha256": "e2b2a2ccce2885a030640bf9bda88e7192a6d1ca3cd116e81062b85574e1d855",
+      "bytes": 83851
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/chunks.json",
+      "sha256": "87dc8bb7d7409b78b6514a0041d34fa30585adbe4d30f290467d08cced35ac75",
+      "bytes": 114609
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/initial.json",
+      "sha256": "f066f4c252c1cbbaf1db50637920373474f646d1dc715f3d602dedb3cad06cdc",
+      "bytes": 2095
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/result.json",
+      "sha256": "c5a66e3747d7086e74e6365ae413859a33235c1b1058274ec61b5207df26cc8f",
+      "bytes": 2194
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/ticks.jsonl",
+      "sha256": "c264686d4814c08faffef15729a6a5702ac1eca51ff77880bbc90219a844dae6",
+      "bytes": 81544
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/chunks.json",
+      "sha256": "1d2b71d05d64b94bb4d4d5033d7b628c841d519d5c4b8658d4e59f24be4a5b87",
+      "bytes": 114492
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/initial.json",
+      "sha256": "cd2dafb7536ff692b219195da410b855df1596cdfde25b1f544de351c373a86d",
+      "bytes": 2087
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/result.json",
+      "sha256": "9d49901299fe556414104550883aa7d29884f9615317fccb137d1dafbe67256a",
+      "bytes": 2220
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/ticks.jsonl",
+      "sha256": "6496117401736f6993e31be5a6d975875065ad36f2136be1f06856ace90235e4",
+      "bytes": 166444
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/chunks.json",
+      "sha256": "14d9e355e66f385157ae94d4fdcff14636aa71e6bc221274ddc6d58c3ccfa518",
+      "bytes": 128930
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/initial.json",
+      "sha256": "2c4d2c8a4ad249f877d4a8365991fa71a59403b2679fff6154503f7c5e1ccbcb",
+      "bytes": 2925
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/result.json",
+      "sha256": "54702520c0d10af8994aa461644f3061cdb6425aef98875c47fe2a1f77be3585",
+      "bytes": 2222
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/ticks.jsonl",
+      "sha256": "693a16b6d1a67bbe7bb52bc969e54233855559fae632a04a122e84b6ce10d444",
+      "bytes": 194759
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/chunks.json",
+      "sha256": "e91d0d5befd0ff0e291391faa8d4e73b0c398240bedd3bc8edfc998867edb556",
+      "bytes": 142841
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/initial.json",
+      "sha256": "5c4d79c7bd58484e9083f2b1e47534b8f4000750091b742cde1114ff8598e00a",
+      "bytes": 2929
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/result.json",
+      "sha256": "a85c4c5882c290c9c20acba38b88e288865ed9484876f083234230684024306c",
+      "bytes": 2221
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/ticks.jsonl",
+      "sha256": "36581eb74eea6d3e92885ccf6a50a91251a9f7d44d828a12dbfdbd9f760a49f1",
+      "bytes": 157468
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/chunks.json",
+      "sha256": "c66715d6a437693f73aa3a11483e1df5cef72159afb656f89c0546ade55bc725",
+      "bytes": 128837
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/initial.json",
+      "sha256": "d2490200adc15ef9dd544431726bcf75b3fb12ae5fcb0bd6ec0bbc27c63ae802",
+      "bytes": 2920
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/result.json",
+      "sha256": "17ae844c8beef400fbe6e9457ec21d4b3517eaaff780249c3209608d17dbf195",
+      "bytes": 2233
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/ticks.jsonl",
+      "sha256": "7a75bf0954dd0d2fc8426eb7cf6e62630d3f15a289a0d2ac24507449b7a5be26",
+      "bytes": 163683
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/chunks.json",
+      "sha256": "88c03cf01f8e69dbe70f449747812cae5204f746dcadc3cb0fe84b0f6c3a6c52",
+      "bytes": 128644
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/initial.json",
+      "sha256": "36ba8562ac5ca4d90c7a1a02d5130bb430c089aa4165a0d065eeef277801f8b4",
+      "bytes": 2933
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/result.json",
+      "sha256": "c07c21d51422ea83f5de1689e5c206abaeaf5a4fcd9b05f6accbd071fde7bcf2",
+      "bytes": 2224
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/ticks.jsonl",
+      "sha256": "cf919eaeb33e2027967e45c3601e9d2e87053bfd23f566e0797c952971969b31",
+      "bytes": 145472
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/chunks.json",
+      "sha256": "4ab017892c83d454db46b9c78100cb166bfc04cd90736911fcf42022e7d48da5",
+      "bytes": 128597
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/initial.json",
+      "sha256": "bc6eea4498bf64806921eda04c7a162d8cbdbe59af2605b61620fe0ade99d613",
+      "bytes": 2925
+    }
+  ],
+  "limitations": [
+    "Five fixed initial states from one known task; Wilson bounds are descriptive, not a broad VLA benchmark.",
+    "Static policy quality and runtime behavior differ; task and action-generation horizons differ across checkpoints.",
+    "Native success is primary; goalXY alone does not prove grasp/place completion.",
+    "Model-time counters include synchronized GPU work and Python overhead; they are not CUDA kernel-event timings.",
+    "Lockstep and real-time also differ in sensor scheduling; results describe the whole declared system.",
+    "Bootstrap, software setup and two warmup calls are outside task time; their latency is recorded separately.",
+    "No hard real-time or real-hardware safety claim."
+  ],
+  "supplemental_protocol": "artifacts/realtime-vla/pi05-protocol.json",
+  "prior35_unchanged": true
+}

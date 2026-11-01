@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-11-01T19:10:49.473761+00:00",
+  "status": "passed",
+  "formal_episodes": 10,
+  "development_excluded": [
+    0
+  ],
+  "frozen_weights_same_as_API_smoke": true,
+  "all813mapped_tensor_values_verified": true,
+  "all_generated_chunks_verified": 87,
+  "all_ROS_exchanges_verified": 174,
+  "all_exchanges_correlated_to_actual_policy_and_broker_receipts": true,
+  "baseline35_data_files_checked": 190,
+  "baseline35_data_changed": [],
+  "registered_source_changed": [],
+  "initial_condition_checks": {
+    "initial_sensor_match_across_models_by_mode": {
+      "all_match": null,
+      "comparisons": []
+    },
+    "physical_initial_metrics_same_across_modes": {
+      "all_match": null,
+      "compared_fields": [
+        "bowl_position",
+        "plate_position",
+        "actuator_control",
+        "goal_xy_error_m"
+      ],
+      "comparisons": []
+    },
+    "initial_sensor_match_across_modes": {
+      "all_match": null,
+      "comparisons": []
+    },
+    "scope_note": "Clone byte parity was tested after regenerating the same snapshot in both scenes. Sync cached-step sensors and async regenerated sensors are compared separately here; their equality is not assumed."
+  }
+}

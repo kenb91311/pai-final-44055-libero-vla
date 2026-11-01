@@ -9,8 +9,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7419,
-      "sha256": "26218bad2f04383b242ac3157902086497e27bf270225c62471c7ee5e5bec6d1"
+      "bytes": 8913,
+      "sha256": "6ea10a530fd6a611f6a822b135c68eedb3ddd49bfed3e493b180d59f6d9b1f3c"
     },
     {
       "path": "artifacts/realtime-vla/ablation-pi0fast-prefetch5/config.json",
@@ -81,6 +81,21 @@
       "path": "artifacts/realtime-vla/environment-versions.json",
       "bytes": 812,
       "sha256": "09e6a9445e576bcfb210facb4fe8d7d02cd57becb763aec608a78ecd5ad364c8"
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/config.json",
+      "bytes": 472,
+      "sha256": "77ac605f493e29c5dafbf8f2a67782b5c10db4f68d1aed0a094f2971888ff9d2"
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/model-audit.json",
+      "bytes": 1747,
+      "sha256": "60dd950efbd903b3674a70bf905b622238f9d6efcc767a6ff2aa47d1a3dd81a6"
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/summary.json",
+      "bytes": 48173,
+      "sha256": "622a643ccc92afa214026b898a2132f0cc9043fe89f696e0483b9b1a8d0e9696"
     },
     {
       "path": "artifacts/realtime-vla/formal-pi0fast-e10/config.json",
@@ -268,6 +283,36 @@
       "sha256": "075cc06d3fc44995c9a5d6265aa4346d6a9cde8eb186ba158e35cea3600ea23f"
     },
     {
+      "path": "artifacts/realtime-vla/pi05-comparison-summary.json",
+      "bytes": 3357,
+      "sha256": "8b54a65fa15ec976d62ce8181fa99bb95ed70310ad9c858377f171052fd7d0ca"
+    },
+    {
+      "path": "artifacts/realtime-vla/pi05-protocol.json",
+      "bytes": 37418,
+      "sha256": "eeb66778e88fabccb1fd016cca68a2f000ba6550c6ed86128954b9087773dfd5"
+    },
+    {
+      "path": "artifacts/realtime-vla/pi05-report/episodes.csv",
+      "bytes": 1342,
+      "sha256": "39e036c3745ed29ec845bf52485fb24b392f6f781bad07c557a970db1f674e6d"
+    },
+    {
+      "path": "artifacts/realtime-vla/pi05-report/results.json",
+      "bytes": 111552,
+      "sha256": "13cf90eb8079e69e376326059f152607c05e8f0c9952322ae186b0bef989bc99"
+    },
+    {
+      "path": "artifacts/realtime-vla/pi05-report/summary.json",
+      "bytes": 10357,
+      "sha256": "a6cadb4f32f34d9f238d824201d92d1d6b3457dbd1c2819ae201aa91d4b663d2"
+    },
+    {
+      "path": "artifacts/realtime-vla/pi05-report/validation.json",
+      "bytes": 1204,
+      "sha256": "6b4582ef0af603a8a3064dd5f89ea59077d002f26cfcbd6982c8aec1770fc914"
+    },
+    {
       "path": "artifacts/realtime-vla/publication-redactions.json",
       "bytes": 2005,
       "sha256": "5c5afa6d8fbf9497958d2760cbf75a36342edddce58dfe8350640a4161069737"
@@ -433,6 +478,11 @@
       "sha256": "a5a6f9c7298c3b7772fd1f63479e28b6acd1673f12dce83c849a0a5378cef7d6"
     },
     {
+      "path": "docs/reference/pi05-libero-assets.md",
+      "bytes": 9328,
+      "sha256": "12d8694af7d8d1236daf8fb866ebe59be3d3f156351d0109aaf22a8642317a0f"
+    },
+    {
       "path": "docs/reference/realtime-vla-assets.md",
       "bytes": 16887,
       "sha256": "ddcf24e61078dfce64679947e3a2fd13e83f3a11a21d5cd6d47cab59289029c4"
@@ -453,6 +503,11 @@
       "sha256": "928dccf281094992f119e29759901f30124eb44f3c216bdc65ff1b18f5a74fab"
     },
     {
+      "path": "experiments/realtime_vla/download_pi05.py",
+      "bytes": 7649,
+      "sha256": "4d4806a9d4a7e224224ebd9517765d393d8c00f3d87f20958e51e834990d3552"
+    },
+    {
       "path": "experiments/realtime_vla/download_pi0fast.py",
       "bytes": 4220,
       "sha256": "0a64497866cc848cbc74717b38223593b6cb517b0780e68d6d407d6f54cd5c59"
@@ -464,8 +519,8 @@
     },
     {
       "path": "experiments/realtime_vla/evaluate.py",
-      "bytes": 21170,
-      "sha256": "19b77588b7ab256c28173f94260e99e13e389b41afaaf523054cb10347ab1f5c"
+      "bytes": 21234,
+      "sha256": "d7b319401af9d0730c2484ae835b9bf41e1ec99512883dedef042e4d661c318a"
     },
     {
       "path": "experiments/realtime_vla/libero_env.py",
@@ -476,6 +531,11 @@
       "path": "experiments/realtime_vla/make_demo.py",
       "bytes": 20802,
       "sha256": "f78b41028c41f441bcb49c77ffcf41378a4b2e021b456c732632732f81f0d36e"
+    },
+    {
+      "path": "experiments/realtime_vla/pi05_runtime.py",
+      "bytes": 23494,
+      "sha256": "4b8b5513b5ca8364daac3ed374aa74175dbeb96f0731fb48a5aee85a11712c2e"
     },
     {
       "path": "experiments/realtime_vla/pi0fast_runtime.py",
@@ -544,8 +604,8 @@
     },
     {
       "path": "experiments/realtime_vla/worker.py",
-      "bytes": 15603,
-      "sha256": "9d5d5bc710cd7e04f4e74538e91b625b950f9f1325fc15ccb9234339ed74f8af"
+      "bytes": 15762,
+      "sha256": "7e4f06a5b935d20cef0a656d01507d75d6adfc9008463caeb8e565858cfd13d5"
     },
     {
       "path": "requirements-realtime.in",

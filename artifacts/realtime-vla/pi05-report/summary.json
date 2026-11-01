@@ -1,0 +1,356 @@
+{
+  "status": "complete",
+  "formal_episodes": 10,
+  "groups": [
+    {
+      "model": "pi05",
+      "mode": "lockstep",
+      "n": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "success_wilson95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "errors": 0,
+      "states": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "final_goal_xy_mm": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 14.728565512831363,
+        "p50": 9.899483759926554,
+        "p95": 25.029890525677168,
+        "min": 6.675753329138834,
+        "max": 25.935656572806323
+      },
+      "hold_fraction": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "pooled_hold_fraction": 0.0,
+      "effective_control_hz": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 7.810741369568854,
+        "p50": 7.9156021499162845,
+        "p95": 8.177513799825972,
+        "min": 7.275735720588078,
+        "max": 8.182251560282312
+      },
+      "realtime_factor": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 0.38870954151118936,
+        "p50": 0.3933097336836372,
+        "p95": 0.40780242340477935,
+        "min": 0.36509897628466753,
+        "max": 0.41047942801732873
+      },
+      "ros_all_verified": true,
+      "effective_received_camera_hz": {
+        "count": 0,
+        "excluded_count": 5,
+        "mean": null,
+        "p50": null,
+        "p95": null,
+        "min": null,
+        "max": null
+      },
+      "model_inference_wall_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 335.1053625145661,
+        "p50": 345.29206100082126,
+        "p95": 373.783035944507,
+        "min": 296.45212885744905,
+        "max": 377.84613543044543
+      },
+      "model_inference_wall_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 376.4261806306604,
+        "p50": 387.8179326020472,
+        "p95": 436.0962846918846,
+        "min": 325.68026180233574,
+        "max": 447.99125160207035
+      },
+      "full_chunk_worker_roundtrip_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 372.0247719008382,
+        "p50": 384.97326750166394,
+        "p95": 414.945091343543,
+        "min": 324.59285743035645,
+        "max": 416.4189031434944
+      },
+      "full_chunk_worker_roundtrip_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 438.83898655098164,
+        "p50": 417.24839335292927,
+        "p95": 559.6048638421051,
+        "min": 354.49252590115066,
+        "max": 577.8326367028056
+      },
+      "action_source_age_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 785.9739817378173,
+        "p50": 780.8640243664497,
+        "p95": 856.3638202129882,
+        "min": 724.5304796964443,
+        "max": 863.453178958203
+      },
+      "action_source_age_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 1216.8892434005102,
+        "p50": 1171.3462059997255,
+        "p95": 1333.4731090896819,
+        "min": 1148.0003125026997,
+        "max": 1352.6951953987007
+      },
+      "action_source_age_ms_bootstrap_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 898.9541369999642,
+        "p50": 932.6091845010524,
+        "p95": 992.623552797304,
+        "min": 772.8526209983102,
+        "max": 994.758504096535
+      },
+      "action_source_age_ms_bootstrap_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 1270.9988401312876,
+        "p50": 1320.1347446527507,
+        "p95": 1345.8040463690122,
+        "min": 1154.8811892494996,
+        "max": 1345.8706412984611
+      },
+      "camera_sensor_age_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 41.42430419569,
+        "p50": 42.66748242071776,
+        "p95": 46.19021499236137,
+        "min": 35.59673742501852,
+        "max": 46.62915173344118
+      },
+      "camera_sensor_age_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 366.44976923955255,
+        "p50": 373.93330349477765,
+        "p95": 409.0368038810266,
+        "min": 323.1050763497478,
+        "max": 415.7203146009124
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "realtime",
+      "n": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "success_wilson95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "errors": 0,
+      "states": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "final_goal_xy_mm": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 17.156740300320767,
+        "p50": 17.653570280662667,
+        "p95": 23.743392675304293,
+        "min": 11.67246693519336,
+        "max": 25.19660020804289
+      },
+      "hold_fraction": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 0.4411215347669609,
+        "p50": 0.43137254901960786,
+        "p95": 0.496249679850719,
+        "min": 0.39849624060150374,
+        "max": 0.5027624309392266
+      },
+      "pooled_hold_fraction": 0.4448818897637795,
+      "effective_control_hz": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 19.98093590699133,
+        "p50": 19.9957038883673,
+        "p95": 19.997661504425967,
+        "min": 19.95029648305292,
+        "max": 19.998005743608907
+      },
+      "realtime_factor": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 1.003216983171541,
+        "p50": 1.0039011970584135,
+        "p95": 1.004192711809673,
+        "min": 1.0008977214239276,
+        "max": 1.004229729162502
+      },
+      "ros_all_verified": true,
+      "effective_received_camera_hz": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 9.204571820719039,
+        "p50": 9.200557770629285,
+        "p95": 9.382705306998403,
+        "min": 8.924841265763172,
+        "max": 9.400696831053462
+      },
+      "model_inference_wall_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 332.15223057749324,
+        "p50": 329.1698028883224,
+        "p95": 346.39944455011573,
+        "min": 319.6100362501966,
+        "max": 347.0156008752383
+      },
+      "model_inference_wall_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 376.6686468707485,
+        "p50": 375.76063460001023,
+        "p95": 397.2493519639829,
+        "min": 352.7434871499281,
+        "max": 399.35149430384627
+      },
+      "full_chunk_worker_roundtrip_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 411.69530569758433,
+        "p50": 374.9416202508655,
+        "p95": 508.29074608914704,
+        "min": 348.20200937610934,
+        "max": 518.5617401115856
+      },
+      "full_chunk_worker_roundtrip_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 660.9581470013652,
+        "p50": 418.13454095135967,
+        "p95": 1170.6185532816012,
+        "min": 381.3041356028407,
+        "max": 1248.6946498029279
+      },
+      "action_source_age_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 811.8169313124903,
+        "p50": 791.2035225717655,
+        "p95": 919.629554052964,
+        "min": 729.1225306314453,
+        "max": 933.9741389877418
+      },
+      "action_source_age_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 1346.5237068700662,
+        "p50": 1040.6297599998652,
+        "p95": 2094.865564120264,
+        "min": 952.1283182493789,
+        "max": 2239.8159862499597
+      },
+      "action_source_age_ms_bootstrap_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 832.0656328971381,
+        "p50": 842.8936148979119,
+        "p95": 916.9028525559406,
+        "min": 704.3265718973998,
+        "max": 931.8002503954631
+      },
+      "action_source_age_ms_bootstrap_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 1034.2259234859375,
+        "p50": 1044.5318830490578,
+        "p95": 1119.2997383944748,
+        "min": 907.0389104446804,
+        "max": 1134.2605222442216
+      },
+      "camera_sensor_age_ms_steady_episode_mean": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 184.00912678324053,
+        "p50": 184.68023620338678,
+        "p95": 190.56890190836694,
+        "min": 173.30688326842525,
+        "max": 191.49621694033607
+      },
+      "camera_sensor_age_ms_steady_episode_p95": {
+        "count": 5,
+        "excluded_count": 0,
+        "mean": 281.3196425596834,
+        "p50": 286.14946699963184,
+        "p95": 287.90002832058235,
+        "min": 260.9529829969688,
+        "max": 288.15818350049085
+      }
+    }
+  ],
+  "audit": {
+    "checked_at_utc": "2026-11-01T19:10:49.473761+00:00",
+    "status": "passed",
+    "formal_episodes": 10,
+    "development_excluded": [
+      0
+    ],
+    "frozen_weights_same_as_API_smoke": true,
+    "all813mapped_tensor_values_verified": true,
+    "all_generated_chunks_verified": 87,
+    "all_ROS_exchanges_verified": 174,
+    "all_exchanges_correlated_to_actual_policy_and_broker_receipts": true,
+    "baseline35_data_files_checked": 190,
+    "baseline35_data_changed": [],
+    "registered_source_changed": [],
+    "initial_condition_checks": {
+      "initial_sensor_match_across_models_by_mode": {
+        "all_match": null,
+        "comparisons": []
+      },
+      "physical_initial_metrics_same_across_modes": {
+        "all_match": null,
+        "compared_fields": [
+          "bowl_position",
+          "plate_position",
+          "actuator_control",
+          "goal_xy_error_m"
+        ],
+        "comparisons": []
+      },
+      "initial_sensor_match_across_modes": {
+        "all_match": null,
+        "comparisons": []
+      },
+      "scope_note": "Clone byte parity was tested after regenerating the same snapshot in both scenes. Sync cached-step sensors and async regenerated sensors are compared separately here; their equality is not assumed."
+    }
+  },
+  "note": "Supplemental pi05 only; prior35 unchanged; no broad benchmark claim."
+}

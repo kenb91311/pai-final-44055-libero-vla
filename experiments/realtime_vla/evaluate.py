@@ -217,7 +217,8 @@ def episode(env,worker,args,mode,index,out,camera=None):
 def main():
     """Evaluate one model at a time with identical environment and scheduler settings.
 
-    Args: CLI. Returns: None; writes immutable run directory and audited summary.
+    Args: CLI --model smolvla/pi0fast/pi05 plus fixed run settings.
+    Returns: None; writes immutable run directory and audited summary.
     Raises: Initialization failures before episode execution.
     Design:
         Context: RTX5080 memory and resource contention affect latency.
@@ -236,7 +237,7 @@ def main():
     ADR: None.
     """
     parser=argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument('--model',choices=['smolvla','pi0fast'],required=True)
+    parser.add_argument('--model',choices=['smolvla','pi0fast','pi05'],required=True)
     parser.add_argument('--modeldir',type=Path)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--initial-states',type=int,nargs='+',default=[0])

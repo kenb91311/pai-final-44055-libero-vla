@@ -1,0 +1,39 @@
+{
+  "model": "pi05",
+  "repository": "lerobot/pi05_libero_finetuned",
+  "revision": "7152f13e34c6c115d808aea0e5d08aca74eac14b",
+  "weights_before_sha256": "569e834f3216c559f61c910b76b4844ad026c8c7ab6b1cadcdea21984f6102e4",
+  "weights_after_sha256": "569e834f3216c559f61c910b76b4844ad026c8c7ab6b1cadcdea21984f6102e4",
+  "weights_unchanged": true,
+  "requires_grad_parameter_count": 0,
+  "parameter_count": 4143404816,
+  "peak_cuda_bytes": 9522044928,
+  "native_horizon": 50,
+  "flow_steps": 10,
+  "processor_snapshot_sha256": {
+    "config.json": "2f6d4b96b032593e1de65b391ee7252a70227bff398ef1b94658fea17818142f",
+    "policy_preprocessor.json": "3d669ffc18d0364536735d8203076dcc69d3a6523aa5956ccaada3f9e1e6b748",
+    "policy_postprocessor.json": "37d719a6584600988e6c343306d2eaee0575109f235ad500313577f73e47e8a1",
+    "policy_preprocessor_step_2_normalizer_processor.safetensors": "a002c0df7f79c5b169c5a899ad151d4ea1bed246c7d82bd93ed1556558d517a9",
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "a002c0df7f79c5b169c5a899ad151d4ea1bed246c7d82bd93ed1556558d517a9"
+  },
+  "local_training": false,
+  "calls": 89,
+  "restoration": {
+    "checkpoint_sha256": "877b3ec1130548b69af7f8aeef3ec9d3fc7738040f0b9beb490857ec970997ae",
+    "strict": true,
+    "stored_tensor_count": 812,
+    "stored_elements": 3616757520,
+    "mapped_tensor_count": 813,
+    "checked_tensor_count": 813,
+    "checked_elements": 4143404816,
+    "runtime_parameter_count": 4143404816,
+    "derived_copy_keys": [
+      "model.paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight"
+    ],
+    "all_mapped_tensors_equal_after_official_dtype_cast": true,
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "local_training": false
+  }
+}

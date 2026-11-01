@@ -1,0 +1,87 @@
+{
+  "generated_at_utc": "2026-11-01T19:11:54.735007+00:00",
+  "scope": "Supplemental pi0.5 formal10, separate from immutable prior35; development init0 excluded",
+  "registered_protocol": "artifacts/realtime-vla/pi05-protocol.json",
+  "baseline35_unchanged": true,
+  "prior_formal_records": 35,
+  "added_formal_records": 10,
+  "total_records_as_of_this_addition": 45,
+  "do_not_pool_different_conditions": true,
+  "task": "LIBERO spatial0 black bowl to plate",
+  "model_repository": "lerobot/pi05_libero_finetuned",
+  "revision": "7152f13e34c6c115d808aea0e5d08aca74eac14b",
+  "license": "gemma",
+  "native_generated_horizon": 50,
+  "executed_prefix": 10,
+  "prefetch_steps": 0,
+  "flow_steps": 10,
+  "control_hz": 20,
+  "groups": [
+    {
+      "model": "pi05",
+      "mode": "lockstep",
+      "n": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "success_wilson95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "hold_fraction_pooled": 0.0,
+      "final_goalXY_median_mm": 9.899483759926554,
+      "RTF_median": 0.3933097336836372,
+      "worker_steady_episode_mean_average_ms": 372.0247719008382,
+      "model_inference_steady_episode_mean_average_ms": 335.1053625145661,
+      "action_source_age_steady_episode_mean_average_ms": 785.9739817378173,
+      "control_hz_mean": 7.810741369568854,
+      "received_camera_hz_mean": null,
+      "peak_cuda_GiB": 8.868095397949219,
+      "peak_cuda_bytes": 9522044928,
+      "max_ram_bytes": null,
+      "max_ram_note": "Host/process peak RAM was not sampled or recorded during these completed formal runs; it cannot be recovered from model/GPU sizes.",
+      "errors": 0,
+      "all_ROS_exchanges_verified": true
+    },
+    {
+      "model": "pi05",
+      "mode": "realtime",
+      "n": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "success_wilson95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "hold_fraction_pooled": 0.4448818897637795,
+      "final_goalXY_median_mm": 17.653570280662667,
+      "RTF_median": 1.0039011970584135,
+      "worker_steady_episode_mean_average_ms": 411.69530569758433,
+      "model_inference_steady_episode_mean_average_ms": 332.15223057749324,
+      "action_source_age_steady_episode_mean_average_ms": 811.8169313124903,
+      "control_hz_mean": 19.98093590699133,
+      "received_camera_hz_mean": 9.204571820719039,
+      "peak_cuda_GiB": 8.868095397949219,
+      "peak_cuda_bytes": 9522044928,
+      "max_ram_bytes": null,
+      "max_ram_note": "Host/process peak RAM was not sampled or recorded during these completed formal runs; it cannot be recovered from model/GPU sizes.",
+      "errors": 0,
+      "all_ROS_exchanges_verified": true
+    }
+  ],
+  "audit": {
+    "weights_unchanged": true,
+    "all813mapped_tensors_verified": true,
+    "generated_chunks_verified": 87,
+    "ROS_exchanges_verified": 174,
+    "independent_ROS_policy_and_broker_receipts_correlated": true,
+    "baseline35_data_files_checked": 190,
+    "baseline35_data_changed": [],
+    "registered_source_changed": []
+  },
+  "limitations": [
+    "Five fixed states of one known task; not the official4suite benchmark.",
+    "Torch CUDA peak is model process allocation, not whole GPU/desktop usage.",
+    "Lockstep pauses physical progress during inference/rendering; RT uses asynchronous camera, matching earlier protocol.",
+    "maxRAM was not measured."
+  ]
+}

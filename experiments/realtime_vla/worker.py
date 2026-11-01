@@ -32,7 +32,7 @@ SENSORS=('agentview_image','robot0_eye_in_hand_image','robot0_eef_pos','robot0_e
 def model_process(family,modeldir,incoming,outgoing,ros_transport=False,ros_port=8780):
     """Own GPU initialization and execute serialized chunk requests.
 
-    Args: family/modeldir: frozen artifact; incoming/outgoing: bounded queues.
+    Args: family/modeldir: frozen SmolVLA, pi0-FAST or pi0.5 artifact; incoming/outgoing: bounded queues.
     Returns: None on shutdown. Raises: Errors are sent as explicit results.
     Design:
         Context: Forking after graphics initialization can corrupt CUDA state.
@@ -61,6 +61,9 @@ def model_process(family,modeldir,incoming,outgoing,ros_transport=False,ros_port
         elif family=='pi0fast':
             from pi0fast_runtime import FrozenPI0Fast
             runtime=FrozenPI0Fast(modeldir,device='cuda')
+        elif family=='pi05':
+            from pi05_runtime import FrozenPI05
+            runtime=FrozenPI05(modeldir,device='cuda')
         else:raise ValueError('unknown model family')
         outgoing.put({'kind':'ready','startup_seconds':time.perf_counter()-start})
         while True:
