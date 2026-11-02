@@ -1,0 +1,2585 @@
+{
+  "schema_version": 1,
+  "status": "cpu_recomputed_and_crosschecked",
+  "scope": "Twenty main E10/P0 task episodes: SmolVLA and pi05, lockstep/realtime, initial states1..5; no GPU, no rerun, no training",
+  "aggregation_definitions": {
+    "model_call_ms": "Per-episode mean of metadata.model_inference_ms from all completed non-bootstrap chunks, including late-drained chunks, then equal-weight mean over five episodes. Timer starts after raw input construction and saved preprocessing; spans policy.predict_action_chunk, saved output postprocessing, and final CUDA synchronization, excluding subsequent NumPy conversion. Policy-internal image preparation remains included. Not GPU-kernel-only time, and narrower than the separate profile full native predict call.",
+    "worker_with_ros_ms": "Same chunk set and episode-weighting; finished_time - started_time spans sensor ROS, model call and action ROS. Parent IPC/poll is excluded. Do not label difference as DDS-only latency.",
+    "action_source_age_ms": "For executed non-held, non-bootstrap actions only, observation capture to action application; average within episode, then equal-weight mean over five. Not merely inference latency.",
+    "pooled_hold_fraction": "Sum hold ticks / sum all ticks across five episodes, not mean episode fraction. Lockstep zero means model waits freeze simulator and are not counted as hold ticks.",
+    "effective_control_hz": "Reciprocal of per-episode mean observed non-null tick_interval_s; then mean across five episodes. Configured20Hz is separate.",
+    "median_final_goal_xy_mm": "Median of five terminal bowl-to-plate XY distances; official task predicate is primary success, XY alone is not task completion.",
+    "memory": "Model-process Torch peak allocated bytes, converted using2**30; not total GPU memory and no host RAM maximum recorded."
+  },
+  "groups": [
+    {
+      "model": "smolvla",
+      "mode": "lockstep",
+      "n": 5,
+      "successes": 5,
+      "successes_by_initial_state": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true
+      },
+      "pooled_hold_fraction": 0.0,
+      "mean_of_episode_mean_model_call_ms": 578.2641994745583,
+      "mean_of_episode_mean_worker_with_ros_ms": 615.3846143892484,
+      "mean_of_episode_mean_action_source_age_ms": 978.0077270344334,
+      "mean_of_episode_mean_camera_source_age_ms": 65.56307280124159,
+      "mean_effective_control_hz": 7.129635690260829,
+      "median_final_goal_xy_mm": 24.05756486100218,
+      "median_realtime_factor": 0.35431997091979106,
+      "model_process_peak_cuda_allocated_bytes": 1574203392,
+      "model_process_peak_cuda_allocated_GiB": 1.4660911560058594,
+      "peak_memory_scope": "Torch CUDA max_memory_allocated for model process; shared across episodes; not whole GPU utilization and not measured max RAM",
+      "sources": {
+        "episodes": [
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/result.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/result.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/result.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/result.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/result.json"
+        ],
+        "timing_chunks": [
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/chunks.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/chunks.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/chunks.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/chunks.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/chunks.json"
+        ],
+        "ticks": [
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/ticks.jsonl",
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/ticks.jsonl",
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/ticks.jsonl",
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/ticks.jsonl",
+          "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/ticks.jsonl"
+        ],
+        "peak_memory": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/model-audit.json",
+          "field": "peak_cuda_bytes"
+        }
+      },
+      "ros_exchanges": 82,
+      "ros_all_verified": true,
+      "prior_summary_crosscheck": {
+        "path": "artifacts/realtime-vla/report/summary.json",
+        "all_equal_within_absolute_1e-9": true
+      }
+    },
+    {
+      "model": "smolvla",
+      "mode": "realtime",
+      "n": 5,
+      "successes": 3,
+      "successes_by_initial_state": {
+        "1": true,
+        "2": true,
+        "3": false,
+        "4": false,
+        "5": true
+      },
+      "pooled_hold_fraction": 0.5322878228782287,
+      "mean_of_episode_mean_model_call_ms": 507.7005914645549,
+      "mean_of_episode_mean_worker_with_ros_ms": 604.1376948691089,
+      "mean_of_episode_mean_action_source_age_ms": 938.2477074847413,
+      "mean_of_episode_mean_camera_source_age_ms": 188.69359661488346,
+      "mean_effective_control_hz": 19.91870163683468,
+      "median_final_goal_xy_mm": 29.877410867972774,
+      "median_realtime_factor": 0.9975257110124028,
+      "model_process_peak_cuda_allocated_bytes": 1574203392,
+      "model_process_peak_cuda_allocated_GiB": 1.4660911560058594,
+      "peak_memory_scope": "Torch CUDA max_memory_allocated for model process; shared across episodes; not whole GPU utilization and not measured max RAM",
+      "sources": {
+        "episodes": [
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/result.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/result.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/result.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/result.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/result.json"
+        ],
+        "timing_chunks": [
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/chunks.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/chunks.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/chunks.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/chunks.json",
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/chunks.json"
+        ],
+        "ticks": [
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/ticks.jsonl",
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/ticks.jsonl",
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/ticks.jsonl",
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/ticks.jsonl",
+          "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/ticks.jsonl"
+        ],
+        "peak_memory": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/model-audit.json",
+          "field": "peak_cuda_bytes"
+        }
+      },
+      "ros_exchanges": 108,
+      "ros_all_verified": true,
+      "prior_summary_crosscheck": {
+        "path": "artifacts/realtime-vla/report/summary.json",
+        "all_equal_within_absolute_1e-9": true
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "lockstep",
+      "n": 5,
+      "successes": 5,
+      "successes_by_initial_state": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true
+      },
+      "pooled_hold_fraction": 0.0,
+      "mean_of_episode_mean_model_call_ms": 335.1053625145661,
+      "mean_of_episode_mean_worker_with_ros_ms": 372.02477190083823,
+      "mean_of_episode_mean_action_source_age_ms": 785.9739817378173,
+      "mean_of_episode_mean_camera_source_age_ms": 41.42430419569,
+      "mean_effective_control_hz": 7.810741369568855,
+      "median_final_goal_xy_mm": 9.899483759926554,
+      "median_realtime_factor": 0.3933097336836372,
+      "model_process_peak_cuda_allocated_bytes": 9522044928,
+      "model_process_peak_cuda_allocated_GiB": 8.868095397949219,
+      "peak_memory_scope": "Torch CUDA max_memory_allocated for model process; shared across episodes; not whole GPU utilization and not measured max RAM",
+      "sources": {
+        "episodes": [
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/result.json",
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/result.json",
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/result.json",
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/result.json",
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/result.json"
+        ],
+        "timing_chunks": [
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/chunks.json",
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/chunks.json",
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/chunks.json",
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/chunks.json",
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/chunks.json"
+        ],
+        "ticks": [
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/ticks.jsonl",
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/ticks.jsonl",
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/ticks.jsonl",
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/ticks.jsonl",
+          "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/ticks.jsonl"
+        ],
+        "peak_memory": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/model-audit.json",
+          "field": "peak_cuda_bytes"
+        }
+      },
+      "ros_exchanges": 82,
+      "ros_all_verified": true,
+      "prior_summary_crosscheck": {
+        "path": "artifacts/realtime-vla/pi05-report/summary.json",
+        "all_equal_within_absolute_1e-9": true
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "realtime",
+      "n": 5,
+      "successes": 5,
+      "successes_by_initial_state": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true
+      },
+      "pooled_hold_fraction": 0.4448818897637795,
+      "mean_of_episode_mean_model_call_ms": 332.15223057749324,
+      "mean_of_episode_mean_worker_with_ros_ms": 411.69530569758433,
+      "mean_of_episode_mean_action_source_age_ms": 811.8169313124903,
+      "mean_of_episode_mean_camera_source_age_ms": 184.00912678324053,
+      "mean_effective_control_hz": 19.98093590699133,
+      "median_final_goal_xy_mm": 17.653570280662667,
+      "median_realtime_factor": 1.0039011970584135,
+      "model_process_peak_cuda_allocated_bytes": 9522044928,
+      "model_process_peak_cuda_allocated_GiB": 8.868095397949219,
+      "peak_memory_scope": "Torch CUDA max_memory_allocated for model process; shared across episodes; not whole GPU utilization and not measured max RAM",
+      "sources": {
+        "episodes": [
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/result.json",
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/result.json",
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/result.json",
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/result.json",
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/result.json"
+        ],
+        "timing_chunks": [
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/chunks.json",
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/chunks.json",
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/chunks.json",
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/chunks.json",
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/chunks.json"
+        ],
+        "ticks": [
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/ticks.jsonl",
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/ticks.jsonl",
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/ticks.jsonl",
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/ticks.jsonl",
+          "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/ticks.jsonl"
+        ],
+        "peak_memory": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/model-audit.json",
+          "field": "peak_cuda_bytes"
+        }
+      },
+      "ros_exchanges": 92,
+      "ros_all_verified": true,
+      "prior_summary_crosscheck": {
+        "path": "artifacts/realtime-vla/pi05-report/summary.json",
+        "all_equal_within_absolute_1e-9": true
+      }
+    }
+  ],
+  "episodes": [
+    {
+      "model": "smolvla",
+      "mode": "lockstep",
+      "init_state_index": 1,
+      "success": true,
+      "success_within_wall_budget": null,
+      "ticks": 79,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 10.624760332000733,
+      "sim_seconds": 3.95,
+      "realtime_factor": 0.37177309196358893,
+      "final_goal_xy_mm": 13.576819900952865,
+      "normal_chunk_count": 7,
+      "generated_chunks_including_bootstrap": 8,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 16,
+      "ros_all_verified": true,
+      "effective_control_hz": 7.401851183569299,
+      "model_call_ms": {
+        "count": 7,
+        "mean": 564.1543747135854,
+        "median": 573.19942900358,
+        "p95": 612.0206644991413,
+        "min": 508.57833399641095,
+        "max": 614.5781209997949
+      },
+      "worker_with_ros_ms": {
+        "count": 7,
+        "mean": 592.1853605718103,
+        "median": 601.8854770009057,
+        "p95": 641.0665802002768,
+        "min": 537.0480839992524,
+        "max": 643.0194290005602
+      },
+      "action_source_age_ms": {
+        "count": 69,
+        "mean": 955.8076058252693,
+        "median": 968.674565992842,
+        "p95": 1309.249220196216,
+        "min": 539.1083939975942,
+        "max": 1399.6002829953795
+      },
+      "camera_source_age_ms": {
+        "count": 69,
+        "mean": 61.09174139071357,
+        "median": 0.8644289991934784,
+        "p95": 591.7689204026826,
+        "min": 0.7557889985037036,
+        "max": 644.9539759996696
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "smolvla",
+      "mode": "lockstep",
+      "init_state_index": 2,
+      "success": true,
+      "success_within_wall_budget": null,
+      "ticks": 82,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 11.649813880001602,
+      "sim_seconds": 4.1000000000000005,
+      "realtime_factor": 0.35193695300473216,
+      "final_goal_xy_mm": 24.05756486100218,
+      "normal_chunk_count": 8,
+      "generated_chunks_including_bootstrap": 9,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 18,
+      "ros_all_verified": true,
+      "effective_control_hz": 7.004082723227615,
+      "model_call_ms": {
+        "count": 8,
+        "mean": 579.4156963766,
+        "median": 590.4929755051853,
+        "p95": 642.6456841509207,
+        "min": 473.4107819967903,
+        "max": 657.3488310023095
+      },
+      "worker_with_ros_ms": {
+        "count": 8,
+        "mean": 605.2605333752581,
+        "median": 617.668783001136,
+        "p95": 669.5149480514374,
+        "min": 498.80009399930714,
+        "max": 685.026604005543
+      },
+      "action_source_age_ms": {
+        "count": 72,
+        "mean": 966.8905011391568,
+        "median": 962.9890205033007,
+        "p95": 1350.359590651351,
+        "min": 500.8140549980453,
+        "max": 1386.334283000906
+      },
+      "camera_source_age_ms": {
+        "count": 72,
+        "mean": 68.27368109710126,
+        "median": 0.8586695039412007,
+        "p95": 618.7058057505055,
+        "min": 0.7744719987385906,
+        "max": 687.1200370005681
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "smolvla",
+      "mode": "lockstep",
+      "init_state_index": 3,
+      "success": true,
+      "success_within_wall_budget": null,
+      "ticks": 79,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 11.40481775200169,
+      "sim_seconds": 3.95,
+      "realtime_factor": 0.34634485932988496,
+      "final_goal_xy_mm": 29.58948656872815,
+      "normal_chunk_count": 7,
+      "generated_chunks_including_bootstrap": 8,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 16,
+      "ros_all_verified": true,
+      "effective_control_hz": 6.890261969518037,
+      "model_call_ms": {
+        "count": 7,
+        "mean": 617.2101072848558,
+        "median": 626.4110029951553,
+        "p95": 715.0870056997518,
+        "min": 540.9857570048189,
+        "max": 750.7711450016359
+      },
+      "worker_with_ros_ms": {
+        "count": 7,
+        "mean": 695.1491965716871,
+        "median": 657.1148700022604,
+        "p95": 877.5571104015397,
+        "min": 580.6147920011426,
+        "max": 919.4590740007698
+      },
+      "action_source_age_ms": {
+        "count": 69,
+        "mean": 1055.097490378366,
+        "median": 1058.4500200056937,
+        "p95": 1429.1804496009715,
+        "min": 582.6522999996087,
+        "max": 1618.024592004076
+      },
+      "camera_source_age_ms": {
+        "count": 69,
+        "mean": 71.59317007281588,
+        "median": 0.9129980026045814,
+        "p95": 657.7962828014279,
+        "min": 0.7918729970697314,
+        "max": 921.6020830062917
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "smolvla",
+      "mode": "lockstep",
+      "init_state_index": 4,
+      "success": true,
+      "success_within_wall_budget": null,
+      "ticks": 77,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 10.495970472999034,
+      "sim_seconds": 3.85,
+      "realtime_factor": 0.3668074343295987,
+      "final_goal_xy_mm": 28.791099741019067,
+      "normal_chunk_count": 7,
+      "generated_chunks_including_bootstrap": 8,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 16,
+      "ros_all_verified": true,
+      "effective_control_hz": 7.30190362179199,
+      "model_call_ms": {
+        "count": 7,
+        "mean": 527.6220539983894,
+        "median": 552.4842059967341,
+        "p95": 595.3038158950221,
+        "min": 413.61558299831813,
+        "max": 610.1383079949301
+      },
+      "worker_with_ros_ms": {
+        "count": 7,
+        "mean": 553.560389714091,
+        "median": 578.3268859959207,
+        "p95": 618.7948673010396,
+        "min": 440.42853499558987,
+        "max": 633.7810309996712
+      },
+      "action_source_age_ms": {
+        "count": 67,
+        "mean": 927.2173972089719,
+        "median": 916.38355699979,
+        "p95": 1320.6467575968418,
+        "min": 442.7101070032222,
+        "max": 1395.2330199972494
+      },
+      "camera_source_age_ms": {
+        "count": 67,
+        "mean": 58.88522559754748,
+        "median": 0.902644002053421,
+        "p95": 571.166019602242,
+        "min": 0.767596997320652,
+        "max": 635.8855799990124
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "smolvla",
+      "mode": "lockstep",
+      "init_state_index": 5,
+      "success": true,
+      "success_within_wall_budget": null,
+      "ticks": 76,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 10.724769451000611,
+      "sim_seconds": 3.8000000000000003,
+      "realtime_factor": 0.35431997091979106,
+      "final_goal_xy_mm": 21.473690428070704,
+      "normal_chunk_count": 7,
+      "generated_chunks_including_bootstrap": 8,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 16,
+      "ros_all_verified": true,
+      "effective_control_hz": 7.050078953197205,
+      "model_call_ms": {
+        "count": 7,
+        "mean": 602.9187649993609,
+        "median": 598.1532109944965,
+        "p95": 669.4900855989545,
+        "min": 554.7581819992047,
+        "max": 692.0532980002463
+      },
+      "worker_with_ros_ms": {
+        "count": 7,
+        "mean": 630.7675917133955,
+        "median": 625.6094299969845,
+        "p95": 696.7797696990601,
+        "min": 582.0169459984754,
+        "max": 718.2154149995768
+      },
+      "action_source_age_ms": {
+        "count": 66,
+        "mean": 985.0256406204029,
+        "median": 982.310339997639,
+        "p95": 1352.3978305001947,
+        "min": 584.201622994442,
+        "max": 1438.3127839973895
+      },
+      "camera_source_age_ms": {
+        "count": 66,
+        "mean": 67.97154584802973,
+        "median": 0.9178170002996922,
+        "p95": 625.2558002488513,
+        "min": 0.796227999671828,
+        "max": 721.1353940001572
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "smolvla",
+      "mode": "realtime",
+      "init_state_index": 1,
+      "success": true,
+      "success_within_wall_budget": true,
+      "ticks": 178,
+      "hold_ticks": 98,
+      "hold_fraction": 0.550561797752809,
+      "wall_seconds": 8.884667568003351,
+      "sim_seconds": 8.9,
+      "realtime_factor": 1.0017257181407515,
+      "final_goal_xy_mm": 29.877410867972774,
+      "normal_chunk_count": 8,
+      "generated_chunks_including_bootstrap": 9,
+      "normal_chunks_completed_after_episode": 1,
+      "ros_exchanges": 18,
+      "ros_all_verified": true,
+      "effective_control_hz": 19.954533635685912,
+      "model_call_ms": {
+        "count": 8,
+        "mean": 535.6104383736238,
+        "median": 519.7384530001727,
+        "p95": 638.0983095994452,
+        "min": 458.2298909954261,
+        "max": 664.4908169982955
+      },
+      "worker_with_ros_ms": {
+        "count": 8,
+        "mean": 746.1721096251495,
+        "median": 564.1023900025175,
+        "p95": 1511.3381082992412,
+        "min": 513.9274000030127,
+        "max": 1952.247234999959
+      },
+      "action_source_age_ms": {
+        "count": 70,
+        "mean": 966.1387862007749,
+        "median": 967.7320445007354,
+        "p95": 1190.471870350666,
+        "min": 690.7189159974223,
+        "max": 1289.1529300031834
+      },
+      "camera_source_age_ms": {
+        "count": 168,
+        "mean": 186.52010528581914,
+        "median": 188.0906389997108,
+        "p95": 290.59271839687426,
+        "min": 85.7666980009526,
+        "max": 340.9895630029496
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "smolvla",
+      "mode": "realtime",
+      "init_state_index": 2,
+      "success": true,
+      "success_within_wall_budget": true,
+      "ticks": 172,
+      "hold_ticks": 86,
+      "hold_fraction": 0.5,
+      "wall_seconds": 8.621331665999605,
+      "sim_seconds": 8.6,
+      "realtime_factor": 0.9975257110124028,
+      "final_goal_xy_mm": 27.92149521078434,
+      "normal_chunk_count": 8,
+      "generated_chunks_including_bootstrap": 9,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 18,
+      "ros_all_verified": true,
+      "effective_control_hz": 19.882744712896297,
+      "model_call_ms": {
+        "count": 8,
+        "mean": 490.49189225115697,
+        "median": 501.7301835032413,
+        "p95": 520.4407471526793,
+        "min": 403.4613100011484,
+        "max": 521.4060860016616
+      },
+      "worker_with_ros_ms": {
+        "count": 8,
+        "mean": 518.2827282487779,
+        "median": 531.1712565016933,
+        "p95": 548.5583286477777,
+        "min": 430.89213699568063,
+        "max": 550.2971289970446
+      },
+      "action_source_age_ms": {
+        "count": 76,
+        "mean": 889.7595233428499,
+        "median": 888.9137225050945,
+        "p95": 1137.2056892523688,
+        "min": 616.103041000315,
+        "max": 1189.5362720024423
+      },
+      "camera_source_age_ms": {
+        "count": 162,
+        "mean": 193.59376926571892,
+        "median": 187.7169085018977,
+        "p95": 338.2352846019785,
+        "min": 86.28585900441976,
+        "max": 403.68086699891137
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "smolvla",
+      "mode": "realtime",
+      "init_state_index": 3,
+      "success": false,
+      "success_within_wall_budget": false,
+      "ticks": 279,
+      "hold_ticks": 151,
+      "hold_fraction": 0.5412186379928315,
+      "wall_seconds": 14.020778716003406,
+      "sim_seconds": 13.950000000000001,
+      "realtime_factor": 0.9949518698328348,
+      "final_goal_xy_mm": 43.90002353821295,
+      "normal_chunk_count": 12,
+      "generated_chunks_including_bootstrap": 13,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 26,
+      "ros_all_verified": true,
+      "effective_control_hz": 19.89929673563996,
+      "model_call_ms": {
+        "count": 12,
+        "mean": 497.7674324163672,
+        "median": 498.2243054982973,
+        "p95": 528.7156165981287,
+        "min": 451.8982209992828,
+        "max": 529.6280159964226
+      },
+      "worker_with_ros_ms": {
+        "count": 12,
+        "mean": 604.9297142502231,
+        "median": 535.4938964992471,
+        "p95": 962.3463647010788,
+        "min": 482.18798900052207,
+        "max": 1458.6618579996866
+      },
+      "action_source_age_ms": {
+        "count": 118,
+        "mean": 984.9799255761185,
+        "median": 939.2469580016041,
+        "p95": 1746.6190734998231,
+        "min": 647.1531709976261,
+        "max": 2037.972861995513
+      },
+      "camera_source_age_ms": {
+        "count": 269,
+        "mean": 182.06536216750808,
+        "median": 187.59470700024394,
+        "p95": 290.2196303970413,
+        "min": 83.98028400551993,
+        "max": 389.19299600092927
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "smolvla",
+      "mode": "realtime",
+      "init_state_index": 4,
+      "success": false,
+      "success_within_wall_budget": false,
+      "ticks": 279,
+      "hold_ticks": 149,
+      "hold_fraction": 0.5340501792114696,
+      "wall_seconds": 14.027607189003902,
+      "sim_seconds": 13.950000000000001,
+      "realtime_factor": 0.9944675390493728,
+      "final_goal_xy_mm": 124.23791625896385,
+      "normal_chunk_count": 13,
+      "generated_chunks_including_bootstrap": 14,
+      "normal_chunks_completed_after_episode": 1,
+      "ros_exchanges": 28,
+      "ros_all_verified": true,
+      "effective_control_hz": 19.88897309296407,
+      "model_call_ms": {
+        "count": 13,
+        "mean": 487.4275731546312,
+        "median": 475.996989000123,
+        "p95": 564.8446202016202,
+        "min": 429.35897399729583,
+        "max": 594.6365000054357
+      },
+      "worker_with_ros_ms": {
+        "count": 13,
+        "mean": 595.9815618457819,
+        "median": 508.2086260008509,
+        "p95": 986.703698802738,
+        "min": 454.8381929998868,
+        "max": 1536.4170579996426
+      },
+      "action_source_age_ms": {
+        "count": 120,
+        "mean": 907.1960619337309,
+        "median": 900.2473600012308,
+        "p95": 1140.374661203532,
+        "min": 594.4523490034044,
+        "max": 1235.1309139994555
+      },
+      "camera_source_age_ms": {
+        "count": 269,
+        "mean": 189.3940712348807,
+        "median": 188.81425500148907,
+        "p95": 296.04052060167305,
+        "min": 86.67501400486799,
+        "max": 390.4048629992758
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "smolvla",
+      "mode": "realtime",
+      "init_state_index": 5,
+      "success": true,
+      "success_within_wall_budget": true,
+      "ticks": 176,
+      "hold_ticks": 93,
+      "hold_fraction": 0.5284090909090909,
+      "wall_seconds": 8.781632426995202,
+      "sim_seconds": 8.8,
+      "realtime_factor": 1.0020915898219944,
+      "final_goal_xy_mm": 19.3988140616611,
+      "normal_chunk_count": 8,
+      "generated_chunks_including_bootstrap": 9,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 18,
+      "ros_all_verified": true,
+      "effective_control_hz": 19.967960006987155,
+      "model_call_ms": {
+        "count": 8,
+        "mean": 527.2056211269955,
+        "median": 535.4972130044189,
+        "p95": 576.5090817520104,
+        "min": 449.78277899645036,
+        "max": 587.6858050032752
+      },
+      "worker_with_ros_ms": {
+        "count": 8,
+        "mean": 555.3223603756123,
+        "median": 564.4916639976145,
+        "p95": 604.5631779023097,
+        "min": 476.20112599543063,
+        "max": 616.7013340018457
+      },
+      "action_source_age_ms": {
+        "count": 73,
+        "mean": 943.1642403702326,
+        "median": 940.4554339998867,
+        "p95": 1188.8866319975932,
+        "min": 640.2748170003179,
+        "max": 1239.8277320025954
+      },
+      "camera_source_age_ms": {
+        "count": 166,
+        "mean": 191.8946751204904,
+        "median": 188.82341099742916,
+        "p95": 297.23999699672277,
+        "min": 86.74463899660623,
+        "max": 386.7678460010211
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "lockstep",
+      "init_state_index": 1,
+      "success": true,
+      "success_within_wall_budget": null,
+      "ticks": 79,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 10.818984047000413,
+      "sim_seconds": 3.95,
+      "realtime_factor": 0.36509897628466753,
+      "final_goal_xy_mm": 9.899483759926554,
+      "normal_chunk_count": 7,
+      "generated_chunks_including_bootstrap": 8,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 16,
+      "ros_all_verified": true,
+      "effective_control_hz": 7.275735720588078,
+      "model_call_ms": {
+        "count": 7,
+        "mean": 377.84613543044543,
+        "median": 380.8490139999776,
+        "p95": 447.99125160207035,
+        "min": 249.24542799999472,
+        "max": 468.54205500130774
+      },
+      "worker_with_ros_ms": {
+        "count": 7,
+        "mean": 409.0498441437376,
+        "median": 413.0946910008788,
+        "p95": 486.6937723993032,
+        "min": 274.4786550028948,
+        "max": 510.4640779973124
+      },
+      "action_source_age_ms": {
+        "count": 69,
+        "mean": 863.453178958203,
+        "median": 871.4036650053458,
+        "p95": 1352.6951953987007,
+        "min": 276.8037070054561,
+        "max": 1487.0788430052926
+      },
+      "camera_source_age_ms": {
+        "count": 69,
+        "mean": 42.66748242071776,
+        "median": 0.9919880030793138,
+        "p95": 415.7203146009124,
+        "min": 0.7907729959697463,
+        "max": 513.1288090051385
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "lockstep",
+      "init_state_index": 2,
+      "success": true,
+      "success_within_wall_budget": null,
+      "ticks": 81,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 10.297227994000423,
+      "sim_seconds": 4.05,
+      "realtime_factor": 0.3933097336836372,
+      "final_goal_xy_mm": 21.406826337160542,
+      "normal_chunk_count": 8,
+      "generated_chunks_including_bootstrap": 9,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 18,
+      "ros_all_verified": true,
+      "effective_control_hz": 8.15856275800061,
+      "model_call_ms": {
+        "count": 8,
+        "mean": 357.53063800075324,
+        "median": 352.67900050166645,
+        "p95": 388.5164170511416,
+        "min": 320.87011900148354,
+        "max": 391.32924700243166
+      },
+      "worker_with_ros_ms": {
+        "count": 8,
+        "mean": 384.97326750166394,
+        "median": 379.972615497536,
+        "p95": 417.24839335292927,
+        "min": 349.4298330042511,
+        "max": 420.5850830039708
+      },
+      "action_source_age_ms": {
+        "count": 71,
+        "mean": 780.8640243664497,
+        "median": 777.2195719953743,
+        "p95": 1171.3462059997255,
+        "min": 351.53540000465,
+        "max": 1221.3455210003303
+      },
+      "camera_source_age_ms": {
+        "count": 71,
+        "mean": 44.43446802804214,
+        "median": 0.8881410030880943,
+        "p95": 382.3027610014833,
+        "min": 0.782385999627877,
+        "max": 422.6363970010425
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "lockstep",
+      "init_state_index": 3,
+      "success": true,
+      "success_within_wall_budget": null,
+      "ticks": 76,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 9.257467586998246,
+      "sim_seconds": 3.8000000000000003,
+      "realtime_factor": 0.41047942801732873,
+      "final_goal_xy_mm": 6.675753329138834,
+      "normal_chunk_count": 7,
+      "generated_chunks_including_bootstrap": 8,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 16,
+      "ros_all_verified": true,
+      "effective_control_hz": 8.182251560282312,
+      "model_call_ms": {
+        "count": 7,
+        "mean": 298.40584928336153,
+        "median": 307.2250109980814,
+        "p95": 332.12504009570694,
+        "min": 238.33951100095874,
+        "max": 335.42175899492577
+      },
+      "worker_with_ros_ms": {
+        "count": 7,
+        "mean": 325.0889872849387,
+        "median": 336.0064060034347,
+        "p95": 357.92760439871927,
+        "min": 267.2460859976127,
+        "max": 360.66024799947627
+      },
+      "action_source_age_ms": {
+        "count": 66,
+        "mean": 724.5304796964443,
+        "median": 713.103621998016,
+        "p95": 1155.8197392478178,
+        "min": 269.78970199706964,
+        "max": 1222.3475270002382
+      },
+      "camera_source_age_ms": {
+        "count": 66,
+        "mean": 35.59673742501852,
+        "median": 0.967294501606375,
+        "p95": 337.1873907508416,
+        "min": 0.8354480014531873,
+        "max": 362.75085899978876
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "lockstep",
+      "init_state_index": 4,
+      "success": true,
+      "success_within_wall_budget": null,
+      "ticks": 74,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 9.799632875998213,
+      "sim_seconds": 3.7,
+      "realtime_factor": 0.37756516461573153,
+      "final_goal_xy_mm": 25.935656572806323,
+      "normal_chunk_count": 7,
+      "generated_chunks_including_bootstrap": 8,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 16,
+      "ros_all_verified": true,
+      "effective_control_hz": 7.521554659056988,
+      "model_call_ms": {
+        "count": 7,
+        "mean": 345.29206100082126,
+        "median": 336.0236920052557,
+        "p95": 387.8179326020472,
+        "min": 318.2245520001743,
+        "max": 391.467924004246
+      },
+      "worker_with_ros_ms": {
+        "count": 7,
+        "mean": 416.4189031434944,
+        "median": 371.8550889971084,
+        "p95": 577.8326367028055,
+        "min": 345.454875001451,
+        "max": 645.698637003079
+      },
+      "action_source_age_ms": {
+        "count": 64,
+        "mean": 828.0063852321291,
+        "median": 830.6110139965313,
+        "p95": 1256.5847638536068,
+        "min": 347.65826600050787,
+        "max": 1502.6409349957248
+      },
+      "camera_source_age_ms": {
+        "count": 64,
+        "mean": 46.62915173344118,
+        "median": 0.9393464970344212,
+        "p95": 373.93330349477765,
+        "min": 0.824830996862147,
+        "max": 647.9362139943987
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "lockstep",
+      "init_state_index": 5,
+      "success": true,
+      "success_within_wall_budget": null,
+      "ticks": 72,
+      "hold_ticks": 0,
+      "hold_fraction": 0.0,
+      "wall_seconds": 9.065854252999998,
+      "sim_seconds": 3.6,
+      "realtime_factor": 0.3970944049545819,
+      "final_goal_xy_mm": 9.725107565124565,
+      "normal_chunk_count": 7,
+      "generated_chunks_including_bootstrap": 8,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 16,
+      "ros_all_verified": true,
+      "effective_control_hz": 7.9156021499162845,
+      "model_call_ms": {
+        "count": 7,
+        "mean": 296.45212885744905,
+        "median": 295.76751699642045,
+        "p95": 325.68026180233574,
+        "min": 261.7875100040692,
+        "max": 327.07895600469783
+      },
+      "worker_with_ros_ms": {
+        "count": 7,
+        "mean": 324.59285743035645,
+        "median": 321.39255000220146,
+        "p95": 354.49252590115066,
+        "min": 293.06736700527836,
+        "max": 356.1016710009426
+      },
+      "action_source_age_ms": {
+        "count": 62,
+        "mean": 733.0158404358606,
+        "median": 711.0729679952783,
+        "p95": 1148.0003125026997,
+        "min": 295.43560699676163,
+        "max": 1208.8396969993482
+      },
+      "camera_source_age_ms": {
+        "count": 62,
+        "mean": 37.793681371230406,
+        "median": 0.9614970003894996,
+        "p95": 323.1050763497478,
+        "min": 0.8480969991069287,
+        "max": 358.19752299721586
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "realtime",
+      "init_state_index": 1,
+      "success": true,
+      "success_within_wall_budget": true,
+      "ticks": 153,
+      "hold_ticks": 66,
+      "hold_fraction": 0.43137254901960786,
+      "wall_seconds": 7.62027181799931,
+      "sim_seconds": 7.65,
+      "realtime_factor": 1.0039011970584135,
+      "final_goal_xy_mm": 17.930562544349897,
+      "normal_chunk_count": 8,
+      "generated_chunks_including_bootstrap": 9,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 18,
+      "ros_all_verified": true,
+      "effective_control_hz": 19.998005743608907,
+      "model_call_ms": {
+        "count": 8,
+        "mean": 347.0156008752383,
+        "median": 333.9893384982133,
+        "p95": 388.8407826045295,
+        "min": 308.02820199460257,
+        "max": 391.22914200561354
+      },
+      "worker_with_ros_ms": {
+        "count": 8,
+        "mean": 374.9416202508655,
+        "median": 361.29731649998575,
+        "p95": 418.13454095135967,
+        "min": 336.08328900299966,
+        "max": 421.21233000216307
+      },
+      "action_source_age_ms": {
+        "count": 77,
+        "mean": 791.2035225717655,
+        "median": 788.5926460003247,
+        "p95": 1040.6297599998652,
+        "min": 486.70318000222323,
+        "max": 1091.2130549986614
+      },
+      "camera_source_age_ms": {
+        "count": 143,
+        "mean": 184.68023620338678,
+        "median": 187.37866899755318,
+        "p95": 284.4701717003773,
+        "min": 87.97166199656203,
+        "max": 290.2929609990679
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "realtime",
+      "init_state_index": 2,
+      "success": true,
+      "success_within_wall_budget": true,
+      "ticks": 181,
+      "hold_ticks": 91,
+      "hold_fraction": 0.5027624309392266,
+      "wall_seconds": 9.041882908000844,
+      "sim_seconds": 9.05,
+      "realtime_factor": 1.0008977214239276,
+      "final_goal_xy_mm": 11.67246693519336,
+      "normal_chunk_count": 9,
+      "generated_chunks_including_bootstrap": 10,
+      "normal_chunks_completed_after_episode": 1,
+      "ros_exchanges": 20,
+      "ros_all_verified": true,
+      "effective_control_hz": 19.95029648305292,
+      "model_call_ms": {
+        "count": 9,
+        "mean": 329.1698028883224,
+        "median": 330.4995759972371,
+        "p95": 375.76063460001023,
+        "min": 277.10281000327086,
+        "max": 391.35115899989614
+      },
+      "worker_with_ros_ms": {
+        "count": 9,
+        "mean": 518.5617401115856,
+        "median": 360.69806400337256,
+        "p95": 1248.6946498029279,
+        "min": 307.522416995198,
+        "max": 1800.7890230001067
+      },
+      "action_source_age_ms": {
+        "count": 80,
+        "mean": 933.9741389877418,
+        "median": 786.8173160022707,
+        "p95": 2239.8159862499597,
+        "min": 410.8683619997464,
+        "max": 2437.106188997859
+      },
+      "camera_source_age_ms": {
+        "count": 171,
+        "mean": 173.30688326842525,
+        "median": 184.6717849984998,
+        "p95": 260.9529829969688,
+        "min": 85.64046600076836,
+        "max": 333.405393997964
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "realtime",
+      "init_state_index": 3,
+      "success": true,
+      "success_within_wall_budget": true,
+      "ticks": 144,
+      "hold_ticks": 58,
+      "hold_fraction": 0.4027777777777778,
+      "wall_seconds": 7.170995886001037,
+      "sim_seconds": 7.2,
+      "realtime_factor": 1.004044642398357,
+      "final_goal_xy_mm": 17.653570280662667,
+      "normal_chunk_count": 8,
+      "generated_chunks_including_bootstrap": 9,
+      "normal_chunks_completed_after_episode": 0,
+      "ros_exchanges": 18,
+      "ros_all_verified": true,
+      "effective_control_hz": 19.996284547694206,
+      "model_call_ms": {
+        "count": 8,
+        "mean": 319.6100362501966,
+        "median": 317.3311485006707,
+        "p95": 352.7434871499281,
+        "min": 294.9426359991776,
+        "max": 362.6262030011276
+      },
+      "worker_with_ros_ms": {
+        "count": 8,
+        "mean": 348.20200937610934,
+        "median": 346.5898055001162,
+        "p95": 381.3041356028407,
+        "min": 322.8941740017035,
+        "max": 391.5739560034126
+      },
+      "action_source_age_ms": {
+        "count": 76,
+        "mean": 729.1225306314453,
+        "median": 736.5604255028302,
+        "p95": 952.1283182493789,
+        "min": 441.97000400163233,
+        "max": 1040.2708889960195
+      },
+      "camera_source_age_ms": {
+        "count": 134,
+        "mean": 191.49621694033607,
+        "median": 188.55707649709075,
+        "p95": 288.15818350049085,
+        "min": 86.37758600525558,
+        "max": 338.53066000301624
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "realtime",
+      "init_state_index": 4,
+      "success": true,
+      "success_within_wall_budget": true,
+      "ticks": 151,
+      "hold_ticks": 71,
+      "hold_fraction": 0.47019867549668876,
+      "wall_seconds": 7.518200049998995,
+      "sim_seconds": 7.550000000000001,
+      "realtime_factor": 1.004229729162502,
+      "final_goal_xy_mm": 13.330501533355008,
+      "normal_chunk_count": 8,
+      "generated_chunks_including_bootstrap": 9,
+      "normal_chunks_completed_after_episode": 1,
+      "ros_exchanges": 18,
+      "ros_all_verified": true,
+      "effective_control_hz": 19.9957038883673,
+      "model_call_ms": {
+        "count": 8,
+        "mean": 343.93481924962543,
+        "median": 354.26038099831203,
+        "p95": 399.35149430384627,
+        "min": 289.864148995548,
+        "max": 414.49024800385814
+      },
+      "worker_with_ros_ms": {
+        "count": 8,
+        "mean": 467.20676999939315,
+        "median": 397.611391999817,
+        "p95": 858.3141671962945,
+        "min": 315.82965300185606,
+        "max": 1080.7947849971242
+      },
+      "action_source_age_ms": {
+        "count": 70,
+        "mean": 862.251214313853,
+        "median": 793.4868239972275,
+        "p95": 1515.0638756014812,
+        "min": 439.3448709961376,
+        "max": 1687.7429529995425
+      },
+      "camera_source_age_ms": {
+        "count": 141,
+        "mean": 183.70265572356408,
+        "median": 186.81516600190662,
+        "p95": 286.14946699963184,
+        "min": 87.33171100175241,
+        "max": 327.52121800149325
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    },
+    {
+      "model": "pi05",
+      "mode": "realtime",
+      "init_state_index": 5,
+      "success": true,
+      "success_within_wall_budget": true,
+      "ticks": 133,
+      "hold_ticks": 53,
+      "hold_fraction": 0.39849624060150374,
+      "wall_seconds": 6.630032822002249,
+      "sim_seconds": 6.65,
+      "realtime_factor": 1.003011625814504,
+      "final_goal_xy_mm": 25.19660020804289,
+      "normal_chunk_count": 8,
+      "generated_chunks_including_bootstrap": 9,
+      "normal_chunks_completed_after_episode": 1,
+      "ros_exchanges": 18,
+      "ros_all_verified": true,
+      "effective_control_hz": 19.96438887223333,
+      "model_call_ms": {
+        "count": 8,
+        "mean": 321.03089362408355,
+        "median": 321.4489370038791,
+        "p95": 366.6468356954283,
+        "min": 276.38513499550754,
+        "max": 375.1527099957457
+      },
+      "worker_with_ros_ms": {
+        "count": 8,
+        "mean": 349.5643887499682,
+        "median": 347.05646799557144,
+        "p95": 398.3432414534036,
+        "min": 302.56196499976795,
+        "max": 406.9792860027519
+      },
+      "action_source_age_ms": {
+        "count": 70,
+        "mean": 742.5332500576458,
+        "median": 738.8109435014485,
+        "p95": 984.980594249646,
+        "min": 438.8912470021751,
+        "max": 1037.4294130015187
+      },
+      "camera_source_age_ms": {
+        "count": 123,
+        "mean": 186.85964178049045,
+        "median": 187.80288499692688,
+        "p95": 286.86740760094835,
+        "min": 86.95676700153854,
+        "max": 336.9139010028448
+      },
+      "source_fields": {
+        "success": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/result.json",
+          "field": "success"
+        },
+        "model_call_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/chunks.json",
+          "field": "[kind=chunk, bootstrap=false].metadata.model_inference_ms"
+        },
+        "worker_with_ros_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/chunks.json",
+          "field": "([kind=chunk, bootstrap=false].finished_time - started_time)*1000"
+        },
+        "hold_fraction": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/ticks.jsonl",
+          "field": "count(held=true) / count(ticks)"
+        },
+        "effective_control_hz": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/ticks.jsonl",
+          "field": "1 / mean(non-null tick_interval_s)"
+        },
+        "action_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/ticks.jsonl",
+          "field": "observation_age_s*1000 for non-held actions excluding bootstrap request IDs"
+        },
+        "camera_source_age_ms": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/ticks.jsonl",
+          "field": "camera_age_s*1000 after final bootstrap action tick; includes held ticks"
+        },
+        "final_goal_xy_mm": {
+          "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/result.json",
+          "field": "goal_xy_error_m*1000"
+        }
+      }
+    }
+  ],
+  "initial_pairing": {
+    "within_same_execution_mode_across_models": [
+      {
+        "mode": "lockstep",
+        "initial_state": 1,
+        "all_sensor_hashes_equal": true,
+        "selected_physical_metrics_equal": true
+      },
+      {
+        "mode": "lockstep",
+        "initial_state": 2,
+        "all_sensor_hashes_equal": true,
+        "selected_physical_metrics_equal": true
+      },
+      {
+        "mode": "lockstep",
+        "initial_state": 3,
+        "all_sensor_hashes_equal": true,
+        "selected_physical_metrics_equal": true
+      },
+      {
+        "mode": "lockstep",
+        "initial_state": 4,
+        "all_sensor_hashes_equal": true,
+        "selected_physical_metrics_equal": true
+      },
+      {
+        "mode": "lockstep",
+        "initial_state": 5,
+        "all_sensor_hashes_equal": true,
+        "selected_physical_metrics_equal": true
+      },
+      {
+        "mode": "realtime",
+        "initial_state": 1,
+        "all_sensor_hashes_equal": true,
+        "selected_physical_metrics_equal": true
+      },
+      {
+        "mode": "realtime",
+        "initial_state": 2,
+        "all_sensor_hashes_equal": true,
+        "selected_physical_metrics_equal": true
+      },
+      {
+        "mode": "realtime",
+        "initial_state": 3,
+        "all_sensor_hashes_equal": true,
+        "selected_physical_metrics_equal": true
+      },
+      {
+        "mode": "realtime",
+        "initial_state": 4,
+        "all_sensor_hashes_equal": true,
+        "selected_physical_metrics_equal": true
+      },
+      {
+        "mode": "realtime",
+        "initial_state": 5,
+        "all_sensor_hashes_equal": true,
+        "selected_physical_metrics_equal": true
+      }
+    ],
+    "across_execution_modes_within_model": [
+      {
+        "model": "smolvla",
+        "initial_state": 1,
+        "selected_physical_metrics_equal": true,
+        "sensor_hashes_equal": false
+      },
+      {
+        "model": "smolvla",
+        "initial_state": 2,
+        "selected_physical_metrics_equal": true,
+        "sensor_hashes_equal": false
+      },
+      {
+        "model": "smolvla",
+        "initial_state": 3,
+        "selected_physical_metrics_equal": true,
+        "sensor_hashes_equal": false
+      },
+      {
+        "model": "smolvla",
+        "initial_state": 4,
+        "selected_physical_metrics_equal": true,
+        "sensor_hashes_equal": false
+      },
+      {
+        "model": "smolvla",
+        "initial_state": 5,
+        "selected_physical_metrics_equal": true,
+        "sensor_hashes_equal": false
+      },
+      {
+        "model": "pi05",
+        "initial_state": 1,
+        "selected_physical_metrics_equal": true,
+        "sensor_hashes_equal": false
+      },
+      {
+        "model": "pi05",
+        "initial_state": 2,
+        "selected_physical_metrics_equal": true,
+        "sensor_hashes_equal": false
+      },
+      {
+        "model": "pi05",
+        "initial_state": 3,
+        "selected_physical_metrics_equal": true,
+        "sensor_hashes_equal": false
+      },
+      {
+        "model": "pi05",
+        "initial_state": 4,
+        "selected_physical_metrics_equal": true,
+        "sensor_hashes_equal": false
+      },
+      {
+        "model": "pi05",
+        "initial_state": 5,
+        "selected_physical_metrics_equal": true,
+        "sensor_hashes_equal": false
+      }
+    ],
+    "interpretation": "Same raw input across models within a mode. Across lockstep/realtime physics is matched, but cached synchronous camera versus regenerated clone camera has different observation phase; not a pure latency intervention."
+  },
+  "formal_vs_profile_weights": [
+    {
+      "model": "smolvla",
+      "formal_source": "artifacts/realtime-vla/formal-smolvla-e10/model-audit.json",
+      "formal_field": "weights_before_sha256",
+      "profile_source": "artifacts/realtime-vla/inference-profile-v1/smolvla-native/report.json",
+      "profile_field": "frozen_audit.weights_before_sha256",
+      "weights_sha256": "1012b19e3b2f43300a8c6d2cf5a6d463c5584100aed41fab8535982b5d390a98",
+      "equal": true
+    },
+    {
+      "model": "pi05",
+      "formal_source": "artifacts/realtime-vla/formal-pi05-e10/model-audit.json",
+      "formal_field": "weights_before_sha256",
+      "profile_source": "artifacts/realtime-vla/inference-profile-v1/pi05-native/report.json",
+      "profile_field": "frozen_audit.weights_before_sha256",
+      "weights_sha256": "569e834f3216c559f61c910b76b4844ad026c8c7ab6b1cadcdea21984f6102e4",
+      "equal": true
+    }
+  ],
+  "limits": [
+    "One known LIBERO Spatial task with five fixed initial states; ten episodes per model do not establish suite-level quality or statistical superiority.",
+    "SmolVLA main experiment was performed first; pi05 was a subsequent frozen-model addition using the same recorded protocol. Hardware scheduling/thermal/software timing may differ across sessions.",
+    "Lockstep allows up to280 control steps (14 simulated seconds) and pauses physical progress during inference/rendering. Realtime runs for at most14 actual seconds or280 ticks. Lockstep success is not success within14 actual seconds.",
+    "Both models generate50 native actions with10 flow steps; main scheduler executes at most10 from each chunk and requests only after queue exhaustion.",
+    "Same seed does not ensure identical asynchronous trajectories: camera/inference completion crossing one control period changes inputs and chunk switch position.",
+    "Both models succeed5/5 under lockstep; only the measured realtime success count differs3/5 versus5/5. Do not claim pi05 superior under every metric or all tasks.",
+    "A lower worker time accompanies less waiting and more realtime task completion but does not isolate a causal effect of model latency from policy architecture, task adaptation, trajectory and sensor scheduling.",
+    "Task model_inference_ms excludes raw input construction/saved preprocessing, whereas fixed-observation profiling wall_ms covers the whole native predict request. Different timing boundaries also contribute to their different numeric values."
+  ],
+  "sources": [
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/config.json",
+      "sha256": "77ac605f493e29c5dafbf8f2a67782b5c10db4f68d1aed0a094f2971888ff9d2",
+      "bytes": 472
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/chunks.json",
+      "sha256": "5759b03f81d6d9a705c5c74a29365dc4b668641452cd6137876a95a268c5de09",
+      "bytes": 114524
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/initial.json",
+      "sha256": "4f3a5efe7ef5cea84caaf43d64ffb310d3b72eedfc2b16b07fa00f2b0242003a",
+      "bytes": 2087
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/result.json",
+      "sha256": "1959fc78fcbe7e0549dc368aa6f613c87bac5b472a64c73660731b8fc7d233e4",
+      "bytes": 2199
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init1/ticks.jsonl",
+      "sha256": "c9681ee283802cc6a7f014b0764e20688cbbde9576c7b1c9450c8949b85a62be",
+      "bytes": 89663
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/chunks.json",
+      "sha256": "da8c6871ace6bf3e00aeaf6d777e40db7b7bf2371e4acd9d2c9aa4c54f0a8292",
+      "bytes": 128617
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/initial.json",
+      "sha256": "7882f0ce97b360347de7cfb029959677fc38c89e49d7db92f7670064cdfcd2bf",
+      "bytes": 2091
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/result.json",
+      "sha256": "353b47278f573b8da08d604082a09182b569fccc10fc6dc1f50b2fcf8c060495",
+      "bytes": 2229
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init2/ticks.jsonl",
+      "sha256": "ffe5c0dfa8d0872f24de6c10c48975a52f4df4f17d93526c19cc852560f07aa0",
+      "bytes": 91885
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/chunks.json",
+      "sha256": "0e195c682884654c226bef09b4a36feba2c3ac6a81e5e1feb9734a1722c0455b",
+      "bytes": 114572
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/initial.json",
+      "sha256": "b57a6da027736b5a6af4ce1acec08a3c42e8d45cda08fd1f1cc4cbcbd001ff94",
+      "bytes": 2082
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/result.json",
+      "sha256": "bf7baf675757b52712509d687e274fcee80daf771d3128dc585d3492cfdf00c1",
+      "bytes": 2214
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init3/ticks.jsonl",
+      "sha256": "4d30542d0763ac241faca12ae14140df98ff53245394de9d921891110e954bd7",
+      "bytes": 86299
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/chunks.json",
+      "sha256": "87dc8bb7d7409b78b6514a0041d34fa30585adbe4d30f290467d08cced35ac75",
+      "bytes": 114609
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/initial.json",
+      "sha256": "f066f4c252c1cbbaf1db50637920373474f646d1dc715f3d602dedb3cad06cdc",
+      "bytes": 2095
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/result.json",
+      "sha256": "f188d9b30944aaacff5d94e1eb5a0ace7e26db913d901d9624faa6c158f9eb29",
+      "bytes": 2191
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init4/ticks.jsonl",
+      "sha256": "e2b2a2ccce2885a030640bf9bda88e7192a6d1ca3cd116e81062b85574e1d855",
+      "bytes": 83851
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/chunks.json",
+      "sha256": "1d2b71d05d64b94bb4d4d5033d7b628c841d519d5c4b8658d4e59f24be4a5b87",
+      "bytes": 114492
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/initial.json",
+      "sha256": "cd2dafb7536ff692b219195da410b855df1596cdfde25b1f544de351c373a86d",
+      "bytes": 2087
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/result.json",
+      "sha256": "c5a66e3747d7086e74e6365ae413859a33235c1b1058274ec61b5207df26cc8f",
+      "bytes": 2194
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/lockstep-init5/ticks.jsonl",
+      "sha256": "c264686d4814c08faffef15729a6a5702ac1eca51ff77880bbc90219a844dae6",
+      "bytes": 81544
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/model-audit.json",
+      "sha256": "60dd950efbd903b3674a70bf905b622238f9d6efcc767a6ff2aa47d1a3dd81a6",
+      "bytes": 1747
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/chunks.json",
+      "sha256": "14d9e355e66f385157ae94d4fdcff14636aa71e6bc221274ddc6d58c3ccfa518",
+      "bytes": 128930
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/initial.json",
+      "sha256": "2c4d2c8a4ad249f877d4a8365991fa71a59403b2679fff6154503f7c5e1ccbcb",
+      "bytes": 2925
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/result.json",
+      "sha256": "9d49901299fe556414104550883aa7d29884f9615317fccb137d1dafbe67256a",
+      "bytes": 2220
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/ticks.jsonl",
+      "sha256": "6496117401736f6993e31be5a6d975875065ad36f2136be1f06856ace90235e4",
+      "bytes": 166444
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/chunks.json",
+      "sha256": "e91d0d5befd0ff0e291391faa8d4e73b0c398240bedd3bc8edfc998867edb556",
+      "bytes": 142841
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/initial.json",
+      "sha256": "5c4d79c7bd58484e9083f2b1e47534b8f4000750091b742cde1114ff8598e00a",
+      "bytes": 2929
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/result.json",
+      "sha256": "54702520c0d10af8994aa461644f3061cdb6425aef98875c47fe2a1f77be3585",
+      "bytes": 2222
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init2/ticks.jsonl",
+      "sha256": "693a16b6d1a67bbe7bb52bc969e54233855559fae632a04a122e84b6ce10d444",
+      "bytes": 194759
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/chunks.json",
+      "sha256": "c66715d6a437693f73aa3a11483e1df5cef72159afb656f89c0546ade55bc725",
+      "bytes": 128837
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/initial.json",
+      "sha256": "d2490200adc15ef9dd544431726bcf75b3fb12ae5fcb0bd6ec0bbc27c63ae802",
+      "bytes": 2920
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/result.json",
+      "sha256": "a85c4c5882c290c9c20acba38b88e288865ed9484876f083234230684024306c",
+      "bytes": 2221
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init3/ticks.jsonl",
+      "sha256": "36581eb74eea6d3e92885ccf6a50a91251a9f7d44d828a12dbfdbd9f760a49f1",
+      "bytes": 157468
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/chunks.json",
+      "sha256": "88c03cf01f8e69dbe70f449747812cae5204f746dcadc3cb0fe84b0f6c3a6c52",
+      "bytes": 128644
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/initial.json",
+      "sha256": "36ba8562ac5ca4d90c7a1a02d5130bb430c089aa4165a0d065eeef277801f8b4",
+      "bytes": 2933
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/result.json",
+      "sha256": "17ae844c8beef400fbe6e9457ec21d4b3517eaaff780249c3209608d17dbf195",
+      "bytes": 2233
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init4/ticks.jsonl",
+      "sha256": "7a75bf0954dd0d2fc8426eb7cf6e62630d3f15a289a0d2ac24507449b7a5be26",
+      "bytes": 163683
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/chunks.json",
+      "sha256": "4ab017892c83d454db46b9c78100cb166bfc04cd90736911fcf42022e7d48da5",
+      "bytes": 128597
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/initial.json",
+      "sha256": "bc6eea4498bf64806921eda04c7a162d8cbdbe59af2605b61620fe0ade99d613",
+      "bytes": 2925
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/result.json",
+      "sha256": "c07c21d51422ea83f5de1689e5c206abaeaf5a4fcd9b05f6accbd071fde7bcf2",
+      "bytes": 2224
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-pi05-e10/realtime-init5/ticks.jsonl",
+      "sha256": "cf919eaeb33e2027967e45c3601e9d2e87053bfd23f566e0797c952971969b31",
+      "bytes": 145472
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/config.json",
+      "sha256": "2a7c1860cfb3584d8bc26ee29ce726a72586260d67949f5d230d27211ae196f0",
+      "bytes": 478
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/chunks.json",
+      "sha256": "dba48840572a124f4433073d33a7a0ffdd3f15405ce9b4fdeddb88d6debd5064",
+      "bytes": 111873
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/initial.json",
+      "sha256": "4f3a5efe7ef5cea84caaf43d64ffb310d3b72eedfc2b16b07fa00f2b0242003a",
+      "bytes": 2087
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/result.json",
+      "sha256": "ddc0f41fc2438cf4a9b9666aae612c59b438855a2e899578902b8c7f60882b40",
+      "bytes": 2195
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init1/ticks.jsonl",
+      "sha256": "d3bf4cf4a1d5aac51a228100a91e4f9b364a6906575c21ed9d7303b9f5035318",
+      "bytes": 89199
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/chunks.json",
+      "sha256": "bada75ed98c572e74140ad4c11b914ab85f0f8dbde16e2da7dd97739535c846e",
+      "bytes": 125997
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/initial.json",
+      "sha256": "7882f0ce97b360347de7cfb029959677fc38c89e49d7db92f7670064cdfcd2bf",
+      "bytes": 2091
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/result.json",
+      "sha256": "3f4d68500e8280754293d0e60a2332e17e0238a3b7d337ed455ffad3815d3df9",
+      "bytes": 2212
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init2/ticks.jsonl",
+      "sha256": "d9dcec20f14d4804f698caa7630b2bcfd6facb407af42dd7e8058116bfb2f244",
+      "bytes": 92623
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/chunks.json",
+      "sha256": "0886588d8abc6b94118e61546b60e4cff7fbc6e6a4c3701b0fb8400840370b9a",
+      "bytes": 111930
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/initial.json",
+      "sha256": "b57a6da027736b5a6af4ce1acec08a3c42e8d45cda08fd1f1cc4cbcbd001ff94",
+      "bytes": 2082
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/result.json",
+      "sha256": "aa5b68bca624b9c8d225a7a1bbdf8f1d1e5e9555bc99e9806c600ae5aa5807fd",
+      "bytes": 2197
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init3/ticks.jsonl",
+      "sha256": "076a5340609a628bb6c906c69a1f415e4979ade5d2fb758dd1d1085e4bb27df4",
+      "bytes": 89219
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/chunks.json",
+      "sha256": "d80c14b223fc5a1d99aeb2e01b645574afa4ddc286dfb598b7b4586f76687873",
+      "bytes": 112056
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/initial.json",
+      "sha256": "f066f4c252c1cbbaf1db50637920373474f646d1dc715f3d602dedb3cad06cdc",
+      "bytes": 2095
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/result.json",
+      "sha256": "0bebc42cc5f548bff22d13ba8b427d8004c5b65ee798f78dfda42dfdbd1f60ed",
+      "bytes": 2194
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init4/ticks.jsonl",
+      "sha256": "d7c1f9b6abe4def369a83bdae97b2657aec173b6f9ed340802df36826063a571",
+      "bytes": 86967
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/chunks.json",
+      "sha256": "1bda62215dd6b4efc9fe800416198e7b4d4afce7517e4acd3152f82bcc6339ea",
+      "bytes": 111967
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/initial.json",
+      "sha256": "cd2dafb7536ff692b219195da410b855df1596cdfde25b1f544de351c373a86d",
+      "bytes": 2087
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/result.json",
+      "sha256": "324471d95021a0f18570b9b3a9a1a7e2ec58840a91e343d0b561d4ef6e26e2ab",
+      "bytes": 2218
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/lockstep-init5/ticks.jsonl",
+      "sha256": "cdaebf6be6b6e4449b88c367dafdcccc530c5d5966559b60e3991ca3a885e9da",
+      "bytes": 85871
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/model-audit.json",
+      "sha256": "c2e48eba240c2826d27ee19c8f67d0aa449ab1ddd751172a8dd0593fe64e1136",
+      "bytes": 886
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/chunks.json",
+      "sha256": "1594498ce412335d956668a570dc8656ea0622a4b0efacc6b81e1db76841ff62",
+      "bytes": 125894
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/initial.json",
+      "sha256": "2c4d2c8a4ad249f877d4a8365991fa71a59403b2679fff6154503f7c5e1ccbcb",
+      "bytes": 2925
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/result.json",
+      "sha256": "5530e7a3ef2832a36a7322e082c063fca10acd8b43a1caf506ef70ed79f46557",
+      "bytes": 2232
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init1/ticks.jsonl",
+      "sha256": "be6e0aa0ac81abfd39859c1aa7f67af988b28d8dcac9495b3e54a736b8b67759",
+      "bytes": 189120
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/chunks.json",
+      "sha256": "a5589ec2d79f3094616de2a649a81329603489631b990936d83d9a42ed9cb9eb",
+      "bytes": 125943
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/initial.json",
+      "sha256": "5c4d79c7bd58484e9083f2b1e47534b8f4000750091b742cde1114ff8598e00a",
+      "bytes": 2929
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/result.json",
+      "sha256": "6eee52bf557ccb02b4d2d9b867550a37a0ce4e5b555075935e0172b08ae5dd48",
+      "bytes": 2212
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init2/ticks.jsonl",
+      "sha256": "14336cfe31878cbf1ab6569b843d2ee0f3a87b38a2499a84348d35ca9e9e2069",
+      "bytes": 184609
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/chunks.json",
+      "sha256": "7d8e97f805b3841ee3fca2e209cafc50942c00b1715c91a69df0d25019a4779e",
+      "bytes": 182268
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/initial.json",
+      "sha256": "d2490200adc15ef9dd544431726bcf75b3fb12ae5fcb0bd6ec0bbc27c63ae802",
+      "bytes": 2920
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/result.json",
+      "sha256": "c511ffcaf7218d55baf1499d667225d574f895207898ba0250ca742cad4d58ae",
+      "bytes": 2249
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init3/ticks.jsonl",
+      "sha256": "b9677f3651385b5f7f245ca03f1c4b55c7599f44135c02fac5af86008a61b774",
+      "bytes": 299421
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/chunks.json",
+      "sha256": "c612228e946b41d47d5663de9010f8620270415026d379b337fcfbc08782c685",
+      "bytes": 196330
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/initial.json",
+      "sha256": "36ba8562ac5ca4d90c7a1a02d5130bb430c089aa4165a0d065eeef277801f8b4",
+      "bytes": 2933
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/result.json",
+      "sha256": "1c6ba7720339cf35a5dead0845a6d9c9625143348596430a6ed9f970f4298251",
+      "bytes": 2248
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init4/ticks.jsonl",
+      "sha256": "25d5c2297d4b0b8849034bcf80c36bd9ee2c898b840d9718e04826e646112f6c",
+      "bytes": 299054
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/chunks.json",
+      "sha256": "27540b46fdf944b2cf58089b30abb97ccc66e089e157fca001986cdbcfee08e2",
+      "bytes": 126094
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/initial.json",
+      "sha256": "bc6eea4498bf64806921eda04c7a162d8cbdbe59af2605b61620fe0ade99d613",
+      "bytes": 2925
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/result.json",
+      "sha256": "dc2813ad534798694bc71d8eb62fc1626edefa79ed4727ab7c3e531edb9c725b",
+      "bytes": 2221
+    },
+    {
+      "path": "artifacts/realtime-vla/formal-smolvla-e10/realtime-init5/ticks.jsonl",
+      "sha256": "878ddd9ce43973880752415d42b05051912113c1fd0ab86ef6bd58e096ce215b",
+      "bytes": 187788
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-v1/pi05-native/report.json",
+      "sha256": "367e725b3f5b49f329163d0c83ae5d273d6da85bf03a09c4bfcdff80f1d24c8c",
+      "bytes": 1869936
+    },
+    {
+      "path": "artifacts/realtime-vla/inference-profile-v1/smolvla-native/report.json",
+      "sha256": "65d7266dcffbb3c79487d44d8097123dd8f0b5f271eae1eb2194b9b5895bb29d",
+      "bytes": 1763602
+    },
+    {
+      "path": "artifacts/realtime-vla/pi05-report/summary.json",
+      "sha256": "a6cadb4f32f34d9f238d824201d92d1d6b3457dbd1c2819ae201aa91d4b663d2",
+      "bytes": 10357
+    },
+    {
+      "path": "artifacts/realtime-vla/report/summary.json",
+      "sha256": "edfd7ca36c323ac0fa1eee8911056bdffbca71015ee3ffbe5b505663a517da6f",
+      "bytes": 424440
+    },
+    {
+      "path": "experiments/realtime_vla/pi05_runtime.py",
+      "sha256": "4b8b5513b5ca8364daac3ed374aa74175dbeb96f0731fb48a5aee85a11712c2e",
+      "bytes": 23494
+    },
+    {
+      "path": "experiments/realtime_vla/smolvla_runtime.py",
+      "sha256": "37d27abc9ae7a52ff781f3b26d92c4927443c4a92cad1b6c7fe7096bf70b7d28",
+      "bytes": 17757
+    }
+  ],
+  "timing_boundary_code_sources": [
+    {
+      "path": "experiments/realtime_vla/smolvla_runtime.py",
+      "field": "Frozen*.predict: model_started/model_start after saved input preprocessing; model_ms after saved postprocessing and CUDA sync"
+    },
+    {
+      "path": "experiments/realtime_vla/pi05_runtime.py",
+      "field": "Frozen*.predict: model_started/model_start after saved input preprocessing; model_ms after saved postprocessing and CUDA sync"
+    }
+  ]
+}

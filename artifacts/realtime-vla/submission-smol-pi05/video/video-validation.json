@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "all_frames_decoded": 1832,
+  "duration_seconds": 91.6,
+  "size": [
+    1080,
+    720
+  ],
+  "fps": 20,
+  "codec": "h264",
+  "audio": "none",
+  "no_intro_or_explanatory_slides": true,
+  "all_terminal_source_frames_shown": true
+}

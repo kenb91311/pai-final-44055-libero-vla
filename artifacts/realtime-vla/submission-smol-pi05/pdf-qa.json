@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "pages": [
+    {
+      "page": 1,
+      "characters": 754,
+      "width": 594.95996,
+      "height": 841.91998
+    },
+    {
+      "page": 2,
+      "characters": 1103,
+      "width": 594.95996,
+      "height": 841.91998
+    },
+    {
+      "page": 3,
+      "characters": 1083,
+      "width": 594.95996,
+      "height": 841.91998
+    },
+    {
+      "page": 4,
+      "characters": 912,
+      "width": 594.95996,
+      "height": 841.91998
+    },
+    {
+      "page": 5,
+      "characters": 1192,
+      "width": 594.95996,
+      "height": 841.91998
+    },
+    {
+      "page": 6,
+      "characters": 1339,
+      "width": 594.95996,
+      "height": 841.91998
+    }
+  ],
+  "geometry": [
+    {
+      "page": 1,
+      "height": 1123,
+      "scrollHeight": 1123,
+      "contentBottom": 967,
+      "footerTop": 1066.953125,
+      "footerOverlap": -99.953125
+    },
+    {
+      "page": 2,
+      "height": 1123,
+      "scrollHeight": 1123,
+      "contentBottom": 1016.671875,
+      "footerTop": 1066.953125,
+      "footerOverlap": -50.28125
+    },
+    {
+      "page": 3,
+      "height": 1123,
+      "scrollHeight": 1123,
+      "contentBottom": 1001.921875,
+      "footerTop": 1066.953125,
+      "footerOverlap": -65.03125
+    },
+    {
+      "page": 4,
+      "height": 1123,
+      "scrollHeight": 1123,
+      "contentBottom": 1049.734375,
+      "footerTop": 1066.953125,
+      "footerOverlap": -17.21875
+    },
+    {
+      "page": 5,
+      "height": 1123,
+      "scrollHeight": 1123,
+      "contentBottom": 999.5625,
+      "footerTop": 1066.953125,
+      "footerOverlap": -67.390625
+    },
+    {
+      "page": 6,
+      "height": 1123,
+      "scrollHeight": 1123,
+      "contentBottom": 1035.109375,
+      "footerTop": 1066.953125,
+      "footerOverlap": -31.84375
+    }
+  ],
+  "actualPdfRendered": true,
+  "japaneseTextExtracted": true,
+  "privacyChecks": true,
+  "metadata": {
+    "PDFFormatVersion": "1.4",
+    "Language": null,
+    "EncryptFilterName": null,
+    "IsLinearized": false,
+    "IsAcroFormPresent": false,
+    "IsXFAPresent": false,
+    "IsCollectionPresent": false,
+    "IsSignaturesPresent": false,
+    "Title": "説明資料_PAI最終課題_44055",
+    "Creator": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "Producer": "Skia/PDF m156",
+    "CreationDate": "D:20261102004945+00'00'",
+    "ModDate": "D:20261102004945+00'00'"
+  }
+}

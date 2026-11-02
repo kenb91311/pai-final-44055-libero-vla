@@ -1,0 +1,84 @@
+{
+  "scope": "PAI final44055 SmolVLA and pi05: new6page report and91.6second task-only video",
+  "report_pages": 6,
+  "video_seconds": 91.6,
+  "skill": "japanese-tech-writing",
+  "new_task_trials": false,
+  "files": [
+    {
+      "path": "説明資料_PAI最終課題_44055.pdf",
+      "bytes": 604954,
+      "sha256": "d3a498d101e37eadd9ab3d463b99432c69ffc2be06eb5908a4f794426a26b045"
+    },
+    {
+      "path": "report.html",
+      "bytes": 470706,
+      "sha256": "8e34fb50f390ecdd29e6a31fc1939c14231b8bd2a361fba4400858b3a07d5d23"
+    },
+    {
+      "path": "report-provenance.json",
+      "bytes": 42980,
+      "sha256": "0ea2bbfe83dda3ef579f3c84bbf358c56c600ce5c90347ae9608e84b5533a490"
+    },
+    {
+      "path": "pdf-qa.json",
+      "bytes": 2440,
+      "sha256": "5f6390e465f2d69529ddc306353c9e00eb633d7632f425026d198be49c59e379"
+    },
+    {
+      "path": "evidence-primary.json",
+      "bytes": 100839,
+      "sha256": "7be0c4d2270c10b5aa8946a96c3af68e33e611266c385716c640d08e494b24e7"
+    },
+    {
+      "path": "evidence-continuity.json",
+      "bytes": 55787,
+      "sha256": "5862a400bf8a40857062af235bb5092fdd263ba05e02d6a20c6eb2cfdb87e18d"
+    },
+    {
+      "path": "inference-stages.png",
+      "bytes": 44961,
+      "sha256": "584d72e08dab8a8cb900d967e3623eb40209b4fbd5bb311e0f0f2b44cd9e8c93"
+    },
+    {
+      "path": "inference-stages.svg",
+      "bytes": 11134,
+      "sha256": "4663bcdb2ec1edb190ab0f9543c87061c679a36bad05a5af19acb8fa5b5ef996"
+    },
+    {
+      "path": "task-initial.png",
+      "bytes": 137114,
+      "sha256": "4d4cca557065d0f60e1fab8ba4919ba41b07f73c70e34a68f6395127252f65c7"
+    },
+    {
+      "path": "task-complete.png",
+      "bytes": 150111,
+      "sha256": "1f304f9d1c40b8df9c92ea7de55cb35911bfc09f6d02a8986caf335d75b3fe0c"
+    },
+    {
+      "path": "frame-provenance.json",
+      "bytes": 929,
+      "sha256": "cb37a204dfc14898ddd5b764d74fff99f8f6732b93666c611c7d7daa67376d1d"
+    },
+    {
+      "path": "video/PAI最終課題_44055.mp4",
+      "bytes": 8600455,
+      "sha256": "c93dd8c5b3862088356075e2470424709c5ce47d84365073fb10f5fa67fabd10"
+    },
+    {
+      "path": "video/video-manifest.json",
+      "bytes": 348747,
+      "sha256": "48baad56fd2f5d9c5d8f780c7cdc74cd2c545350d8689532c412a1db35d493d3"
+    },
+    {
+      "path": "video/video-validation.json",
+      "bytes": 255,
+      "sha256": "988f9926abfdba48030a1d941b9153d6a3ce3a1764ea77c732c8e500e3211021"
+    },
+    {
+      "path": "video/YouTube概要欄_PAI最終課題_44055.txt",
+      "bytes": 2029,
+      "sha256": "b02bf74826e9ff3ce4f580a8bf7a625eadb7366226f6316fcd4de5d447754b8e"
+    }
+  ]
+}

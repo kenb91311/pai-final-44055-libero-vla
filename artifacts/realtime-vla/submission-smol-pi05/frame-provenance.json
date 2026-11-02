@@ -1,0 +1,27 @@
+{
+  "source_frame_count": 153,
+  "frames": [
+    {
+      "file": "task-initial.png",
+      "source": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/rollout.mp4",
+      "frame": 0,
+      "source_fps": 20.0,
+      "png_sha256": "4d4cca557065d0f60e1fab8ba4919ba41b07f73c70e34a68f6395127252f65c7"
+    },
+    {
+      "file": "task-middle.png",
+      "source": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/rollout.mp4",
+      "frame": 76,
+      "source_fps": 20.0,
+      "png_sha256": "61cfc6878eacd8eae927bc2b2f382e5cffec6d52658880db41505c93fcb793c2"
+    },
+    {
+      "file": "task-complete.png",
+      "source": "artifacts/realtime-vla/formal-pi05-e10/realtime-init1/rollout.mp4",
+      "frame": 152,
+      "source_fps": 20.0,
+      "png_sha256": "1f304f9d1c40b8df9c92ea7de55cb35911bfc09f6d02a8986caf335d75b3fe0c"
+    }
+  ],
+  "source_sha256": "ea0a6e425ecca4b685262fd305b42e2ef12d3c0174ac2e45a3c61381b4a6065a"
+}

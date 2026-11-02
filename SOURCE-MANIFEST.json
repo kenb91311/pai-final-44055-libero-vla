@@ -1,6 +1,6 @@
 {
   "task": "PAI final assignment 44055: realtime LIBERO bowl transfer",
-  "scope": "Task implementation, standalone runtimes, original35 and separately scoped additional experimental evidence, including frozen inference profiling",
+  "scope": "Final SmolVLA/pi05 task report and source; separately scoped historical FAST, clean continuity and frozen inference evidence",
   "files": [
     {
       "path": ".gitignore",
@@ -29,8 +29,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11505,
-      "sha256": "9221450c89d76dd8d76b035f15ed669ac4d710db18dbe26df7aa6d6e5ac352b3"
+      "bytes": 18071,
+      "sha256": "ac6354b5f952db1734f5f603d67ae2430d98093c82344fe14813ce8398f30809"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -783,6 +783,81 @@
       "sha256": "e07008cde92dc169d27de53df1dcffbc8059203610bda25b78bc307abba51f70"
     },
     {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/evidence-continuity.json",
+      "bytes": 55787,
+      "sha256": "5862a400bf8a40857062af235bb5092fdd263ba05e02d6a20c6eb2cfdb87e18d"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/evidence-primary.json",
+      "bytes": 100839,
+      "sha256": "7be0c4d2270c10b5aa8946a96c3af68e33e611266c385716c640d08e494b24e7"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/frame-provenance.json",
+      "bytes": 929,
+      "sha256": "cb37a204dfc14898ddd5b764d74fff99f8f6732b93666c611c7d7daa67376d1d"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/inference-stages.png",
+      "bytes": 44961,
+      "sha256": "584d72e08dab8a8cb900d967e3623eb40209b4fbd5bb311e0f0f2b44cd9e8c93"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/inference-stages.svg",
+      "bytes": 11134,
+      "sha256": "4663bcdb2ec1edb190ab0f9543c87061c679a36bad05a5af19acb8fa5b5ef996"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/pdf-qa.json",
+      "bytes": 2440,
+      "sha256": "5f6390e465f2d69529ddc306353c9e00eb633d7632f425026d198be49c59e379"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/release.json",
+      "bytes": 2617,
+      "sha256": "180e5e3bb1d803f2297212e1f39fb8f2b36c8a782a1a99d058694fd79c74605d"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/report-provenance.json",
+      "bytes": 42980,
+      "sha256": "0ea2bbfe83dda3ef579f3c84bbf358c56c600ce5c90347ae9608e84b5533a490"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/report.html",
+      "bytes": 470706,
+      "sha256": "8e34fb50f390ecdd29e6a31fc1939c14231b8bd2a361fba4400858b3a07d5d23"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/task-complete.png",
+      "bytes": 150111,
+      "sha256": "1f304f9d1c40b8df9c92ea7de55cb35911bfc09f6d02a8986caf335d75b3fe0c"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/task-initial.png",
+      "bytes": 137114,
+      "sha256": "4d4cca557065d0f60e1fab8ba4919ba41b07f73c70e34a68f6395127252f65c7"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/video/YouTube概要欄_PAI最終課題_44055.txt",
+      "bytes": 2029,
+      "sha256": "b02bf74826e9ff3ce4f580a8bf7a625eadb7366226f6316fcd4de5d447754b8e"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/video/video-manifest.json",
+      "bytes": 348747,
+      "sha256": "48baad56fd2f5d9c5d8f780c7cdc74cd2c545350d8689532c412a1db35d493d3"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/video/video-validation.json",
+      "bytes": 255,
+      "sha256": "988f9926abfdba48030a1d941b9153d6a3ce3a1764ea77c732c8e500e3211021"
+    },
+    {
+      "path": "artifacts/realtime-vla/submission-smol-pi05/説明資料_PAI最終課題_44055.pdf",
+      "bytes": 604954,
+      "sha256": "d3a498d101e37eadd9ab3d463b99432c69ffc2be06eb5908a4f794426a26b045"
+    },
+    {
       "path": "artifacts/realtime-vla/verification.json",
       "bytes": 715,
       "sha256": "adc2bf36f1b47d34933a65fdc1622f6f9dded451d8bdf0c748954e8a29d26bd2"
@@ -844,8 +919,8 @@
     },
     {
       "path": "docs/architecture/realtime-vla.md",
-      "bytes": 6879,
-      "sha256": "0450f9ab09ef4ab00cb3ee5416c193bfa535cbbbfcfa5b2541c4c74d24970d85"
+      "bytes": 8826,
+      "sha256": "91d3235d3b79dc4975ad6cc74c3016f3a308c729f7ecad8b86e753bebf96274d"
     },
     {
       "path": "docs/experiments/realtime-continuity.md",
@@ -1191,6 +1266,16 @@
       "path": "scripts/build_realtime_report.py",
       "bytes": 24685,
       "sha256": "70ece8cdafbd16be38f7ca74c75c5305762b0103a2418b4178e5313ec7638661"
+    },
+    {
+      "path": "scripts/build_smol_pi05_submission.py",
+      "bytes": 39120,
+      "sha256": "594462c07e4eec3527e01686bed88e3fddd6ae1e841d51fae86abbf771944725"
+    },
+    {
+      "path": "scripts/build_smol_pi05_video.py",
+      "bytes": 25814,
+      "sha256": "22fbd209465ff48f2770f890d844a137a4fed1f0a52fbac2ee521b05abb662c3"
     },
     {
       "path": "scripts/fetch_libero_assets.py",
